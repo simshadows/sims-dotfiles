@@ -1,36 +1,45 @@
-! special
-*.foreground:   #ffffff
-*.background:   #000000
-*.cursorColor:  #ffffff
+!! Solarized Dark
+!!
+!! http://ethanschoonover.com/solarized
+!! v1.0.0beta2
+!! Note: This was modified from the original to remove the #define usage.
 
-! black
-*.color0:       #202020
-*.color8:       #505050
+*background:            #002b36
+*foreground:            #657b83
+*fading:                40
+*fadeColor:             #002b36
+*cursorColor:           #93a1a1
+*pointerColorBackground:#586e75
+*pointerColorForeground:#93a1a1
 
-! red
-*.color1:       #ff0000
-*.color9:       #ff8080
+!! black dark/light
+*color0:                #073642
+*color8:                #002b36
 
-! green
-*.color2:       #00ff00
-*.color10:      #80ff80
+!! red dark/light
+*color1:                #dc322f
+*color9:                #cb4b16
 
-! yellow
-*.color3:       #ffff00
-*.color11:      #ffff80
+!! green dark/light
+*color2:                #859900
+*color10:               #586e75
 
-! blue
-*.color4:       #0000ff
-*.color12:      #8080ff
+!! yellow dark/light
+*color3:                #b58900
+*color11:               #657b83
 
-! magenta
-*.color5:       #ff00ff
-*.color13:      #ff80ff
+!! blue dark/light
+*color4:                #268bd2
+*color12:               #839496
 
-! cyan
-*.color6:       #00ffff
-*.color14:      #80ffff
+!! magenta dark/light
+*color5:                #d33682
+*color13:               #6c71c4
 
-! white
-*.color7:       #a0a0a0
-*.color15:      #ffffff
+!! cyan dark/light
+*color6:                #2aa198
+*color14:               #93a1a1
+
+!! white dark/light
+*color7:                #eee8d5
+*color15:               #fdf6e3
