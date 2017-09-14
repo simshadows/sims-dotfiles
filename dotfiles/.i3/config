@@ -11,6 +11,9 @@
 
 set $mod Mod1
 
+# TODO: Find a way to make this toggle the modkey.
+#bindsym $mod+Shift+r i3-toggle-modkey
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -119,7 +122,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+x restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -149,19 +152,54 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Solarized Dark Colour Scheme Variables
+# NOTE: Feel free to delete these when changing colour schemes.
+set $S_yellow  #b58900
+set $S_orange  #cb4b16
+set $S_red     #dc322f
+set $S_magenta #d33682
+set $S_violet  #6c71c4
+set $S_blue    #268bd2
+set $S_cyan    #2aa198
+set $S_green   #859900
+#
+set $S_base03  #002b36
+set $S_base02  #073642
+set $S_base01  #586e75
+set $S_base00  #657b83
+set $S_base0   #839496
+set $S_base1   #93a1a1
+set $S_base2   #eee8d5
+set $S_base3   #fdf6e3
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
 	position bottom
+	colors {
+		background         $S_base03
+		statusline         $S_base0
+		separator          $S_base0
+		focused_background $S_base03  
+		focused_statusline $S_base0
+		focused_separator  $S_base0
+		
+		# class            border     background text
+		focused_workspace  $S_base0   $S_base0   $S_base03
+		active_workspace   $S_base0   $S_base01  $S_base03
+		inactive_workspace $S_base0   $S_base03  $S_base0
+		urgent_workspace   $S_red     $S_red     $S_base0
+		binding_mode       $S_yellow  $S_yellow  $S_base0
+	}
 }
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #ffffff #ffffff #000000 #ffffff   #ffffff
-client.focused_inactive #ffffff #000000 #ffffff #ffffff   #ffffff
-client.unfocused        #ffffff #000000 #ffffff #ffffff   #ffffff
-client.urgent           #ff0000 #ff0000 #000000 #ff0000   #ff0000
-client.placeholder      #0000ff #0000ff #0000ff #0000ff   #0000ff
+# class                 border    backgr.   text      indicator child_border
+client.focused          $S_base0  $S_base0  $S_base03 $S_base0  $S_base0
+client.focused_inactive $S_base01 $S_base01 $S_base03 $S_base0  $S_base01
+client.unfocused        $S_base01 $S_base01 $S_base03 $S_base0  $S_base01
+client.urgent           $S_red    $S_red    $S_base03 $S_red    $S_red
+client.placeholder      $S_blue   $S_blue   $S_blue   $S_blue   $S_blue  
 
 client.background       #ffffff
 
@@ -170,6 +208,6 @@ exec xrdb -nocpp -merge $HOME/.Xresources
 # Enable VBoxClient features (such as auto-resize)
 exec VBoxClient-all
 
-# Open initial terminal
-exec urxvt
+# Open initial terminal with tmux
+exec urxvt -e tmux
 
