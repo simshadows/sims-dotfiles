@@ -1,4 +1,4 @@
-" file  : .vimrc
+"   file: .vimrc
 " author: https://github.com/simshadows
 "
 " Vim basic configuration.
@@ -45,6 +45,14 @@ set nowb
 set noswapfile
 " TODO: Maybe turn it on and configure it to backup somewhere benign?
 
+" Persistent Undo
+"try
+"   set undodir=/tmp/vimtmp/undodir
+"   set undofile
+"catch
+"endtry
+" TODO: Figure out how this works, and how to do it reliable cross-platform.
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEXT """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -82,6 +90,12 @@ set smartindent
 " Show hybrid relative and absolute
 set number
 set relativenumber
+" Shows absolute line numbers in insert mode, and hybrid again once you leave it
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 " Scrolloff ensures you can see extra lines below/above when scrolling up/down.
 set scrolloff=7
@@ -195,6 +209,13 @@ set laststatus=2
 
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MISC KEY MAPPINGS """""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Select all. Practically the same as Ctrl+a in graphical editors.
+nnoremap <C-A> ggVG
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " HELPER FUNCTIONS """"""""""""""""""""""""""""""""""""""""""""""""""
