@@ -22,16 +22,26 @@
 "
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" GENERAL """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" GENERAL AND UI """"""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Turns off Vi compatibility mode, which would otherwise have horrible default behaviour
+set nocompatible
+
+"let $LANG='en'
+"set langmenu=en
+
+" Set command history
 set history=500
 
 filetype plugin on
 filetype indent on
 
-" Automatically reads in changes if our buffer is unmodified and something else has modified it.
-"set autoread
+" Don't automatically load in changes.
+set noautoread
+
+" Optimize for fast terminal connections
+set ttyfast
 
 "let mapleader="\\"
 "let g:mapleader="\\"
@@ -53,39 +63,6 @@ set noswapfile
 "endtry
 " TODO: Figure out how this works, and how to do it reliable cross-platform.
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TEXT """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Wrap lines longer than the width of the window.
-set wrap
-
-" Use spaces to indent instead of tabs
-set expandtab
-
-" TODO: What does this do, and do I need it? Once figured out, uncomment this.
-"set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-" TODO: What's the difference?
-
-" Turn off automatic linen breaking
-set textwidth=0
-
-" Automatic indent
-set autoindent
-" Smart indenting (TODO: Figure out the specifics of what this does.)
-set smartindent
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" UI """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"let $LANG='en'
-"set langmenu=en
-
 "" Line numbers
 " Show hybrid relative and absolute
 set number
@@ -96,6 +73,12 @@ augroup numbertoggle
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
     autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+
+"" Last line
+" Show current mode
+set showmode
+" Show the partial command
+set showcmd
 
 " Scrolloff ensures you can see extra lines below/above when scrolling up/down.
 set scrolloff=7
@@ -162,6 +145,32 @@ set magic
 "set foldcolumn=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TEXT """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Wrap lines longer than the width of the window.
+set wrap
+
+"" Indentation
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+" Disable softtabstop. Such a confusing feature.
+set softtabstop=0
+" Insert spaces instead of tabs.
+set expandtab
+" TODO: What does this do, and do I need it? Once figured out, uncomment this.
+"set smarttab
+
+" Turn off automatic linen breaking
+set textwidth=0
+
+" Automatic indent
+set autoindent
+" Smart indenting (TODO: Figure out the specifics of what this does.)
+set smartindent
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOURS AND FONTS """""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -208,14 +217,15 @@ set ffs=unix,dos,mac
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+set statusline=\ %-h%w\ \ %{HasPaste()}%F\ \ \ cwd:\ %{getcwd()}%=%a\ \ \ char:\ %b(0x%B)\ \ \ line:\ %l/%L\ \ \ col:\ %c\ \ \ %y%m%r\ \ 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPPINGS """""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Select all. Practically the same as Ctrl+a in graphical editors.
-nnoremap <C-A> ggVG
+"nnoremap <C-A> ggVG
+" Currently disabled since it jumps you to the end of the file.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " HELPER FUNCTIONS """"""""""""""""""""""""""""""""""""""""""""""""""
