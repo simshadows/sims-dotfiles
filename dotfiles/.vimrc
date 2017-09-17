@@ -1,4 +1,3 @@
-"   file: .vimrc
 " author: https://github.com/simshadows
 "
 " Vim basic configuration.
@@ -21,12 +20,53 @@
 "     https://github.com/amix/vimrc/blob/7fc202ec8895c564c10940a21af357d6c0665368/vimrcs/basic.vim
 "
 
+" Turns off Vi compatibility mode, which would otherwise have horrible default behaviour
+set nocompatible
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGINS """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""" VUNDLE CODE """
+
+filetype off
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" Alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+" Let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+""" INDIVIDUAL PLUGIN INSTALLATION """
+
+" Dependencies
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'garbas/vim-snipmate'
+
+""" VUNDLE CODE """
+
+call vundle#end()
+filetype plugin indent on
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+filetype on
+
+""" PLUGIN SETTINGS """
+
+let g:solarized_termtrans=1
+let g:solarized_visibility="high"
+set background=dark
+colorscheme solarized
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL AND UI """"""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Turns off Vi compatibility mode, which would otherwise have horrible default behaviour
-set nocompatible
 
 "let $LANG='en'
 "set langmenu=en
@@ -68,11 +108,11 @@ set noswapfile
 set number
 set relativenumber
 " Shows absolute line numbers in insert mode, and hybrid again once you leave it
-augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+"augroup numbertoggle
+"    autocmd!
+"    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+"augroup END
 
 "" Last line
 " Show current mode
@@ -226,6 +266,9 @@ set statusline=\ %-h%w\ \ %{HasPaste()}%F\ \ \ cwd:\ %{getcwd()}%=%a\ \ \ char:\
 " Select all. Practically the same as Ctrl+a in graphical editors.
 "nnoremap <C-A> ggVG
 " Currently disabled since it jumps you to the end of the file.
+
+" Semicolon now toggles paste mode
+nnoremap ; :set paste!<enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " HELPER FUNCTIONS """"""""""""""""""""""""""""""""""""""""""""""""""

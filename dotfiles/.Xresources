@@ -1,6 +1,12 @@
 
 URxvt.scrollBar: False
 
+URxvt.font:           xft:Source Code Pro:size=9:antialias=true:hinting=true
+URxvt.boldFont:       xft:Source Code Pro:size=9:antialias=true:hinting=true
+URxvt.italicFont:     xft:Source Code Pro:style=Oblique:size=9:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:Source Code Pro:style=Bold Oblique:size=9:antialias=true:hinting=true
+URxvt.letterSpace:    -2
+
 !!!!!!!!!!!
 ! Colours !
 !!!!!!!!!!!
@@ -23,10 +29,11 @@ URxvt.scrollBar: False
 
 *color0:                  #073642
 *color1:                  #dc322f
-! Changed color2 to be greener
+! Changed green (color2) to be greener
 *color2:                  #339900
 *color3:                  #b58900
-*color4:                  #268bd2
+! Changed color 4 to be darker, to contrast better against green (color2).
+*color4:                  #167bff
 *color5:                  #d33682
 *color6:                  #2aa198
 *color7:                  #eee8d5

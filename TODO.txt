@@ -1,0 +1,7 @@
+Make install script.
+
+Things to do:
+    Symlink things as necessary
+    Automatically clone in Vundle
+    Automatically install plugins
+
