@@ -1,11 +1,13 @@
 
 URxvt.scrollBar: False
 
+URxvt.dynamicColors: on
+
 URxvt.font:           xft:Source Code Pro:size=9:antialias=true:hinting=true
 URxvt.boldFont:       xft:Source Code Pro:size=9:antialias=true:hinting=true
 URxvt.italicFont:     xft:Source Code Pro:style=Oblique:size=9:antialias=true:hinting=true
 URxvt.boldItalicFont: xft:Source Code Pro:style=Bold Oblique:size=9:antialias=true:hinting=true
-URxvt.letterSpace:    -2
+URxvt.letterSpace:    -1
 
 !!!!!!!!!!!
 ! Colours !

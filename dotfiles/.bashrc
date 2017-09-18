@@ -11,5 +11,6 @@ fi
 
 alias ls='ls --color=auto'
 alias la='ls --color=auto -la'
+alias r='ranger'
 PS1='\u@\h \W\$ '
 

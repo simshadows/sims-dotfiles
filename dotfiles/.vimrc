@@ -45,6 +45,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
+" Functionality Plugins
+
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'garbas/vim-snipmate'
 
@@ -217,6 +219,10 @@ set smartindent
 " Enable syntax highlighting
 syntax enable
 
+" Configure list mode to show whitespace.
+" (Enabling list mode is toggled. See keybindings section.)
+set listchars=tab:»—,trail:·,extends:>,precedes:<
+
 " Enable 256 colours palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
@@ -268,7 +274,7 @@ set statusline=\ %-h%w\ \ %{HasPaste()}%F\ \ \ cwd:\ %{getcwd()}%=%a\ \ \ char:\
 " Currently disabled since it jumps you to the end of the file.
 
 " Semicolon now toggles paste mode
-nnoremap ; :set paste!<enter>
+nnoremap ; :set list!<enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " HELPER FUNCTIONS """"""""""""""""""""""""""""""""""""""""""""""""""
