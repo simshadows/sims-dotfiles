@@ -5,12 +5,55 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [ -d "$HOME/bin" ] ; then
+# Prompt
+
+PS1='\[\e[31m\]\u@\h\[\e[m\] \W\$ '
+
+
+# Put ~/bin into PATH
+
+if [ -d "$HOME/bin" ]; then
 	export PATH="$HOME/bin:$PATH"
 fi
 
+
+# The usual aliases
+
 alias ls='ls --color=auto'
-alias la='ls --color=auto -la'
+alias la='ls --color=auto -lah'
 alias r='ranger'
-PS1='\u@\h \W\$ '
+
+# Prevents nesting ranger instances when you repeatedly open shells with Shift+s
+
+function ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        /usr/bin/ranger "$@"
+    else
+        exit
+    fi
+}
+
+
+# Handy shortcut to quickly clone in something from github
+
+function github() {
+    git clone git@github.com:$1.git
+}
+
+function githubwiki() {
+    git clone git@github.com:$1.wiki.git
+}
+
+function githuball() {
+    github $1
+    githubwiki $1
+}
+
+
+# Other script invocations
+
+# This is where code not intended to be part of the dotfiles repository goes.
+# Here, we find machine-specific config, such as aliases to specific files
+# on a machine.
+[[ -f ~/.bash_custom ]] && source ~/.bash_custom
 
