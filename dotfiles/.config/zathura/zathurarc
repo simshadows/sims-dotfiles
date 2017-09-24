@@ -1,0 +1,9 @@
+#   file: zathurarc
+# author: http://github.com/simshadows
+
+# Turn on scrollbars, command line, and statusbar.
+set guioptions cshv
+
+# Scroll step size
+set scroll-step 260
+

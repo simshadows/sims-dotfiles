@@ -1,3 +1,4 @@
+"   file: .vimrc
 " author: https://github.com/simshadows
 "
 " Vim basic configuration.
@@ -27,7 +28,7 @@ set nocompatible
 " PLUGINS """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""" VUNDLE CODE """
+""" VUNDLE BOILERPLATE CODE """
 
 filetype off
 
@@ -42,15 +43,23 @@ Plugin 'VundleVim/Vundle.vim'
 """ INDIVIDUAL PLUGIN INSTALLATION """
 
 " Dependencies
+
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
 " Functionality Plugins
 
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-sleuth'
+Plugin 'SirVer/ultisnips'
+"Plugin 'mattn/emmet-vim'
+Plugin 'lervag/vimtex'
 
-""" VUNDLE CODE """
+" Content Plugins
+
+Plugin 'simshadows/vim-snippets' " My own fork
+
+""" VUNDLE BOILERPLATE CODE """
 
 call vundle#end()
 filetype plugin indent on
@@ -65,6 +74,9 @@ let g:solarized_termtrans=1
 let g:solarized_visibility="high"
 set background=dark
 colorscheme solarized
+
+let g:vimtex_view_general_viewer="zathura"
+"let g:vimtex_view_method="zathura"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL AND UI """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -85,9 +97,9 @@ set noautoread
 " Optimize for fast terminal connections
 set ttyfast
 
-"let mapleader="\\"
-"let g:mapleader="\\"
-" TODO: Wait, what's the default? What happens if I delete this?
+let mapleader="\\"
+let g:mapleader="\\"
+" TODO: Why do we need g:mapleader?
 
 " TODO: Add a sudo save command. amix's line66 has this.
 
@@ -219,15 +231,18 @@ set smartindent
 " Enable syntax highlighting
 syntax enable
 
+
+" Set to 256 colours
+set t_Co=256
+"if $COLORTERM == 'gnome-terminal'
+"    set t_Co=256
+"endif
+" TODO: Fix this up, make this more reliable...
+
+
 " Configure list mode to show whitespace.
 " (Enabling list mode is toggled. See keybindings section.)
 set listchars=tab:»—,trail:·,extends:>,precedes:<
-
-" Enable 256 colours palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-" TODO: I don't think I need this...
 
 " Set colour scheme
 "try
@@ -263,7 +278,7 @@ set ffs=unix,dos,mac
 set laststatus=2
 
 " Format the status line
-set statusline=\ %-h%w\ \ %{HasPaste()}%F\ \ \ cwd:\ %{getcwd()}%=%a\ \ \ char:\ %b(0x%B)\ \ \ line:\ %l/%L\ \ \ col:\ %c\ \ \ %y%m%r\ \ 
+set statusline=\ %-h%w\ \ %{HasPaste()}%F\ \ \ cwd:\ %{getcwd()}%=%a\ \ \ %b(0x%B)\ \ %l/%L\ \ %c\ \ %y%m%r\ \ 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPPINGS """""""""""""""""""""""""""""""""""""""""""""""""
