@@ -3,7 +3,8 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+#[[ $- != *i* ]] && return
+# IGNORE FOR NOW.
 
 # Prompt
 
@@ -23,6 +24,7 @@ alias ls='ls --color=auto'
 alias la='ls --color=auto -lah'
 alias r='ranger'
 
+
 # Prevents nesting ranger instances when you repeatedly open shells with Shift+s
 
 function ranger() {
@@ -31,6 +33,18 @@ function ranger() {
     else
         exit
     fi
+}
+
+
+# Very handy pastebins. Pipe in your data, and you get back a URL.
+# Multiple are provided for options since some can break.
+
+function pastebin() {
+    curl -F '"'"'sprunge=<-'"'"' http://sprunge.us
+}
+
+function pastebin2() {
+    nc termbin.com 9999
 }
 
 

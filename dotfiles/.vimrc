@@ -54,6 +54,8 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'SirVer/ultisnips'
 "Plugin 'mattn/emmet-vim'
 Plugin 'lervag/vimtex'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'vim-syntastic/syntastic'
 
 " Content Plugins
 
@@ -91,8 +93,8 @@ set history=500
 filetype plugin on
 filetype indent on
 
-" Don't automatically load in changes.
-set noautoread
+" Automatically load in changes.
+set autoread
 
 " Optimize for fast terminal connections
 set ttyfast
