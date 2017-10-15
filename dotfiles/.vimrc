@@ -200,12 +200,21 @@ set magic
 " Add a margin to the left
 "set foldcolumn=1
 
+" Use system CLIPBOARD automatically when yanking/pasting.
+set clipboard=unnamedplus
+" Ideally, a clipboard manager should also synchronize the two
+" clipboards.
+" TODO: Why does "set clipboard+=unnamedplus" not work?
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEXT """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Wrap lines longer than the width of the window.
 set wrap
+
+" Long lines will continue from visually the same indent level
+set breakindent
 
 "" Indentation
 " 1 tab == 4 spaces
@@ -292,6 +301,11 @@ set statusline=\ %-h%w\ \ %{HasPaste()}%F\ \ \ cwd:\ %{getcwd()}%=%a\ \ \ %b(0x%
 
 " Semicolon now toggles paste mode
 nnoremap ; :set list!<enter>
+
+" Indenting/dedenting with < and > in visual mode no longer removes
+" selection afterwards.
+vnoremap < <gv
+vnoremap > >gv
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " HELPER FUNCTIONS """"""""""""""""""""""""""""""""""""""""""""""""""
