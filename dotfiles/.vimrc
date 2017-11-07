@@ -56,6 +56,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'lervag/vimtex'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/nerdcommenter'
 
 " Content Plugins
 
@@ -160,9 +161,9 @@ set cmdheight=1
 "set hid
 
 " Makes backspace work as intended
-"set backspace=eol,start,indent
-"set whichwrap+=<,>,h,l
-" TODO: Why is this needed? Once figured out, uncomment these.
+set backspace=eol,start,indent
+set whichwrap+=<,>
+" TODO: Should I add other options such as b, s, [, and ]?
 
 "" Search Settings
 " Ignore case (Usually ignored. `smartcase` makes searches case sensitive.)
