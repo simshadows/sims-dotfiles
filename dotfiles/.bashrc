@@ -64,6 +64,43 @@ function githuball() {
 }
 
 
+# Clipboard operations
+
+function clip.targets() {
+    echo '=== PRIMARY ==='
+    xclip -selection primary -t TARGETS -o
+    echo '=== CLIPBOARD ==='
+    xclip -selection clipboard -t TARGETS -o
+}
+
+function clip.get() {
+    xclip -selection clipboard -t $1 -o
+}
+
+# A very useful "script" for quickly getting a BMP file from CLIPBOARD into a PNG file at
+# the CWD. This is very often used when pasting selections from Microsoft Paint in a
+# Windows virtual machine.
+function clip.bmptofile() {
+    if [ -z "$1" ]; then
+        echo 'Usage: clip.bmptofile filename-without-extension'
+        echo '.png is automatically appended to the filename.'
+        return
+    fi
+
+    CLIP_TARGET='image/bmp'
+    FILENAME=$1'.png'
+
+    BUF=`xclip -selection clipboard -t TARGETS -o | grep ${CLIP_TARGET}`
+    if [ "${BUF}" != "${CLIP_TARGET}" ]; then
+        echo "Target \`${CLIP_TARGET}\` not found. Aborting."
+        return
+    fi
+
+    xclip -selection clipboard -t "$CLIP_TARGET" -o | mogrify -format png - > $FILENAME
+    echo 'BMP from clipboard saved as '$FILENAME
+}
+
+
 # Other script invocations
 
 # This is where code not intended to be part of the dotfiles repository goes.
