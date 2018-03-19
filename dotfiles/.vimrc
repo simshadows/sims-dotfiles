@@ -3,11 +3,9 @@
 "
 " Vim basic configuration.
 "
-" Optimized for my Australian English keyboard. Relocalization may require tweaks.
-"
-" """"""""""""""""""""
-" " Acknowledgements "
-" """"""""""""""""""""
+" ====================
+" = Acknowledgements =
+" ====================
 "
 " As with many other vimrc files, this one attempts to combine bits
 " and bobs from versions made by many others.
@@ -15,9 +13,9 @@
 " In particular, I based the initial version on:
 "     https://github.com/amix/vimrc
 "
-" """""""""""""
-" " TODO List "
-" """""""""""""
+" =============
+" = TODO List =
+" =============
 "
 " Go back to lines 208-398 in:
 "     https://github.com/amix/vimrc/blob/7fc202ec8895c564c10940a21af357d6c0665368/vimrcs/basic.vim
@@ -102,12 +100,6 @@ set autoread
 
 " Optimize for fast terminal connections
 set ttyfast
-
-let mapleader=","
-let g:mapleader=","
-" TODO: Why do we need g:mapleader?
-
-" TODO: Add a sudo save command. amix's line66 has this.
 
 " Turn off all backups
 set nobackup
@@ -327,13 +319,22 @@ endfunction
 " KEY MAPPINGS """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" IMPORTANT: All remappings that can lead to heavy muscle-memory dependence
-"            will be marked with "(WARNING: MUSCLE DEPENDENCE)". These are
-"            remappings which I believe may hinder one's ability to use
-"            vanilla vim, which is important when using others' machines,
-"            or vim emulators that lack keymapping customizability.
-
 " See ':h index' to find default functions.
+
+" ------------
+" --- Meta ---
+" ------------
+
+" Leader Key
+let mapleader=","
+let g:mapleader=","
+" TODO: Why do we need g:mapleader?
+
+" In addition to this, I use two more keys as "meta-keys", i.e. keys that
+" give access to further commands. These keys are:
+"   s   Used for navigating splits and tabs. Mappings are similar to tmux.
+"           MNEMONIC: "Split"
+"   ;   Used for other functions that don't quite neatly fit anywhere.
 
 " ---------------
 " --- Editing ---
@@ -344,35 +345,15 @@ endfunction
 vnoremap < <gv
 vnoremap > >gv
 
-" Inserts newlines at the cursor in normal mode without entering insert mode,
-" while also stripping away whitespace.
-" (WARNING: MUSCLE DEPENDENCE)
-nnoremap <CR> <esc>i<CR><esc>kJxi<CR><esc>^
-nnoremap K    <esc>i<CR><esc>kJxi<CR><esc>^
-" BUG: Behaves poorly if the editor decides to automatically insert new
-"      characters between the lines, such as comment leaders. I have
-"      auto-comment leaders disabled explicitly, which helps this.
-" WEIRDNESS: It would be nice if pre-pending a number would allow you to
-"            enter multiple newlines without bugging out. For now, <esc>
-"            is added to prevent this.
-" TODO: Make this more efficient and smoother.
-
-" Inserts a space/tab at the cursor in normal mode without entering insert mode.
-" Cursor finishes with the new space being to the left of the cursor.
-" (WARNING: MUSCLE DEPENDENCE)
-nnoremap <space> i<space><esc>l
-nnoremap <tab>   i<tab><esc>l
-
-" Shortcut for writing a global substitute command
+" Shortcut for writing a global substitute command.
 " It's up to you to then fill it out to complete it.
-" Example: %s/oldtext/newtext/g
-" (I use it so much that it seems stupid to me not to have one.)
-nnoremap S :%s///g<left><left><left>
+" I use it so much that it seems stupid to me not to have one.
+" Example: :%s/oldtext/newtext/g
+nnoremap ;s :%s///g<left><left><left>
 " A version that will only replace within a visual selection:
 " (Note that the '<,'> part is automatically added in.)
-"vnoremap S :s///g<left><left><left>
-" TODO: That visual mode version somehow doesn't work. Find another
-"       suitable key.
+vnoremap ;s :s///g<left><left><left>
+" MNEMONIC: "Substitute"
 " TODO: Maybe it's better to just use something like:
 "           :%s//g<left><left>
 "       since it results in fewer keystrokes.
@@ -422,9 +403,12 @@ nnoremap sH <C-W><
 " WEIRDNESS: These remappings don't seem to work with netrw...
 " TODO: Fix this.
 
+" Creates a tab that clones the current window
 nnoremap sc :tab split<enter>
+" Creates a netrw tab
 nnoremap sC :Tex<enter>
 
+" Easier tab navigation
 nnoremap sp :tabprevious<enter>
 nnoremap sn :tabnext<enter>
 
@@ -433,23 +417,17 @@ nnoremap sn :tabnext<enter>
 " -----------------
 
 " Display tabs and leading spaces.
-nnoremap ; :set list!<enter>
+nnoremap ;; :set list!<enter>
+" I use this so much to inspect whitespace that it deserves this prime real estate.
 
 " Remove search highlighting.
-"nnoremap s :noh<enter>
-" TODO: Find a better keybinding?
-
-" Visually select a word.
-"nnoremap <space> viw
-" Currently disabled due to bad habit-forming.
+nnoremap ;c :noh<enter>
+" MNEMONIC: "Clear" highlight
 
 " Makes it so pasting in visual mode will replace the visual selection
-" WITHOUT YANKING IT. (Upper-case P will continue to be available for
-" that functionality.)
+" WITHOUT YANKING THE REPLACED TEXT. (Upper-case P will continue to be available
+" for that functionality.)
 vnoremap p "_dP
-" Alias with <space> to allow chaining of select followed by replace.
-"vnoremap <space> "_dP
-" Currently disabled due to bad habit-forming.
 
 " -------------
 " --- netrw ---
@@ -509,5 +487,4 @@ endfunction
 " to be the most significant culprit. However, disabling it doesn't feel
 " to have worked. Also, I have no idea what matchparen is used for.
 "let loaded_matchparen = 1
-
 
