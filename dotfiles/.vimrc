@@ -100,8 +100,8 @@ set autoread
 " Optimize for fast terminal connections
 set ttyfast
 
-let mapleader="\\"
-let g:mapleader="\\"
+let mapleader=","
+let g:mapleader=","
 " TODO: Why do we need g:mapleader?
 
 " TODO: Add a sudo save command. amix's line66 has this.
@@ -202,10 +202,12 @@ set magic
 "set foldcolumn=1
 
 " Use system CLIPBOARD automatically when yanking/pasting.
-set clipboard=unnamedplus
+set clipboard=unnamedplus,unnamed
 " Ideally, a clipboard manager should also synchronize the two
 " clipboards.
 " TODO: Why does "set clipboard+=unnamedplus" not work?
+" TODO: I originally had just 'unnamedplus' but it wouldn't work on mac, so
+"       I added ',unnamed'. What other implications does this have?
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEXT """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -290,23 +292,43 @@ set ffs=unix,dos,mac
 set laststatus=2
 
 " Format the status line
-set statusline=\ %-h%w\ \ %{HasPaste()}%F\ \ \ cwd:\ %{getcwd()}%=%a\ \ \ %b(0x%B)\ \ %l/%L\ \ %c\ \ %y%m%r\ \ 
+set statusline=\ %-h%w\ \ %{HasPaste()}cwd:\ %{getcwd()}\ \ \ %F%=%a\ \ \ %b(0x%B)\ \ %l/%L\ \ %c\ \ %y%m%r\ \ 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPPINGS """""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" See ':h index' to find default functions.
+
 " Select all. Practically the same as Ctrl+a in graphical editors.
 "nnoremap <C-A> ggVG
 " Currently disabled since it jumps you to the end of the file.
 
-" Semicolon now toggles paste mode
+" Display tabs and leading spaces.
 nnoremap ; :set list!<enter>
 
 " Indenting/dedenting with < and > in visual mode no longer removes
 " selection afterwards.
 vnoremap < <gv
 vnoremap > >gv
+
+" Easier splits navigation.
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Visually select a word.
+"nnoremap <space> viw
+" Currently disabled due to bad habit-forming.
+
+" Makes it so pasting in visual mode will replace the visual selection
+" WITHOUT YANKING IT. (Upper-case P will continue to be available for
+" that functionality.)
+vnoremap p "_dP
+" Alias with <space> to allow chaining of select followed by replace.
+"vnoremap <space> "_dP
+" Currently disabled due to bad habit-forming.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " HELPER FUNCTIONS """"""""""""""""""""""""""""""""""""""""""""""""""
