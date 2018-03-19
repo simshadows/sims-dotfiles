@@ -3,6 +3,8 @@
 "
 " Vim basic configuration.
 "
+" Optimized for my Australian English keyboard. Relocalization may require tweaks.
+"
 " """"""""""""""""""""
 " " Acknowledgements "
 " """"""""""""""""""""
@@ -28,7 +30,7 @@ set nocompatible
 " PLUGINS """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""" VUNDLE BOILERPLATE CODE """
+""" VUNDLE BOILERPLATE CODE (1 of 2) """
 
 filetype off
 
@@ -57,12 +59,13 @@ Plugin 'lervag/vimtex'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
 
 " Content Plugins
 
 Plugin 'simshadows/vim-snippets' " My own fork
 
-""" VUNDLE BOILERPLATE CODE """
+""" VUNDLE BOILERPLATE CODE (2 of 2) """
 
 call vundle#end()
 filetype plugin indent on
@@ -209,6 +212,12 @@ set clipboard=unnamedplus,unnamed
 " TODO: I originally had just 'unnamedplus' but it wouldn't work on mac, so
 "       I added ',unnamed'. What other implications does this have?
 
+" Horizontal splits split down
+set splitbelow
+" Vertical splits split right
+set splitright
+" Also note: vim horizontal splits are like tmux/i3 vertical splits, and vice versa.
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEXT """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -237,6 +246,13 @@ set textwidth=0
 set autoindent
 " Smart indenting (TODO: Figure out the specifics of what this does.)
 set smartindent
+
+" Stops automatically creating comment lines when creating a new line either
+" by line break or by use of o or O. As a result, you will have to add the
+" comment character yourself.
+autocmd FileType * set formatoptions-=cro
+" TODO: Why doesn't 'set formatoptions-=cro' on its own work in vimrc?
+"       it works when entering it in manually...
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOURS AND FONTS """""""""""""""""""""""""""""""""""""""""""""""""
@@ -291,32 +307,137 @@ set ffs=unix,dos,mac
 " Always show the status line
 set laststatus=2
 
-" Format the status line
-set statusline=\ %-h%w\ \ %{HasPaste()}cwd:\ %{getcwd()}\ \ \ %F%=%a\ \ \ %b(0x%B)\ \ %l/%L\ \ %c\ \ %y%m%r\ \ 
+" Format the status line conditionally depending on file type.
+"set statusline=\ %-h%w\ \ %{HasPaste()}cwd:\ %{getcwd()}\ \ \ %F%=%a\ \ \ %b(0x%B)\ \ %l/%L\ \ %c\ \ %y%m%r\ \ 
+
+set statusline=%!StatusLine()
+" Shows different status line depending on file type.
+function! StatusLine()
+    if &ft == 'netrw'
+        " netrw
+        let b:status = "\ %-h%w\ \ %F%=%a\ \ \ %b(0x%B)\ \ %l/%L\ \ %c\ \ %y%m%r\ \ "
+    else
+        " DEFAULT
+        let b:status = "\ %-h%w\ \ %{HasPaste()}cwd:\ %{getcwd()}\ \ \ %F%=%a\ \ \ %b(0x%B)\ \ %l/%L\ \ %c\ \ %y%m%r\ \ "
+    endif
+    return b:status
+endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MISC KEY MAPPINGS """""""""""""""""""""""""""""""""""""""""""""""""
+" KEY MAPPINGS """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" IMPORTANT: All remappings that can lead to heavy muscle-memory dependence
+"            will be marked with "(WARNING: MUSCLE DEPENDENCE)". These are
+"            remappings which I believe may hinder one's ability to use
+"            vanilla vim, which is important when using others' machines,
+"            or vim emulators that lack keymapping customizability.
 
 " See ':h index' to find default functions.
 
-" Select all. Practically the same as Ctrl+a in graphical editors.
-"nnoremap <C-A> ggVG
-" Currently disabled since it jumps you to the end of the file.
-
-" Display tabs and leading spaces.
-nnoremap ; :set list!<enter>
+" ---------------
+" --- Editing ---
+" ---------------
 
 " Indenting/dedenting with < and > in visual mode no longer removes
 " selection afterwards.
 vnoremap < <gv
 vnoremap > >gv
 
+" Inserts newlines at the cursor in normal mode without entering insert mode,
+" while also stripping away whitespace.
+" (WARNING: MUSCLE DEPENDENCE)
+nnoremap <CR> <esc>i<CR><esc>kJxi<CR><esc>^
+nnoremap K    <esc>i<CR><esc>kJxi<CR><esc>^
+" BUG: Behaves poorly if the editor decides to automatically insert new
+"      characters between the lines, such as comment leaders. I have
+"      auto-comment leaders disabled explicitly, which helps this.
+" WEIRDNESS: It would be nice if pre-pending a number would allow you to
+"            enter multiple newlines without bugging out. For now, <esc>
+"            is added to prevent this.
+" TODO: Make this more efficient and smoother.
+
+" Inserts a space/tab at the cursor in normal mode without entering insert mode.
+" Cursor finishes with the new space being to the left of the cursor.
+" (WARNING: MUSCLE DEPENDENCE)
+nnoremap <space> i<space><esc>l
+nnoremap <tab>   i<tab><esc>l
+
+" Shortcut for writing a global substitute command
+" It's up to you to then fill it out to complete it.
+" Example: %s/oldtext/newtext/g
+" (I use it so much that it seems stupid to me not to have one.)
+nnoremap S :%s///g<left><left><left>
+" A version that will only replace within a visual selection:
+" (Note that the '<,'> part is automatically added in.)
+"vnoremap S :s///g<left><left><left>
+" TODO: That visual mode version somehow doesn't work. Find another
+"       suitable key.
+" TODO: Maybe it's better to just use something like:
+"           :%s//g<left><left>
+"       since it results in fewer keystrokes.
+
+" ------------------
+" --- UI: Splits ---
+" ------------------
+
+" WEIRDNESS: These remappings don't seem to work with netrw...
+" TODO: Fix this.
+
+" Easier splits creation, and more conformant to tmux and i3.
+" These split the current file then goes to it (since it doesn't by default):
+nnoremap s% :vsp<enter><C-L>
+nnoremap s" :sp<enter><C-L>
+" NOTE: Assumes:
+"           set splitbelow
+"           set splitright
+
+" These make a netrw split:
+" (No need to add <C-L> or <C-J> since we automatically go to it.)
+nnoremap s5 :Vex<enter>
+nnoremap s' :Sex<enter>
+
 " Easier splits navigation.
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap sj <C-W><C-J>
+nnoremap sk <C-W><C-K>
+nnoremap sl <C-W><C-L>
+nnoremap sh <C-W><C-H>
+
+" Easier splits resizing.
+nnoremap sJ <C-W>-
+nnoremap sK <C-W>+
+nnoremap sL <C-W>>
+nnoremap sH <C-W><
+" WEIRDNESS: These don't expand the splits by direction like you'd expect.
+"            For each orientation (horizontal/vertical), one key expands the
+"            current pane in that orientation while the other shrinks it.
+"            What you end up with is behaviour where windows don't expand
+"            or shrink in the direction you expect it to.
+" TODO: Fix that weirdness maybe?
+
+" ----------------
+" --- UI: Tabs ---
+" ----------------
+
+" WEIRDNESS: These remappings don't seem to work with netrw...
+" TODO: Fix this.
+
+nnoremap sc :tab split<enter>
+nnoremap sC :Tex<enter>
+
+nnoremap sp :tabprevious<enter>
+nnoremap sn :tabnext<enter>
+
+" -----------------
+" --- UI: Other ---
+" -----------------
+
+" Display tabs and leading spaces.
+nnoremap ; :set list!<enter>
+
+" Remove search highlighting.
+"nnoremap s :noh<enter>
+" TODO: Find a better keybinding?
 
 " Visually select a word.
 "nnoremap <space> viw
@@ -330,6 +451,44 @@ vnoremap p "_dP
 "vnoremap <space> "_dP
 " Currently disabled due to bad habit-forming.
 
+" -------------
+" --- netrw ---
+" -------------
+
+" TODO: Figure out the cleanest way to remap things specifically for
+"       netrw and help filetypes without affecting everything else.
+"       'help' filetype mappings desired:
+"           nnoremap q :q<enter>
+"       'netrw' filetype mappings desired:
+"           nnoremap q :q<enter>
+"           nnoremap L <enter>
+"           nnoremap H /^\.\.\/$<enter><enter>
+
+" (This remapping attempt will not switch back for other types on other panes.)
+"autocmd FileType netrw nnoremap q :q<enter>
+
+" --------------
+" --- Others ---
+" --------------
+
+" Allows you to sudo-write.
+cmap w!! w !sudo tee > /dev/null %
+" BUG: Sometimes, 'w!!' will fail to change to expand to the actual command.
+"      However, if you've already used it in the session, you can just
+"      press up-arrow to go through the command buffer.
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NETRW CONFIG """"""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Removes the huge useless banner.
+let g:netrw_banner = 0
+" NOTE: It can still be viewed with the 'I' key, but why would you need it...
+
+" Display style
+let g:netrw_liststyle = 0
+" NOTE: This can be changed with the 'i' key.
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " HELPER FUNCTIONS """"""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -341,4 +500,14 @@ function! HasPaste()
     endif
     return ''
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TEMPORARY """""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" I'm trying to diagnose vim's slowness, and profiling shows matchparen
+" to be the most significant culprit. However, disabling it doesn't feel
+" to have worked. Also, I have no idea what matchparen is used for.
+"let loaded_matchparen = 1
+
 
