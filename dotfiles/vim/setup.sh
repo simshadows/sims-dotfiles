@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "=== Vim Setup Script ==="
+echo "=== Vim ==="
 
 # Terminate script on error
 set -e
@@ -19,7 +19,7 @@ echo "Running vim PluginInstall..."
 vim +PluginInstall +qall
 # This should also automatically set up parent directories.
 
-echo "Setting up Vim symlinks..."
+echo "Setting up symlinks..."
 ln -sf "$src_dir/.vimrc" ~/.vimrc
 ln -sf "$src_dir/vimruntime" ~/.vim/custom-runtime
 

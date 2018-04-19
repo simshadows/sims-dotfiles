@@ -11,6 +11,7 @@ echo "Running the setup scripts..."
 printf "\n"
 
 bash "$src_dir/dotfiles/general-linux/setup.sh"
+bash "$src_dir/dotfiles/git/setup.sh"
 bash "$src_dir/dotfiles/vim/setup.sh"
 
 echo "ALL DONE!"

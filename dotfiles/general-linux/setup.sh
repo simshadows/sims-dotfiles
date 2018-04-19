@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "=== General Linux Setup Script ==="
+echo "=== General Linux ==="
 
 # Terminate script on error
 set -e
@@ -9,7 +9,7 @@ set -e
 # (This may not be portable.)
 src_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "Setting up general Linux symlinks and directories..."
+echo "Setting up symlinks and directories..."
 
 ln -sf "$src_dir/.bash_logout" ~/.bash_logout
 ln -sf "$src_dir/.bash_profile" ~/.bash_profile

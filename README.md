@@ -4,7 +4,9 @@ My personal dotfiles for Linux.
 
 ## Installation
 
-Run `setup.sh` to set most things up.
+I suggest looking through everything first. Most things on here are personalized for my needs, such as my git identity.
+
+If you're happy with what you see, run `setup.sh` to set everything up.
 
 ### Parts that require manual installation
 
