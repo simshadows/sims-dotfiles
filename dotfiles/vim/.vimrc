@@ -57,7 +57,9 @@ Plugin 'lervag/vimtex'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-surround'
+
+" Conflicts...
+"Plugin 'tpope/vim-surround'
 
 " Content Plugins
 
@@ -244,7 +246,7 @@ set smartindent
 " comment character yourself.
 autocmd FileType * set formatoptions-=cro
 " TODO: Why doesn't 'set formatoptions-=cro' on its own work in vimrc?
-"       it works when entering it in manually...
+"       It works when entering it in manually...
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOURS AND FONTS """""""""""""""""""""""""""""""""""""""""""""""""
@@ -252,7 +254,6 @@ autocmd FileType * set formatoptions-=cro
 
 " Enable syntax highlighting
 syntax enable
-
 
 " Set to 256 colours
 set t_Co=256
@@ -264,7 +265,7 @@ set t_Co=256
 
 " Configure list mode to show whitespace.
 " (Enabling list mode is toggled. See keybindings section.)
-set listchars=tab:»—,trail:·,extends:>,precedes:<
+set listchars=tab:>-,trail:.,extends:>,precedes:<
 
 " Set colour scheme
 "try
@@ -326,8 +327,8 @@ endfunction
 " ------------
 
 " Leader Key
-let mapleader=","
-let g:mapleader=","
+let mapleader="\\"
+let g:mapleader="\\"
 " TODO: Why do we need g:mapleader?
 
 " In addition to this, I use two more keys as "meta-keys", i.e. keys that
@@ -357,6 +358,14 @@ vnoremap ;s :s///g<left><left><left>
 " TODO: Maybe it's better to just use something like:
 "           :%s//g<left><left>
 "       since it results in fewer keystrokes.
+
+" TODO: Add something for ':g/'?
+
+" <C-U> or <C-W> in insert mode deletes text with no way of undoing. <C-U> in
+" particular is frequently accidentally done when attempting to scroll up or
+" down. I don't even use these keys in insert mode anyway.
+inoremap <C-U> <Nop>
+inoremap <C-W> <Nop>
 
 " ------------------
 " --- UI: Splits ---

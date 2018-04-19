@@ -199,11 +199,6 @@ client.placeholder      $S_blue   $S_blue   $S_blue   $S_blue   $S_blue
 
 client.background       #ffffff
 
-# Load terminal style config
-exec xrdb -nocpp -merge $HOME/.Xresources
-# Enable VBoxClient features (such as auto-resize)
-exec VBoxClient-all
-
 # Open initial terminal with tmux
 exec urxvt -e tmux
 
