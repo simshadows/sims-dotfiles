@@ -11,19 +11,19 @@ src_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Setting up symlinks and directories..."
 
-ln -sf "$src_dir/.bash_logout" ~/.bash_logout
-ln -sf "$src_dir/.bash_profile" ~/.bash_profile
-ln -sf "$src_dir/.bashrc" ~/.bashrc
-ln -sf "$src_dir/.i3" ~/.i3
-ln -sf "$src_dir/.tmux.conf" ~/.tmux.conf
-ln -sf "$src_dir/.Xresources" ~/.Xresources
+ln -sfT "$src_dir/.bash_logout" ~/.bash_logout
+ln -sfT "$src_dir/.bash_profile" ~/.bash_profile
+ln -sfT "$src_dir/.bashrc" ~/.bashrc
+ln -sfT "$src_dir/.i3" ~/.i3
+ln -sfT "$src_dir/.tmux.conf" ~/.tmux.conf
+ln -sfT "$src_dir/.Xresources" ~/.Xresources
 
 
 config_dir=~/.config
 repo_config_dir="$src_dir/.config"
 function config_ln() {
     mkdir -p "$config_dir/$1"
-    ln -sf "$repo_config_dir/$1/$2" "$config_dir/$1/$2"
+    ln -sfT "$repo_config_dir/$1/$2" "$config_dir/$1/$2"
 }
 config_ln i3status config
 config_ln ranger commands_sample.py

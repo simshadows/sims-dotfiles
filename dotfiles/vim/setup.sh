@@ -20,8 +20,8 @@ vim +PluginInstall +qall
 # This should also automatically set up parent directories.
 
 echo "Setting up symlinks..."
-ln -sf "$src_dir/.vimrc" ~/.vimrc
-ln -sf "$src_dir/vimruntime" ~/.vim/custom-runtime
+ln -sfT "$src_dir/.vimrc" ~/.vimrc
+ln -sfT "$src_dir/vimruntime" ~/.vim/custom-runtime
 
 echo "DONE!"
 printf "\n"

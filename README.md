@@ -4,7 +4,9 @@ My personal dotfiles for Linux.
 
 ## Installation
 
-I suggest looking through everything first. Most things on here are personalized for my needs, such as my git identity.
+This script will overwrite any existing files. Back up your current configuration now if you need to.
+
+I suggest looking through everything first and changing things as needed. This repo is personalized for my needs, such as my git identity.
 
 If you're happy with what you see, run `setup.sh` to set everything up.
 
