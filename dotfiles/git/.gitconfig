@@ -1,0 +1,10 @@
+[user]
+	email = contact@simshadows.com
+	name = simshadows
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+[core]
+	excludesfile = /home/simshadows/.gitignore_global
+	editor = vim
