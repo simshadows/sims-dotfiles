@@ -48,22 +48,6 @@ function pastebin2() {
 }
 
 
-# Handy shortcut to quickly clone in something from github
-
-function github() {
-    git clone git@github.com:$1.git
-}
-
-function githubwiki() {
-    git clone git@github.com:$1.wiki.git
-}
-
-function githuball() {
-    github $1
-    githubwiki $1
-}
-
-
 # Clipboard operations
 
 function clip.targets() {
