@@ -1,0 +1,19 @@
+priority 50
+
+snippet /* "comment block" b
+/*
+ * $0
+ */
+endsnippet
+
+snippet el "Else" b
+} else {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet elif "Else if" b
+} else if (${1:true}) {
+	${0:${VISUAL}}
+}
+endsnippet

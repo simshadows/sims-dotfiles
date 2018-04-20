@@ -1,0 +1,283 @@
+priority 50
+
+###############
+# Referencing #
+###############
+
+snippet ref "\ref{$1}" w
+\ref{$1}$0
+endsnippet
+
+snippet aref "\autoref{$1}" w
+\autoref{$1}$0
+endsnippet
+
+
+#################
+# Text Emphasis #
+#################
+
+snippet tit "Text Emphasis: Italics" w
+\textit{$1}$0
+endsnippet
+
+snippet tbf "Text Emphasis: Bold" w
+\textbf{$1}$0
+endsnippet
+
+snippet ttt "Text Emphasis: Teletype" w
+\texttt{$1}$0
+endsnippet
+
+snippet tul "Text Emphasis: Underline" w
+\underline{$1}$0
+endsnippet
+
+#snippet tbu "Text Emphasis: Bold and Underline" w
+#\textbu{\underline{$1}}$0
+#endsnippet
+snippet tbu "Text Emphasis: Bold and Underline" w
+\textbu{$1}$0
+endsnippet
+
+snippet ttd "Text Emphasis: Teletype (with detokenization)" w
+\ttd{$1}$0
+endsnippet
+
+# Less-important notes
+snippet exn "Text Colour: Less Important Notes" w
+\Exn{$1}$0
+endsnippet
+
+
+#####################
+# Math Environments #
+#####################
+
+snippet ga "gather env." b
+\begin{gather}
+	$1
+\end{gather}$0
+endsnippet
+
+
+######################
+# Math Miscellaneous #
+######################
+
+# Text
+
+snippet txt "Math: \text{$1}" w
+\text{$1}$0
+endsnippet
+
+snippet mbf "Math: \mathbf{$1}" w
+\mathbf{$1}$0
+endsnippet
+
+snippet mbb "Math: \mathbb{$1}" w
+\mathbb{$1}$0
+endsnippet
+
+# Surrounds
+
+snippet abso "Math: |$1|" w
+\abs{$1}$0
+endsnippet
+
+snippet paren "Math: ($1)" w
+\parens{$1}$0
+endsnippet
+
+snippet brackets "Math: [$1]" w
+\brackets{$1}$0
+endsnippet
+
+snippet braces "Math: {$1}" w
+\braces{$1}$0
+endsnippet
+
+# siunitx Unit Building
+
+snippet si "Math: \si{} SI Units" w
+\si{$1}$0
+endsnippet
+
+# siunitx Others
+
+snippet ang "Math: \ang{} Angle" w
+\ang{$1}$0
+endsnippet
+
+snippet angg "Math: \angle \ang{$1}" w
+\angle \ang{$1}$0
+endsnippet
+
+snippet sirad "Math: \si{\radian}" w
+\si{\radian}$0
+endsnippet
+
+# Miscellaneous
+
+snippet boxed "Math: \boxed{$0}" b
+\boxed{
+	$1
+}$0
+endsnippet
+
+snippet sqrt "Math: \sqrt{$1}" w
+\sqrt{$1}$0
+endsnippet
+
+snippet dif "Math: \diff{$1}" w
+\diff{$1}$0
+endsnippet
+
+snippet diff "Math: \,\diff{$1}" w
+\,\diff{$1}$0
+endsnippet
+
+snippet parallel "Math: \parallelsum" w
+\parallelsum$0
+endsnippet
+
+snippet difff "Math: dx/dy" w
+\frac{\diff{${1:x}}}{\diff{${2:y}}}$0
+endsnippet
+
+snippet nth "Math: n^th" w
+\Nth{${1:n}}{${2:th}}$0
+endsnippet
+
+
+################
+# Placeholders #
+################
+
+snippet Todo "Placeholder \Todo{}" w
+\Todo{$0}
+endsnippet
+
+snippet missingfig "Placeholder \MissingFig{}" w
+\MissingFig{$0}
+endsnippet
+
+
+#################
+# Miscellaneous #
+#################
+
+snippet lst "lstlisting env." b
+\begin{lstlisting}[language=\{\}]
+	${1:${VISUAL}}
+\end{lstlisting}$0
+endsnippet
+
+snippet enuma "enumerate env.: (a),(b),(c),..." b
+\begin{enumerate}[label=(\alph*)]
+	\item $1
+\end{enumerate}$0
+endsnippet
+
+snippet enumi "enumerate env.: (i),(ii),(iii),..." b
+\begin{enumerate}[label=(\roman*)]
+	\item $1
+\end{enumerate}$0
+endsnippet
+
+#snippet table "Table env." b
+#\begin{table}[${1:H}]
+#	\centering
+#	\caption{${2:caption}}
+#	\label{tab:${3:label}}
+#	\begin{${4:t}${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${5:c}}
+#	$0${5/(?<=.)(c|l|r)|./(?1: & )/g}
+#	\end{$4${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
+#\end{table}
+#endsnippet
+
+#snippet fig "Figure env." b
+#\begin{figure}[${2:H}]
+#	\centering
+#	\includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
+#	\caption{${4/(\w+)\.\w+/\u$1/}$0}
+#	\label{fig:${4/(\w+)\.\w+/$1/}}
+#\end{figure}
+#endsnippet
+
+snippet myfig "Custom Figure env." b
+\begin{figure}[H]
+	\CommonFigureFormatBordered{%
+		\includegraphics[width=0.9\linewidth]{assets/${1:file name}}
+	}
+	\caption{${2:caption}}
+	\label{fig:${3:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+\end{figure}$0
+endsnippet
+
+snippet que "QuestionFrame env." b
+\begin{QuestionFrame}
+	$1
+\end{QuestionFrame}$0
+endsnippet
+
+snippet suppnote "\SupplementaryNotes{$0}" b
+\SupplementaryNotes{
+	$1
+}$0
+endsnippet
+
+snippet minipage "minipage env." b
+\begin{minipage}{\columnwidth}
+	$1
+\end{minipage}$0
+endsnippet
+
+snippet myminipage "Custom minipage env." b
+\begin{myminipage}{\columnwidth}
+	$1
+\end{myminipage}$0
+endsnippet
+
+snippet indent "Add indentation level" b
+\begin{pindent}
+	$1
+\end{pindent}$0
+endsnippet
+
+snippet multicols "multicols env." b
+\begin{multicols}{2}
+	$1
+\end{multicols}$0
+endsnippet
+
+snippet cases "cases env." b
+\begin{cases}
+	$1
+\end{cases}$0
+endsnippet
+
+snippet align "align env." b
+\begin{align}
+	$1
+\end{align}$0
+endsnippet
+
+snippet alignn "align* env." b
+\begin{align*}
+	$1
+\end{align*}$0
+endsnippet
+
+snippet subeq "subequations env." b
+\begin{subequations}
+$1
+\end{subequations}$0
+endsnippet
+
+snippet circ "circuitikz env." b
+\begin{circuitikz}
+	$1
+\end{circuitikz}$0
+endsnippet
+

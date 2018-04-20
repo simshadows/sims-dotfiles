@@ -21,6 +21,9 @@
 "     https://github.com/amix/vimrc/blob/7fc202ec8895c564c10940a21af357d6c0665368/vimrcs/basic.vim
 "
 
+" Add to runtimepath
+set runtimepath^=~/.vim/custom-runtime/
+
 " Turns off Vi compatibility mode, which would otherwise have horrible default behaviour
 set nocompatible
 
@@ -83,6 +86,17 @@ colorscheme solarized
 
 let g:vimtex_view_general_viewer="zathura"
 "let g:vimtex_view_method="zathura"
+
+" These keys trigger UltiSnips commands in insert mode.
+" NOTE: <C-L> should still usable if you use 'set insertmode'.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+" Aliases
+"inoremap <expr> <C-J> UltiSnips#JumpForwards()
+"inoremap <expr> <C-K> UltiSnips#JumpBackwards()
+" TODO: These are bugged. Find a better alternative...
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL AND UI """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -336,6 +350,15 @@ let g:mapleader="\\"
 "   s   Used for navigating splits and tabs. Mappings are similar to tmux.
 "           MNEMONIC: "Split"
 "   ;   Used for other functions that don't quite neatly fit anywhere.
+
+" ------------------
+" --- Navigation ---
+" ------------------
+
+" Jump to tag
+nnoremap L <c-]>
+" Jump previous tag (from the tag stack)
+nnoremap H <c-T>
 
 " ---------------
 " --- Editing ---

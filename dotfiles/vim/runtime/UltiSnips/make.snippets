@@ -1,0 +1,20 @@
+priority 50
+
+snippet initial "Makefile template, for C."
+CC=gcc
+CFLAGS=-Wall -Werror -Wextra
+SHELL=/bin/sh
+
+OBJECTS=main.o dependency.o
+
+main : $(OBJECTS)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o main $(OBJECTS)
+
+main.o : dependency.h
+dependency.o : dependency.h
+
+.PHONY : clean
+clean :
+	-rm main
+	-rm $(OBJECTS)
+endsnippet

@@ -36,6 +36,13 @@ function ranger() {
 }
 
 
+# Different ways to search for things
+
+function search.str() {
+    grep -rnw $1 -e $2
+}
+
+
 # Very handy pastebins. Pipe in your data, and you get back a URL.
 # Multiple are provided for options since some can break.
 
