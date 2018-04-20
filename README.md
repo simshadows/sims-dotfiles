@@ -14,6 +14,10 @@ If you're happy with what you see, run `setup.sh` to set everything up.
 
 Anything in `dotfiles/other-backups/` must be manually copied/symlinked as needed.
 
+## Maintenance
+
+You should be able to just `git pull && ./setup.sh` to get and install the latest version of this repository.
+
 ## Interesting stuff
 
 - Git configuration file `dotfiles/git/.gitconfig` includes a whole bunch of aliases of essential commands along with extensive comments in that config file.

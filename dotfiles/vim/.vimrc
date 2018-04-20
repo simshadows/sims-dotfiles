@@ -66,7 +66,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Content Plugins
 
-Plugin 'simshadows/vim-snippets' " My own fork
+Plugin 'honza/vim-snippets'
 
 """ VUNDLE BOILERPLATE CODE (2 of 2) """
 
