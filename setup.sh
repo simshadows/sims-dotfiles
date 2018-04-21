@@ -48,7 +48,7 @@ printf "\n"
 
 bash "$src_dir/dotfiles/general/setup.sh"
 
-if [[ os_type == "gnu" ]]; then
+if [[ "$os_type" == "gnu" ]]; then
     bash "$src_dir/dotfiles/general-linux/setup.sh"
 fi
 
