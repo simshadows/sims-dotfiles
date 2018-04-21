@@ -23,7 +23,7 @@ echo "Running vim PluginInstall..."
 vim +PluginInstall +qall
 
 echo "Setting up remaining symlinks..."
-ln -sfT "$src_dir/runtime" ~/.vim/custom-runtime
+ln -sfn "$src_dir/runtime" ~/.vim/custom-runtime
 
 echo "DONE!"
 printf "\n"

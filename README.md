@@ -10,7 +10,20 @@ I suggest looking through everything first and changing things as needed. This r
 
 If you're happy with what you see, run `setup.sh` to set everything up.
 
-### Parts that require manual installation
+### Errors during installation
+
+During first-time installation, you may run into something like the following:
+
+```
+Error detected while processing /home/simshadows/.vimrc:
+line   85:
+E185: Cannot find color scheme 'solarized'
+Press ENTER or type command to continue
+```
+
+Just press enter. It happens because Vim needs to be run during installation to install plugins, which reads a line from `.vimrc` that requires a plugin to be installed.
+
+### Pamts that require manual installation
 
 Anything in `dotfiles/other-backups/` must be manually copied/symlinked as needed.
 
