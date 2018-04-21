@@ -1,0 +1,48 @@
+priority 50
+
+#########################
+# Lecture Notes Helpers #
+#########################
+
+# I write my lecture notes in a fairly structured plaintext format.
+# These snippets help me write them with as little effort as possible.
+# I intentionally don't use tabstops here to avoid breaking my flow during a
+# lecture. If I have to edit something, I edit it manually.
+
+snippet "l(ec)?[0-9]+(w[0-9]+)?" "LecNotes: Mark the start of a new lecture." br
+`!p
+from datetime import date
+s = match.string
+wpos = s.find("w")
+fpos = 1 if (s.find("c") == -1) else 3
+lnum, wnum = (s[fpos:], s[fpos:]) if (wpos == -1) else (s[fpos:wpos], s[wpos+1:])
+snip.rv = "# Lecture {} (Week {}, {})".format(lnum, wnum, date.today().strftime("%F"))
+`
+
+$0
+endsnippet
+
+snippet "s[0-9]+" "LecNotes: Indicate slide number." br
+[slide: `!p snip.rv = match.string[1:]`]
+	$0
+endsnippet
+
+snippet sn "LecNotes: Indicate next slide." b
+[slide: next]
+	$0
+endsnippet
+
+snippet s "LecNotes: Indicate described slide." b
+[slide: "$1"]
+	$0
+endsnippet
+
+# "(!!!)" means something is super-important.
+snippet ! "LecNotes: Mark as super-important." w
+(!!!)$0
+endsnippet
+
+# "(???)" means I don't really understand what I wrote.
+snippet ? "LecNotes: Mark as I don't understand." w
+(???)$0
+endsnippet
