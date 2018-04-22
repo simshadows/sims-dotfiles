@@ -21,9 +21,11 @@ bind-key h quit
 #bind-key U show-urls
 #bind-key x pb-delete
 
-#color listnormal cyan default
-#color listfocus black yellow standout bold
-#color listnormal_unread blue default
-#color listfocus_unread yellow default bold
-#color info red black bold
-#color article cyan default
+#     <element>         <fg>    <bg>   [<attribute> ...]
+color background        white   black
+color listnormal        blue    black
+color listfocus         default yellow bold
+color listnormal_unread green   black
+color listfocus_unread  black   yellow bold
+color info              black   blue   bold
+color article           default black

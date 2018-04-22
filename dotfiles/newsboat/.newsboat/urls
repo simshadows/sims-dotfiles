@@ -1,24 +1,31 @@
-http://simshadows.com/feed.xml
-https://medium.com/feed/@simshadows
-https://www.youtube.com/feeds/videos.xml?channel_id=UCwKwh-ukQv4ihdjT28vBtpw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCjTXJSh3EDxuWQt8b27hTFQ
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsErtgNZ8pczmVp1_lTIBzg
+http://simshadows.com/feed.xml "My Content"
+https://medium.com/feed/@simshadows "My Content"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwKwh-ukQv4ihdjT28vBtpw "My Content"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjTXJSh3EDxuWQt8b27hTFQ "My Content"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsErtgNZ8pczmVp1_lTIBzg "My Content"
+
 https://blog.inoreader.com/feeds/posts/default "~Inoreader Blog"
 http://feeds.feedburner.com/PythonInsider
+
 http://feeds.feedburner.com/blogspot/gJZg "~Google Research Blog"
 http://feeds.feedburner.com/GoogleOnlineSecurityBlog "~Google Security Blog"
 https://googleprojectzero.blogspot.com/feeds/posts/default "~Google Project Zero"
 https://medium.freecodecamp.org/feed
 https://www.technologyreview.com/topnews.rss
 https://www.technologyreview.com/stories.rss
+
 http://feeds.nature.com/nature/rss/current
 http://feeds.nature.com/scientificamerican/rss/current
 http://feeds.nature.com/scientificamericanmind/rss/current
 http://rss.sciam.com/ScientificAmerican-Global
+
 https://myanimelist.net/rss/news.xml
 http://feeds.feedburner.com/crunchyroll/animenews "~Crunchyroll: Anime News"
 http://feeds.feedburner.com/crunchyroll/rss/news "~Crunchyroll: Site News"
 https://what-if.xkcd.com/feed.atom "~xkcd: What If?"
 https://blog.xkcd.com/feed/ "~xkcd blog"
-https://www.buzzfeed.com/comics.xml "~Buzzfeed Comics"
+
 https://xkcd.com/rss.xml "~xkcd"
+https://www.buzzfeed.com/comics.xml "~Buzzfeed Comics"
+http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom "~Buzzfeed Comics [Facebook] (via. fetchrss.com, 'www.facebook.com/BuzzFeedComics')"
+http://buzzfeedcomics.tumblr.com/rss "~Buzzfeed Comics [Tumblr]"

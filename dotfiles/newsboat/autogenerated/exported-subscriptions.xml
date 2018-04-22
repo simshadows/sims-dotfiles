@@ -26,7 +26,9 @@
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/rss/news" htmlUrl="http://www.crunchyroll.com/forumcategory-1/site-news" title="Crunchyroll: Site News"/>
     <outline type="rss" xmlUrl="https://what-if.xkcd.com/feed.atom" htmlUrl="https://what-if.xkcd.com/feed.atom" title="xkcd: What If?"/>
     <outline type="rss" xmlUrl="https://blog.xkcd.com/feed/" htmlUrl="https://blog.xkcd.com" title="xkcd blog"/>
-    <outline type="rss" xmlUrl="https://www.buzzfeed.com/comics.xml" htmlUrl="https://www.buzzfeed.com/comics" title="Buzzfeed Comics"/>
     <outline type="rss" xmlUrl="https://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/" title="xkcd"/>
+    <outline type="rss" xmlUrl="https://www.buzzfeed.com/comics.xml" htmlUrl="https://www.buzzfeed.com/comics" title="Buzzfeed Comics"/>
+    <outline type="rss" xmlUrl="http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom" htmlUrl="http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom" title="Buzzfeed Comics [Facebook] (via. fetchrss.com, 'www.facebook.com/BuzzFeedComics')"/>
+    <outline type="rss" xmlUrl="http://buzzfeedcomics.tumblr.com/rss" htmlUrl="http://buzzfeedcomics.tumblr.com/" title="Buzzfeed Comics [Tumblr]"/>
   </body>
 </opml>
