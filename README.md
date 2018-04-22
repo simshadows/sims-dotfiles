@@ -4,6 +4,8 @@ My personal dotfiles for Linux and Mac.
 
 ## Cool stuff to check out
 
+- **My Newsboat RSS Subscriptions.**
+    - See `dotfiles/general/.newsboat/urls` for my complete list of RSS subscriptions.
 - **My Vim config and UltiSnips snippets collection.**
     - See `dotfiles/vim/.vimrc` and `dotfiles/vim/runtime/UltiSnips/`.
     - I generally still rely on [honza/vim-snippets](https://github.com/honza/vim-snippets). The snippets found in this dotfiles repository simply add my personal preferences and tweaks on top of honza's repository.

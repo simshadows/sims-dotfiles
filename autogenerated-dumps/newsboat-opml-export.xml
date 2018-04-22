@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="http://simshadows.com/feed.xml" htmlUrl="http://simshadows.com//" title=""/>
+    <outline type="rss" xmlUrl="https://medium.com/feed/@simshadows" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCwKwh-ukQv4ihdjT28vBtpw" htmlUrl="https://www.youtube.com/channel/UCwKwh-ukQv4ihdjT28vBtpw" title="simshadows"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCjTXJSh3EDxuWQt8b27hTFQ" htmlUrl="https://www.youtube.com/channel/UCjTXJSh3EDxuWQt8b27hTFQ" title="simshadows music"/>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCsErtgNZ8pczmVp1_lTIBzg" htmlUrl="https://www.youtube.com/channel/UCsErtgNZ8pczmVp1_lTIBzg" title="Sim's Supcom Sandbox Shenanigans"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/PythonInsider" htmlUrl="https://pythoninsider.blogspot.com/" title="Python Insider"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" htmlUrl="http://research.googleblog.com/" title="Google Research Blog"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GoogleOnlineSecurityBlog" htmlUrl="http://security.googleblog.com/" title="Google Security Blog"/>
+    <outline type="rss" xmlUrl="https://googleprojectzero.blogspot.com/feeds/posts/default" htmlUrl="https://googleprojectzero.blogspot.com/" title="Google Project Zero"/>
+    <outline type="rss" xmlUrl="https://medium.freecodecamp.org/feed" htmlUrl="https://medium.freecodecamp.org?source=rss----336d898217ee---4" title="freeCodeCamp - Medium"/>
+    <outline type="rss" xmlUrl="https://www.technologyreview.com/topnews.rss" htmlUrl="https://www.technologyreview.com/" title="Top News - MIT Technology Review"/>
+    <outline type="rss" xmlUrl="https://www.technologyreview.com/stories.rss" htmlUrl="https://www.technologyreview.com/" title="New on MIT Technology Review"/>
+    <outline type="rss" xmlUrl="http://feeds.nature.com/nature/rss/current" htmlUrl="http://feeds.nature.com/nature/rss/current" title="Nature - Issue - nature.com science feeds"/>
+    <outline type="rss" xmlUrl="http://feeds.nature.com/scientificamerican/rss/current" htmlUrl="http://www.nature.com/scientificamerican/current_issue/" title="Scientific American - nature.com science feeds"/>
+    <outline type="rss" xmlUrl="http://feeds.nature.com/scientificamericanmind/rss/current" htmlUrl="http://www.nature.com/scientificamericanmind/current_issue/" title="Scientific American Mind - nature.com science feeds"/>
+    <outline type="rss" xmlUrl="http://rss.sciam.com/ScientificAmerican-Global" htmlUrl="http://www.scientificamerican.com" title="Scientific American Content: Global"/>
+    <outline type="rss" xmlUrl="https://myanimelist.net/rss/news.xml" htmlUrl="https://myanimelist.net/news?_location=rss" title="News - MyAnimeList"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/animenews" htmlUrl="http://www.crunchyroll.com/news" title="Crunchyroll: Anime News"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/rss/news" htmlUrl="http://www.crunchyroll.com/forumcategory-1/site-news" title="Crunchyroll: Site News"/>
+    <outline type="rss" xmlUrl="https://what-if.xkcd.com/feed.atom" htmlUrl="https://what-if.xkcd.com/feed.atom" title="xkcd: What If?"/>
+    <outline type="rss" xmlUrl="https://blog.xkcd.com/feed/" htmlUrl="https://blog.xkcd.com" title="xkcd blog"/>
+    <outline type="rss" xmlUrl="https://www.buzzfeed.com/comics.xml" htmlUrl="https://www.buzzfeed.com/comics" title="Buzzfeed Comics"/>
+    <outline type="rss" xmlUrl="https://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/" title="xkcd"/>
+  </body>
+</opml>
