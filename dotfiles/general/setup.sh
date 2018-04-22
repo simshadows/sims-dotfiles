@@ -21,8 +21,6 @@ ln_corresponding .config/ranger rc.conf
 ln_corresponding .config/ranger rifle.conf
 ln_corresponding .config/ranger scope.sh
 ln_corresponding .config/zathura zathurarc
-ln_corresponding .newsboat config
-ln_corresponding .newsboat urls
 
 echo "DONE!"
 printf "\n"
