@@ -4,12 +4,12 @@ My personal dotfiles for Linux and Mac.
 
 ## Cool stuff to check out
 
-- **My Git config can be used as a cheatsheet.**
-    - `dotfiles/git/.gitconfig` includes a whole bunch of aliases of essential commands along with extensive comments in that config file.
 - **My Vim config and UltiSnips snippets collection.**
     - See `dotfiles/vim/.vimrc` and `dotfiles/vim/runtime/UltiSnips/`.
     - I generally still rely on [honza/vim-snippets](https://github.com/honza/vim-snippets). The snippets found in this dotfiles repository simply add my personal preferences and tweaks on top of honza's repository.
     - My Latex snippets frequently involve custom commands, so don't expect them to work for you out of the box.
+- **My Git config can be used as a cheatsheet.**
+    - `dotfiles/git/.gitconfig` includes a whole bunch of aliases of essential commands along with extensive comments in that config file.
 
 ## Compatibility and Personalization
 

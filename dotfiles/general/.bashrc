@@ -42,6 +42,7 @@ else
 fi
 
 alias r='ranger'
+alias rss='newsboat' # My preferred RSS reader client
 
 
 # Prevents nesting ranger instances when you repeatedly open shells with Shift+s
