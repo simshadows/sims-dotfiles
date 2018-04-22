@@ -15,9 +15,11 @@ ln_corresponding .bash_profile
 ln_corresponding .bashrc
 ln_corresponding .tmux.conf
 ln_corresponding .config/i3status config
-ln_corresponding .config/ranger commands_sample.py
+ln_corresponding .config/ranger commands.py
+ln_corresponding .config/ranger commands_full.py
 ln_corresponding .config/ranger rc.conf
 ln_corresponding .config/ranger rifle.conf
+ln_corresponding .config/ranger scope.sh
 ln_corresponding .config/zathura zathurarc
 
 echo "DONE!"
