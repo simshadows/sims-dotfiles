@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="https://what-if.xkcd.com/feed.atom" htmlUrl="https://what-if.xkcd.com/feed.atom" title="xkcd: What If?"/>
+    <outline type="rss" xmlUrl="https://blog.xkcd.com/feed/" htmlUrl="https://blog.xkcd.com" title="xkcd blog"/>
+  </body>
+</opml>

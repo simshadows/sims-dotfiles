@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="http://feeds.nature.com/nature/rss/current" htmlUrl="http://feeds.nature.com/nature/rss/current" title="Nature - Issue - nature.com science feeds"/>
+    <outline type="rss" xmlUrl="http://feeds.nature.com/scientificamerican/rss/current" htmlUrl="http://www.nature.com/scientificamerican/current_issue/" title="Scientific American - nature.com science feeds"/>
+    <outline type="rss" xmlUrl="http://feeds.nature.com/scientificamericanmind/rss/current" htmlUrl="http://www.nature.com/scientificamericanmind/current_issue/" title="Scientific American Mind - nature.com science feeds"/>
+    <outline type="rss" xmlUrl="http://rss.sciam.com/ScientificAmerican-Global" htmlUrl="http://www.scientificamerican.com" title="Scientific American Content: Global"/>
+  </body>
+</opml>

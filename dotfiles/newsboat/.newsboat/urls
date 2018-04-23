@@ -4,28 +4,28 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCwKwh-ukQv4ihdjT28vBtpw "My
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjTXJSh3EDxuWQt8b27hTFQ "My Content" "Youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsErtgNZ8pczmVp1_lTIBzg "My Content" "Youtube"
 
-https://blog.inoreader.com/feeds/posts/default "~Inoreader Blog"
-http://feeds.feedburner.com/PythonInsider
+https://blog.inoreader.com/feeds/posts/default "~Inoreader Blog" "Tech"
+http://feeds.feedburner.com/blogspot/gJZg "~Google Research Blog" "Tech"
+http://feeds.feedburner.com/GoogleOnlineSecurityBlog "~Google Security Blog" "Tech"
+https://googleprojectzero.blogspot.com/feeds/posts/default "~Google Project Zero" "Tech"
+http://feeds.feedburner.com/PythonInsider "Tech"
+https://medium.freecodecamp.org/feed "Tech"
+https://www.technologyreview.com/topnews.rss "Tech"
+https://www.technologyreview.com/stories.rss "Tech"
 
-http://feeds.feedburner.com/blogspot/gJZg "~Google Research Blog"
-http://feeds.feedburner.com/GoogleOnlineSecurityBlog "~Google Security Blog"
-https://googleprojectzero.blogspot.com/feeds/posts/default "~Google Project Zero"
-https://medium.freecodecamp.org/feed
-https://www.technologyreview.com/topnews.rss
-https://www.technologyreview.com/stories.rss
+http://feeds.nature.com/nature/rss/current "Science"
+http://feeds.nature.com/scientificamerican/rss/current "Science"
+http://feeds.nature.com/scientificamericanmind/rss/current "Science"
+http://rss.sciam.com/ScientificAmerican-Global "Science"
 
-http://feeds.nature.com/nature/rss/current
-http://feeds.nature.com/scientificamerican/rss/current
-http://feeds.nature.com/scientificamericanmind/rss/current
-http://rss.sciam.com/ScientificAmerican-Global
+https://myanimelist.net/rss/news.xml "Weeb"
+http://feeds.feedburner.com/crunchyroll/animenews "~Crunchyroll: Anime News" "Weeb"
+http://feeds.feedburner.com/crunchyroll/rss/news "~Crunchyroll: Site News" "Weeb"
 
-https://myanimelist.net/rss/news.xml
-http://feeds.feedburner.com/crunchyroll/animenews "~Crunchyroll: Anime News"
-http://feeds.feedburner.com/crunchyroll/rss/news "~Crunchyroll: Site News"
-https://what-if.xkcd.com/feed.atom "~xkcd: What If?"
-https://blog.xkcd.com/feed/ "~xkcd blog"
+https://what-if.xkcd.com/feed.atom "~xkcd: What If?" "Random"
+https://blog.xkcd.com/feed/ "~xkcd blog" "Random"
 
-https://xkcd.com/rss.xml "~xkcd"
-https://www.buzzfeed.com/comics.xml "~Buzzfeed Comics"
-http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom "~Buzzfeed Comics [Facebook] (via. fetchrss.com, 'www.facebook.com/BuzzFeedComics')"
-http://buzzfeedcomics.tumblr.com/rss "~Buzzfeed Comics [Tumblr]"
+https://xkcd.com/rss.xml "~xkcd" "Comics"
+https://www.buzzfeed.com/comics.xml "~Buzzfeed Comics" "Comics"
+http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom "~Buzzfeed Comics [Facebook] (via. fetchrss.com, 'www.facebook.com/BuzzFeedComics')" "Comics"
+http://buzzfeedcomics.tumblr.com/rss "~Buzzfeed Comics [Tumblr]" "Comics"

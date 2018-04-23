@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="https://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/" title="xkcd"/>
+    <outline type="rss" xmlUrl="https://www.buzzfeed.com/comics.xml" htmlUrl="https://www.buzzfeed.com/comics" title="Buzzfeed Comics"/>
+    <outline type="rss" xmlUrl="http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom" htmlUrl="http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom" title="Buzzfeed Comics [Facebook] (via. fetchrss.com, 'www.facebook.com/BuzzFeedComics')"/>
+    <outline type="rss" xmlUrl="http://buzzfeedcomics.tumblr.com/rss" htmlUrl="http://buzzfeedcomics.tumblr.com/" title="Buzzfeed Comics [Tumblr]"/>
+  </body>
+</opml>

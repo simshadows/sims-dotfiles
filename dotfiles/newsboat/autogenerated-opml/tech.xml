@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="https://blog.inoreader.com/feeds/posts/default" htmlUrl="https://blog.inoreader.com/" title="Inoreader Blog"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" htmlUrl="http://research.googleblog.com/" title="Google Research Blog"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GoogleOnlineSecurityBlog" htmlUrl="http://security.googleblog.com/" title="Google Security Blog"/>
+    <outline type="rss" xmlUrl="https://googleprojectzero.blogspot.com/feeds/posts/default" htmlUrl="https://googleprojectzero.blogspot.com/" title="Google Project Zero"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/PythonInsider" htmlUrl="https://pythoninsider.blogspot.com/" title="Python Insider"/>
+    <outline type="rss" xmlUrl="https://medium.freecodecamp.org/feed" htmlUrl="https://medium.freecodecamp.org?source=rss----336d898217ee---4" title="freeCodeCamp - Medium"/>
+    <outline type="rss" xmlUrl="https://www.technologyreview.com/topnews.rss" htmlUrl="https://www.technologyreview.com/" title="Top News - MIT Technology Review"/>
+    <outline type="rss" xmlUrl="https://www.technologyreview.com/stories.rss" htmlUrl="https://www.technologyreview.com/" title="New on MIT Technology Review"/>
+  </body>
+</opml>
