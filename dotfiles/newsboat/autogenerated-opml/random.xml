@@ -6,5 +6,9 @@
   <body>
     <outline type="rss" xmlUrl="https://what-if.xkcd.com/feed.atom" htmlUrl="https://what-if.xkcd.com/feed.atom" title="xkcd: What If?"/>
     <outline type="rss" xmlUrl="https://blog.xkcd.com/feed/" htmlUrl="https://blog.xkcd.com" title="xkcd blog"/>
+    <outline type="rss" xmlUrl="https://feeds.feedburner.com/LostAtEMinor" htmlUrl="https://www.lostateminor.com" title="Lost At E Minor: For creative people"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/TodayIFoundOut" htmlUrl="http://www.todayifoundout.com" title="Today I Found Out"/>
+    <outline type="rss" xmlUrl="https://improveverywhere.com/feed/" htmlUrl="https://improveverywhere.com" title="Improv Everywhere"/>
+    <outline type="rss" xmlUrl="https://www.penny-arcade.com/feed" htmlUrl="http://penny-arcade.com" title="Penny Arcade"/>
   </body>
 </opml>

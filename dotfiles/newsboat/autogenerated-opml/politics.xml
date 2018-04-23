@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="http://atheistfoundation.org.au/feed/" htmlUrl="http://atheistfoundation.org.au" title="Atheist Foundation of Australia Inc"/>
+    <outline type="rss" xmlUrl="https://ffrf.org/component/k2/itemlist?format=feed&amp;moduleID=322" htmlUrl="https://ffrf.org" title="News - Freedom From Religion Foundation - Freedom From Religion Foundation"/>
+  </body>
+</opml>

@@ -4,13 +4,26 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
-    <outline type="rss" xmlUrl="https://blog.inoreader.com/feeds/posts/default" htmlUrl="https://blog.inoreader.com/" title="Inoreader Blog"/>
-    <outline type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" htmlUrl="http://research.googleblog.com/" title="Google Research Blog"/>
-    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GoogleOnlineSecurityBlog" htmlUrl="http://security.googleblog.com/" title="Google Security Blog"/>
-    <outline type="rss" xmlUrl="https://googleprojectzero.blogspot.com/feeds/posts/default" htmlUrl="https://googleprojectzero.blogspot.com/" title="Google Project Zero"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/PythonInsider" htmlUrl="https://pythoninsider.blogspot.com/" title="Python Insider"/>
+    <outline type="rss" xmlUrl="https://blog.inoreader.com/feeds/posts/default" htmlUrl="https://blog.inoreader.com/" title="Inoreader Blog"/>
+    <outline type="rss" xmlUrl="https://hackaday.com/blog/feed/" htmlUrl="https://hackaday.com" title="Blog &#x2013; Hackaday"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" htmlUrl="http://research.googleblog.com/" title="Google Research"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GoogleOnlineSecurityBlog" htmlUrl="http://security.googleblog.com/" title="Google Security"/>
+    <outline type="rss" xmlUrl="https://googleprojectzero.blogspot.com/feeds/posts/default" htmlUrl="https://googleprojectzero.blogspot.com/" title="Google Project Zero"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/OfficialGoogleAustraliaBlog" htmlUrl="http://australia.googleblog.com/" title="Google Australia"/>
+    <outline type="rss" xmlUrl="https://code.facebook.com/posts/rss/" htmlUrl="https://code.facebook.com/" title="Facebook Code"/>
+    <outline type="rss" xmlUrl="https://www.atlassian.com/blog/feed" htmlUrl="https://www.atlassian.com/blog" title="Atlassian Blog"/>
     <outline type="rss" xmlUrl="https://medium.freecodecamp.org/feed" htmlUrl="https://medium.freecodecamp.org?source=rss----336d898217ee---4" title="freeCodeCamp - Medium"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/topnews.rss" htmlUrl="https://www.technologyreview.com/" title="Top News - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/stories.rss" htmlUrl="https://www.technologyreview.com/" title="New on MIT Technology Review"/>
+    <outline type="rss" xmlUrl="https://www.technologyreview.com/c/computing/rss/" htmlUrl="https://www.technologyreview.com/" title="Computing - MIT Technology Review"/>
+    <outline type="rss" xmlUrl="https://www.technologyreview.com/c/energy/rss/" htmlUrl="https://www.technologyreview.com/" title="Energy - MIT Technology Review"/>
+    <outline type="rss" xmlUrl="https://makezine.com/feed/" htmlUrl="https://makezine.com" title="Make: DIY Projects and Ideas for Makers"/>
+    <outline type="rss" xmlUrl="http://www.eevblog.com/feed/" htmlUrl="https://www.eevblog.com" title="EEVblog"/>
+    <outline type="rss" xmlUrl="https://www.defcon.org/defconrss.xml" htmlUrl="https://www.defcon.org/" title="DEF CON Announcements!"/>
+    <outline type="rss" xmlUrl="https://www.raspberrypi.org/feed/" htmlUrl="https://www.raspberrypi.org" title="Raspberry Pi"/>
+    <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="https://www.raspberrypi.org/magpi" title="The MagPi Magazine"/>
+    <outline type="rss" xmlUrl="https://blog.discordapp.com/feed" htmlUrl="https://blog.discordapp.com?source=rss----cb96a1f03649---4" title="Discord Blog - Medium"/>
+    <outline type="rss" xmlUrl="https://blog.discordapp.com/feed/tagged/engineering" htmlUrl="https://blog.discordapp.com/tagged/engineering?source=rss----cb96a1f03649--engineering" title="Engineering in Discord Blog on Medium"/>
   </body>
 </opml>

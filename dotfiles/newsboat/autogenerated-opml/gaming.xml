@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="https://www.atlasreactorgame.com/en/news/feed/" htmlUrl="https://www.atlasreactorgame.com/en" title="Atlas ReactorNews &#x2013; Atlas Reactor"/>
+    <outline type="rss" xmlUrl="https://www.trionworlds.com/rift/en/feed/" htmlUrl="https://www.trionworlds.com/rift/en" title="RIFTRIFT"/>
+    <outline type="rss" xmlUrl="http://store.steampowered.com/feeds/news.xml" htmlUrl="http://www.steampowered.com/" title="Steam RSS News Feed"/>
+    <outline type="rss" xmlUrl="http://www.thejimquisition.com/feed/" htmlUrl="http://www.thejimquisition.com" title="The Jimquisition"/>
+  </body>
+</opml>

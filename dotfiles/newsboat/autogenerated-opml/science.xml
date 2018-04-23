@@ -4,9 +4,51 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
+    <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/breaking_news.rss" htmlUrl="http://www.nasa.gov/" title="NASA Breaking News"/>
+    <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss" htmlUrl="http://www.nasa.gov/" title="NASA Image of the Day"/>
+    <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/onthestation_rss.rss" htmlUrl="http://www.nasa.gov/" title="On the Station - Latest News"/>
+    <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/mission_pages/kepler/news/kepler-newsandfeatures-RSS.rss" htmlUrl="http://www.nasa.gov/" title="Kepler News and Features"/>
+    <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/chandra_images.rss" htmlUrl="http://www.nasa.gov/" title="Chandra Images"/>
+    <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/shuttle_station.rss" htmlUrl="http://www.nasa.gov/" title="Space Station News"/>
+    <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/solar_system.rss" htmlUrl="http://www.nasa.gov/" title="Solar System and Beyond"/>
+    <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/earth.rss" htmlUrl="http://www.nasa.gov/" title="Earth News"/>
+    <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/aeronautics.rss" htmlUrl="http://www.nasa.gov/" title="Aeronautics News"/>
+    <outline type="rss" xmlUrl="https://www.jpl.nasa.gov/multimedia/rss/news.xml" htmlUrl="http://www.jpl.nasa.gov/news/" title="News and Features - NASA's Jet Propulsion Laboratory"/>
+    <outline type="rss" xmlUrl="http://www.asc-csa.gc.ca/rss/default_eng.xml" htmlUrl="http://www.asc-csa.gc.ca/rss/default_fra.xml" title="Canadian Space Agency - Home"/>
+    <outline type="rss" xmlUrl="http://www.esa.int/rssfeed/Our_Activities/Space_News" htmlUrl="http://www.esa.int/" title="ESA Top News"/>
+    <outline type="rss" xmlUrl="http://www.esa.int/rssfeed/Our_Activities/Observing_the_Earth" htmlUrl="http://www.esa.int/Our_Activities/Observing_the_Earth" title="ESA Observing the Earth"/>
+    <outline type="rss" xmlUrl="http://www.esa.int/rssfeed/Our_Activities/Human_Spaceflight" htmlUrl="http://www.esa.int/Our_Activities/Human_Spaceflight" title="ESA Human Spaceflight"/>
+    <outline type="rss" xmlUrl="http://www.esa.int/rssfeed/Our_Activities/Launchers" htmlUrl="http://www.esa.int/Our_Activities/Space_Transportation" title="ESA Space Transportation"/>
+    <outline type="rss" xmlUrl="http://www.esa.int/rssfeed/Our_Activities/Navigation" htmlUrl="http://www.esa.int/Our_Activities/Navigation" title="ESA Navigation"/>
+    <outline type="rss" xmlUrl="http://www.esa.int/rssfeed/Our_Activities/Space_Science" htmlUrl="http://www.esa.int/Our_Activities/Space_Science" title="ESA Space Science"/>
+    <outline type="rss" xmlUrl="http://www.esa.int/rssfeed/Our_Activities/Space_Engineering_Technology" htmlUrl="http://www.esa.int/Our_Activities/Space_Engineering_Technology" title="ESA Space Engineering &amp; Technology"/>
+    <outline type="rss" xmlUrl="http://www.esa.int/rssfeed/Our_Activities/Telecommunications_Integrated_Applications" htmlUrl="http://www.esa.int/Our_Activities/Telecommunications_Integrated_Applications" title="ESA Telecommunications &amp; Integrated Applications"/>
+    <outline type="rss" xmlUrl="http://global.jaxa.jp/rss/new.rdf" htmlUrl="http://global.jaxa.jp/" title="Japan Aerospace Exploration Agency | What's New"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/hubble_news/" htmlUrl="http://www.spacetelescope.org/news/" title="Hubble News"/>
+    <outline type="rss" xmlUrl="http://www.spacerip.com/feed/" htmlUrl="http://www.spacerip.com" title="SpaceRip: Space, Astronomy, and the Search for Life"/>
     <outline type="rss" xmlUrl="http://feeds.nature.com/nature/rss/current" htmlUrl="http://feeds.nature.com/nature/rss/current" title="Nature - Issue - nature.com science feeds"/>
     <outline type="rss" xmlUrl="http://feeds.nature.com/scientificamerican/rss/current" htmlUrl="http://www.nature.com/scientificamerican/current_issue/" title="Scientific American - nature.com science feeds"/>
     <outline type="rss" xmlUrl="http://feeds.nature.com/scientificamericanmind/rss/current" htmlUrl="http://www.nature.com/scientificamericanmind/current_issue/" title="Scientific American Mind - nature.com science feeds"/>
     <outline type="rss" xmlUrl="http://rss.sciam.com/ScientificAmerican-Global" htmlUrl="http://www.scientificamerican.com" title="Scientific American Content: Global"/>
+    <outline type="rss" xmlUrl="http://www.sciencemag.org/rss/news_current.xml" htmlUrl="http://www.sciencemag.org/rss/news_current.xml" title="Latest News from Science Magazine"/>
+    <outline type="rss" xmlUrl="http://advances.sciencemag.org/rss/current.xml" htmlUrl="http://advances.sciencemag.org" title="Science Advances current issue"/>
+    <outline type="rss" xmlUrl="http://robotics.sciencemag.org/rss/current.xml" htmlUrl="http://robotics.sciencemag.org" title="Science Robotics current issue"/>
+    <outline type="rss" xmlUrl="https://physicstoday.scitation.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=pto" htmlUrl="https://physicstoday.scitation.org/loi/pto?af=R" title="American Institute of Physics: Physics Today: Table of Contents"/>
+    <outline type="rss" xmlUrl="http://news.mit.edu/rss/research" htmlUrl="http://news.mit.edu/mitresearch-rss.xml" title="MIT Research News"/>
+    <outline type="rss" xmlUrl="https://www.technologyreview.com/c/biomedicine/rss/" htmlUrl="https://www.technologyreview.com/" title="Biomedicine - MIT Technology Review"/>
+    <outline type="rss" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss" htmlUrl="https://www.sciencenews.org/" title="Latest Headlines | Science News"/>
+    <outline type="rss" xmlUrl="https://cosmosmagazine.com/feed.rss" htmlUrl="https://cosmosmagazine.com/" title="Cosmos Magazine"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/DiscoverTopStories" htmlUrl="http://discovermagazine.com/rss/master-feeds/top-stories" title="Top Stories"/>
+    <outline type="rss" xmlUrl="https://www.the-scientist.com/feed-the-scientist.xml" htmlUrl="https://www.the-scientist.com/" title="The Scientist RSS"/>
+    <outline type="rss" xmlUrl="https://www.the-scientist.com/feed-the-nutshell.xml" htmlUrl="https://www.the-scientist.com/" title="The Scientist RSS - The Nutshell"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/scienceaf-latestnews" htmlUrl="https://www.scienceaf.com/" title="Science As Fact - Latest"/>
+    <outline type="rss" xmlUrl="https://digest.bps.org.uk/feed/" htmlUrl="https://digest.bps.org.uk" title="Research Digest"/>
+    <outline type="rss" xmlUrl="http://www.apa.org/news/psycport/psycport-rss.xml" htmlUrl="http://www.apa.org/news/psycport/index.aspx" title="PsycPORT: Psychology Newswire"/>
+    <outline type="rss" xmlUrl="https://australiascience.tv/feed/" htmlUrl="https://australiascience.tv" title="Australia's Science Channel"/>
+    <outline type="rss" xmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife/feed/" htmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife" title="Secret Life of Scientists and Engineers"/>
+    <outline type="rss" xmlUrl="http://www.compoundchem.com/feed/" htmlUrl="http://www.compoundchem.com" title="Compound Interest"/>
+    <outline type="rss" xmlUrl="https://asapscience.tumblr.com/rss" htmlUrl="https://asapscience.tumblr.com/" title="AsapSCIENCE"/>
+    <outline type="rss" xmlUrl="http://www.howdoesacarwork.com/feeds/posts/default" htmlUrl="http://www.howdoesacarwork.com/" title="Engineering Explained"/>
+    <outline type="rss" xmlUrl="https://veritasium.com/feed/" htmlUrl="https://veritasium.com" title="Veritasium"/>
   </body>
 </opml>

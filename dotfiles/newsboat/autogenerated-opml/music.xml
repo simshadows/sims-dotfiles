@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="https://www.loudersound.com/feeds/all" htmlUrl="https://www.loudersound.com/feeds/all" title="LouderSound"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/Metalsucks" htmlUrl="http://www.metalsucks.net" title="MetalSucks"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/metalinjection" htmlUrl="http://www.metalinjection.net" title="Metal Injection"/>
+    <outline type="rss" xmlUrl="http://www.metalblade.com/us/feed/" htmlUrl="http://www.metalblade.com/us" title="Metal Blade Records"/>
+    <outline type="rss" xmlUrl="http://www.folk-metal.nl/feed/" htmlUrl="http://www.folk-metal.nl" title="Folk-metal.nl"/>
+    <outline type="rss" xmlUrl="http://www.metalobsession.net/feed/" htmlUrl="http://www.metalobsession.net" title="Metal Obsession"/>
+    <outline type="rss" xmlUrl="http://www.nuclearblast.de/en/label/music/news/feed.xml" htmlUrl="http://www.nuclearblast.de/en/label/music/news/index.html" title="Nuclear Blast - News"/>
+    <outline type="rss" xmlUrl="http://ocremix.org/feeds/ten20/" htmlUrl="http://www.ocremix.org" title="10 Latest OverClocked ReMixes"/>
+    <outline type="rss" xmlUrl="http://blog.noisetrade.com/feed/" htmlUrl="http://blog.noisetrade.com" title="Noisetrade Blog"/>
+  </body>
+</opml>

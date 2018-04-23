@@ -7,5 +7,7 @@
     <outline type="rss" xmlUrl="https://myanimelist.net/rss/news.xml" htmlUrl="https://myanimelist.net/news?_location=rss" title="News - MyAnimeList"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/animenews" htmlUrl="http://www.crunchyroll.com/news" title="Crunchyroll: Anime News"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/rss/news" htmlUrl="http://www.crunchyroll.com/forumcategory-1/site-news" title="Crunchyroll: Site News"/>
+    <outline type="rss" xmlUrl="http://yenpress.com/feed/" htmlUrl="http://yenpress.com" title="Yen Press"/>
+    <outline type="rss" xmlUrl="http://www.kinokuniya.com.au/feed/" htmlUrl="http://www.kinokuniya.com.au" title="Kinokuniya"/>
   </body>
 </opml>

@@ -4,9 +4,43 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
+    <outline type="rss" xmlUrl="http://phdcomics.com/gradfeed.php" htmlUrl="http://www.phdcomics.com" title="PHD Comics"/>
     <outline type="rss" xmlUrl="https://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/" title="xkcd"/>
+    <outline type="rss" xmlUrl="http://www.pusheen.com/rss" htmlUrl="http://www.pusheen.com/" title="Pusheen the cat"/>
+    <outline type="rss" xmlUrl="http://www.beatricebiologist.com/feed/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="http://www.the-petri-dish.com/rss.xml" htmlUrl="http://www.the-petri-dish.com" title="The Petri Dish"/>
+    <outline type="rss" xmlUrl="http://librarycomic.com/feed/" htmlUrl="http://librarycomic.com" title="Library Comic"/>
+    <outline type="rss" xmlUrl="http://shencomix.com/rss" htmlUrl="http://shencomix.com/" title="Shen Comix"/>
+    <outline type="rss" xmlUrl="http://sarahcandersen.com/rss" htmlUrl="http://sarahcandersen.com/" title="Sarah's&#10;Scribbles"/>
+    <outline type="rss" xmlUrl="https://simonscat.com/feed/" htmlUrl="https://simonscat.com" title="Simon's Cat"/>
+    <outline type="rss" xmlUrl="http://feeds2.feedburner.com/channelATE" htmlUrl="http://www.channelate.com" title="Channelate"/>
+    <outline type="rss" xmlUrl="https://www.safelyendangered.com/feed/" htmlUrl="https://www.safelyendangered.com" title="Safely Endangered"/>
+    <outline type="rss" xmlUrl="http://www.commitstrip.com/en/feed/" htmlUrl="http://www.commitstrip.com" title="CommitStrip"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/SpikedMath" htmlUrl="http://spikedmath.com/" title="Spiked Math"/>
+    <outline type="rss" xmlUrl="https://www.webtoons.com/en/comedy/trash-bird/rss?title_no=473" htmlUrl="https://www.webtoons.com/en/comedy/trash-bird/list?title_no=473" title="Trash Bird"/>
+    <outline type="rss" xmlUrl="http://itfoolsamonster.com/rss" htmlUrl="http://itfoolsamonster.com/" title="It Fools A Monster"/>
     <outline type="rss" xmlUrl="https://www.buzzfeed.com/comics.xml" htmlUrl="https://www.buzzfeed.com/comics" title="Buzzfeed Comics"/>
     <outline type="rss" xmlUrl="http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom" htmlUrl="http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom" title="Buzzfeed Comics [Facebook] (via. fetchrss.com, 'www.facebook.com/BuzzFeedComics')"/>
     <outline type="rss" xmlUrl="http://buzzfeedcomics.tumblr.com/rss" htmlUrl="http://buzzfeedcomics.tumblr.com/" title="Buzzfeed Comics [Tumblr]"/>
+    <outline type="rss" xmlUrl="http://piecomic.tumblr.com/rss" htmlUrl="http://piecomic.tumblr.com/" title="Pie Comic by John McNamee"/>
+    <outline type="rss" xmlUrl="http://existentialcomics.com/rss.xml" htmlUrl="http://existentialcomics.com" title="Existential Comics"/>
+    <outline type="rss" xmlUrl="http://maximumble.thebookofbiff.com/feed/" htmlUrl="http://maximumble.thebookofbiff.com" title="Maximumble"/>
+    <outline type="rss" xmlUrl="https://tapas.io/rss/series/5216" htmlUrl="https://tapas.io/series/5216" title="Ichabod the Optimistic Canine"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/ThingsInSquares" htmlUrl="https://www.thingsinsquares.com" title="Things in Squares"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/oatmealfeed" htmlUrl="http://theoatmeal.com/" title="The Oatmeal - Comics, Quizzes, &amp; Stories"/>
+    <outline type="rss" xmlUrl="https://www.webtoons.com/en/slice-of-life/lunarbaboon/rss?title_no=523" htmlUrl="https://www.webtoons.com/en/slice-of-life/lunarbaboon/list?title_no=523" title="Lunarbaboon"/>
+    <outline type="rss" xmlUrl="https://www.webtoons.com/en/slice-of-life/doodle-for-food/rss?title_no=487" htmlUrl="https://www.webtoons.com/en/slice-of-life/doodle-for-food/list?title_no=487" title="Doodle for Food"/>
+    <outline type="rss" xmlUrl="http://deep-dark-fears.tumblr.com/rss" htmlUrl="http://deep-dark-fears.tumblr.com/" title="deep-dark-fears"/>
+    <outline type="rss" xmlUrl="http://extrafabulouscomics.com/feed/" htmlUrl="http://extrafabulouscomics.com" title="Extra Fabulous Comics"/>
+    <outline type="rss" xmlUrl="http://huginn.mflau.com/users/1/web_requests/30/examplerss.xml" htmlUrl="http://www.mrlovenstein.com" title="Mr. Lovenstein"/>
+    <outline type="rss" xmlUrl="http://theawkwardyeti.com/feed/" htmlUrl="http://theawkwardyeti.com" title="The Awkward Yeti"/>
+    <outline type="rss" xmlUrl="http://birdandmoon.tumblr.com/rss" htmlUrl="http://birdandmoon.tumblr.com/" title="birdandmoon.com"/>
+    <outline type="rss" xmlUrl="https://theupturnedmicroscope.com/feed/" htmlUrl="https://theupturnedmicroscope.com" title="The Upturned Microscope"/>
+    <outline type="rss" xmlUrl="http://www.bunicomic.com/feed/" htmlUrl="http://www.bunicomic.com" title="Buni"/>
+    <outline type="rss" xmlUrl="http://deathbulge.com/rss.xml" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="http://cornellajoan.tumblr.com/rss" htmlUrl="http://cornellajoan.tumblr.com/" title="Joan Cornell&#xE0;"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/PoorlyDrawnLines" htmlUrl="http://www.poorlydrawnlines.com" title="Poorly Drawn Lines"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/TheGentlemansArmchair" htmlUrl="http://thegentlemansarmchair.com" title="The Gentlemans Armchair"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/Explosm" htmlUrl="http://explosm.net" title="Explosm.net"/>
   </body>
 </opml>
