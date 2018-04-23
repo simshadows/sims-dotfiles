@@ -10,8 +10,8 @@ set -e
 src_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Setting up symlinks..."
-ln -sfT "$src_dir/.gitconfig" ~/.gitconfig
-ln -sfT "$src_dir/.gitignore_global" ~/.gitignore_global
+ln_corresponding .gitconfig
+ln_corresponding .gitignore_global
 
 echo "DONE!"
 printf "\n"

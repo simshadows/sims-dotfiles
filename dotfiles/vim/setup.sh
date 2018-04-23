@@ -9,6 +9,9 @@ set -e
 # (This may not be portable.)
 src_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo "Setting up .vimrc symlink..."
+ln_corresponding .vimrc
+
 echo "Setting up Vundle..."
 vundle_dir=~/.vim/bundle/Vundle.vim
 if [ ! -d "$vundle_dir" ]; then
@@ -19,8 +22,7 @@ fi
 echo "Running vim PluginInstall..."
 vim +PluginInstall +qall
 
-echo "Setting up symlinks..."
-ln -sfT "$src_dir/.vimrc" ~/.vimrc
+echo "Setting up remaining symlinks..."
 ln -sfT "$src_dir/runtime" ~/.vim/custom-runtime
 
 echo "DONE!"
