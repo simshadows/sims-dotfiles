@@ -1,10 +1,23 @@
 #
 # ~/.bashrc
 #
+# A lot of this isn't very portable, but it's portable enough for me.
+#
+
 
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
 # IGNORE FOR NOW.
+
+# System detection
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    os_type="mac"
+    utils_flavour="bsd"
+else
+    # Catch-all: Assume everything else is GNU.
+    os_type="gnu"
+    utils_flavour="gnu"
+fi
 
 # Prompt
 
@@ -14,26 +27,42 @@ PS1='\[\e[31m\]\u@\h\[\e[m\] \W\$ '
 # Put ~/bin into PATH
 
 if [ -d "$HOME/bin" ]; then
-	export PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin:$PATH"
 fi
 
 
 # The usual aliases
 
-alias ls='ls --color=auto'
-alias la='ls --color=auto -lah'
+if [[ "$utils_flavour" == "bsd" ]]; then
+    alias ls='ls -G'
+    alias la='ls -lahG'
+else
+    alias ls='ls --color=auto'
+    alias la='ls --color=auto -lah'
+fi
+
 alias r='ranger'
 
 
 # Prevents nesting ranger instances when you repeatedly open shells with Shift+s
 
-function ranger() {
-    if [ -z "$RANGER_LEVEL" ]; then
-        /usr/bin/ranger "$@"
-    else
-        exit
-    fi
-}
+if [[ "$os_type" == "mac" ]]; then
+    function ranger() {
+        if [ -z "$RANGER_LEVEL" ]; then
+            /usr/local/bin/ranger "$@"
+        else
+            exit
+        fi
+    }
+else
+    function ranger() {
+        if [ -z "$RANGER_LEVEL" ]; then
+            /usr/bin/ranger "$@"
+        else
+            exit
+        fi
+    }
+fi
 
 
 # Different ways to search for things

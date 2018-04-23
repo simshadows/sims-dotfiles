@@ -355,10 +355,27 @@ let g:mapleader="\\"
 " --- Navigation ---
 " ------------------
 
+" As much as I want to love the existing tag navigation keys, they absolutely suck.
+
 " Jump to tag
-nnoremap L <c-]>
-" Jump previous tag (from the tag stack)
-nnoremap H <c-T>
+nnoremap ;l <c-]>
+" Jump to previous tag (from the tag stack)
+nnoremap ;h <c-T>
+" List the tag stack
+nnoremap ;k :tags<enter>
+
+" List the jump stack
+nnoremap ;j :jumps<enter>
+
+" For future use...
+"nnoremap H <Nop>
+"nnoremap K <Nop>
+"nnoremap L <Nop>
+"nnoremap <c-h> <Nop>
+"nnoremap <c-j> <Nop>
+"nnoremap <c-k> <Nop>
+"nnoremap <c-l> <Nop>
+" I might end up using these for tags and jumps...
 
 " ---------------
 " --- Editing ---
@@ -460,6 +477,11 @@ nnoremap ;c :noh<enter>
 " WITHOUT YANKING THE REPLACED TEXT. (Upper-case P will continue to be available
 " for that functionality.)
 vnoremap p "_dP
+
+" The manpage key
+" I don't use it (I prefer using another terminal), but I guess it might
+" be useful someday?
+nnoremap ;m K
 
 " -------------
 " --- netrw ---
