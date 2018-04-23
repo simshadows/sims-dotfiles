@@ -1,8 +1,8 @@
 http://simshadows.com/feed.xml "My Content"
 https://medium.com/feed/@simshadows "My Content"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCwKwh-ukQv4ihdjT28vBtpw "My Content"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCjTXJSh3EDxuWQt8b27hTFQ "My Content"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsErtgNZ8pczmVp1_lTIBzg "My Content"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwKwh-ukQv4ihdjT28vBtpw "My Content" "Youtube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjTXJSh3EDxuWQt8b27hTFQ "My Content" "Youtube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsErtgNZ8pczmVp1_lTIBzg "My Content" "Youtube"
 
 https://blog.inoreader.com/feeds/posts/default "~Inoreader Blog"
 http://feeds.feedburner.com/PythonInsider
