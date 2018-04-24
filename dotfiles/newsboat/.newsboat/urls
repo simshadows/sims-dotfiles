@@ -18,32 +18,113 @@ http://www.kinokuniya.com.au/feed/ "Announcements" "Weeb"
 
 
 
-http://feeds.feedburner.com/PythonInsider "Tech" "Announcements"
-https://blog.inoreader.com/feeds/posts/default "~Inoreader Blog" "Tech"
-https://hackaday.com/blog/feed/ "Tech"
-http://feeds.feedburner.com/blogspot/gJZg "~Google Research" "Tech"
-http://feeds.feedburner.com/GoogleOnlineSecurityBlog "~Google Security" "Tech"
-https://googleprojectzero.blogspot.com/feeds/posts/default "~Google Project Zero" "Tech"
-http://feeds.feedburner.com/OfficialGoogleAustraliaBlog "~Google Australia" "Tech"
-https://code.facebook.com/posts/rss/ "Tech"
-https://www.atlassian.com/blog/feed "Tech"
-https://medium.freecodecamp.org/feed "Tech"
-https://blog.udacity.com/feed "Tech"
-https://medium.com/feed/udacity "Tech"
-https://news.codecademy.com/rss/ "Tech"
-https://www.technologyreview.com/topnews.rss "Tech"
-https://www.technologyreview.com/stories.rss "Tech"
-https://www.technologyreview.com/c/biomedicine/rss/ "Tech" "Science"
-https://www.technologyreview.com/c/computing/rss/ "Tech"
-https://www.technologyreview.com/c/energy/rss/ "Tech"
-https://makezine.com/feed/ "Tech"
-http://www.eevblog.com/feed/ "Tech"
-https://www.defcon.org/defconrss.xml "Tech"
-https://www.raspberrypi.org/feed/ "Tech"
-https://www.raspberrypi.org/magpi/feed/ "Tech"
-https://blog.discordapp.com/feed "Tech"
-https://blog.discordapp.com/feed/tagged/engineering "Tech"
-http://blog.wolfram.com/feed/ "Tech"
+http://kuvshinov-ilya.tumblr.com/rss "Art"
+http://ticcyart.tumblr.com/rss "Art"
+
+
+
+http://phdcomics.com/gradfeed.php "Comics"
+https://xkcd.com/rss.xml "~xkcd" "Comics"
+http://www.pusheen.com/rss "Comics"
+http://www.beatricebiologist.com/feed/ "Comics"
+http://www.the-petri-dish.com/rss.xml "Comics"
+http://librarycomic.com/feed/ "Comics"
+http://shencomix.com/rss "Comics"
+http://sarahcandersen.com/rss "Comics"
+https://simonscat.com/feed/ "Comics"
+http://feeds2.feedburner.com/channelATE "Comics"
+https://www.safelyendangered.com/feed/ "Comics"
+http://www.commitstrip.com/en/feed/ "Comics"
+http://feeds.feedburner.com/SpikedMath "Comics"
+https://www.webtoons.com/en/comedy/trash-bird/rss?title_no=473 "Comics"
+http://itfoolsamonster.com/rss "Comics"
+https://www.buzzfeed.com/comics.xml "~Buzzfeed Comics" "Comics"
+http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom "~Buzzfeed Comics [Facebook] (via. fetchrss.com, 'www.facebook.com/BuzzFeedComics')" "Comics"
+http://buzzfeedcomics.tumblr.com/rss "~Buzzfeed Comics [Tumblr]" "Comics"
+http://piecomic.tumblr.com/rss "Comics"
+http://existentialcomics.com/rss.xml "Comics"
+http://maximumble.thebookofbiff.com/feed/ "Comics"
+https://tapas.io/rss/series/5216 "Comics"
+http://feeds.feedburner.com/ThingsInSquares "Comics"
+http://feeds.feedburner.com/oatmealfeed "Comics"
+https://www.webtoons.com/en/slice-of-life/lunarbaboon/rss?title_no=523 "Comics"
+https://www.webtoons.com/en/slice-of-life/doodle-for-food/rss?title_no=487 "Comics"
+http://deep-dark-fears.tumblr.com/rss "Comics"
+http://extrafabulouscomics.com/feed/ "Comics"
+http://huginn.mflau.com/users/1/web_requests/30/examplerss.xml "~Mr. Lovenstein" "Comics"
+http://theawkwardyeti.com/feed/ "Comics"
+http://birdandmoon.tumblr.com/rss "Comics"
+https://theupturnedmicroscope.com/feed/ "Comics"
+http://www.bunicomic.com/feed/ "Comics"
+http://deathbulge.com/rss.xml "Comics"
+http://cornellajoan.tumblr.com/rss "Comics"
+http://feeds.feedburner.com/PoorlyDrawnLines "Comics"
+http://feeds.feedburner.com/TheGentlemansArmchair "Comics"
+http://feeds.feedburner.com/Explosm "Comics"
+https://www.imitationlobster.com/?format=rss "Comics"
+http://loryn-brantz-illustration.tumblr.com/rss "Comics"
+http://toothpastefordinner.com/rss/rss.php "Comics"
+https://thelittleworldofliz.com/rss "Comics"
+http://lizclimo.tumblr.com/rss "Comics"
+http://irwincardozocomics.tumblr.com/rss "Comics"
+
+
+
+http://blog.humblebundle.com/rss "Gaming" "Announcements"
+http://www.thejimquisition.com/feed/ "Gaming"
+
+http://store.steampowered.com/feeds/news.xml "Gaming"
+http://blogs.valvesoftware.com/feed/ "Gaming"
+https://www.guildwars2.com/en/feed/ "Gaming" "Announcements"
+https://www.freeallegiance.org/feed/ "Gaming" "Announcements"
+https://www.trionworlds.com/en/news/feed/ "Gaming"
+https://www.atlasreactorgame.com/en/news/feed/ "Gaming" "Announcements"
+https://www.trionworlds.com/rift/en/feed/ "Gaming"
+http://larian.com/feed/ "Gaming"
+https://minecraft.net/en-us/feeds/community-content/atom "Gaming"
+https://mojang.com/feed.xml "Gaming"
+http://kerbaldevteam.tumblr.com/rss "Gaming"
+http://www.awesomenauts.com/feed/ "Gaming"
+http://joostdevblog.blogspot.com/feeds/posts/default "Gaming"
+http://www.zachtronicsindustries.com/feed/ "Gaming"
+https://www.nintendo.com/feed "Gaming"
+https://robocraftgame.com/feed.xml "Gaming"
+http://blog.rpgmakerweb.com/feed/ "Gaming"
+https://oce.leagueoflegends.com/en/rss.xml "Gaming"
+https://engineering.riotgames.com/news/feed "Gaming" "Tech"
+
+
+
+http://www.japaneseammo.com/feed/ "Language and Culture"
+https://jpf.org.au/feed/ "Language and Culture"
+http://japanesefilmfestival.net/feed/ "Language and Culture" "Announcements"
+http://japanesefilmfestival.net/upcoming_productions "Language and Culture" "Announcements"
+http://japanesefilmfestival.net/upcoming_events "Language and Culture" "Announcements"
+
+
+
+https://www.loudersound.com/feeds/all "Music"
+http://feeds.feedburner.com/Metalsucks "Music"
+http://feeds.feedburner.com/metalinjection "Music"
+http://www.metalblade.com/us/feed/ "Music"
+http://www.folk-metal.nl/feed/ "Music"
+http://www.metalobsession.net/feed/ "Music"
+http://www.metaltalk.net/rss_page.php "Music"
+
+http://www.nuclearblast.de/en/label/music/news/feed.xml "Music"
+http://www.centurymedia.com/rss/news.ashx "Music"
+http://ocremix.org/feeds/ten20/ "Music"
+http://blog.noisetrade.com/feed/ "Music"
+
+http://machinaesupremacyofficial.tumblr.com/rss "Music"
+https://www.berliner-philharmoniker.de/en/blog/rss/ "Music"
+http://miracleofsound.net/feed/ "~Miracle of Sound" "Music"
+https://www.taylordavisviolin.com/feed/ "Music"
+
+
+
+http://atheistfoundation.org.au/feed/ "Politics"
+https://ffrf.org/component/k2/itemlist?format=feed&moduleID=322 "Politics"
 
 
 
@@ -97,121 +178,40 @@ https://hatepseudoscience.com/feed/ "Science 2"
 
 
 
+http://feeds.feedburner.com/PythonInsider "Tech" "Announcements"
+https://blog.inoreader.com/feeds/posts/default "~Inoreader Blog" "Tech"
+https://hackaday.com/blog/feed/ "Tech"
+http://feeds.feedburner.com/blogspot/gJZg "~Google Research" "Tech"
+http://feeds.feedburner.com/GoogleOnlineSecurityBlog "~Google Security" "Tech"
+https://googleprojectzero.blogspot.com/feeds/posts/default "~Google Project Zero" "Tech"
+http://feeds.feedburner.com/OfficialGoogleAustraliaBlog "~Google Australia" "Tech"
+https://code.facebook.com/posts/rss/ "Tech"
+https://www.atlassian.com/blog/feed "Tech"
+https://medium.freecodecamp.org/feed "Tech"
+https://blog.udacity.com/feed "Tech"
+https://medium.com/feed/udacity "Tech"
+https://news.codecademy.com/rss/ "Tech"
+https://www.technologyreview.com/topnews.rss "Tech"
+https://www.technologyreview.com/stories.rss "Tech"
+https://www.technologyreview.com/c/biomedicine/rss/ "Tech" "Science"
+https://www.technologyreview.com/c/computing/rss/ "Tech"
+https://www.technologyreview.com/c/energy/rss/ "Tech"
+https://makezine.com/feed/ "Tech"
+http://www.eevblog.com/feed/ "Tech"
+https://www.defcon.org/defconrss.xml "Tech"
+https://www.raspberrypi.org/feed/ "Tech"
+https://www.raspberrypi.org/magpi/feed/ "Tech"
+https://blog.discordapp.com/feed "Tech"
+https://blog.discordapp.com/feed/tagged/engineering "Tech"
+http://blog.wolfram.com/feed/ "Tech"
+
+
+
 https://myanimelist.net/rss/news.xml "Weeb"
 http://feeds.feedburner.com/crunchyroll/animenews "~Crunchyroll: Anime News" "Weeb"
 http://feeds.feedburner.com/crunchyroll/rss/news "~Crunchyroll: Site News" "Weeb"
 http://yenpress.com/feed/ "Weeb"
 https://www.facebook.com/madman "Weeb"
-
-
-
-http://blog.humblebundle.com/rss "Gaming" "Announcements"
-http://www.thejimquisition.com/feed/ "Gaming"
-
-http://store.steampowered.com/feeds/news.xml "Gaming"
-http://blogs.valvesoftware.com/feed/ "Gaming"
-https://www.guildwars2.com/en/feed/ "Gaming" "Announcements"
-https://www.freeallegiance.org/feed/ "Gaming" "Announcements"
-https://www.trionworlds.com/en/news/feed/ "Gaming"
-https://www.atlasreactorgame.com/en/news/feed/ "Gaming" "Announcements"
-https://www.trionworlds.com/rift/en/feed/ "Gaming"
-http://larian.com/feed/ "Gaming"
-https://minecraft.net/en-us/feeds/community-content/atom "Gaming"
-https://mojang.com/feed.xml "Gaming"
-http://kerbaldevteam.tumblr.com/rss "Gaming"
-http://www.awesomenauts.com/feed/ "Gaming"
-http://joostdevblog.blogspot.com/feeds/posts/default "Gaming"
-http://www.zachtronicsindustries.com/feed/ "Gaming"
-https://www.nintendo.com/feed "Gaming"
-https://robocraftgame.com/feed.xml "Gaming"
-http://blog.rpgmakerweb.com/feed/ "Gaming"
-https://oce.leagueoflegends.com/en/rss.xml "Gaming"
-https://engineering.riotgames.com/news/feed "Gaming" "Tech"
-
-
-
-https://www.loudersound.com/feeds/all "Music"
-http://feeds.feedburner.com/Metalsucks "Music"
-http://feeds.feedburner.com/metalinjection "Music"
-http://www.metalblade.com/us/feed/ "Music"
-http://www.folk-metal.nl/feed/ "Music"
-http://www.metalobsession.net/feed/ "Music"
-http://www.metaltalk.net/rss_page.php "Music"
-
-http://www.nuclearblast.de/en/label/music/news/feed.xml "Music"
-http://www.centurymedia.com/rss/news.ashx "Music"
-http://ocremix.org/feeds/ten20/ "Music"
-http://blog.noisetrade.com/feed/ "Music"
-
-http://machinaesupremacyofficial.tumblr.com/rss "Music"
-https://www.berliner-philharmoniker.de/en/blog/rss/ "Music"
-http://miracleofsound.net/feed/ "~Miracle of Sound" "Music"
-https://www.taylordavisviolin.com/feed/ "Music"
-
-
-
-http://www.japaneseammo.com/feed/ "Language and Culture"
-https://jpf.org.au/feed/ "Language and Culture"
-http://japanesefilmfestival.net/feed/ "Language and Culture" "Announcements"
-http://japanesefilmfestival.net/upcoming_productions "Language and Culture" "Announcements"
-http://japanesefilmfestival.net/upcoming_events "Language and Culture" "Announcements"
-
-
-
-http://phdcomics.com/gradfeed.php "Comics"
-https://xkcd.com/rss.xml "~xkcd" "Comics"
-http://www.pusheen.com/rss "Comics"
-http://www.beatricebiologist.com/feed/ "Comics"
-http://www.the-petri-dish.com/rss.xml "Comics"
-http://librarycomic.com/feed/ "Comics"
-http://shencomix.com/rss "Comics"
-http://sarahcandersen.com/rss "Comics"
-https://simonscat.com/feed/ "Comics"
-http://feeds2.feedburner.com/channelATE "Comics"
-https://www.safelyendangered.com/feed/ "Comics"
-http://www.commitstrip.com/en/feed/ "Comics"
-http://feeds.feedburner.com/SpikedMath "Comics"
-https://www.webtoons.com/en/comedy/trash-bird/rss?title_no=473 "Comics"
-http://itfoolsamonster.com/rss "Comics"
-https://www.buzzfeed.com/comics.xml "~Buzzfeed Comics" "Comics"
-http://fetchrss.com/rss/5adce80a8a93f8115e8b4567699782727.atom "~Buzzfeed Comics [Facebook] (via. fetchrss.com, 'www.facebook.com/BuzzFeedComics')" "Comics"
-http://buzzfeedcomics.tumblr.com/rss "~Buzzfeed Comics [Tumblr]" "Comics"
-http://piecomic.tumblr.com/rss "Comics"
-http://existentialcomics.com/rss.xml "Comics"
-http://maximumble.thebookofbiff.com/feed/ "Comics"
-https://tapas.io/rss/series/5216 "Comics"
-http://feeds.feedburner.com/ThingsInSquares "Comics"
-http://feeds.feedburner.com/oatmealfeed "Comics"
-https://www.webtoons.com/en/slice-of-life/lunarbaboon/rss?title_no=523 "Comics"
-https://www.webtoons.com/en/slice-of-life/doodle-for-food/rss?title_no=487 "Comics"
-http://deep-dark-fears.tumblr.com/rss "Comics"
-http://extrafabulouscomics.com/feed/ "Comics"
-http://huginn.mflau.com/users/1/web_requests/30/examplerss.xml "~Mr. Lovenstein" "Comics"
-http://theawkwardyeti.com/feed/ "Comics"
-http://birdandmoon.tumblr.com/rss "Comics"
-https://theupturnedmicroscope.com/feed/ "Comics"
-http://www.bunicomic.com/feed/ "Comics"
-http://deathbulge.com/rss.xml "Comics"
-http://cornellajoan.tumblr.com/rss "Comics"
-http://feeds.feedburner.com/PoorlyDrawnLines "Comics"
-http://feeds.feedburner.com/TheGentlemansArmchair "Comics"
-http://feeds.feedburner.com/Explosm "Comics"
-https://www.imitationlobster.com/?format=rss "Comics"
-http://loryn-brantz-illustration.tumblr.com/rss "Comics"
-http://toothpastefordinner.com/rss/rss.php "Comics"
-https://thelittleworldofliz.com/rss "Comics"
-http://lizclimo.tumblr.com/rss "Comics"
-http://irwincardozocomics.tumblr.com/rss "Comics"
-
-
-
-http://kuvshinov-ilya.tumblr.com/rss "Art"
-http://ticcyart.tumblr.com/rss "Art"
-
-
-
-http://atheistfoundation.org.au/feed/ "Politics"
-https://ffrf.org/component/k2/itemlist?format=feed&moduleID=322 "Politics"
 
 
 
@@ -232,13 +232,15 @@ http://feeds.soundcloud.com/users/soundcloud:users:27399956/sounds.rss "~Cox n' 
 
 
 
+https://becausegamesmatter.com/news?format=RSS "AV Media" "Gaming"
+https://extracreditsblog.tumblr.com/rss "AV Media" "Gaming"
+http://cinemassacre.com/feed/atom/ "AV Media" "Gaming"
+
+
+
 http://kurzgesagt.org/feed/ "AV Media" "Science 2"
 http://smartereveryday.tumblr.com/rss "AV Media" "Science 2"
 https://asapscience.tumblr.com/rss "AV Media" "Science 2"
 http://www.howdoesacarwork.com/feeds/posts/default "AV Media" "Science 2"
 https://veritasium.com/feed/ "AV Media" "Science 2"
 http://simonegiertz.tumblr.com/rss "AV Media" "Science 2"
-
-https://becausegamesmatter.com/news?format=RSS "AV Media" "Gaming"
-https://extracreditsblog.tumblr.com/rss "AV Media" "Gaming"
-http://cinemassacre.com/feed/atom/ "AV Media" "Gaming"

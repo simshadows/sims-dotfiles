@@ -4,7 +4,6 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
-    <outline type="rss" xmlUrl="https://www.technologyreview.com/c/biomedicine/rss/" htmlUrl="https://www.technologyreview.com/" title="Biomedicine - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/breaking_news.rss" htmlUrl="http://www.nasa.gov/" title="NASA Breaking News"/>
     <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss" htmlUrl="http://www.nasa.gov/" title="NASA Image of the Day"/>
     <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/onthestation_rss.rss" htmlUrl="http://www.nasa.gov/" title="On the Station - Latest News"/>
@@ -48,5 +47,6 @@
     <outline type="rss" xmlUrl="https://australiascience.tv/feed/" htmlUrl="https://australiascience.tv" title="Australia's Science Channel"/>
     <outline type="rss" xmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife/feed/" htmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife" title="Secret Life of Scientists and Engineers"/>
     <outline type="rss" xmlUrl="http://www.compoundchem.com/feed/" htmlUrl="http://www.compoundchem.com" title="Compound Interest"/>
+    <outline type="rss" xmlUrl="https://www.technologyreview.com/c/biomedicine/rss/" htmlUrl="https://www.technologyreview.com/" title="Biomedicine - MIT Technology Review"/>
   </body>
 </opml>

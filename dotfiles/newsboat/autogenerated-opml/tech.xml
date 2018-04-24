@@ -4,6 +4,7 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
+    <outline type="rss" xmlUrl="https://engineering.riotgames.com/news/feed" htmlUrl="https://engineering.riotgames.com/" title="Riot Games Tech Blog News Feed"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/PythonInsider" htmlUrl="https://pythoninsider.blogspot.com/" title="Python Insider"/>
     <outline type="rss" xmlUrl="https://blog.inoreader.com/feeds/posts/default" htmlUrl="https://blog.inoreader.com/" title="Inoreader Blog"/>
     <outline type="rss" xmlUrl="https://hackaday.com/blog/feed/" htmlUrl="https://hackaday.com" title="Blog &#x2013; Hackaday"/>
@@ -30,6 +31,5 @@
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed" htmlUrl="https://blog.discordapp.com?source=rss----cb96a1f03649---4" title="Discord Blog - Medium"/>
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed/tagged/engineering" htmlUrl="https://blog.discordapp.com/tagged/engineering?source=rss----cb96a1f03649--engineering" title="Engineering in Discord Blog on Medium"/>
     <outline type="rss" xmlUrl="http://blog.wolfram.com/feed/" htmlUrl="http://blog.wolfram.com" title="Wolfram Blog"/>
-    <outline type="rss" xmlUrl="https://engineering.riotgames.com/news/feed" htmlUrl="https://engineering.riotgames.com/" title="Riot Games Tech Blog News Feed"/>
   </body>
 </opml>

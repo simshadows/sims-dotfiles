@@ -401,6 +401,9 @@ vnoremap ;s :s///g<left><left><left>
 
 " TODO: Add something for ':g/'?
 
+" Shortcut for sorting a selection by alphabetical order.
+nnoremap ;o :sort u<enter>
+
 " <C-U> or <C-W> in insert mode deletes text with no way of undoing. <C-U> in
 " particular is frequently accidentally done when attempting to scroll up or
 " down. I don't even use these keys in insert mode anyway.
