@@ -5,8 +5,14 @@
   </head>
   <body>
     <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="https://www.guildwars2.com/en/feed/" htmlUrl="https://www.guildwars2.com/en" title="GuildWars2.com"/>
+    <outline type="rss" xmlUrl="https://www.freeallegiance.org/feed/" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="https://www.atlasreactorgame.com/en/news/feed/" htmlUrl="https://www.atlasreactorgame.com/en" title="Atlas ReactorNews &#x2013; Atlas Reactor"/>
     <outline type="rss" xmlUrl="https://www.trionworlds.com/rift/en/feed/" htmlUrl="https://www.trionworlds.com/rift/en" title="RIFTRIFT"/>
+    <outline type="rss" xmlUrl="http://larian.com/feed/" htmlUrl="http://larian.com" title="Larian Studios"/>
+    <outline type="rss" xmlUrl="http://kerbaldevteam.tumblr.com/rss" htmlUrl="http://kerbaldevteam.tumblr.com/" title="Kerbal Space Program Blog"/>
+    <outline type="rss" xmlUrl="http://www.awesomenauts.com/feed/" htmlUrl="https://www.awesomenauts.com" title="Awesomenauts &#x2013; The free 2D MOBA, official homepage"/>
+    <outline type="rss" xmlUrl="http://joostdevblog.blogspot.com/feeds/posts/default" htmlUrl="http://joostdevblog.blogspot.com/" title="Joost's Dev Blog"/>
     <outline type="rss" xmlUrl="http://store.steampowered.com/feeds/news.xml" htmlUrl="http://www.steampowered.com/" title="Steam RSS News Feed"/>
     <outline type="rss" xmlUrl="http://www.thejimquisition.com/feed/" htmlUrl="http://www.thejimquisition.com" title="The Jimquisition"/>
   </body>

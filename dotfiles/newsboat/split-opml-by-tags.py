@@ -72,7 +72,6 @@ print("    Tags found:")
 for k, v in tags.items():
     assert len(v) > 0
     print("        '{}' with {} URLs.".format(k, len(v)))
-    print(v)
 
 # Create the new OPML files
 print("    Writing new OPML files...")
@@ -84,10 +83,6 @@ with open(orig, "r") as orig_f:
         print("        {}".format(newopml))
         with open(newopml, "w") as new_f:
             for line in orig_f:
-                if tag == "art":
-                    print("TO REMOVE: " + str(urls_to_remove))
                 if all(("xmlUrl=\"{}\"".format(x) not in line) for x in urls_to_remove):
-                    if tag == "art":
-                        print(line)
                     new_f.write(line)
     

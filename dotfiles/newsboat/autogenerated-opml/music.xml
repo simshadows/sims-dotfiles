@@ -10,8 +10,11 @@
     <outline type="rss" xmlUrl="http://www.metalblade.com/us/feed/" htmlUrl="http://www.metalblade.com/us" title="Metal Blade Records"/>
     <outline type="rss" xmlUrl="http://www.folk-metal.nl/feed/" htmlUrl="http://www.folk-metal.nl" title="Folk-metal.nl"/>
     <outline type="rss" xmlUrl="http://www.metalobsession.net/feed/" htmlUrl="http://www.metalobsession.net" title="Metal Obsession"/>
+    <outline type="rss" xmlUrl="http://www.metaltalk.net/rss_page.php" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="http://www.nuclearblast.de/en/label/music/news/feed.xml" htmlUrl="http://www.nuclearblast.de/en/label/music/news/index.html" title="Nuclear Blast - News"/>
+    <outline type="rss" xmlUrl="http://www.centurymedia.com/rss/news.ashx" htmlUrl="http://www.centurymedia.com/rss/news.ashx?IdCompany=3" title="Century Media Records News"/>
     <outline type="rss" xmlUrl="http://ocremix.org/feeds/ten20/" htmlUrl="http://www.ocremix.org" title="10 Latest OverClocked ReMixes"/>
     <outline type="rss" xmlUrl="http://blog.noisetrade.com/feed/" htmlUrl="http://blog.noisetrade.com" title="Noisetrade Blog"/>
+    <outline type="rss" xmlUrl="http://machinaesupremacyofficial.tumblr.com/rss" htmlUrl="http://machinaesupremacyofficial.tumblr.com/" title="MACHINAE SUPREMACY"/>
   </body>
 </opml>

@@ -10,5 +10,7 @@
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/TodayIFoundOut" htmlUrl="http://www.todayifoundout.com" title="Today I Found Out"/>
     <outline type="rss" xmlUrl="https://improveverywhere.com/feed/" htmlUrl="https://improveverywhere.com" title="Improv Everywhere"/>
     <outline type="rss" xmlUrl="https://www.penny-arcade.com/feed" htmlUrl="http://penny-arcade.com" title="Penny Arcade"/>
+    <outline type="rss" xmlUrl="http://www.thebookoflife.org/feed/" htmlUrl="http://www.thebookoflife.org" title="The Book of Life"/>
+    <outline type="rss" xmlUrl="https://www.flightradar24.com/blog/feed/" htmlUrl="https://www.flightradar24.com/blog" title="Flightradar24 Blog"/>
   </body>
 </opml>

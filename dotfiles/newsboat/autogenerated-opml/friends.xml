@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="http://sthr.me/feed.xml" htmlUrl="http://sthr.me/feed.xml" title="sthrme"/>
+  </body>
+</opml>

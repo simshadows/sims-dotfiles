@@ -11,6 +11,9 @@
     <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCsErtgNZ8pczmVp1_lTIBzg" htmlUrl="https://www.youtube.com/channel/UCsErtgNZ8pczmVp1_lTIBzg" title="Sim's Supcom Sandbox Shenanigans"/>
     <outline type="rss" xmlUrl="http://simishadows.tumblr.com/rss" htmlUrl="http://simishadows.tumblr.com/" title="SimiShadows"/>
     <outline type="rss" xmlUrl="http://syndryster.tumblr.com/rss" htmlUrl="http://syndryster.tumblr.com/" title="Syndryster"/>
+    <outline type="rss" xmlUrl="http://sthr.me/feed.xml" htmlUrl="http://sthr.me/feed.xml" title="sthrme"/>
+    <outline type="rss" xmlUrl="https://blog.musicbrainz.org/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="http://www.kinokuniya.com.au/feed/" htmlUrl="http://www.kinokuniya.com.au" title="Kinokuniya"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/PythonInsider" htmlUrl="https://pythoninsider.blogspot.com/" title="Python Insider"/>
     <outline type="rss" xmlUrl="https://blog.inoreader.com/feeds/posts/default" htmlUrl="https://blog.inoreader.com/" title="Inoreader Blog"/>
     <outline type="rss" xmlUrl="https://hackaday.com/blog/feed/" htmlUrl="https://hackaday.com" title="Blog &#x2013; Hackaday"/>
@@ -21,8 +24,10 @@
     <outline type="rss" xmlUrl="https://code.facebook.com/posts/rss/" htmlUrl="https://code.facebook.com/" title="Facebook Code"/>
     <outline type="rss" xmlUrl="https://www.atlassian.com/blog/feed" htmlUrl="https://www.atlassian.com/blog" title="Atlassian Blog"/>
     <outline type="rss" xmlUrl="https://medium.freecodecamp.org/feed" htmlUrl="https://medium.freecodecamp.org?source=rss----336d898217ee---4" title="freeCodeCamp - Medium"/>
+    <outline type="rss" xmlUrl="https://blog.udacity.com/feed" htmlUrl="https://blog.udacity.com" title="Udacity"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/topnews.rss" htmlUrl="https://www.technologyreview.com/" title="Top News - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/stories.rss" htmlUrl="https://www.technologyreview.com/" title="New on MIT Technology Review"/>
+    <outline type="rss" xmlUrl="https://www.technologyreview.com/c/biomedicine/rss/" htmlUrl="https://www.technologyreview.com/" title="Biomedicine - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/c/computing/rss/" htmlUrl="https://www.technologyreview.com/" title="Computing - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/c/energy/rss/" htmlUrl="https://www.technologyreview.com/" title="Energy - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://makezine.com/feed/" htmlUrl="https://makezine.com" title="Make: DIY Projects and Ideas for Makers"/>
@@ -63,8 +68,8 @@
     <outline type="rss" xmlUrl="http://robotics.sciencemag.org/rss/current.xml" htmlUrl="http://robotics.sciencemag.org" title="Science Robotics current issue"/>
     <outline type="rss" xmlUrl="https://physicstoday.scitation.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=pto" htmlUrl="https://physicstoday.scitation.org/loi/pto?af=R" title="American Institute of Physics: Physics Today: Table of Contents"/>
     <outline type="rss" xmlUrl="http://news.mit.edu/rss/research" htmlUrl="http://news.mit.edu/mitresearch-rss.xml" title="MIT Research News"/>
-    <outline type="rss" xmlUrl="https://www.technologyreview.com/c/biomedicine/rss/" htmlUrl="https://www.technologyreview.com/" title="Biomedicine - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss" htmlUrl="https://www.sciencenews.org/" title="Latest Headlines | Science News"/>
+    <outline type="rss" xmlUrl="https://www.seti.org/rss.xml" htmlUrl="https://www.seti.org/seti-institute/about-seti/news" title="SETI.org - News"/>
     <outline type="rss" xmlUrl="https://cosmosmagazine.com/feed.rss" htmlUrl="https://cosmosmagazine.com/" title="Cosmos Magazine"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/DiscoverTopStories" htmlUrl="http://discovermagazine.com/rss/master-feeds/top-stories" title="Top Stories"/>
     <outline type="rss" xmlUrl="https://www.the-scientist.com/feed-the-scientist.xml" htmlUrl="https://www.the-scientist.com/" title="The Scientist RSS"/>
@@ -82,10 +87,16 @@
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/animenews" htmlUrl="http://www.crunchyroll.com/news" title="Crunchyroll: Anime News"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/rss/news" htmlUrl="http://www.crunchyroll.com/forumcategory-1/site-news" title="Crunchyroll: Site News"/>
     <outline type="rss" xmlUrl="http://yenpress.com/feed/" htmlUrl="http://yenpress.com" title="Yen Press"/>
-    <outline type="rss" xmlUrl="http://www.kinokuniya.com.au/feed/" htmlUrl="http://www.kinokuniya.com.au" title="Kinokuniya"/>
+    <outline type="rss" xmlUrl="https://www.facebook.com/madman" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="https://www.guildwars2.com/en/feed/" htmlUrl="https://www.guildwars2.com/en" title="GuildWars2.com"/>
+    <outline type="rss" xmlUrl="https://www.freeallegiance.org/feed/" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="https://www.atlasreactorgame.com/en/news/feed/" htmlUrl="https://www.atlasreactorgame.com/en" title="Atlas ReactorNews &#x2013; Atlas Reactor"/>
     <outline type="rss" xmlUrl="https://www.trionworlds.com/rift/en/feed/" htmlUrl="https://www.trionworlds.com/rift/en" title="RIFTRIFT"/>
+    <outline type="rss" xmlUrl="http://larian.com/feed/" htmlUrl="http://larian.com" title="Larian Studios"/>
+    <outline type="rss" xmlUrl="http://kerbaldevteam.tumblr.com/rss" htmlUrl="http://kerbaldevteam.tumblr.com/" title="Kerbal Space Program Blog"/>
+    <outline type="rss" xmlUrl="http://www.awesomenauts.com/feed/" htmlUrl="https://www.awesomenauts.com" title="Awesomenauts &#x2013; The free 2D MOBA, official homepage"/>
+    <outline type="rss" xmlUrl="http://joostdevblog.blogspot.com/feeds/posts/default" htmlUrl="http://joostdevblog.blogspot.com/" title="Joost's Dev Blog"/>
     <outline type="rss" xmlUrl="http://store.steampowered.com/feeds/news.xml" htmlUrl="http://www.steampowered.com/" title="Steam RSS News Feed"/>
     <outline type="rss" xmlUrl="http://www.thejimquisition.com/feed/" htmlUrl="http://www.thejimquisition.com" title="The Jimquisition"/>
     <outline type="rss" xmlUrl="https://www.loudersound.com/feeds/all" htmlUrl="https://www.loudersound.com/feeds/all" title="LouderSound"/>
@@ -94,9 +105,12 @@
     <outline type="rss" xmlUrl="http://www.metalblade.com/us/feed/" htmlUrl="http://www.metalblade.com/us" title="Metal Blade Records"/>
     <outline type="rss" xmlUrl="http://www.folk-metal.nl/feed/" htmlUrl="http://www.folk-metal.nl" title="Folk-metal.nl"/>
     <outline type="rss" xmlUrl="http://www.metalobsession.net/feed/" htmlUrl="http://www.metalobsession.net" title="Metal Obsession"/>
+    <outline type="rss" xmlUrl="http://www.metaltalk.net/rss_page.php" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="http://www.nuclearblast.de/en/label/music/news/feed.xml" htmlUrl="http://www.nuclearblast.de/en/label/music/news/index.html" title="Nuclear Blast - News"/>
+    <outline type="rss" xmlUrl="http://www.centurymedia.com/rss/news.ashx" htmlUrl="http://www.centurymedia.com/rss/news.ashx?IdCompany=3" title="Century Media Records News"/>
     <outline type="rss" xmlUrl="http://ocremix.org/feeds/ten20/" htmlUrl="http://www.ocremix.org" title="10 Latest OverClocked ReMixes"/>
     <outline type="rss" xmlUrl="http://blog.noisetrade.com/feed/" htmlUrl="http://blog.noisetrade.com" title="Noisetrade Blog"/>
+    <outline type="rss" xmlUrl="http://machinaesupremacyofficial.tumblr.com/rss" htmlUrl="http://machinaesupremacyofficial.tumblr.com/" title="MACHINAE SUPREMACY"/>
     <outline type="rss" xmlUrl="http://www.japaneseammo.com/feed/" htmlUrl="http://www.japaneseammo.com" title="Japanese Ammo"/>
     <outline type="rss" xmlUrl="https://jpf.org.au/feed/" htmlUrl="https://jpf.org.au" title="Japan Foundation, Sydney"/>
     <outline type="rss" xmlUrl="http://phdcomics.com/gradfeed.php" htmlUrl="http://www.phdcomics.com" title="PHD Comics"/>
@@ -146,5 +160,7 @@
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/TodayIFoundOut" htmlUrl="http://www.todayifoundout.com" title="Today I Found Out"/>
     <outline type="rss" xmlUrl="https://improveverywhere.com/feed/" htmlUrl="https://improveverywhere.com" title="Improv Everywhere"/>
     <outline type="rss" xmlUrl="https://www.penny-arcade.com/feed" htmlUrl="http://penny-arcade.com" title="Penny Arcade"/>
+    <outline type="rss" xmlUrl="http://www.thebookoflife.org/feed/" htmlUrl="http://www.thebookoflife.org" title="The Book of Life"/>
+    <outline type="rss" xmlUrl="https://www.flightradar24.com/blog/feed/" htmlUrl="https://www.flightradar24.com/blog" title="Flightradar24 Blog"/>
   </body>
 </opml>
