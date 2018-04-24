@@ -48,8 +48,5 @@
     <outline type="rss" xmlUrl="https://australiascience.tv/feed/" htmlUrl="https://australiascience.tv" title="Australia's Science Channel"/>
     <outline type="rss" xmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife/feed/" htmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife" title="Secret Life of Scientists and Engineers"/>
     <outline type="rss" xmlUrl="http://www.compoundchem.com/feed/" htmlUrl="http://www.compoundchem.com" title="Compound Interest"/>
-    <outline type="rss" xmlUrl="https://asapscience.tumblr.com/rss" htmlUrl="https://asapscience.tumblr.com/" title="AsapSCIENCE"/>
-    <outline type="rss" xmlUrl="http://www.howdoesacarwork.com/feeds/posts/default" htmlUrl="http://www.howdoesacarwork.com/" title="Engineering Explained"/>
-    <outline type="rss" xmlUrl="https://veritasium.com/feed/" htmlUrl="https://veritasium.com" title="Veritasium"/>
   </body>
 </opml>

@@ -4,6 +4,8 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
+    <outline type="rss" xmlUrl="http://syndryster.tumblr.com/rss" htmlUrl="http://syndryster.tumblr.com/" title="Syndryster"/>
     <outline type="rss" xmlUrl="http://kuvshinov-ilya.tumblr.com/rss" htmlUrl="http://kuvshinov-ilya.tumblr.com/" title="Kuvshinov Ilya"/>
+    <outline type="rss" xmlUrl="http://ticcyart.tumblr.com/rss" htmlUrl="http://ticcyart.tumblr.com/" title="Ticcy's Tumblr Art Archive"/>
   </body>
 </opml>

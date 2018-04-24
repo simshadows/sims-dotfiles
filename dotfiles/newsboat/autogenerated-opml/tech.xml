@@ -15,6 +15,8 @@
     <outline type="rss" xmlUrl="https://www.atlassian.com/blog/feed" htmlUrl="https://www.atlassian.com/blog" title="Atlassian Blog"/>
     <outline type="rss" xmlUrl="https://medium.freecodecamp.org/feed" htmlUrl="https://medium.freecodecamp.org?source=rss----336d898217ee---4" title="freeCodeCamp - Medium"/>
     <outline type="rss" xmlUrl="https://blog.udacity.com/feed" htmlUrl="https://blog.udacity.com" title="Udacity"/>
+    <outline type="rss" xmlUrl="https://medium.com/feed/udacity" htmlUrl="https://medium.com/udacity?source=rss----b7bbc4597459---4" title="Udacity Inc - Medium"/>
+    <outline type="rss" xmlUrl="https://news.codecademy.com/rss/" htmlUrl="https://news.codecademy.com/" title="Codecademy News"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/topnews.rss" htmlUrl="https://www.technologyreview.com/" title="Top News - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/stories.rss" htmlUrl="https://www.technologyreview.com/" title="New on MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/c/biomedicine/rss/" htmlUrl="https://www.technologyreview.com/" title="Biomedicine - MIT Technology Review"/>
@@ -27,5 +29,7 @@
     <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="https://www.raspberrypi.org/magpi" title="The MagPi Magazine"/>
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed" htmlUrl="https://blog.discordapp.com?source=rss----cb96a1f03649---4" title="Discord Blog - Medium"/>
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed/tagged/engineering" htmlUrl="https://blog.discordapp.com/tagged/engineering?source=rss----cb96a1f03649--engineering" title="Engineering in Discord Blog on Medium"/>
+    <outline type="rss" xmlUrl="http://blog.wolfram.com/feed/" htmlUrl="http://blog.wolfram.com" title="Wolfram Blog"/>
+    <outline type="rss" xmlUrl="https://engineering.riotgames.com/news/feed" htmlUrl="https://engineering.riotgames.com/" title="Riot Games Tech Blog News Feed"/>
   </body>
 </opml>

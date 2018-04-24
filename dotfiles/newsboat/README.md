@@ -8,12 +8,16 @@ Check out `.newsboat/urls` for a full list of my RSS subscriptions.
 
 My RSS are all tagged, and the `.newsboat/urls` file has them grouped by what I arbitrarily consider to be their "primary" tag. Each subscription may have additional tags beyond this primary tag.
 
-Most tags represent some kind of interest (such as `Tech` being for technology), but a few hold special meaning. These are:
+These are the tags I use:
 
-- `My Content`: Things I run personally, such as my own blog and my youtube channels.
-- `Friends`: Things my friends run.
-- `Announcements`: Things I listen to *particularly closely* for announcements, such as for upcoming Python releases, or for Humble Bundle releases.
-- `Uncategorized`: I can't come up with a good place to put these, so I just put them all together into one big glob of random stuff.
+- Interest tags
+    - These are tags such as `Tech`, `Comics`, and `Science`.
+    - `Uncategorized` is a special-case interest tag, for things which I haven't decided on a proper tag for.
+- Special tags (these will always be accompanied by an interest tag)
+    - `My Content`: Things I run personally, such as my own blog and my youtube channels.
+    - `Friends`: Things my friends run.
+    - `AV Media`: Audio and video media. Covers things like Youtube and Soundcloud.
+    - `Announcements`: Things I listen to *particularly closely* for announcements, such as for upcoming Python releases, or for Humble Bundle releases.
 
 ## OPML Files
 

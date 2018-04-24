@@ -4,6 +4,8 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
+    <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCjTXJSh3EDxuWQt8b27hTFQ" htmlUrl="https://www.youtube.com/channel/UCjTXJSh3EDxuWQt8b27hTFQ" title="simshadows music"/>
+    <outline type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:279933690/sounds.rss" htmlUrl="" title="EmilyOmily (SoundCloud)"/>
     <outline type="rss" xmlUrl="https://www.loudersound.com/feeds/all" htmlUrl="https://www.loudersound.com/feeds/all" title="LouderSound"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/Metalsucks" htmlUrl="http://www.metalsucks.net" title="MetalSucks"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/metalinjection" htmlUrl="http://www.metalinjection.net" title="Metal Injection"/>
@@ -16,5 +18,8 @@
     <outline type="rss" xmlUrl="http://ocremix.org/feeds/ten20/" htmlUrl="http://www.ocremix.org" title="10 Latest OverClocked ReMixes"/>
     <outline type="rss" xmlUrl="http://blog.noisetrade.com/feed/" htmlUrl="http://blog.noisetrade.com" title="Noisetrade Blog"/>
     <outline type="rss" xmlUrl="http://machinaesupremacyofficial.tumblr.com/rss" htmlUrl="http://machinaesupremacyofficial.tumblr.com/" title="MACHINAE SUPREMACY"/>
+    <outline type="rss" xmlUrl="https://www.berliner-philharmoniker.de/en/blog/rss/" htmlUrl="https://www.berliner-philharmoniker.de/en/blog/rss/" title="Berliner Philharmoniker"/>
+    <outline type="rss" xmlUrl="http://miracleofsound.net/feed/" htmlUrl="http://miracleofsound.net" title="Miracle of Sound"/>
+    <outline type="rss" xmlUrl="https://www.taylordavisviolin.com/feed/" htmlUrl="https://www.taylordavisviolin.com" title="Taylor Davis"/>
   </body>
 </opml>

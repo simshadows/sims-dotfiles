@@ -4,13 +4,20 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
+    <outline type="rss" xmlUrl="http://simshadows.com/feed.xml" htmlUrl="http://simshadows.com//" title=""/>
+    <outline type="rss" xmlUrl="https://medium.com/feed/@simshadows" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="http://sthr.me/feed.xml" htmlUrl="http://sthr.me/feed.xml" title="sthrme"/>
+    <outline type="rss" xmlUrl="https://blog.musicbrainz.org/" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="https://what-if.xkcd.com/feed.atom" htmlUrl="https://what-if.xkcd.com/feed.atom" title="xkcd: What If?"/>
     <outline type="rss" xmlUrl="https://blog.xkcd.com/feed/" htmlUrl="https://blog.xkcd.com" title="xkcd blog"/>
     <outline type="rss" xmlUrl="https://feeds.feedburner.com/LostAtEMinor" htmlUrl="https://www.lostateminor.com" title="Lost At E Minor: For creative people"/>
+    <outline type="rss" xmlUrl="https://www.techly.com.au/feed/" htmlUrl="https://www.techly.com.au" title="Techly"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/TodayIFoundOut" htmlUrl="http://www.todayifoundout.com" title="Today I Found Out"/>
     <outline type="rss" xmlUrl="https://improveverywhere.com/feed/" htmlUrl="https://improveverywhere.com" title="Improv Everywhere"/>
     <outline type="rss" xmlUrl="https://www.penny-arcade.com/feed" htmlUrl="http://penny-arcade.com" title="Penny Arcade"/>
     <outline type="rss" xmlUrl="http://www.thebookoflife.org/feed/" htmlUrl="http://www.thebookoflife.org" title="The Book of Life"/>
     <outline type="rss" xmlUrl="https://www.flightradar24.com/blog/feed/" htmlUrl="https://www.flightradar24.com/blog" title="Flightradar24 Blog"/>
+    <outline type="rss" xmlUrl="http://5minutehour.com/rss" htmlUrl="http://5minutehour.com/" title="Jeff Lewis 5 Minute Comedy Hour"/>
+    <outline type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:27399956/sounds.rss" htmlUrl="http://soundcloud.com/coxncrendor" title="Cox n' Crendor Show"/>
   </body>
 </opml>

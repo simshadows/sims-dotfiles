@@ -8,5 +8,11 @@
     <outline type="rss" xmlUrl="http://www.kinokuniya.com.au/feed/" htmlUrl="http://www.kinokuniya.com.au" title="Kinokuniya"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/PythonInsider" htmlUrl="https://pythoninsider.blogspot.com/" title="Python Insider"/>
     <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="https://www.guildwars2.com/en/feed/" htmlUrl="https://www.guildwars2.com/en" title="GuildWars2.com"/>
+    <outline type="rss" xmlUrl="https://www.freeallegiance.org/feed/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="https://www.atlasreactorgame.com/en/news/feed/" htmlUrl="https://www.atlasreactorgame.com/en" title="Atlas ReactorNews &#x2013; Atlas Reactor"/>
+    <outline type="rss" xmlUrl="http://japanesefilmfestival.net/feed/" htmlUrl="http://japanesefilmfestival.net" title="Japanese Film Festival Australia"/>
+    <outline type="rss" xmlUrl="http://japanesefilmfestival.net/upcoming_productions" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="http://japanesefilmfestival.net/upcoming_events" htmlUrl="" title=""/>
   </body>
 </opml>

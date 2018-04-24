@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="https://hatepseudoscience.com/feed/" htmlUrl="https://hatepseudoscience.com" title="I fucking hate pseudoscience"/>
+    <outline type="rss" xmlUrl="http://kurzgesagt.org/feed/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="http://smartereveryday.tumblr.com/rss" htmlUrl="http://smartereveryday.tumblr.com/" title="Smarter Every Day"/>
+    <outline type="rss" xmlUrl="https://asapscience.tumblr.com/rss" htmlUrl="https://asapscience.tumblr.com/" title="AsapSCIENCE"/>
+    <outline type="rss" xmlUrl="http://www.howdoesacarwork.com/feeds/posts/default" htmlUrl="http://www.howdoesacarwork.com/" title="Engineering Explained"/>
+    <outline type="rss" xmlUrl="https://veritasium.com/feed/" htmlUrl="https://veritasium.com" title="Veritasium"/>
+    <outline type="rss" xmlUrl="http://simonegiertz.tumblr.com/rss" htmlUrl="http://simonegiertz.tumblr.com/" title="Simone Giertz"/>
+  </body>
+</opml>

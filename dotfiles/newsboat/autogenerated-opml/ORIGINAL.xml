@@ -12,6 +12,7 @@
     <outline type="rss" xmlUrl="http://simishadows.tumblr.com/rss" htmlUrl="http://simishadows.tumblr.com/" title="SimiShadows"/>
     <outline type="rss" xmlUrl="http://syndryster.tumblr.com/rss" htmlUrl="http://syndryster.tumblr.com/" title="Syndryster"/>
     <outline type="rss" xmlUrl="http://sthr.me/feed.xml" htmlUrl="http://sthr.me/feed.xml" title="sthrme"/>
+    <outline type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:279933690/sounds.rss" htmlUrl="" title="EmilyOmily (SoundCloud)"/>
     <outline type="rss" xmlUrl="https://blog.musicbrainz.org/" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="http://www.kinokuniya.com.au/feed/" htmlUrl="http://www.kinokuniya.com.au" title="Kinokuniya"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/PythonInsider" htmlUrl="https://pythoninsider.blogspot.com/" title="Python Insider"/>
@@ -25,6 +26,8 @@
     <outline type="rss" xmlUrl="https://www.atlassian.com/blog/feed" htmlUrl="https://www.atlassian.com/blog" title="Atlassian Blog"/>
     <outline type="rss" xmlUrl="https://medium.freecodecamp.org/feed" htmlUrl="https://medium.freecodecamp.org?source=rss----336d898217ee---4" title="freeCodeCamp - Medium"/>
     <outline type="rss" xmlUrl="https://blog.udacity.com/feed" htmlUrl="https://blog.udacity.com" title="Udacity"/>
+    <outline type="rss" xmlUrl="https://medium.com/feed/udacity" htmlUrl="https://medium.com/udacity?source=rss----b7bbc4597459---4" title="Udacity Inc - Medium"/>
+    <outline type="rss" xmlUrl="https://news.codecademy.com/rss/" htmlUrl="https://news.codecademy.com/" title="Codecademy News"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/topnews.rss" htmlUrl="https://www.technologyreview.com/" title="Top News - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/stories.rss" htmlUrl="https://www.technologyreview.com/" title="New on MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/c/biomedicine/rss/" htmlUrl="https://www.technologyreview.com/" title="Biomedicine - MIT Technology Review"/>
@@ -37,6 +40,7 @@
     <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="https://www.raspberrypi.org/magpi" title="The MagPi Magazine"/>
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed" htmlUrl="https://blog.discordapp.com?source=rss----cb96a1f03649---4" title="Discord Blog - Medium"/>
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed/tagged/engineering" htmlUrl="https://blog.discordapp.com/tagged/engineering?source=rss----cb96a1f03649--engineering" title="Engineering in Discord Blog on Medium"/>
+    <outline type="rss" xmlUrl="http://blog.wolfram.com/feed/" htmlUrl="http://blog.wolfram.com" title="Wolfram Blog"/>
     <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/breaking_news.rss" htmlUrl="http://www.nasa.gov/" title="NASA Breaking News"/>
     <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss" htmlUrl="http://www.nasa.gov/" title="NASA Image of the Day"/>
     <outline type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/onthestation_rss.rss" htmlUrl="http://www.nasa.gov/" title="On the Station - Latest News"/>
@@ -80,25 +84,33 @@
     <outline type="rss" xmlUrl="https://australiascience.tv/feed/" htmlUrl="https://australiascience.tv" title="Australia's Science Channel"/>
     <outline type="rss" xmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife/feed/" htmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife" title="Secret Life of Scientists and Engineers"/>
     <outline type="rss" xmlUrl="http://www.compoundchem.com/feed/" htmlUrl="http://www.compoundchem.com" title="Compound Interest"/>
-    <outline type="rss" xmlUrl="https://asapscience.tumblr.com/rss" htmlUrl="https://asapscience.tumblr.com/" title="AsapSCIENCE"/>
-    <outline type="rss" xmlUrl="http://www.howdoesacarwork.com/feeds/posts/default" htmlUrl="http://www.howdoesacarwork.com/" title="Engineering Explained"/>
-    <outline type="rss" xmlUrl="https://veritasium.com/feed/" htmlUrl="https://veritasium.com" title="Veritasium"/>
+    <outline type="rss" xmlUrl="https://hatepseudoscience.com/feed/" htmlUrl="https://hatepseudoscience.com" title="I fucking hate pseudoscience"/>
     <outline type="rss" xmlUrl="https://myanimelist.net/rss/news.xml" htmlUrl="https://myanimelist.net/news?_location=rss" title="News - MyAnimeList"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/animenews" htmlUrl="http://www.crunchyroll.com/news" title="Crunchyroll: Anime News"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/rss/news" htmlUrl="http://www.crunchyroll.com/forumcategory-1/site-news" title="Crunchyroll: Site News"/>
     <outline type="rss" xmlUrl="http://yenpress.com/feed/" htmlUrl="http://yenpress.com" title="Yen Press"/>
     <outline type="rss" xmlUrl="https://www.facebook.com/madman" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="http://www.thejimquisition.com/feed/" htmlUrl="http://www.thejimquisition.com" title="The Jimquisition"/>
+    <outline type="rss" xmlUrl="http://store.steampowered.com/feeds/news.xml" htmlUrl="http://www.steampowered.com/" title="Steam RSS News Feed"/>
+    <outline type="rss" xmlUrl="http://blogs.valvesoftware.com/feed/" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="https://www.guildwars2.com/en/feed/" htmlUrl="https://www.guildwars2.com/en" title="GuildWars2.com"/>
     <outline type="rss" xmlUrl="https://www.freeallegiance.org/feed/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="https://www.trionworlds.com/en/news/feed/" htmlUrl="https://www.trionworlds.com/en" title="News &#x2013; Trion Worlds, Inc."/>
     <outline type="rss" xmlUrl="https://www.atlasreactorgame.com/en/news/feed/" htmlUrl="https://www.atlasreactorgame.com/en" title="Atlas ReactorNews &#x2013; Atlas Reactor"/>
     <outline type="rss" xmlUrl="https://www.trionworlds.com/rift/en/feed/" htmlUrl="https://www.trionworlds.com/rift/en" title="RIFTRIFT"/>
     <outline type="rss" xmlUrl="http://larian.com/feed/" htmlUrl="http://larian.com" title="Larian Studios"/>
+    <outline type="rss" xmlUrl="https://minecraft.net/en-us/feeds/community-content/atom" htmlUrl="http://minecraft.net/en-us/" title="Minecraft.net - All Content Atom Feed"/>
+    <outline type="rss" xmlUrl="https://mojang.com/feed.xml" htmlUrl="https://mojang.com/" title="Mojang"/>
     <outline type="rss" xmlUrl="http://kerbaldevteam.tumblr.com/rss" htmlUrl="http://kerbaldevteam.tumblr.com/" title="Kerbal Space Program Blog"/>
     <outline type="rss" xmlUrl="http://www.awesomenauts.com/feed/" htmlUrl="https://www.awesomenauts.com" title="Awesomenauts &#x2013; The free 2D MOBA, official homepage"/>
     <outline type="rss" xmlUrl="http://joostdevblog.blogspot.com/feeds/posts/default" htmlUrl="http://joostdevblog.blogspot.com/" title="Joost's Dev Blog"/>
-    <outline type="rss" xmlUrl="http://store.steampowered.com/feeds/news.xml" htmlUrl="http://www.steampowered.com/" title="Steam RSS News Feed"/>
-    <outline type="rss" xmlUrl="http://www.thejimquisition.com/feed/" htmlUrl="http://www.thejimquisition.com" title="The Jimquisition"/>
+    <outline type="rss" xmlUrl="http://www.zachtronicsindustries.com/feed/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="https://www.nintendo.com/feed" htmlUrl="https://nintendo.com/whatsnew" title="Nintendo.com &#x2013; News and Updates"/>
+    <outline type="rss" xmlUrl="https://robocraftgame.com/feed.xml" htmlUrl="https://robocraftgame.com" title="ROBOCRAFT"/>
+    <outline type="rss" xmlUrl="http://blog.rpgmakerweb.com/feed/" htmlUrl="http://blog.rpgmakerweb.com" title="The Official RPG Maker Blog"/>
+    <outline type="rss" xmlUrl="https://oce.leagueoflegends.com/en/rss.xml" htmlUrl="https://oce.leagueoflegends.com/en/rss.xml" title="Most Recent News"/>
+    <outline type="rss" xmlUrl="https://engineering.riotgames.com/news/feed" htmlUrl="https://engineering.riotgames.com/" title="Riot Games Tech Blog News Feed"/>
     <outline type="rss" xmlUrl="https://www.loudersound.com/feeds/all" htmlUrl="https://www.loudersound.com/feeds/all" title="LouderSound"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/Metalsucks" htmlUrl="http://www.metalsucks.net" title="MetalSucks"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/metalinjection" htmlUrl="http://www.metalinjection.net" title="Metal Injection"/>
@@ -111,8 +123,14 @@
     <outline type="rss" xmlUrl="http://ocremix.org/feeds/ten20/" htmlUrl="http://www.ocremix.org" title="10 Latest OverClocked ReMixes"/>
     <outline type="rss" xmlUrl="http://blog.noisetrade.com/feed/" htmlUrl="http://blog.noisetrade.com" title="Noisetrade Blog"/>
     <outline type="rss" xmlUrl="http://machinaesupremacyofficial.tumblr.com/rss" htmlUrl="http://machinaesupremacyofficial.tumblr.com/" title="MACHINAE SUPREMACY"/>
+    <outline type="rss" xmlUrl="https://www.berliner-philharmoniker.de/en/blog/rss/" htmlUrl="https://www.berliner-philharmoniker.de/en/blog/rss/" title="Berliner Philharmoniker"/>
+    <outline type="rss" xmlUrl="http://miracleofsound.net/feed/" htmlUrl="http://miracleofsound.net" title="Miracle of Sound"/>
+    <outline type="rss" xmlUrl="https://www.taylordavisviolin.com/feed/" htmlUrl="https://www.taylordavisviolin.com" title="Taylor Davis"/>
     <outline type="rss" xmlUrl="http://www.japaneseammo.com/feed/" htmlUrl="http://www.japaneseammo.com" title="Japanese Ammo"/>
     <outline type="rss" xmlUrl="https://jpf.org.au/feed/" htmlUrl="https://jpf.org.au" title="Japan Foundation, Sydney"/>
+    <outline type="rss" xmlUrl="http://japanesefilmfestival.net/feed/" htmlUrl="http://japanesefilmfestival.net" title="Japanese Film Festival Australia"/>
+    <outline type="rss" xmlUrl="http://japanesefilmfestival.net/upcoming_productions" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="http://japanesefilmfestival.net/upcoming_events" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="http://phdcomics.com/gradfeed.php" htmlUrl="http://www.phdcomics.com" title="PHD Comics"/>
     <outline type="rss" xmlUrl="https://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/" title="xkcd"/>
     <outline type="rss" xmlUrl="http://www.pusheen.com/rss" htmlUrl="http://www.pusheen.com/" title="Pusheen the cat"/>
@@ -151,16 +169,35 @@
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/PoorlyDrawnLines" htmlUrl="http://www.poorlydrawnlines.com" title="Poorly Drawn Lines"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/TheGentlemansArmchair" htmlUrl="http://thegentlemansarmchair.com" title="The Gentlemans Armchair"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/Explosm" htmlUrl="http://explosm.net" title="Explosm.net"/>
+    <outline type="rss" xmlUrl="https://www.imitationlobster.com/?format=rss" htmlUrl="https://www.imitationlobster.com/" title="Imitation Lobster"/>
+    <outline type="rss" xmlUrl="http://loryn-brantz-illustration.tumblr.com/rss" htmlUrl="http://loryn-brantz-illustration.tumblr.com/" title="Loryn Brantz"/>
+    <outline type="rss" xmlUrl="http://toothpastefordinner.com/rss/rss.php" htmlUrl="http://www.toothpastefordinner.com" title="Toothpaste For Dinner"/>
+    <outline type="rss" xmlUrl="https://thelittleworldofliz.com/rss" htmlUrl="https://thelittleworldofliz.com" title="Liz Climo"/>
+    <outline type="rss" xmlUrl="http://lizclimo.tumblr.com/rss" htmlUrl="http://lizclimo.tumblr.com/" title="Hi, I'm Liz"/>
+    <outline type="rss" xmlUrl="http://irwincardozocomics.tumblr.com/rss" htmlUrl="http://irwincardozocomics.tumblr.com/" title="irwincardozo comics - I WUB WUB YOU!"/>
     <outline type="rss" xmlUrl="http://kuvshinov-ilya.tumblr.com/rss" htmlUrl="http://kuvshinov-ilya.tumblr.com/" title="Kuvshinov Ilya"/>
+    <outline type="rss" xmlUrl="http://ticcyart.tumblr.com/rss" htmlUrl="http://ticcyart.tumblr.com/" title="Ticcy's Tumblr Art Archive"/>
     <outline type="rss" xmlUrl="http://atheistfoundation.org.au/feed/" htmlUrl="http://atheistfoundation.org.au" title="Atheist Foundation of Australia Inc"/>
     <outline type="rss" xmlUrl="https://ffrf.org/component/k2/itemlist?format=feed&amp;moduleID=322" htmlUrl="https://ffrf.org" title="News - Freedom From Religion Foundation - Freedom From Religion Foundation"/>
     <outline type="rss" xmlUrl="https://what-if.xkcd.com/feed.atom" htmlUrl="https://what-if.xkcd.com/feed.atom" title="xkcd: What If?"/>
     <outline type="rss" xmlUrl="https://blog.xkcd.com/feed/" htmlUrl="https://blog.xkcd.com" title="xkcd blog"/>
     <outline type="rss" xmlUrl="https://feeds.feedburner.com/LostAtEMinor" htmlUrl="https://www.lostateminor.com" title="Lost At E Minor: For creative people"/>
+    <outline type="rss" xmlUrl="https://www.techly.com.au/feed/" htmlUrl="https://www.techly.com.au" title="Techly"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/TodayIFoundOut" htmlUrl="http://www.todayifoundout.com" title="Today I Found Out"/>
     <outline type="rss" xmlUrl="https://improveverywhere.com/feed/" htmlUrl="https://improveverywhere.com" title="Improv Everywhere"/>
     <outline type="rss" xmlUrl="https://www.penny-arcade.com/feed" htmlUrl="http://penny-arcade.com" title="Penny Arcade"/>
     <outline type="rss" xmlUrl="http://www.thebookoflife.org/feed/" htmlUrl="http://www.thebookoflife.org" title="The Book of Life"/>
     <outline type="rss" xmlUrl="https://www.flightradar24.com/blog/feed/" htmlUrl="https://www.flightradar24.com/blog" title="Flightradar24 Blog"/>
+    <outline type="rss" xmlUrl="http://5minutehour.com/rss" htmlUrl="http://5minutehour.com/" title="Jeff Lewis 5 Minute Comedy Hour"/>
+    <outline type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:27399956/sounds.rss" htmlUrl="http://soundcloud.com/coxncrendor" title="Cox n' Crendor Show"/>
+    <outline type="rss" xmlUrl="http://kurzgesagt.org/feed/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="http://smartereveryday.tumblr.com/rss" htmlUrl="http://smartereveryday.tumblr.com/" title="Smarter Every Day"/>
+    <outline type="rss" xmlUrl="https://asapscience.tumblr.com/rss" htmlUrl="https://asapscience.tumblr.com/" title="AsapSCIENCE"/>
+    <outline type="rss" xmlUrl="http://www.howdoesacarwork.com/feeds/posts/default" htmlUrl="http://www.howdoesacarwork.com/" title="Engineering Explained"/>
+    <outline type="rss" xmlUrl="https://veritasium.com/feed/" htmlUrl="https://veritasium.com" title="Veritasium"/>
+    <outline type="rss" xmlUrl="http://simonegiertz.tumblr.com/rss" htmlUrl="http://simonegiertz.tumblr.com/" title="Simone Giertz"/>
+    <outline type="rss" xmlUrl="https://becausegamesmatter.com/news?format=RSS" htmlUrl="https://becausegamesmatter.com/" title="Extra Credits"/>
+    <outline type="rss" xmlUrl="https://extracreditsblog.tumblr.com/rss" htmlUrl="https://extracreditsblog.tumblr.com/" title="Extra Credits"/>
+    <outline type="rss" xmlUrl="http://cinemassacre.com/feed/atom/" htmlUrl="http://cinemassacre.com" title="Cinemassacre Productions"/>
   </body>
 </opml>
