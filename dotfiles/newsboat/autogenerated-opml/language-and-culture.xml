@@ -6,6 +6,7 @@
   <body>
     <outline type="rss" xmlUrl="http://www.japaneseammo.com/feed/" htmlUrl="http://www.japaneseammo.com" title="Japanese Ammo"/>
     <outline type="rss" xmlUrl="https://jpf.org.au/feed/" htmlUrl="https://jpf.org.au" title="Japan Foundation, Sydney"/>
+    <outline type="rss" xmlUrl="https://www.tofugu.com/feed.xml" htmlUrl="https://www.tofugu.com/feed.xml" title="Tofugu"/>
     <outline type="rss" xmlUrl="http://japanesefilmfestival.net/feed/" htmlUrl="http://japanesefilmfestival.net" title="Japanese Film Festival Australia"/>
     <outline type="rss" xmlUrl="http://japanesefilmfestival.net/upcoming_productions" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="http://japanesefilmfestival.net/upcoming_events" htmlUrl="" title=""/>

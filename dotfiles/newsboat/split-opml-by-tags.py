@@ -33,7 +33,8 @@ with open(urls, "r") as f:
         assert line.startswith("http")
         substr1 = line.split(maxsplit=1)
         substr1[0] = substr1[0].replace("&", "&amp;") # A HACK.............
-        assert substr1[0] not in all_urls
+        if substr1[0] in all_urls:
+            raise ValueError("Found duplicate: {}".format(substr1[0]))
         all_urls.add(substr1[0])
         if len(substr1) == 1:
             no_tags.add(substr1[0])

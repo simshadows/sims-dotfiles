@@ -6,8 +6,10 @@
   <body>
     <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCwKwh-ukQv4ihdjT28vBtpw" htmlUrl="https://www.youtube.com/channel/UCwKwh-ukQv4ihdjT28vBtpw" title="simshadows"/>
     <outline type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCsErtgNZ8pczmVp1_lTIBzg" htmlUrl="https://www.youtube.com/channel/UCsErtgNZ8pczmVp1_lTIBzg" title="Sim's Supcom Sandbox Shenanigans"/>
-    <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="https://www.polygon.com/rss/index.xml" htmlUrl="https://www.polygon.com/" title="Polygon -  All"/>
     <outline type="rss" xmlUrl="http://www.thejimquisition.com/feed/" htmlUrl="http://www.thejimquisition.com" title="The Jimquisition"/>
+    <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="https://www.gog.com/frontpage/rss" htmlUrl="http://www.gog.com/frontpage/rss" title="GOG.com News"/>
     <outline type="rss" xmlUrl="http://store.steampowered.com/feeds/news.xml" htmlUrl="http://www.steampowered.com/" title="Steam RSS News Feed"/>
     <outline type="rss" xmlUrl="http://blogs.valvesoftware.com/feed/" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="https://www.guildwars2.com/en/feed/" htmlUrl="https://www.guildwars2.com/en" title="GuildWars2.com"/>

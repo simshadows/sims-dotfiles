@@ -33,9 +33,7 @@
     <outline type="rss" xmlUrl="http://www.sciencemag.org/rss/news_current.xml" htmlUrl="http://www.sciencemag.org/rss/news_current.xml" title="Latest News from Science Magazine"/>
     <outline type="rss" xmlUrl="http://advances.sciencemag.org/rss/current.xml" htmlUrl="http://advances.sciencemag.org" title="Science Advances current issue"/>
     <outline type="rss" xmlUrl="http://robotics.sciencemag.org/rss/current.xml" htmlUrl="http://robotics.sciencemag.org" title="Science Robotics current issue"/>
-    <outline type="rss" xmlUrl="https://physicstoday.scitation.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=pto" htmlUrl="https://physicstoday.scitation.org/loi/pto?af=R" title="American Institute of Physics: Physics Today: Table of Contents"/>
     <outline type="rss" xmlUrl="http://news.mit.edu/rss/research" htmlUrl="http://news.mit.edu/mitresearch-rss.xml" title="MIT Research News"/>
-    <outline type="rss" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss" htmlUrl="https://www.sciencenews.org/" title="Latest Headlines | Science News"/>
     <outline type="rss" xmlUrl="https://www.seti.org/rss.xml" htmlUrl="https://www.seti.org/seti-institute/about-seti/news" title="SETI.org - News"/>
     <outline type="rss" xmlUrl="https://cosmosmagazine.com/feed.rss" htmlUrl="https://cosmosmagazine.com/" title="Cosmos Magazine"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/DiscoverTopStories" htmlUrl="http://discovermagazine.com/rss/master-feeds/top-stories" title="Top Stories"/>
@@ -47,6 +45,43 @@
     <outline type="rss" xmlUrl="https://australiascience.tv/feed/" htmlUrl="https://australiascience.tv" title="Australia's Science Channel"/>
     <outline type="rss" xmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife/feed/" htmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife" title="Secret Life of Scientists and Engineers"/>
     <outline type="rss" xmlUrl="http://www.compoundchem.com/feed/" htmlUrl="http://www.compoundchem.com" title="Compound Interest"/>
+    <outline type="rss" xmlUrl="https://astronomynow.com/feed/" htmlUrl="https://astronomynow.com" title="Astronomy Now"/>
+    <outline type="rss" xmlUrl="http://www.popsci.com.au/rssmediareleases.aspx" htmlUrl="http://www.popsci.com.au" title="Australian Popular Science"/>
+    <outline type="rss" xmlUrl="http://earthsky.org/feed" htmlUrl="http://earthsky.org" title="EarthSky"/>
+    <outline type="rss" xmlUrl="http://nautil.us//rss/all" htmlUrl="http://nautil.us/rss/all" title="Nautilus"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/" htmlUrl="https://www.newscientist.com" title="New Scientist"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/science-news" htmlUrl="https://www.newscientist.com" title="New Scientist: News"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/features" htmlUrl="https://www.newscientist.com" title="New Scientist: Features"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/physics-math" htmlUrl="https://www.newscientist.com" title="New Scientist: Physics"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/tech" htmlUrl="https://www.newscientist.com" title="New Scientist: Tech"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/space" htmlUrl="https://www.newscientist.com" title="New Scientist: Space"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/life" htmlUrl="https://www.newscientist.com" title="New Scientist: Life"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/environment" htmlUrl="https://www.newscientist.com" title="New Scientist: Environment"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/health" htmlUrl="https://www.newscientist.com" title="New Scientist: Health"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/humans" htmlUrl="https://www.newscientist.com" title="New Scientist: Humans"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/" htmlUrl="https://phys.org/" title="Phys.org"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/space-news/" htmlUrl="https://phys.org/space-news/" title="Phys.org: Astronomy and Space"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/biology-news/" htmlUrl="https://phys.org/biology-news/" title="Phys.org: Biology"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/chemistry-news/" htmlUrl="https://phys.org/chemistry-news/" title="Phys.org: Chemistry"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/earth-news/" htmlUrl="https://phys.org/earth-news/" title="Phys.org: Earth"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/nanotech-news/" htmlUrl="https://phys.org/nanotech-news/" title="Phys.org: Nanotechnology"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/science-news/" htmlUrl="https://phys.org/science-news/" title="Phys.org: Other Sciences"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/physics-news/" htmlUrl="https://phys.org/physics-news/" title="Phys.org: Physics"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/technology-news/" htmlUrl="https://phys.org/technology-news/" title="Phys.org: Technology"/>
+    <outline type="rss" xmlUrl="https://physicstoday.scitation.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=pto" htmlUrl="https://physicstoday.scitation.org/loi/pto?af=R" title="Physics Today"/>
+    <outline type="rss" xmlUrl="https://physicsworld.com/feed/" htmlUrl="https://physicsworld.com" title="Physics World"/>
+    <outline type="rss" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss" htmlUrl="https://www.sciencenews.org/" title="Science News"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/observing/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope: Observing"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/astronomy-news/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope: Astronomy News"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/astronomy-resources/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope: Astronomy Resources and Education"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/astronomy-blogs/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope: Astronomy Blogs"/>
+    <outline type="rss" xmlUrl="https://www.space.com/home/feed/site.xml" htmlUrl=" https://www.space.com" title="Space.com"/>
+    <outline type="rss" xmlUrl="https://spaceflightnow.com/feed/" htmlUrl="https://spaceflightnow.com" title="Spaceflight Now"/>
+    <outline type="rss" xmlUrl="https://www.universetoday.com/feed/" htmlUrl="https://www.universetoday.com" title="Universe Today"/>
+    <outline type="rss" xmlUrl="https://api.quantamagazine.org/feed/" htmlUrl="https://www.quantamagazine.org" title="Quanta Magazine"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/c/biomedicine/rss/" htmlUrl="https://www.technologyreview.com/" title="Biomedicine - MIT Technology Review"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/science_and_environment/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Science and Environment"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/science/latest/rss" htmlUrl="https://www.wired.com/category/science/latest" title="WIRED: Science"/>
   </body>
 </opml>

@@ -61,8 +61,10 @@
     <outline type="rss" xmlUrl="https://thelittleworldofliz.com/rss" htmlUrl="https://thelittleworldofliz.com" title="Liz Climo"/>
     <outline type="rss" xmlUrl="http://lizclimo.tumblr.com/rss" htmlUrl="http://lizclimo.tumblr.com/" title="Hi, I'm Liz"/>
     <outline type="rss" xmlUrl="http://irwincardozocomics.tumblr.com/rss" htmlUrl="http://irwincardozocomics.tumblr.com/" title="irwincardozo comics - I WUB WUB YOU!"/>
-    <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="https://www.polygon.com/rss/index.xml" htmlUrl="https://www.polygon.com/" title="Polygon -  All"/>
     <outline type="rss" xmlUrl="http://www.thejimquisition.com/feed/" htmlUrl="http://www.thejimquisition.com" title="The Jimquisition"/>
+    <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="https://www.gog.com/frontpage/rss" htmlUrl="http://www.gog.com/frontpage/rss" title="GOG.com News"/>
     <outline type="rss" xmlUrl="http://store.steampowered.com/feeds/news.xml" htmlUrl="http://www.steampowered.com/" title="Steam RSS News Feed"/>
     <outline type="rss" xmlUrl="http://blogs.valvesoftware.com/feed/" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="https://www.guildwars2.com/en/feed/" htmlUrl="https://www.guildwars2.com/en" title="GuildWars2.com"/>
@@ -84,6 +86,7 @@
     <outline type="rss" xmlUrl="https://engineering.riotgames.com/news/feed" htmlUrl="https://engineering.riotgames.com/" title="Riot Games Tech Blog News Feed"/>
     <outline type="rss" xmlUrl="http://www.japaneseammo.com/feed/" htmlUrl="http://www.japaneseammo.com" title="Japanese Ammo"/>
     <outline type="rss" xmlUrl="https://jpf.org.au/feed/" htmlUrl="https://jpf.org.au" title="Japan Foundation, Sydney"/>
+    <outline type="rss" xmlUrl="https://www.tofugu.com/feed.xml" htmlUrl="https://www.tofugu.com/feed.xml" title="Tofugu"/>
     <outline type="rss" xmlUrl="http://japanesefilmfestival.net/feed/" htmlUrl="http://japanesefilmfestival.net" title="Japanese Film Festival Australia"/>
     <outline type="rss" xmlUrl="http://japanesefilmfestival.net/upcoming_productions" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="http://japanesefilmfestival.net/upcoming_events" htmlUrl="" title=""/>
@@ -133,9 +136,7 @@
     <outline type="rss" xmlUrl="http://www.sciencemag.org/rss/news_current.xml" htmlUrl="http://www.sciencemag.org/rss/news_current.xml" title="Latest News from Science Magazine"/>
     <outline type="rss" xmlUrl="http://advances.sciencemag.org/rss/current.xml" htmlUrl="http://advances.sciencemag.org" title="Science Advances current issue"/>
     <outline type="rss" xmlUrl="http://robotics.sciencemag.org/rss/current.xml" htmlUrl="http://robotics.sciencemag.org" title="Science Robotics current issue"/>
-    <outline type="rss" xmlUrl="https://physicstoday.scitation.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=pto" htmlUrl="https://physicstoday.scitation.org/loi/pto?af=R" title="American Institute of Physics: Physics Today: Table of Contents"/>
     <outline type="rss" xmlUrl="http://news.mit.edu/rss/research" htmlUrl="http://news.mit.edu/mitresearch-rss.xml" title="MIT Research News"/>
-    <outline type="rss" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss" htmlUrl="https://www.sciencenews.org/" title="Latest Headlines | Science News"/>
     <outline type="rss" xmlUrl="https://www.seti.org/rss.xml" htmlUrl="https://www.seti.org/seti-institute/about-seti/news" title="SETI.org - News"/>
     <outline type="rss" xmlUrl="https://cosmosmagazine.com/feed.rss" htmlUrl="https://cosmosmagazine.com/" title="Cosmos Magazine"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/DiscoverTopStories" htmlUrl="http://discovermagazine.com/rss/master-feeds/top-stories" title="Top Stories"/>
@@ -147,14 +148,45 @@
     <outline type="rss" xmlUrl="https://australiascience.tv/feed/" htmlUrl="https://australiascience.tv" title="Australia's Science Channel"/>
     <outline type="rss" xmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife/feed/" htmlUrl="http://www.pbs.org/wgbh/nova/blogs/secretlife" title="Secret Life of Scientists and Engineers"/>
     <outline type="rss" xmlUrl="http://www.compoundchem.com/feed/" htmlUrl="http://www.compoundchem.com" title="Compound Interest"/>
+    <outline type="rss" xmlUrl="https://astronomynow.com/feed/" htmlUrl="https://astronomynow.com" title="Astronomy Now"/>
+    <outline type="rss" xmlUrl="http://www.popsci.com.au/rssmediareleases.aspx" htmlUrl="http://www.popsci.com.au" title="Australian Popular Science"/>
+    <outline type="rss" xmlUrl="http://earthsky.org/feed" htmlUrl="http://earthsky.org" title="EarthSky"/>
+    <outline type="rss" xmlUrl="http://nautil.us//rss/all" htmlUrl="http://nautil.us/rss/all" title="Nautilus"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/" htmlUrl="https://www.newscientist.com" title="New Scientist"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/science-news" htmlUrl="https://www.newscientist.com" title="New Scientist: News"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/features" htmlUrl="https://www.newscientist.com" title="New Scientist: Features"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/physics-math" htmlUrl="https://www.newscientist.com" title="New Scientist: Physics"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/tech" htmlUrl="https://www.newscientist.com" title="New Scientist: Tech"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/space" htmlUrl="https://www.newscientist.com" title="New Scientist: Space"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/life" htmlUrl="https://www.newscientist.com" title="New Scientist: Life"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/environment" htmlUrl="https://www.newscientist.com" title="New Scientist: Environment"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/health" htmlUrl="https://www.newscientist.com" title="New Scientist: Health"/>
+    <outline type="rss" xmlUrl="http://feeds.newscientist.com/humans" htmlUrl="https://www.newscientist.com" title="New Scientist: Humans"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/" htmlUrl="https://phys.org/" title="Phys.org"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/space-news/" htmlUrl="https://phys.org/space-news/" title="Phys.org: Astronomy and Space"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/biology-news/" htmlUrl="https://phys.org/biology-news/" title="Phys.org: Biology"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/chemistry-news/" htmlUrl="https://phys.org/chemistry-news/" title="Phys.org: Chemistry"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/earth-news/" htmlUrl="https://phys.org/earth-news/" title="Phys.org: Earth"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/nanotech-news/" htmlUrl="https://phys.org/nanotech-news/" title="Phys.org: Nanotechnology"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/science-news/" htmlUrl="https://phys.org/science-news/" title="Phys.org: Other Sciences"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/physics-news/" htmlUrl="https://phys.org/physics-news/" title="Phys.org: Physics"/>
+    <outline type="rss" xmlUrl="https://phys.org/rss-feed/technology-news/" htmlUrl="https://phys.org/technology-news/" title="Phys.org: Technology"/>
+    <outline type="rss" xmlUrl="https://physicstoday.scitation.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=pto" htmlUrl="https://physicstoday.scitation.org/loi/pto?af=R" title="Physics Today"/>
+    <outline type="rss" xmlUrl="https://physicsworld.com/feed/" htmlUrl="https://physicsworld.com" title="Physics World"/>
+    <outline type="rss" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss" htmlUrl="https://www.sciencenews.org/" title="Science News"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/observing/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope: Observing"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/astronomy-news/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope: Astronomy News"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/astronomy-resources/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope: Astronomy Resources and Education"/>
+    <outline type="rss" xmlUrl="http://www.skyandtelescope.com/astronomy-blogs/feed/" htmlUrl="http://www.skyandtelescope.com" title="Sky &amp; Telescope: Astronomy Blogs"/>
+    <outline type="rss" xmlUrl="https://www.space.com/home/feed/site.xml" htmlUrl=" https://www.space.com" title="Space.com"/>
+    <outline type="rss" xmlUrl="https://spaceflightnow.com/feed/" htmlUrl="https://spaceflightnow.com" title="Spaceflight Now"/>
+    <outline type="rss" xmlUrl="https://www.universetoday.com/feed/" htmlUrl="https://www.universetoday.com" title="Universe Today"/>
+    <outline type="rss" xmlUrl="https://api.quantamagazine.org/feed/" htmlUrl="https://www.quantamagazine.org" title="Quanta Magazine"/>
     <outline type="rss" xmlUrl="https://hatepseudoscience.com/feed/" htmlUrl="https://hatepseudoscience.com" title="I fucking hate pseudoscience"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/PythonInsider" htmlUrl="https://pythoninsider.blogspot.com/" title="Python Insider"/>
     <outline type="rss" xmlUrl="https://blog.inoreader.com/feeds/posts/default" htmlUrl="https://blog.inoreader.com/" title="Inoreader Blog"/>
     <outline type="rss" xmlUrl="https://hackaday.com/blog/feed/" htmlUrl="https://hackaday.com" title="Blog &#x2013; Hackaday"/>
-    <outline type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" htmlUrl="http://research.googleblog.com/" title="Google Research"/>
-    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GoogleOnlineSecurityBlog" htmlUrl="http://security.googleblog.com/" title="Google Security"/>
-    <outline type="rss" xmlUrl="https://googleprojectzero.blogspot.com/feeds/posts/default" htmlUrl="https://googleprojectzero.blogspot.com/" title="Google Project Zero"/>
-    <outline type="rss" xmlUrl="http://feeds.feedburner.com/OfficialGoogleAustraliaBlog" htmlUrl="http://australia.googleblog.com/" title="Google Australia"/>
     <outline type="rss" xmlUrl="https://code.facebook.com/posts/rss/" htmlUrl="https://code.facebook.com/" title="Facebook Code"/>
     <outline type="rss" xmlUrl="https://www.atlassian.com/blog/feed" htmlUrl="https://www.atlassian.com/blog" title="Atlassian Blog"/>
     <outline type="rss" xmlUrl="https://medium.freecodecamp.org/feed" htmlUrl="https://medium.freecodecamp.org?source=rss----336d898217ee---4" title="freeCodeCamp - Medium"/>
@@ -166,29 +198,90 @@
     <outline type="rss" xmlUrl="https://www.technologyreview.com/c/biomedicine/rss/" htmlUrl="https://www.technologyreview.com/" title="Biomedicine - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/c/computing/rss/" htmlUrl="https://www.technologyreview.com/" title="Computing - MIT Technology Review"/>
     <outline type="rss" xmlUrl="https://www.technologyreview.com/c/energy/rss/" htmlUrl="https://www.technologyreview.com/" title="Energy - MIT Technology Review"/>
-    <outline type="rss" xmlUrl="https://makezine.com/feed/" htmlUrl="https://makezine.com" title="Make: DIY Projects and Ideas for Makers"/>
     <outline type="rss" xmlUrl="http://www.eevblog.com/feed/" htmlUrl="https://www.eevblog.com" title="EEVblog"/>
     <outline type="rss" xmlUrl="https://www.defcon.org/defconrss.xml" htmlUrl="https://www.defcon.org/" title="DEF CON Announcements!"/>
-    <outline type="rss" xmlUrl="https://www.raspberrypi.org/feed/" htmlUrl="https://www.raspberrypi.org" title="Raspberry Pi"/>
-    <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="https://www.raspberrypi.org/magpi" title="The MagPi Magazine"/>
-    <outline type="rss" xmlUrl="https://blog.discordapp.com/feed" htmlUrl="https://blog.discordapp.com?source=rss----cb96a1f03649---4" title="Discord Blog - Medium"/>
-    <outline type="rss" xmlUrl="https://blog.discordapp.com/feed/tagged/engineering" htmlUrl="https://blog.discordapp.com/tagged/engineering?source=rss----cb96a1f03649--engineering" title="Engineering in Discord Blog on Medium"/>
     <outline type="rss" xmlUrl="http://blog.wolfram.com/feed/" htmlUrl="http://blog.wolfram.com" title="Wolfram Blog"/>
+    <outline type="rss" xmlUrl="https://www.bugcrowd.com/feed/" htmlUrl="https://www.bugcrowd.com" title="Bugcrowd"/>
+    <outline type="rss" xmlUrl="https://blog.discordapp.com/feed" htmlUrl="https://blog.discordapp.com?source=rss----cb96a1f03649---4" title="Discord"/>
+    <outline type="rss" xmlUrl="https://blog.discordapp.com/feed/tagged/engineering" htmlUrl="https://blog.discordapp.com/tagged/engineering?source=rss----cb96a1f03649--engineering" title="Discord: Engineering"/>
+    <outline type="rss" xmlUrl="https://www.engadget.com/rss.xml" htmlUrl="https://www.engadget.com/rss.xml" title="Engadget"/>
+    <outline type="rss" xmlUrl="https://www.exploit-db.com/rss.xml" htmlUrl="http://www.exploit-db.com" title="Exploit-DB.com"/>
+    <outline type="rss" xmlUrl="http://gizmodo.com/rss" htmlUrl="http://gizmodo.com" title="Gizmodo"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" htmlUrl="http://research.googleblog.com/" title="Google Research"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GoogleOnlineSecurityBlog" htmlUrl="http://security.googleblog.com/" title="Google Security"/>
+    <outline type="rss" xmlUrl="https://googleprojectzero.blogspot.com/feeds/posts/default" htmlUrl="https://googleprojectzero.blogspot.com/" title="Google Project Zero"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/OfficialGoogleAustraliaBlog" htmlUrl="http://australia.googleblog.com/" title="Google Australia"/>
+    <outline type="rss" xmlUrl="https://www.hackerone.com/blog.rss" htmlUrl="https://www.hackerone.com/blog.rss" title="HackerOne"/>
+    <outline type="rss" xmlUrl="https://makezine.com/feed/" htmlUrl="https://makezine.com" title="Make:"/>
+    <outline type="rss" xmlUrl="https://www.microsoft.com/en-us/research/feed/" htmlUrl="https://www.microsoft.com/en-us/research" title="Microsoft Research"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/oreilly/radar/atom" htmlUrl="http://feeds.feedburner.com/oreilly/radar/atom" title="O'Reilly"/>
+    <outline type="rss" xmlUrl="https://www.oreilly.com/ideas/feed.atom" htmlUrl="https://www.oreilly.com/ideas/feed.atom" title="O'Reilly: Ideas"/>
+    <outline type="rss" xmlUrl="https://www.raspberrypi.org/feed/" htmlUrl="https://www.raspberrypi.org" title="Raspberry Pi"/>
+    <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="https://www.raspberrypi.org/magpi" title="The MagiPi"/>
+    <outline type="rss" xmlUrl="https://shubs.io/rss/" htmlUrl="http://shubs.io/" title="Shubham Shah"/>
+    <outline type="rss" xmlUrl="https://techcrunch.com/feed/" htmlUrl="https://techcrunch.com" title="TechCrunch"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Top Stories"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: World"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/uk/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: UK"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/business/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Business"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/politics/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Politics"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/health/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Health"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/education/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Education"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/science_and_environment/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Science and Environment"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/technology/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Technology"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Entertainment and Arts"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/africa/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Africa"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/asia/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Asia"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/europe/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Europe"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/latin_america/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Latin America"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/middle_east/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Middle East"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: US and Canada"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/england/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: England"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/northern_ireland/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Northern Ireland"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/scotland/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Scotland"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/wales/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Wales"/>
+    <outline type="rss" xmlUrl="https://www.forbes.com/real-time/feed2/" htmlUrl="http://www.forbes.com/real-time/" title="Forbes"/>
+    <outline type="rss" xmlUrl="https://www.theguardian.com/au/rss" htmlUrl="https://www.theguardian.com/au" title="The Guardian"/>
+    <outline type="rss" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" htmlUrl="http://www.nytimes.com/pages/index.html?partner=rss&amp;emc=rss" title="The New York Times: Home Page"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/politics" htmlUrl="http://www.washingtonpost.com/pb/politics/" title="Washington Post: Politics"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/opinions" htmlUrl="http://www.washingtonpost.com/pb/opinions/" title="Washington Post: Opinions"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/local" htmlUrl="http://www.washingtonpost.com/pb/local/" title="Washington Post: Local"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/sports" htmlUrl="http://www.washingtonpost.com/pb/sports/" title="Washington Post: Sports"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/national" htmlUrl="http://www.washingtonpost.com/pb/national/" title="Washington Post: National"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/world" htmlUrl="http://www.washingtonpost.com/pb/world/" title="Washington Post: World"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/business" htmlUrl="http://www.washingtonpost.com/pb/business/" title="Washington Post: Business"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/lifestyle" htmlUrl="http://www.washingtonpost.com/pb/lifestyle/" title="Washington Post: Lifestyle"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/entertainment" htmlUrl="http://www.washingtonpost.com/pb/entertainment/" title="Washington Post: Entertainment"/>
+    <outline type="rss" xmlUrl="https://feeds.feedburner.com/LostAtEMinor" htmlUrl="https://www.lostateminor.com" title="Lost At E Minor"/>
+    <outline type="rss" xmlUrl="https://www.techly.com.au/feed/" htmlUrl="https://www.techly.com.au" title="Techly"/>
+    <outline type="rss" xmlUrl="https://www.theverge.com/rss/index.xml" htmlUrl="https://www.theverge.com/" title="The Verge"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/rss" htmlUrl="https://www.wired.com" title="WIRED: Top Stories"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/business/latest/rss" htmlUrl="https://www.wired.com/category/business/latest" title="WIRED: Business"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/culture/latest/rss" htmlUrl="https://www.wired.com/category/culture/latest" title="WIRED: Culture"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/gear/latest/rss" htmlUrl="https://www.wired.com/category/gear/latest" title="WIRED: Gear"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/ideas/latest/rss" htmlUrl="https://www.wired.com/category/ideas/latest" title="WIRED: Ideas"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/science/latest/rss" htmlUrl="https://www.wired.com/category/science/latest" title="WIRED: Science"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/security/latest/rss" htmlUrl="https://www.wired.com/category/security/latest" title="WIRED: Security"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/transportation/latest/rss" htmlUrl="https://www.wired.com/category/transportation/latest" title="WIRED: Transportation"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/backchannel/latest/rss" htmlUrl="https://www.wired.com/category/backchannel/latest" title="WIRED: Backchannel"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/tag/wired-guide/latest/rss" htmlUrl="https://www.wired.com/tag/wired-guide/latest" title="WIRED: WIRED Guides"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/photo/latest/rss" htmlUrl="https://www.wired.com/category/photo/latest" title="WIRED: Photo"/>
     <outline type="rss" xmlUrl="https://myanimelist.net/rss/news.xml" htmlUrl="https://myanimelist.net/news?_location=rss" title="News - MyAnimeList"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/animenews" htmlUrl="http://www.crunchyroll.com/news" title="Crunchyroll: Anime News"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/rss/news" htmlUrl="http://www.crunchyroll.com/forumcategory-1/site-news" title="Crunchyroll: Site News"/>
     <outline type="rss" xmlUrl="http://yenpress.com/feed/" htmlUrl="http://yenpress.com" title="Yen Press"/>
     <outline type="rss" xmlUrl="https://www.facebook.com/madman" htmlUrl="" title=""/>
-    <outline type="rss" xmlUrl="https://what-if.xkcd.com/feed.atom" htmlUrl="https://what-if.xkcd.com/feed.atom" title="xkcd: What If?"/>
-    <outline type="rss" xmlUrl="https://blog.xkcd.com/feed/" htmlUrl="https://blog.xkcd.com" title="xkcd blog"/>
-    <outline type="rss" xmlUrl="https://feeds.feedburner.com/LostAtEMinor" htmlUrl="https://www.lostateminor.com" title="Lost At E Minor: For creative people"/>
-    <outline type="rss" xmlUrl="https://www.techly.com.au/feed/" htmlUrl="https://www.techly.com.au" title="Techly"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/TodayIFoundOut" htmlUrl="http://www.todayifoundout.com" title="Today I Found Out"/>
     <outline type="rss" xmlUrl="https://improveverywhere.com/feed/" htmlUrl="https://improveverywhere.com" title="Improv Everywhere"/>
     <outline type="rss" xmlUrl="https://www.penny-arcade.com/feed" htmlUrl="http://penny-arcade.com" title="Penny Arcade"/>
     <outline type="rss" xmlUrl="http://www.thebookoflife.org/feed/" htmlUrl="http://www.thebookoflife.org" title="The Book of Life"/>
     <outline type="rss" xmlUrl="https://www.flightradar24.com/blog/feed/" htmlUrl="https://www.flightradar24.com/blog" title="Flightradar24 Blog"/>
     <outline type="rss" xmlUrl="http://5minutehour.com/rss" htmlUrl="http://5minutehour.com/" title="Jeff Lewis 5 Minute Comedy Hour"/>
+    <outline type="rss" xmlUrl="https://blog.ncase.me/rss/" htmlUrl="https://blog.ncase.me/" title="Writing In Case"/>
+    <outline type="rss" xmlUrl="http://www.discovery.com/feed/" htmlUrl="http://www.discovery.com" title="Discovery"/>
+    <outline type="rss" xmlUrl="http://news.nationalgeographic.com/index.rss" htmlUrl="http://news.nationalgeographic.com" title="National Geographic"/>
+    <outline type="rss" xmlUrl="https://what-if.xkcd.com/feed.atom" htmlUrl="https://what-if.xkcd.com/feed.atom" title="xkcd: What If?"/>
+    <outline type="rss" xmlUrl="https://blog.xkcd.com/feed/" htmlUrl="https://blog.xkcd.com" title="xkcd blog"/>
     <outline type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:27399956/sounds.rss" htmlUrl="http://soundcloud.com/coxncrendor" title="Cox n' Crendor Show"/>
     <outline type="rss" xmlUrl="https://becausegamesmatter.com/news?format=RSS" htmlUrl="https://becausegamesmatter.com/" title="Extra Credits"/>
     <outline type="rss" xmlUrl="https://extracreditsblog.tumblr.com/rss" htmlUrl="https://extracreditsblog.tumblr.com/" title="Extra Credits"/>

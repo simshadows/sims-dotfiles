@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Top Stories"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: World"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/uk/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: UK"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/business/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Business"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/politics/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Politics"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/health/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Health"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/education/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Education"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/science_and_environment/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Science and Environment"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/technology/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Technology"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Entertainment and Arts"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/africa/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Africa"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/asia/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Asia"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/europe/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Europe"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/latin_america/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Latin America"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/middle_east/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Middle East"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: US and Canada"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/england/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: England"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/northern_ireland/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Northern Ireland"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/scotland/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Scotland"/>
+    <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/wales/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Wales"/>
+    <outline type="rss" xmlUrl="https://www.forbes.com/real-time/feed2/" htmlUrl="http://www.forbes.com/real-time/" title="Forbes"/>
+    <outline type="rss" xmlUrl="https://www.theguardian.com/au/rss" htmlUrl="https://www.theguardian.com/au" title="The Guardian"/>
+    <outline type="rss" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" htmlUrl="http://www.nytimes.com/pages/index.html?partner=rss&amp;emc=rss" title="The New York Times: Home Page"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/politics" htmlUrl="http://www.washingtonpost.com/pb/politics/" title="Washington Post: Politics"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/opinions" htmlUrl="http://www.washingtonpost.com/pb/opinions/" title="Washington Post: Opinions"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/local" htmlUrl="http://www.washingtonpost.com/pb/local/" title="Washington Post: Local"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/sports" htmlUrl="http://www.washingtonpost.com/pb/sports/" title="Washington Post: Sports"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/national" htmlUrl="http://www.washingtonpost.com/pb/national/" title="Washington Post: National"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/world" htmlUrl="http://www.washingtonpost.com/pb/world/" title="Washington Post: World"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/business" htmlUrl="http://www.washingtonpost.com/pb/business/" title="Washington Post: Business"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/lifestyle" htmlUrl="http://www.washingtonpost.com/pb/lifestyle/" title="Washington Post: Lifestyle"/>
+    <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/entertainment" htmlUrl="http://www.washingtonpost.com/pb/entertainment/" title="Washington Post: Entertainment"/>
+  </body>
+</opml>

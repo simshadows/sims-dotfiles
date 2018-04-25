@@ -70,11 +70,14 @@ http://irwincardozocomics.tumblr.com/rss "Comics"
 
 
 
-http://blog.humblebundle.com/rss "Gaming" "Announcements"
+https://www.polygon.com/rss/index.xml "Gaming"
 http://www.thejimquisition.com/feed/ "Gaming"
 
+http://blog.humblebundle.com/rss "Gaming" "Announcements"
+https://www.gog.com/frontpage/rss "Gaming"
 http://store.steampowered.com/feeds/news.xml "Gaming"
 http://blogs.valvesoftware.com/feed/ "Gaming"
+
 https://www.guildwars2.com/en/feed/ "Gaming" "Announcements"
 https://www.freeallegiance.org/feed/ "Gaming" "Announcements"
 https://www.trionworlds.com/en/news/feed/ "Gaming"
@@ -97,6 +100,7 @@ https://engineering.riotgames.com/news/feed "Gaming" "Tech"
 
 http://www.japaneseammo.com/feed/ "Language and Culture"
 https://jpf.org.au/feed/ "Language and Culture"
+https://www.tofugu.com/feed.xml "Language and Culture"
 http://japanesefilmfestival.net/feed/ "Language and Culture" "Announcements"
 http://japanesefilmfestival.net/upcoming_productions "Language and Culture" "Announcements"
 http://japanesefilmfestival.net/upcoming_events "Language and Culture" "Announcements"
@@ -157,9 +161,7 @@ http://rss.sciam.com/ScientificAmerican-Global "Science"
 http://www.sciencemag.org/rss/news_current.xml "Science"
 http://advances.sciencemag.org/rss/current.xml "Science"
 http://robotics.sciencemag.org/rss/current.xml "Science"
-https://physicstoday.scitation.org/action/showFeed?type=etoc&feed=rss&jc=pto "Science"
 http://news.mit.edu/rss/research "Science"
-https://www.sciencenews.org/feeds/headlines.rss "Science"
 https://www.seti.org/rss.xml "Science"
 https://cosmosmagazine.com/feed.rss "Science"
 http://feeds.feedburner.com/DiscoverTopStories "Science"
@@ -172,6 +174,55 @@ https://australiascience.tv/feed/ "Science"
 http://www.pbs.org/wgbh/nova/blogs/secretlife/feed/ "Science"
 http://www.compoundchem.com/feed/ "Science"
 
+https://astronomynow.com/feed/ "~Astronomy Now" "Science"
+
+http://www.popsci.com.au/rssmediareleases.aspx "~Australian Popular Science" "Science"
+
+http://earthsky.org/feed "~EarthSky" "Science"
+
+http://nautil.us//rss/all "~Nautilus" "Science"
+
+http://feeds.newscientist.com/ "~New Scientist" "Science"
+http://feeds.newscientist.com/science-news "~New Scientist: News" "Science"
+http://feeds.newscientist.com/features "~New Scientist: Features" "Science"
+http://feeds.newscientist.com/physics-math "~New Scientist: Physics" "Science"
+http://feeds.newscientist.com/tech "~New Scientist: Tech" "Science"
+http://feeds.newscientist.com/space "~New Scientist: Space" "Science"
+http://feeds.newscientist.com/life "~New Scientist: Life" "Science"
+http://feeds.newscientist.com/environment "~New Scientist: Environment" "Science"
+http://feeds.newscientist.com/health "~New Scientist: Health" "Science"
+http://feeds.newscientist.com/humans "~New Scientist: Humans" "Science"
+
+https://phys.org/rss-feed/ "~Phys.org" "Science"
+https://phys.org/rss-feed/space-news/ "~Phys.org: Astronomy and Space" "Science"
+https://phys.org/rss-feed/biology-news/ "~Phys.org: Biology" "Science"
+https://phys.org/rss-feed/chemistry-news/ "~Phys.org: Chemistry" "Science"
+https://phys.org/rss-feed/earth-news/ "~Phys.org: Earth" "Science"
+https://phys.org/rss-feed/nanotech-news/ "~Phys.org: Nanotechnology" "Science"
+https://phys.org/rss-feed/science-news/ "~Phys.org: Other Sciences" "Science"
+https://phys.org/rss-feed/physics-news/ "~Phys.org: Physics" "Science"
+https://phys.org/rss-feed/technology-news/ "~Phys.org: Technology" "Science" "Tech"
+
+https://physicstoday.scitation.org/action/showFeed?type=etoc&feed=rss&jc=pto "~Physics Today" "Science"
+
+https://physicsworld.com/feed/ "~Physics World" "Science"
+
+https://www.sciencenews.org/feeds/headlines.rss "~Science News" "Science"
+
+http://www.skyandtelescope.com/feed/ "~Sky & Telescope" "Science"
+http://www.skyandtelescope.com/observing/feed/ "~Sky & Telescope: Observing" "Science"
+http://www.skyandtelescope.com/astronomy-news/feed/ "~Sky & Telescope: Astronomy News" "Science"
+http://www.skyandtelescope.com/astronomy-resources/feed/ "~Sky & Telescope: Astronomy Resources and Education" "Science"
+http://www.skyandtelescope.com/astronomy-blogs/feed/ "~Sky & Telescope: Astronomy Blogs" "Science"
+
+https://www.space.com/home/feed/site.xml "~Space.com" "Science"
+
+https://spaceflightnow.com/feed/ "~Spaceflight Now" "Science"
+
+https://www.universetoday.com/feed/ "~Universe Today" "Science"
+
+https://api.quantamagazine.org/feed/ "~Quanta Magazine" "Science"
+
 
 
 https://hatepseudoscience.com/feed/ "Science 2"
@@ -181,10 +232,6 @@ https://hatepseudoscience.com/feed/ "Science 2"
 http://feeds.feedburner.com/PythonInsider "Tech" "Announcements"
 https://blog.inoreader.com/feeds/posts/default "~Inoreader Blog" "Tech"
 https://hackaday.com/blog/feed/ "Tech"
-http://feeds.feedburner.com/blogspot/gJZg "~Google Research" "Tech"
-http://feeds.feedburner.com/GoogleOnlineSecurityBlog "~Google Security" "Tech"
-https://googleprojectzero.blogspot.com/feeds/posts/default "~Google Project Zero" "Tech"
-http://feeds.feedburner.com/OfficialGoogleAustraliaBlog "~Google Australia" "Tech"
 https://code.facebook.com/posts/rss/ "Tech"
 https://www.atlassian.com/blog/feed "Tech"
 https://medium.freecodecamp.org/feed "Tech"
@@ -196,14 +243,99 @@ https://www.technologyreview.com/stories.rss "Tech"
 https://www.technologyreview.com/c/biomedicine/rss/ "Tech" "Science"
 https://www.technologyreview.com/c/computing/rss/ "Tech"
 https://www.technologyreview.com/c/energy/rss/ "Tech"
-https://makezine.com/feed/ "Tech"
 http://www.eevblog.com/feed/ "Tech"
 https://www.defcon.org/defconrss.xml "Tech"
-https://www.raspberrypi.org/feed/ "Tech"
-https://www.raspberrypi.org/magpi/feed/ "Tech"
-https://blog.discordapp.com/feed "Tech"
-https://blog.discordapp.com/feed/tagged/engineering "Tech"
 http://blog.wolfram.com/feed/ "Tech"
+
+https://www.bugcrowd.com/feed/ "~Bugcrowd" "Tech"
+
+https://blog.discordapp.com/feed "~Discord" "Tech"
+https://blog.discordapp.com/feed/tagged/engineering "~Discord: Engineering" "Tech"
+
+https://www.engadget.com/rss.xml "~Engadget" "Tech"
+
+https://www.exploit-db.com/rss.xml "~Exploit-DB.com" "Tech"
+
+http://gizmodo.com/rss "~Gizmodo" "Tech"
+
+http://feeds.feedburner.com/blogspot/gJZg "~Google Research" "Tech"
+http://feeds.feedburner.com/GoogleOnlineSecurityBlog "~Google Security" "Tech"
+https://googleprojectzero.blogspot.com/feeds/posts/default "~Google Project Zero" "Tech"
+http://feeds.feedburner.com/OfficialGoogleAustraliaBlog "~Google Australia" "Tech"
+
+https://www.hackerone.com/blog.rss "~HackerOne" "Tech"
+
+https://makezine.com/feed/ "~Make:" "Tech"
+
+https://www.microsoft.com/en-us/research/feed/ "~Microsoft Research" "Tech"
+
+http://feeds.feedburner.com/oreilly/radar/atom "~O'Reilly" "Tech"
+https://www.oreilly.com/ideas/feed.atom "~O'Reilly: Ideas" "Tech"
+
+https://www.raspberrypi.org/feed/ "~Raspberry Pi" "Tech"
+https://www.raspberrypi.org/magpi/feed/ "~The MagiPi" "Tech"
+
+https://shubs.io/rss/ "~Shubham Shah" "Tech"
+
+https://techcrunch.com/feed/ "~TechCrunch" "Tech"
+
+
+
+http://feeds.bbci.co.uk/news/rss.xml "~BBC News: Top Stories" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/world/rss.xml "~BBC News: World" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/uk/rss.xml "~BBC News: UK" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/business/rss.xml "~BBC News: Business" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/politics/rss.xml "~BBC News: Politics" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/health/rss.xml "~BBC News: Health" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/education/rss.xml "~BBC News: Education" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/science_and_environment/rss.xml "~BBC News: Science and Environment" "Variety Journalism 1" "Science"
+http://feeds.bbci.co.uk/news/technology/rss.xml "~BBC News: Technology" "Variety Journalism 1" "Tech"
+http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml "~BBC News: Entertainment and Arts" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/world/africa/rss.xml "~BBC News: Africa" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/world/asia/rss.xml "~BBC News: Asia" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/world/europe/rss.xml "~BBC News: Europe" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/world/latin_america/rss.xml "~BBC News: Latin America" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/world/middle_east/rss.xml "~BBC News: Middle East" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml "~BBC News: US and Canada" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/england/rss.xml "~BBC News: England" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/northern_ireland/rss.xml "~BBC News: Northern Ireland" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/scotland/rss.xml "~BBC News: Scotland" "Variety Journalism 1"
+http://feeds.bbci.co.uk/news/wales/rss.xml "~BBC News: Wales" "Variety Journalism 1"
+
+https://www.forbes.com/real-time/feed2/ "~Forbes" "Variety Journalism 1"
+
+https://www.theguardian.com/au/rss "~The Guardian" "Variety Journalism 1"
+
+http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml "~The New York Times: Home Page" "Variety Journalism 1"
+
+http://feeds.washingtonpost.com/rss/politics "~Washington Post: Politics" "Variety Journalism 1"
+http://feeds.washingtonpost.com/rss/opinions "~Washington Post: Opinions" "Variety Journalism 1"
+http://feeds.washingtonpost.com/rss/local "~Washington Post: Local" "Variety Journalism 1"
+http://feeds.washingtonpost.com/rss/sports "~Washington Post: Sports" "Variety Journalism 1"
+http://feeds.washingtonpost.com/rss/national "~Washington Post: National" "Variety Journalism 1"
+http://feeds.washingtonpost.com/rss/world "~Washington Post: World" "Variety Journalism 1"
+http://feeds.washingtonpost.com/rss/business "~Washington Post: Business" "Variety Journalism 1"
+http://feeds.washingtonpost.com/rss/lifestyle "~Washington Post: Lifestyle" "Variety Journalism 1"
+http://feeds.washingtonpost.com/rss/entertainment "~Washington Post: Entertainment" "Variety Journalism 1"
+
+
+
+https://feeds.feedburner.com/LostAtEMinor "~Lost At E Minor" "Variety Journalism 2"
+https://www.techly.com.au/feed/ "~Techly" "Variety Journalism 2"
+
+https://www.theverge.com/rss/index.xml "~The Verge" "Variety Journalism 2"
+
+https://www.wired.com/feed/rss "~WIRED: Top Stories" "Variety Journalism 2"
+https://www.wired.com/feed/category/business/latest/rss "~WIRED: Business" "Variety Journalism 2"
+https://www.wired.com/feed/category/culture/latest/rss "~WIRED: Culture" "Variety Journalism 2"
+https://www.wired.com/feed/category/gear/latest/rss "~WIRED: Gear" "Variety Journalism 2" "Tech"
+https://www.wired.com/feed/category/ideas/latest/rss "~WIRED: Ideas" "Variety Journalism 2"
+https://www.wired.com/feed/category/science/latest/rss "~WIRED: Science" "Variety Journalism 2" "Science"
+https://www.wired.com/feed/category/security/latest/rss "~WIRED: Security" "Variety Journalism 2" "Tech"
+https://www.wired.com/feed/category/transportation/latest/rss "~WIRED: Transportation" "Variety Journalism 2"
+https://www.wired.com/feed/category/backchannel/latest/rss "~WIRED: Backchannel" "Variety Journalism 2" "Tech"
+https://www.wired.com/feed/tag/wired-guide/latest/rss "~WIRED: WIRED Guides" "Variety Journalism 2"
+https://www.wired.com/feed/category/photo/latest/rss "~WIRED: Photo" "Variety Journalism 2"
 
 
 
@@ -215,16 +347,20 @@ https://www.facebook.com/madman "Weeb"
 
 
 
-https://what-if.xkcd.com/feed.atom "~xkcd: What If?" "Uncategorized"
-https://blog.xkcd.com/feed/ "~xkcd blog" "Uncategorized"
-https://feeds.feedburner.com/LostAtEMinor "Uncategorized"
-https://www.techly.com.au/feed/ "Uncategorized"
 http://feeds.feedburner.com/TodayIFoundOut "Uncategorized"
 https://improveverywhere.com/feed/ "Uncategorized"
 https://www.penny-arcade.com/feed "Uncategorized"
 http://www.thebookoflife.org/feed/ "Uncategorized"
 https://www.flightradar24.com/blog/feed/ "Uncategorized"
 http://5minutehour.com/rss "Uncategorized"
+https://blog.ncase.me/rss/ "Uncategorized"
+
+http://www.discovery.com/feed/ "~Discovery" "Uncategorized"
+
+http://news.nationalgeographic.com/index.rss "~National Geographic" "Uncategorized"
+
+https://what-if.xkcd.com/feed.atom "~xkcd: What If?" "Uncategorized"
+https://blog.xkcd.com/feed/ "~xkcd blog" "Uncategorized"
 
 
 
@@ -241,6 +377,7 @@ http://cinemassacre.com/feed/atom/ "AV Media" "Gaming"
 http://kurzgesagt.org/feed/ "AV Media" "Science 2"
 http://smartereveryday.tumblr.com/rss "AV Media" "Science 2"
 https://asapscience.tumblr.com/rss "AV Media" "Science 2"
+
 http://www.howdoesacarwork.com/feeds/posts/default "AV Media" "Science 2"
 https://veritasium.com/feed/ "AV Media" "Science 2"
 http://simonegiertz.tumblr.com/rss "AV Media" "Science 2"

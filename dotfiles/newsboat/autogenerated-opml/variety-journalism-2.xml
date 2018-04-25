@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="https://feeds.feedburner.com/LostAtEMinor" htmlUrl="https://www.lostateminor.com" title="Lost At E Minor"/>
+    <outline type="rss" xmlUrl="https://www.techly.com.au/feed/" htmlUrl="https://www.techly.com.au" title="Techly"/>
+    <outline type="rss" xmlUrl="https://www.theverge.com/rss/index.xml" htmlUrl="https://www.theverge.com/" title="The Verge"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/rss" htmlUrl="https://www.wired.com" title="WIRED: Top Stories"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/business/latest/rss" htmlUrl="https://www.wired.com/category/business/latest" title="WIRED: Business"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/culture/latest/rss" htmlUrl="https://www.wired.com/category/culture/latest" title="WIRED: Culture"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/gear/latest/rss" htmlUrl="https://www.wired.com/category/gear/latest" title="WIRED: Gear"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/ideas/latest/rss" htmlUrl="https://www.wired.com/category/ideas/latest" title="WIRED: Ideas"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/science/latest/rss" htmlUrl="https://www.wired.com/category/science/latest" title="WIRED: Science"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/security/latest/rss" htmlUrl="https://www.wired.com/category/security/latest" title="WIRED: Security"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/transportation/latest/rss" htmlUrl="https://www.wired.com/category/transportation/latest" title="WIRED: Transportation"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/backchannel/latest/rss" htmlUrl="https://www.wired.com/category/backchannel/latest" title="WIRED: Backchannel"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/tag/wired-guide/latest/rss" htmlUrl="https://www.wired.com/tag/wired-guide/latest" title="WIRED: WIRED Guides"/>
+    <outline type="rss" xmlUrl="https://www.wired.com/feed/category/photo/latest/rss" htmlUrl="https://www.wired.com/category/photo/latest" title="WIRED: Photo"/>
+  </body>
+</opml>
