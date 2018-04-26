@@ -13,8 +13,9 @@
     <outline type="rss" xmlUrl="http://syndryster.tumblr.com/rss" htmlUrl="http://syndryster.tumblr.com/" title="Syndryster"/>
     <outline type="rss" xmlUrl="http://sthr.me/feed.xml" htmlUrl="http://sthr.me/feed.xml" title="sthrme"/>
     <outline type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:279933690/sounds.rss" htmlUrl="" title="EmilyOmily (SoundCloud)"/>
-    <outline type="rss" xmlUrl="https://blog.musicbrainz.org/" htmlUrl="" title=""/>
-    <outline type="rss" xmlUrl="http://www.kinokuniya.com.au/feed/" htmlUrl="http://www.kinokuniya.com.au" title="Kinokuniya"/>
+    <outline type="rss" xmlUrl="http://www.kinokuniya.com.au/feed/" htmlUrl="http://www.kinokuniya.com.au" title="Kinokuniya Australia"/>
+    <outline type="rss" xmlUrl="https://blog.musicbrainz.org/" htmlUrl="" title="MusicBrainz"/>
+    <outline type="rss" xmlUrl="https://www.exploit-db.com/rss.xml" htmlUrl="https://www.exploit-db.com" title="Exploit-DB.com"/>
     <outline type="rss" xmlUrl="http://kuvshinov-ilya.tumblr.com/rss" htmlUrl="http://kuvshinov-ilya.tumblr.com/" title="Kuvshinov Ilya"/>
     <outline type="rss" xmlUrl="http://ticcyart.tumblr.com/rss" htmlUrl="http://ticcyart.tumblr.com/" title="Ticcy's Tumblr Art Archive"/>
     <outline type="rss" xmlUrl="http://phdcomics.com/gradfeed.php" htmlUrl="http://www.phdcomics.com" title="PHD Comics"/>
@@ -61,8 +62,25 @@
     <outline type="rss" xmlUrl="https://thelittleworldofliz.com/rss" htmlUrl="https://thelittleworldofliz.com" title="Liz Climo"/>
     <outline type="rss" xmlUrl="http://lizclimo.tumblr.com/rss" htmlUrl="http://lizclimo.tumblr.com/" title="Hi, I'm Liz"/>
     <outline type="rss" xmlUrl="http://irwincardozocomics.tumblr.com/rss" htmlUrl="http://irwincardozocomics.tumblr.com/" title="irwincardozo comics - I WUB WUB YOU!"/>
-    <outline type="rss" xmlUrl="https://www.polygon.com/rss/index.xml" htmlUrl="https://www.polygon.com/" title="Polygon -  All"/>
+    <outline type="rss" xmlUrl="https://www.destructoid.com/?mode=atom" htmlUrl="https://www.destructoid.com/?mode=atom" title="Destructoid"/>
+    <outline type="rss" xmlUrl="https://www.eurogamer.net/?format=rss" htmlUrl="https://www.eurogamer.net/" title="Eurogamer"/>
+    <outline type="rss" xmlUrl="http://feeds.ign.com/ign/all" htmlUrl="http://www.ign.com/articles" title="IGN"/>
+    <outline type="rss" xmlUrl="http://kotaku.com/rss" htmlUrl="http://kotaku.com" title="Kotaku"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraNews" htmlUrl="http://www.gamasutra.com/newswire" title="Gamasutra: News"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraConsolePCNews" htmlUrl="http://www.gamasutra.com/topic/console-pc" title="Gamasutra: Console/PC News"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraSocialOnlineNews" htmlUrl="http://www.gamasutra.com/topic/social-online" title="Gamasutra: Social/Online News"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraSmartphoneTabletNews" htmlUrl="http://www.gamasutra.com/topic/smartphone-tablet" title="Gamasutra: Smartphone/Tablet News"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraIndependentNews" htmlUrl="http://www.gamasutra.com/topic/indie" title="Gamasutra: Independent Games News"/>
+    <outline type="rss" xmlUrl="https://www.gamespot.com/feeds/mashup/" htmlUrl="https://www.gamespot.com/feeds/mashup/" title="GameSpot"/>
+    <outline type="rss" xmlUrl="https://www.gamerswithjobs.com/rss.xml" htmlUrl="https://www.gamerswithjobs.com/articles" title="Gamers With Jobs"/>
+    <outline type="rss" xmlUrl="https://www.pcgamesn.com/mainrss.xml" htmlUrl="https://www.pcgamesn.com/mainrss.xml" title="PCGamesN.com"/>
+    <outline type="rss" xmlUrl="https://www.polygon.com/rss/index.xml" htmlUrl="https://www.polygon.com/" title="Polygon"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/RockPaperShotgun" htmlUrl="https://www.rockpapershotgun.com" title="Rock, Paper, Shotgun"/>
+    <outline type="rss" xmlUrl="http://rss.escapistmagazine.com/news/0.xml" htmlUrl="http://www.escapistmagazine.com" title="The Escapist: Latest News"/>
+    <outline type="rss" xmlUrl="http://rss.escapistmagazine.com/articles/0.xml" htmlUrl="http://www.escapistmagazine.com/articles" title="The Escapist: Articles"/>
     <outline type="rss" xmlUrl="http://www.thejimquisition.com/feed/" htmlUrl="http://www.thejimquisition.com" title="The Jimquisition"/>
+    <outline type="rss" xmlUrl="http://toucharcade.com/feed/" htmlUrl="http://toucharcade.com" title="TouchArcade"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/VGChartz" htmlUrl="http://www.vgchartz.com" title="VGChartz"/>
     <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
     <outline type="rss" xmlUrl="https://www.gog.com/frontpage/rss" htmlUrl="http://www.gog.com/frontpage/rss" title="GOG.com News"/>
     <outline type="rss" xmlUrl="http://store.steampowered.com/feeds/news.xml" htmlUrl="http://www.steampowered.com/" title="Steam RSS News Feed"/>
@@ -205,7 +223,6 @@
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed" htmlUrl="https://blog.discordapp.com?source=rss----cb96a1f03649---4" title="Discord"/>
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed/tagged/engineering" htmlUrl="https://blog.discordapp.com/tagged/engineering?source=rss----cb96a1f03649--engineering" title="Discord: Engineering"/>
     <outline type="rss" xmlUrl="https://www.engadget.com/rss.xml" htmlUrl="https://www.engadget.com/rss.xml" title="Engadget"/>
-    <outline type="rss" xmlUrl="https://www.exploit-db.com/rss.xml" htmlUrl="http://www.exploit-db.com" title="Exploit-DB.com"/>
     <outline type="rss" xmlUrl="http://gizmodo.com/rss" htmlUrl="http://gizmodo.com" title="Gizmodo"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" htmlUrl="http://research.googleblog.com/" title="Google Research"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/GoogleOnlineSecurityBlog" htmlUrl="http://security.googleblog.com/" title="Google Security"/>
@@ -216,6 +233,7 @@
     <outline type="rss" xmlUrl="https://www.microsoft.com/en-us/research/feed/" htmlUrl="https://www.microsoft.com/en-us/research" title="Microsoft Research"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/oreilly/radar/atom" htmlUrl="http://feeds.feedburner.com/oreilly/radar/atom" title="O'Reilly"/>
     <outline type="rss" xmlUrl="https://www.oreilly.com/ideas/feed.atom" htmlUrl="https://www.oreilly.com/ideas/feed.atom" title="O'Reilly: Ideas"/>
+    <outline type="rss" xmlUrl="https://www.pcworld.com/index.rss" htmlUrl="https://www.pcworld.com" title="PCWorld"/>
     <outline type="rss" xmlUrl="https://www.raspberrypi.org/feed/" htmlUrl="https://www.raspberrypi.org" title="Raspberry Pi"/>
     <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="https://www.raspberrypi.org/magpi" title="The MagiPi"/>
     <outline type="rss" xmlUrl="https://shubs.io/rss/" htmlUrl="http://shubs.io/" title="Shubham Shah"/>
@@ -243,6 +261,8 @@
     <outline type="rss" xmlUrl="https://www.forbes.com/real-time/feed2/" htmlUrl="http://www.forbes.com/real-time/" title="Forbes"/>
     <outline type="rss" xmlUrl="https://www.theguardian.com/au/rss" htmlUrl="https://www.theguardian.com/au" title="The Guardian"/>
     <outline type="rss" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" htmlUrl="http://www.nytimes.com/pages/index.html?partner=rss&amp;emc=rss" title="The New York Times: Home Page"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/venturebeat/SZYF" htmlUrl="https://venturebeat.com" title="VentureBeat"/>
+    <outline type="rss" xmlUrl="https://venturebeat.com/category/games/feed/" htmlUrl="https://venturebeat.com" title="VentureBeat: GamesBeat"/>
     <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/politics" htmlUrl="http://www.washingtonpost.com/pb/politics/" title="Washington Post: Politics"/>
     <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/opinions" htmlUrl="http://www.washingtonpost.com/pb/opinions/" title="Washington Post: Opinions"/>
     <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/local" htmlUrl="http://www.washingtonpost.com/pb/local/" title="Washington Post: Local"/>
@@ -270,7 +290,6 @@
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/animenews" htmlUrl="http://www.crunchyroll.com/news" title="Crunchyroll: Anime News"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/crunchyroll/rss/news" htmlUrl="http://www.crunchyroll.com/forumcategory-1/site-news" title="Crunchyroll: Site News"/>
     <outline type="rss" xmlUrl="http://yenpress.com/feed/" htmlUrl="http://yenpress.com" title="Yen Press"/>
-    <outline type="rss" xmlUrl="https://www.facebook.com/madman" htmlUrl="" title=""/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/TodayIFoundOut" htmlUrl="http://www.todayifoundout.com" title="Today I Found Out"/>
     <outline type="rss" xmlUrl="https://improveverywhere.com/feed/" htmlUrl="https://improveverywhere.com" title="Improv Everywhere"/>
     <outline type="rss" xmlUrl="https://www.penny-arcade.com/feed" htmlUrl="http://penny-arcade.com" title="Penny Arcade"/>

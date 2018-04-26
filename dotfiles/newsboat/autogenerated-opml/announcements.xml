@@ -4,8 +4,8 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
-    <outline type="rss" xmlUrl="https://blog.musicbrainz.org/" htmlUrl="" title=""/>
-    <outline type="rss" xmlUrl="http://www.kinokuniya.com.au/feed/" htmlUrl="http://www.kinokuniya.com.au" title="Kinokuniya"/>
+    <outline type="rss" xmlUrl="http://www.kinokuniya.com.au/feed/" htmlUrl="http://www.kinokuniya.com.au" title="Kinokuniya Australia"/>
+    <outline type="rss" xmlUrl="https://blog.musicbrainz.org/" htmlUrl="" title="MusicBrainz"/>
     <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
     <outline type="rss" xmlUrl="https://www.guildwars2.com/en/feed/" htmlUrl="https://www.guildwars2.com/en" title="GuildWars2.com"/>
     <outline type="rss" xmlUrl="https://www.freeallegiance.org/feed/" htmlUrl="" title=""/>

@@ -27,6 +27,8 @@
     <outline type="rss" xmlUrl="https://www.forbes.com/real-time/feed2/" htmlUrl="http://www.forbes.com/real-time/" title="Forbes"/>
     <outline type="rss" xmlUrl="https://www.theguardian.com/au/rss" htmlUrl="https://www.theguardian.com/au" title="The Guardian"/>
     <outline type="rss" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" htmlUrl="http://www.nytimes.com/pages/index.html?partner=rss&amp;emc=rss" title="The New York Times: Home Page"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/venturebeat/SZYF" htmlUrl="https://venturebeat.com" title="VentureBeat"/>
+    <outline type="rss" xmlUrl="https://venturebeat.com/category/games/feed/" htmlUrl="https://venturebeat.com" title="VentureBeat: GamesBeat"/>
     <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/politics" htmlUrl="http://www.washingtonpost.com/pb/politics/" title="Washington Post: Politics"/>
     <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/opinions" htmlUrl="http://www.washingtonpost.com/pb/opinions/" title="Washington Post: Opinions"/>
     <outline type="rss" xmlUrl="http://feeds.washingtonpost.com/rss/local" htmlUrl="http://www.washingtonpost.com/pb/local/" title="Washington Post: Local"/>

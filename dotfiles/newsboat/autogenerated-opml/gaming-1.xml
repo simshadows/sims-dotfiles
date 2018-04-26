@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="https://www.destructoid.com/?mode=atom" htmlUrl="https://www.destructoid.com/?mode=atom" title="Destructoid"/>
+    <outline type="rss" xmlUrl="https://www.eurogamer.net/?format=rss" htmlUrl="https://www.eurogamer.net/" title="Eurogamer"/>
+    <outline type="rss" xmlUrl="http://feeds.ign.com/ign/all" htmlUrl="http://www.ign.com/articles" title="IGN"/>
+    <outline type="rss" xmlUrl="http://kotaku.com/rss" htmlUrl="http://kotaku.com" title="Kotaku"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraNews" htmlUrl="http://www.gamasutra.com/newswire" title="Gamasutra: News"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraConsolePCNews" htmlUrl="http://www.gamasutra.com/topic/console-pc" title="Gamasutra: Console/PC News"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraSocialOnlineNews" htmlUrl="http://www.gamasutra.com/topic/social-online" title="Gamasutra: Social/Online News"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraSmartphoneTabletNews" htmlUrl="http://www.gamasutra.com/topic/smartphone-tablet" title="Gamasutra: Smartphone/Tablet News"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/GamasutraIndependentNews" htmlUrl="http://www.gamasutra.com/topic/indie" title="Gamasutra: Independent Games News"/>
+    <outline type="rss" xmlUrl="https://www.gamespot.com/feeds/mashup/" htmlUrl="https://www.gamespot.com/feeds/mashup/" title="GameSpot"/>
+    <outline type="rss" xmlUrl="https://www.gamerswithjobs.com/rss.xml" htmlUrl="https://www.gamerswithjobs.com/articles" title="Gamers With Jobs"/>
+    <outline type="rss" xmlUrl="https://www.pcgamesn.com/mainrss.xml" htmlUrl="https://www.pcgamesn.com/mainrss.xml" title="PCGamesN.com"/>
+    <outline type="rss" xmlUrl="https://www.polygon.com/rss/index.xml" htmlUrl="https://www.polygon.com/" title="Polygon"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/RockPaperShotgun" htmlUrl="https://www.rockpapershotgun.com" title="Rock, Paper, Shotgun"/>
+    <outline type="rss" xmlUrl="http://rss.escapistmagazine.com/news/0.xml" htmlUrl="http://www.escapistmagazine.com" title="The Escapist: Latest News"/>
+    <outline type="rss" xmlUrl="http://rss.escapistmagazine.com/articles/0.xml" htmlUrl="http://www.escapistmagazine.com/articles" title="The Escapist: Articles"/>
+    <outline type="rss" xmlUrl="http://www.thejimquisition.com/feed/" htmlUrl="http://www.thejimquisition.com" title="The Jimquisition"/>
+    <outline type="rss" xmlUrl="http://toucharcade.com/feed/" htmlUrl="http://toucharcade.com" title="TouchArcade"/>
+    <outline type="rss" xmlUrl="http://feeds.feedburner.com/VGChartz" htmlUrl="http://www.vgchartz.com" title="VGChartz"/>
+  </body>
+</opml>

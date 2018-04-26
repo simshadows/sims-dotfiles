@@ -27,7 +27,6 @@
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed" htmlUrl="https://blog.discordapp.com?source=rss----cb96a1f03649---4" title="Discord"/>
     <outline type="rss" xmlUrl="https://blog.discordapp.com/feed/tagged/engineering" htmlUrl="https://blog.discordapp.com/tagged/engineering?source=rss----cb96a1f03649--engineering" title="Discord: Engineering"/>
     <outline type="rss" xmlUrl="https://www.engadget.com/rss.xml" htmlUrl="https://www.engadget.com/rss.xml" title="Engadget"/>
-    <outline type="rss" xmlUrl="https://www.exploit-db.com/rss.xml" htmlUrl="http://www.exploit-db.com" title="Exploit-DB.com"/>
     <outline type="rss" xmlUrl="http://gizmodo.com/rss" htmlUrl="http://gizmodo.com" title="Gizmodo"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" htmlUrl="http://research.googleblog.com/" title="Google Research"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/GoogleOnlineSecurityBlog" htmlUrl="http://security.googleblog.com/" title="Google Security"/>
@@ -38,6 +37,7 @@
     <outline type="rss" xmlUrl="https://www.microsoft.com/en-us/research/feed/" htmlUrl="https://www.microsoft.com/en-us/research" title="Microsoft Research"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/oreilly/radar/atom" htmlUrl="http://feeds.feedburner.com/oreilly/radar/atom" title="O'Reilly"/>
     <outline type="rss" xmlUrl="https://www.oreilly.com/ideas/feed.atom" htmlUrl="https://www.oreilly.com/ideas/feed.atom" title="O'Reilly: Ideas"/>
+    <outline type="rss" xmlUrl="https://www.pcworld.com/index.rss" htmlUrl="https://www.pcworld.com" title="PCWorld"/>
     <outline type="rss" xmlUrl="https://www.raspberrypi.org/feed/" htmlUrl="https://www.raspberrypi.org" title="Raspberry Pi"/>
     <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="https://www.raspberrypi.org/magpi" title="The MagiPi"/>
     <outline type="rss" xmlUrl="https://shubs.io/rss/" htmlUrl="http://shubs.io/" title="Shubham Shah"/>

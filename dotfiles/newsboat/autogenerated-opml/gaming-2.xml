@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="http://blog.humblebundle.com/rss" htmlUrl="http://blog.humblebundle.com/" title="Humble Bundle Blog"/>
+    <outline type="rss" xmlUrl="https://www.gog.com/frontpage/rss" htmlUrl="http://www.gog.com/frontpage/rss" title="GOG.com News"/>
+    <outline type="rss" xmlUrl="http://store.steampowered.com/feeds/news.xml" htmlUrl="http://www.steampowered.com/" title="Steam RSS News Feed"/>
+    <outline type="rss" xmlUrl="http://blogs.valvesoftware.com/feed/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="https://www.guildwars2.com/en/feed/" htmlUrl="https://www.guildwars2.com/en" title="GuildWars2.com"/>
+    <outline type="rss" xmlUrl="https://www.freeallegiance.org/feed/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="https://www.trionworlds.com/en/news/feed/" htmlUrl="https://www.trionworlds.com/en" title="News &#x2013; Trion Worlds, Inc."/>
+    <outline type="rss" xmlUrl="https://www.atlasreactorgame.com/en/news/feed/" htmlUrl="https://www.atlasreactorgame.com/en" title="Atlas ReactorNews &#x2013; Atlas Reactor"/>
+    <outline type="rss" xmlUrl="https://www.trionworlds.com/rift/en/feed/" htmlUrl="https://www.trionworlds.com/rift/en" title="RIFTRIFT"/>
+    <outline type="rss" xmlUrl="http://larian.com/feed/" htmlUrl="http://larian.com" title="Larian Studios"/>
+    <outline type="rss" xmlUrl="https://minecraft.net/en-us/feeds/community-content/atom" htmlUrl="http://minecraft.net/en-us/" title="Minecraft.net - All Content Atom Feed"/>
+    <outline type="rss" xmlUrl="https://mojang.com/feed.xml" htmlUrl="https://mojang.com/" title="Mojang"/>
+    <outline type="rss" xmlUrl="http://kerbaldevteam.tumblr.com/rss" htmlUrl="http://kerbaldevteam.tumblr.com/" title="Kerbal Space Program Blog"/>
+    <outline type="rss" xmlUrl="http://www.awesomenauts.com/feed/" htmlUrl="https://www.awesomenauts.com" title="Awesomenauts &#x2013; The free 2D MOBA, official homepage"/>
+    <outline type="rss" xmlUrl="http://joostdevblog.blogspot.com/feeds/posts/default" htmlUrl="http://joostdevblog.blogspot.com/" title="Joost's Dev Blog"/>
+    <outline type="rss" xmlUrl="http://www.zachtronicsindustries.com/feed/" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="https://www.nintendo.com/feed" htmlUrl="https://nintendo.com/whatsnew" title="Nintendo.com &#x2013; News and Updates"/>
+    <outline type="rss" xmlUrl="https://robocraftgame.com/feed.xml" htmlUrl="https://robocraftgame.com" title="ROBOCRAFT"/>
+    <outline type="rss" xmlUrl="http://blog.rpgmakerweb.com/feed/" htmlUrl="http://blog.rpgmakerweb.com" title="The Official RPG Maker Blog"/>
+    <outline type="rss" xmlUrl="https://oce.leagueoflegends.com/en/rss.xml" htmlUrl="https://oce.leagueoflegends.com/en/rss.xml" title="Most Recent News"/>
+    <outline type="rss" xmlUrl="https://engineering.riotgames.com/news/feed" htmlUrl="https://engineering.riotgames.com/" title="Riot Games Tech Blog News Feed"/>
+  </body>
+</opml>
