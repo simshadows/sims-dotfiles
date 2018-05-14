@@ -281,3 +281,14 @@ snippet circ "circuitikz env." b
 \end{circuitikz}$0
 endsnippet
 
+snippet circc "circuitikz env. (2)" b
+\begin{figure}[H]\centering
+\begin{circuitikz}
+	\draw $1
+	;
+\end{circuitikz}
+\caption{${2:caption}}
+\label{fig:${3:labelname}}
+\end{figure}$0
+endsnippet
+

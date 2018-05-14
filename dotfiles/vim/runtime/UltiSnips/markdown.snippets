@@ -1,11 +1,28 @@
 priority 50
 
+extends liquid
+
 ################
 # Blog Helpers #
 ################
 
 # I use these to help me write posts for my personal blog.
 
-snippet blogimg "Blog: Add an image." b
-![${1:alt text}](/images/posts/${2:filename}){:height="100%" width="100%"}
+snippet eqq "Blog Helper: Mathjax Inclusion" b
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 endsnippet
+
+snippet eq "Blog Helper: Equation" b
+<script type="math/tex; mode=display">
+% <![CDATA[
+\begin{equation}
+    $1
+\end{equation}
+%]]>
+</script>$0
+endsnippet
+
+snippet img "Blog Helper: Image" b
+![${1:alttext}](/images/posts/${2:filename}){:height="${3:60%}" width="$3"}$0
+endsnippet
+
