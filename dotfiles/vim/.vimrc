@@ -60,6 +60,7 @@ Plugin 'lervag/vimtex'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'wincent/command-t'
 
 " Conflicts...
 "Plugin 'tpope/vim-surround'
@@ -97,6 +98,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 "inoremap <expr> <C-J> UltiSnips#JumpForwards()
 "inoremap <expr> <C-K> UltiSnips#JumpBackwards()
 " TODO: These are bugged. Find a better alternative...
+
+nnoremap ;; :CommandT<enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL AND UI """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -357,12 +360,15 @@ let g:mapleader="\\"
 
 " As much as I want to love the existing tag navigation keys, they absolutely suck.
 
+" Tag Navigation
 " Jump to tag
-nnoremap ;l <c-]>
-" Jump to previous tag (from the tag stack)
-nnoremap ;h <c-T>
+nnoremap <c-h> <c-T>
+" Unbound (for now)
+nnoremap <c-j> <Nop>
 " List the tag stack
-nnoremap ;k :tags<enter>
+nnoremap <c-k> :tags<enter>
+" Jump to previous tag (from the tag stack)
+nnoremap <c-l> <c-]>
 
 " List the jump stack
 nnoremap ;j :jumps<enter>
@@ -371,11 +377,6 @@ nnoremap ;j :jumps<enter>
 "nnoremap H <Nop>
 "nnoremap K <Nop>
 "nnoremap L <Nop>
-"nnoremap <c-h> <Nop>
-"nnoremap <c-j> <Nop>
-"nnoremap <c-k> <Nop>
-"nnoremap <c-l> <Nop>
-" I might end up using these for tags and jumps...
 
 " ---------------
 " --- Editing ---
@@ -469,7 +470,7 @@ nnoremap sn :tabnext<enter>
 " -----------------
 
 " Display tabs and leading spaces.
-nnoremap ;; :set list!<enter>
+nnoremap ;l :set list!<enter>
 " I use this so much to inspect whitespace that it deserves this prime real estate.
 
 " Remove search highlighting.

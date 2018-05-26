@@ -22,6 +22,11 @@ fi
 echo "Running vim PluginInstall..."
 vim +PluginInstall +qall
 
+echo "Completing installation of the Command-T plugin..."
+cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
+ruby extconf.rb
+make
+
 echo "Setting up remaining symlinks..."
 ln -sfn "$src_dir/runtime" ~/.vim/custom-runtime
 

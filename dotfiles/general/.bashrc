@@ -10,10 +10,6 @@
 # IGNORE FOR NOW.
 
 
-# vi keys
-set -o vi
-
-
 # System detection
 if [[ "$OSTYPE" == "darwin"* ]]; then
     os_type="mac"

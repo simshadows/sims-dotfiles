@@ -13,6 +13,7 @@ echo "Setting up symlinks and directories..."
 ln_corresponding .bash_logout
 ln_corresponding .bash_profile
 ln_corresponding .bashrc
+ln_corresponding .inputrc
 ln_corresponding .tmux.conf
 ln_corresponding .config/i3status config
 ln_corresponding .config/ranger commands.py
