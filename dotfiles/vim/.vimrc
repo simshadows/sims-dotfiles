@@ -411,6 +411,8 @@ nnoremap ;o :sort u<enter>
 inoremap <C-U> <Nop>
 inoremap <C-W> <Nop>
 
+nnoremap ;t :call ConvertTabsTo4Spaces()<CR>
+
 " ------------------
 " --- UI: Splits ---
 " ------------------
@@ -534,6 +536,14 @@ function! HasPaste()
     if &paste
         return 'PASTE MODE  '
     endif
+    return ''
+endfunction
+
+function! ConvertTabsTo4Spaces()
+    set tabstop=4
+    set shiftwidth=4
+    set expandtab
+    retab
     return ''
 endfunction
 
