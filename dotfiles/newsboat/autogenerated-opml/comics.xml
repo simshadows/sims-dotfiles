@@ -37,7 +37,7 @@
     <outline type="rss" xmlUrl="http://birdandmoon.tumblr.com/rss" htmlUrl="http://birdandmoon.tumblr.com/" title="birdandmoon.com"/>
     <outline type="rss" xmlUrl="https://theupturnedmicroscope.com/feed/" htmlUrl="https://theupturnedmicroscope.com" title="The Upturned Microscope"/>
     <outline type="rss" xmlUrl="http://www.bunicomic.com/feed/" htmlUrl="http://www.bunicomic.com" title="Buni"/>
-    <outline type="rss" xmlUrl="http://deathbulge.com/rss.xml" htmlUrl="" title=""/>
+    <outline type="rss" xmlUrl="http://deathbulge.com/rss.xml" htmlUrl="http://deathbulge.com/#/comics" title="Deathbulge"/>
     <outline type="rss" xmlUrl="http://cornellajoan.tumblr.com/rss" htmlUrl="http://cornellajoan.tumblr.com/" title="Joan Cornell&#xE0;"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/PoorlyDrawnLines" htmlUrl="http://www.poorlydrawnlines.com" title="Poorly Drawn Lines"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/TheGentlemansArmchair" htmlUrl="http://thegentlemansarmchair.com" title="The Gentlemans Armchair"/>
@@ -48,5 +48,6 @@
     <outline type="rss" xmlUrl="https://thelittleworldofliz.com/rss" htmlUrl="https://thelittleworldofliz.com" title="Liz Climo"/>
     <outline type="rss" xmlUrl="http://lizclimo.tumblr.com/rss" htmlUrl="http://lizclimo.tumblr.com/" title="Hi, I'm Liz"/>
     <outline type="rss" xmlUrl="http://irwincardozocomics.tumblr.com/rss" htmlUrl="http://irwincardozocomics.tumblr.com/" title="irwincardozo comics - I WUB WUB YOU!"/>
+    <outline type="rss" xmlUrl="http://adamtots.tumblr.com/rss" htmlUrl="" title=""/>
   </body>
 </opml>

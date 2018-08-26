@@ -6,5 +6,7 @@
   <body>
     <outline type="rss" xmlUrl="http://sthr.me/feed.xml" htmlUrl="http://sthr.me/feed.xml" title="sthrme"/>
     <outline type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:279933690/sounds.rss" htmlUrl="" title="EmilyOmily (SoundCloud)"/>
+    <outline type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?q=by%3AAeirsus&amp;type=journal&amp;formatted=1" htmlUrl="" title="Aeirsus (DeviantArt)"/>
+    <outline type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?q=by%3AAersus&amp;type=journal&amp;formatted=1" htmlUrl="" title="Aeirsus (DeviantArt) (Old Account)"/>
   </body>
 </opml>

@@ -4,6 +4,9 @@
     <title>newsboat - Exported Feeds</title>
   </head>
   <body>
+    <outline type="rss" xmlUrl="https://medium.com/feed/@csesoc" htmlUrl="" title="UNSW CSESoc: CSESoc Publications (Medium)"/>
+    <outline type="rss" xmlUrl="https://www.cjdb.com.au/feed.xml" htmlUrl="" title="Christopher Di Bella's Developer Blog"/>
+    <outline type="rss" xmlUrl="https://shubs.io/rss/" htmlUrl="http://shubs.io/" title="Shubham Shah"/>
     <outline type="rss" xmlUrl="https://engineering.riotgames.com/news/feed" htmlUrl="https://engineering.riotgames.com/" title="Riot Games Tech Blog News Feed"/>
     <outline type="rss" xmlUrl="https://phys.org/rss-feed/technology-news/" htmlUrl="https://phys.org/technology-news/" title="Phys.org: Technology"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/PythonInsider" htmlUrl="https://pythoninsider.blogspot.com/" title="Python Insider"/>
@@ -35,12 +38,13 @@
     <outline type="rss" xmlUrl="https://www.hackerone.com/blog.rss" htmlUrl="https://www.hackerone.com/blog.rss" title="HackerOne"/>
     <outline type="rss" xmlUrl="https://makezine.com/feed/" htmlUrl="https://makezine.com" title="Make:"/>
     <outline type="rss" xmlUrl="https://www.microsoft.com/en-us/research/feed/" htmlUrl="https://www.microsoft.com/en-us/research" title="Microsoft Research"/>
+    <outline type="rss" xmlUrl="https://medium.com/feed/netflix-techblog" htmlUrl="" title="Netflix TechBlog"/>
     <outline type="rss" xmlUrl="http://feeds.feedburner.com/oreilly/radar/atom" htmlUrl="http://feeds.feedburner.com/oreilly/radar/atom" title="O'Reilly"/>
     <outline type="rss" xmlUrl="https://www.oreilly.com/ideas/feed.atom" htmlUrl="https://www.oreilly.com/ideas/feed.atom" title="O'Reilly: Ideas"/>
     <outline type="rss" xmlUrl="https://www.pcworld.com/index.rss" htmlUrl="https://www.pcworld.com" title="PCWorld"/>
     <outline type="rss" xmlUrl="https://www.raspberrypi.org/feed/" htmlUrl="https://www.raspberrypi.org" title="Raspberry Pi"/>
     <outline type="rss" xmlUrl="https://www.raspberrypi.org/magpi/feed/" htmlUrl="https://www.raspberrypi.org/magpi" title="The MagiPi"/>
-    <outline type="rss" xmlUrl="https://shubs.io/rss/" htmlUrl="http://shubs.io/" title="Shubham Shah"/>
+    <outline type="rss" xmlUrl="https://riscv.org/feed/" htmlUrl="" title="RISC-V Foundation"/>
     <outline type="rss" xmlUrl="https://techcrunch.com/feed/" htmlUrl="https://techcrunch.com" title="TechCrunch"/>
     <outline type="rss" xmlUrl="http://feeds.bbci.co.uk/news/technology/rss.xml" htmlUrl="http://www.bbc.co.uk/news/" title="BBC News: Technology"/>
     <outline type="rss" xmlUrl="https://www.wired.com/feed/category/gear/latest/rss" htmlUrl="https://www.wired.com/category/gear/latest" title="WIRED: Gear"/>

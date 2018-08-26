@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>newsboat - Exported Feeds</title>
+  </head>
+  <body>
+    <outline type="rss" xmlUrl="https://www.cjdb.com.au/feed.xml" htmlUrl="" title="Christopher Di Bella's Developer Blog"/>
+    <outline type="rss" xmlUrl="https://shubs.io/rss/" htmlUrl="http://shubs.io/" title="Shubham Shah"/>
+  </body>
+</opml>

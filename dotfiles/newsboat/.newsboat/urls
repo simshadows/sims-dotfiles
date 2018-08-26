@@ -10,6 +10,18 @@ http://syndryster.tumblr.com/rss "My Content" "Art"
 
 http://sthr.me/feed.xml "Friends" "Uncategorized"
 http://feeds.soundcloud.com/users/soundcloud:users:279933690/sounds.rss "~EmilyOmily (SoundCloud)" "Friends" "AV Media" "Music"
+https://backend.deviantart.com/rss.xml?q=by%3AAeirsus&type=journal&formatted=1 "~Aeirsus (DeviantArt)" "Friends" "Art"
+https://backend.deviantart.com/rss.xml?q=by%3AAersus&type=journal&formatted=1 "~Aeirsus (DeviantArt) (Old Account)" "Friends" "Art"
+
+
+
+https://medium.com/feed/@csesoc "~UNSW CSESoc: CSESoc Publications (Medium)" "Category 1" "Tech"
+
+
+
+https://www.cjdb.com.au/feed.xml "~Christopher Di Bella's Developer Blog" "Category 2" "Tech"
+
+https://shubs.io/rss/ "~Shubham Shah" "Category 2" "Tech"
 
 
 
@@ -72,6 +84,7 @@ http://toothpastefordinner.com/rss/rss.php "Comics"
 https://thelittleworldofliz.com/rss "Comics"
 http://lizclimo.tumblr.com/rss "Comics"
 http://irwincardozocomics.tumblr.com/rss "Comics"
+http://adamtots.tumblr.com/rss "Comics"
 
 
 
@@ -304,6 +317,8 @@ https://makezine.com/feed/ "~Make:" "Tech"
 
 https://www.microsoft.com/en-us/research/feed/ "~Microsoft Research" "Tech"
 
+https://medium.com/feed/netflix-techblog "~Netflix TechBlog" "Tech"
+
 http://feeds.feedburner.com/oreilly/radar/atom "~O'Reilly" "Tech"
 https://www.oreilly.com/ideas/feed.atom "~O'Reilly: Ideas" "Tech"
 
@@ -312,7 +327,7 @@ https://www.pcworld.com/index.rss "~PCWorld" "Tech"
 https://www.raspberrypi.org/feed/ "~Raspberry Pi" "Tech"
 https://www.raspberrypi.org/magpi/feed/ "~The MagiPi" "Tech"
 
-https://shubs.io/rss/ "~Shubham Shah" "Tech"
+https://riscv.org/feed/ "~RISC-V Foundation" "Tech"
 
 https://techcrunch.com/feed/ "~TechCrunch" "Tech"
 
