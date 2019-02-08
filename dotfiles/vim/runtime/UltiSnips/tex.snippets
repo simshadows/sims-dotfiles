@@ -149,6 +149,10 @@ snippet nth "Math: n^th" w
 \Nth{${1:n}}{${2:th}}$0
 endsnippet
 
+snippet right "Math: \Rightarrow"
+\Rightarrow $0
+endsnippet
+
 snippet qquadright "Math: \qquad \Rightarrow \qquad" b
 \qquad \Rightarrow \qquad
 $0
@@ -171,6 +175,14 @@ endsnippet
 #################
 # Miscellaneous #
 #################
+
+snippet sigfig "Math: Significant Figures" w
+\text{ (${1:4} sig. fig.)}$0
+endsnippet
+
+snippet decpl "Math: Decimal Places" w
+\text{ (${1:4} dec. fig.)}$0
+endsnippet
 
 snippet lst "lstlisting env." b
 \begin{lstlisting}[language=\{\}]
@@ -280,20 +292,70 @@ $1
 \end{subequations}$0
 endsnippet
 
-snippet circ "circuitikz env." b
+snippet circc "CircuiTikZ Environment" b
+\begin{figure}[H]\centering
+\begin{circuitikz}
+	\draw
+		(0,0) $1
+	;
+\end{circuitikz}
+\caption{${2:caption}}
+\label{fig:${3:labelname}}
+\end{figure}$0
+endsnippet
+
+snippet circc "CircuiTikZ Environment (Simple)" b
 \begin{circuitikz}
 	$1
 \end{circuitikz}$0
 endsnippet
 
-snippet circc "circuitikz env. (2)" b
+snippet circgnd "CircuiTikZ: \draw Ground" b
+\draw (${1:0,0}) node[ground] {};$0
+endsnippet
+
+snippet circnode "CircuiTikZ: \draw Labelled Node" b
+\draw[${1:blue}, fill=$1] (${2:0,0}) circle [radius=3pt] node[above=3pt] {${3:label}};$0
+endsnippet
+
+snippet circmesh "CircuiTikZ: \draw Labelled Mesh" b
+% Meshes
+\def\meshcw#1#2#3#4{
+	\draw[thick, stealth-, #3] (#1) node{#4}  ++(-70:#2) arc (-70:190:#2);
+}
+\def\meshcc#1#2#3#4{
+	\draw[thick, -stealth, #3] (#1) node{#4}  ++(-10:#2) arc (-10:250:#2);
+}
+\meshcw{1,1}{0.35}{red}{$\mathbf{I}_1$}
+\meshcc{1,2}{0.35}{red}{$\mathbf{I}_2$}
+endsnippet
+
+snippet samplephasordiagram "TikZ: [Sample] Phasor Diagram" b
 \begin{figure}[H]\centering
-\begin{circuitikz}
-	\draw $1
-	;
-\end{circuitikz}
-\caption{${2:caption}}
-\label{fig:${3:labelname}}
+\begin{tikzpicture}[scale=1.2]
+	% Definitions
+	\def\phasorlin#1#2#3#4#5#6{
+		\coordinate (#6) at (#1:#2);
+		\draw[->, ultra thick, #3] (0,0) -- (#1:#2) node[#4] {#5};
+	}
+	\def\phasorarc#1#2#3#4#5{
+		\draw[#3, very thick] (#2,0) arc [start angle=0, end angle=#1, radius=#2] node [midway, #4] {#5};
+	}
+	% Reference
+	\draw[very thick, dotted] (0,0) -- (5,0);
+	% Phasors
+	\phasorlin{29}{2.5}{black}{right}{$\mathbf{I}_1$}{v1}
+	\phasorarc{29}{1  }{black}{right}{$\ang{29}$}
+	\phasorlin{-11}{2.7}{black}{right}{$\mathbf{I}_2$}{v2}
+	\phasorarc{-11}{1.4}{black}{right}{$\ang{-11}$}
+	\phasorlin{105}{1.8}{black}{above}{$\mathbf{I}_3$}{v3}
+	\phasorarc{105}{0.8}{black}{above}{$\ang{105}$}
+	% Connecting Lines
+	\draw[->, ultra thick, dotted, red]
+		(v2) -- (v1) node[midway, right] {$\mathbf{I}_3$};
+\end{tikzpicture}
+\caption{${1:Phasor diagram.}}
+\label{fig:${2:label}}}
 \end{figure}$0
 endsnippet
 

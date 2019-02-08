@@ -60,10 +60,10 @@
 	# Clone a remote repository
 	cl             = clone  # <url>
 	# Clone from Github
-	cl-github      = !sh -c 'git clone git@github.com:$1.git' -
-	cl-githubwiki  = !sh -c 'git clone git@github.com:$1.wiki.git' -
-	clH-github     = !sh -c 'git clone https://github.com/$1.git' -
-	clH-githubwiki = !sh -c 'git clone https://github.com/$1.wiki.git' -
+	github          = !sh -c 'git clone git@github.com:$1.git' -
+	githubwiki      = !sh -c 'git clone git@github.com:$1.wiki.git' -
+	githubHTTPS     = !sh -c 'git clone https://github.com/$1.git' -
+	githubwikiHTTPS = !sh -c 'git clone https://github.com/$1.wiki.git' -
 
 	# View all remotes.
 	rR             = remote
