@@ -4,8 +4,16 @@ priority 50
 # Referencing #
 ###############
 
+snippet lab "\label{$1}" w
+\label{$1}$0
+endsnippet
+
 snippet ref "\ref{$1}" w
 \ref{$1}$0
+endsnippet
+
+snippet eqref "\eqref{eq:$1}" w
+\eqref{eq:$1}$0
 endsnippet
 
 snippet aref "\autoref{$1}" w
@@ -30,7 +38,7 @@ snippet ttt "Text Emphasis: Teletype" w
 endsnippet
 
 snippet tul "Text Emphasis: Underline" w
-\underline{$1}$0
+\myul{$1}$0
 endsnippet
 
 #snippet tbu "Text Emphasis: Bold and Underline" w
@@ -60,10 +68,52 @@ snippet ga "gather env." b
 \end{gather}$0
 endsnippet
 
+snippet ga* "gather* env." b
+\begin{gather*}
+	$1
+\end{gather*}$0
+endsnippet
+
+snippet align "align env." b
+\begin{align}
+	$1
+\end{align}$0
+endsnippet
+
+snippet align* "align* env." b
+\begin{align*}
+	$1
+\end{align*}$0
+endsnippet
+
+snippet alignat "alignat env." b
+\begin{alignat}{2}
+	$1
+\end{alignat}$0
+endsnippet
+
+snippet alignat* "alignat* env." b
+\begin{alignat*}{2}
+	$1
+\end{alignat*}$0
+endsnippet
+
+snippet subeq "subequations env." b
+\begin{subequations}
+$1
+\end{subequations}$0
+endsnippet
+
 
 ######################
 # Math Miscellaneous #
 ######################
+
+# Quick Numbers
+
+snippet 1e "Math: {10}^{$1}" w
+{10}^{$1}$0
+endsnippet
 
 # Text
 
@@ -79,22 +129,54 @@ snippet mbb "Math: \mathbb{$1}" w
 \mathbb{$1}$0
 endsnippet
 
-# Surrounds
+# Simple Surrounds
 
-snippet abs "Math: |$1|" w
-\abs{$1}$0
-endsnippet
-
-snippet paren "Math: ($1)" w
-\parens{$1}$0
+snippet parens "Math: ($1)" w
+\parens*{$1}$0
 endsnippet
 
 snippet brackets "Math: [$1]" w
-\brackets{$1}$0
+\brackets*{$1}$0
 endsnippet
 
 snippet braces "Math: {$1}" w
 \braces{$1}$0
+endsnippet
+
+snippet abs "Math: |$1|" w
+\abs*{$1}$0
+endsnippet
+
+snippet ceil "Math: Ceiling Surrounds" w
+\ceil*{$1}$0
+endsnippet
+
+snippet floor "Math: Floor Surrounds" w
+\floor*{$1}$0
+endsnippet
+
+# More Complicated Surrounds
+
+snippet evalat "Math: Evaluation Bar" w
+\evalat{$1}{$2}$0
+endsnippet
+
+# Matrices
+
+snippet bmat "Math: Matrix with [] surrounds" w
+\begin{bmatrix}
+	$1
+\end{bmatrix}$0
+endsnippet
+
+# siunitx Scientific Notation
+
+snippet num "Math: Scientific Notation" w
+\num{${1:1e-3}}$0
+endsnippet
+
+snippet nu "Math: Scientific Notation (with surrounding parentheses)" w
+(\num{${1:1e-3}})$0
 endsnippet
 
 # siunitx Unit Building
@@ -113,11 +195,65 @@ snippet angg "Math: \angle \ang{$1}" w
 \angle \ang{$1}$0
 endsnippet
 
-snippet sirad "Math: \si{\radian}" w
+snippet rad "Math: \si{\radian}" w
 \si{\radian}$0
 endsnippet
 
+snippet volt "Math: \si{\volt}" w
+\si{\volt}$0
+endsnippet
+snippet kvolt "Math: \si{\kilo\volt}" w
+\si{\kilo\volt}$0
+endsnippet
+snippet mvolt "Math: \si{\milli\volt}" w
+\si{\milli\volt}$0
+endsnippet
+snippet uvolt "Math: \si{\micro\volt}" w
+\si{\micro\volt}$0
+endsnippet
+
+snippet amp "Math: \si{\ampere}" w
+\si{\ampere}$0
+endsnippet
+snippet mamp "Math: \si{\milli\ampere}" w
+\si{\milli\ampere}$0
+endsnippet
+snippet uamp "Math: \si{\micro\ampere}" w
+\si{\micro\ampere}$0
+endsnippet
+
+snippet ohm "Math: \si{\ohm}" w
+\si{\ohm}$0
+endsnippet
+snippet kohm "Math: \si{\kilo\ohm}" w
+\si{\kilo\ohm}$0
+endsnippet
+snippet Mohm "Math: \si{\mega\ohm}" w
+\si{\mega\ohm}$0
+endsnippet
+
+snippet farad "Math: \si{\farad}" w
+\si{\farad}$0
+endsnippet
+snippet ufarad "Math: \si{\micro\farad}" w
+\si{\micro\farad}$0
+endsnippet
+snippet nfarad "Math: \si{\nano\farad}" w
+\si{\nano\farad}$0
+endsnippet
+
+snippet db "Math: \si{\decibel}" w
+\si{\decibel}$0
+endsnippet
+
 # Miscellaneous
+
+snippet real "Math: \mathbb{R}" w
+\mathbb{R}$0
+endsnippet
+snippet complex "Math: \mathbb{C}" w
+\mathbb{C}$0
+endsnippet
 
 snippet boxed "Math: \boxed{$0}" b
 \boxed{
@@ -127,6 +263,101 @@ endsnippet
 
 snippet sqrt "Math: \sqrt{$1}" w
 \sqrt{$1}$0
+endsnippet
+
+snippet ln "Math: \ln{$1}" w
+\ln{$1}$0
+endsnippet
+snippet log "Math: \log_$1{$2}" w
+\log${1:_x}{$2}$0
+endsnippet
+
+snippet sin "Math: \sin{$1}" w
+\sin{$1}$0
+endsnippet
+snippet cos "Math: \cos{$1}" w
+\cos{$1}$0
+endsnippet
+snippet tan "Math: \tan{$1}" w
+\tan{$1}$0
+endsnippet
+snippet csc "Math: \csc{$1}" w
+\csc{$1}$0
+endsnippet
+snippet cosec "Math: \csc{$1} (2)" w
+\csc{$1}$0
+endsnippet
+snippet ssec "Math: \sec{$1}" w
+\sec{$1}$0
+endsnippet
+snippet cot "Math: \cot{$1}" w
+\cot{$1}$0
+endsnippet
+
+snippet asin "Math: \sin^{-1}{$1}" w
+\sin^{-1}{$1}$0
+endsnippet
+snippet acos "Math: \cos^{-1}{$1}" w
+\cos^{-1}{$1}$0
+endsnippet
+snippet atan "Math: \tan^{-1}{$1}" w
+\tan^{-1}{$1}$0
+endsnippet
+snippet acsc "Math: \csc^{-1}{$1}" w
+\csc^{-1}{$1}$0
+endsnippet
+snippet acosec "Math: \csc^{-1}{$1} (2)" w
+\csc^{-1}{$1}$0
+endsnippet
+snippet assec "Math: \sec^{-1}{$1}" w
+\sec^{-1}{$1}$0
+endsnippet
+snippet acot "Math: \cot^{-1}{$1}" w
+\cot^{-1}{$1}$0
+endsnippet
+
+snippet sinh "Math: \sinh{$1}" w
+\sinh{$1}$0
+endsnippet
+snippet cosh "Math: \cosh{$1}" w
+\cosh{$1}$0
+endsnippet
+snippet tanh "Math: \tanh{$1}" w
+\tanh{$1}$0
+endsnippet
+snippet csch "Math: \csch{$1}" w
+\csch{$1}$0
+endsnippet
+snippet cosech "Math: \csch{$1} (2)" w
+\csch{$1}$0
+endsnippet
+snippet ssech "Math: \sech{$1}" w
+\sech{$1}$0
+endsnippet
+snippet coth "Math: \coth{$1}" w
+\coth{$1}$0
+endsnippet
+
+snippet asinh "Math: \sinh^{-1}{$1}" w
+\sinh^{-1}{$1}$0
+endsnippet
+snippet acosh "Math: \cosh^{-1}{$1}" w
+\cosh^{-1}{$1}$0
+endsnippet
+snippet atanh "Math: \tanh^{-1}{$1}" w
+\tanh^{-1}{$1}$0
+endsnippet
+snippet acsch "Math: \csch^{-1}{$1}" w
+\csch^{-1}{$1}$0
+endsnippet
+snippet acosech "Math: \csch^{-1}{$1} (2)" w
+\csch^{-1}{$1}$0
+endsnippet
+snippet assech "Math: \sech^{-1}{$1}" w
+\sech^{-1}{$1}$0
+endsnippet
+snippet acoth "Math: \coth^{-1}{$1}" w
+\coth^{-1}{$1}$0
 endsnippet
 
 snippet dif "Math: \diff{$1}" w
@@ -142,18 +373,18 @@ snippet parallel "Math: \parallelsum" w
 endsnippet
 
 snippet difff "Math: dx/dy" w
-\frac{\diff{${1:x}}}{\diff{${2:y}}}$0
+\frac{\diff{${1:y}}}{\diff{${2:x}}}$0
+endsnippet
+
+snippet int "Math: Integral" w
+\int${1:_0^1}{${2:x} \,\diff{${3:x}}}$0
 endsnippet
 
 snippet nth "Math: n^th" w
 \Nth{${1:n}}{${2:th}}$0
 endsnippet
 
-snippet right "Math: \Rightarrow"
-\Rightarrow $0
-endsnippet
-
-snippet qquadright "Math: \qquad \Rightarrow \qquad" b
+snippet ==> "Math: \qquad \Rightarrow \qquad" w
 \qquad \Rightarrow \qquad
 $0
 endsnippet
@@ -274,88 +505,20 @@ snippet cases "cases env." b
 \end{cases}$0
 endsnippet
 
-snippet align "align env." b
-\begin{align}
-	$1
-\end{align}$0
-endsnippet
-
-snippet alignn "align* env." b
-\begin{align*}
-	$1
-\end{align*}$0
-endsnippet
-
-snippet subeq "subequations env." b
-\begin{subequations}
-$1
-\end{subequations}$0
-endsnippet
-
-snippet circc "CircuiTikZ Environment" b
-\begin{figure}[H]\centering
-\begin{circuitikz}
-	\draw
-		(0,0) $1
-	;
-\end{circuitikz}
-\caption{${2:caption}}
-\label{fig:${3:labelname}}
-\end{figure}$0
-endsnippet
-
-snippet circc "CircuiTikZ Environment (Simple)" b
+snippet circ "circuitikz env." b
 \begin{circuitikz}
 	$1
 \end{circuitikz}$0
 endsnippet
 
-snippet circgnd "CircuiTikZ: \draw Ground" b
-\draw (${1:0,0}) node[ground] {};$0
-endsnippet
-
-snippet circnode "CircuiTikZ: \draw Labelled Node" b
-\draw[${1:blue}, fill=$1] (${2:0,0}) circle [radius=3pt] node[above=3pt] {${3:label}};$0
-endsnippet
-
-snippet circmesh "CircuiTikZ: \draw Labelled Mesh" b
-% Meshes
-\def\meshcw#1#2#3#4{
-	\draw[thick, stealth-, #3] (#1) node{#4}  ++(-70:#2) arc (-70:190:#2);
-}
-\def\meshcc#1#2#3#4{
-	\draw[thick, -stealth, #3] (#1) node{#4}  ++(-10:#2) arc (-10:250:#2);
-}
-\meshcw{1,1}{0.35}{red}{$\mathbf{I}_1$}
-\meshcc{1,2}{0.35}{red}{$\mathbf{I}_2$}
-endsnippet
-
-snippet samplephasordiagram "TikZ: [Sample] Phasor Diagram" b
+snippet circc "circuitikz env. (2)" b
 \begin{figure}[H]\centering
-\begin{tikzpicture}[scale=1.2]
-	% Definitions
-	\def\phasorlin#1#2#3#4#5#6{
-		\coordinate (#6) at (#1:#2);
-		\draw[->, ultra thick, #3] (0,0) -- (#1:#2) node[#4] {#5};
-	}
-	\def\phasorarc#1#2#3#4#5{
-		\draw[#3, very thick] (#2,0) arc [start angle=0, end angle=#1, radius=#2] node [midway, #4] {#5};
-	}
-	% Reference
-	\draw[very thick, dotted] (0,0) -- (5,0);
-	% Phasors
-	\phasorlin{29}{2.5}{black}{right}{$\mathbf{I}_1$}{v1}
-	\phasorarc{29}{1  }{black}{right}{$\ang{29}$}
-	\phasorlin{-11}{2.7}{black}{right}{$\mathbf{I}_2$}{v2}
-	\phasorarc{-11}{1.4}{black}{right}{$\ang{-11}$}
-	\phasorlin{105}{1.8}{black}{above}{$\mathbf{I}_3$}{v3}
-	\phasorarc{105}{0.8}{black}{above}{$\ang{105}$}
-	% Connecting Lines
-	\draw[->, ultra thick, dotted, red]
-		(v2) -- (v1) node[midway, right] {$\mathbf{I}_3$};
-\end{tikzpicture}
-\caption{${1:Phasor diagram.}}
-\label{fig:${2:label}}}
+\begin{circuitikz}
+	\draw $1
+	;
+\end{circuitikz}
+\caption{${2:caption}}
+\label{fig:${3:labelname}}
 \end{figure}$0
 endsnippet
 
