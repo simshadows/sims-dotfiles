@@ -82,68 +82,38 @@ And now, we clone my repository!<br>
 `git clone https://github.com/simshadows/sims-dotfiles.git /root/dotfiles`<br>
 `cd /root/dotfiles/system-setup-scripts-and-guides/arch-linux`
 
+**IMPORTANT: Each script may need adjustments before running. Please read the "This will:" dotpoints and adjust the script if any of it is wrong!**
+
 ## Stage 3: Continuing from within the Arch installation...
 
-`pacman -Sy openssh grub-bios linux-headers linux-lts linux-lts-headers wpa_supplicant wireless_tools`<br>
-Packages:
-* openssh: Optional, but useful if you want to SSH into the box. This is useful since we can simply copy-paste things, especially a disk UUID.
-* grub-bios: Required.
-* linux-headers: Recommended.
-* linux-lts: Recommended. This is a secondary kernel, useful as a backup. Accessible via the boot menu.
-* linux-lts-headers: Recommended to go with the LTS kernel.
-* wpa\_supplicant: Required in order to use a wireless card. Recommended otherwise.
-* wireless\_tools: Optional.
+Run my script:<br>
+`./stage3a-loctimegrub.sh`<br>
+This will:
+- Generate locale to `en_AU.UTF-8`.
+- Set our timezone to `Australia/Sydney`.
+- Set the hardware clock.
+- Install GRUB to `/dev/sda`.
+- Sets GRUB language to `en`.
 
-`vi /etc/locale.gen`<br>
-Uncomment the desired line. `en_US.UTF-8 UTF-8` if you're in the US.
-
-*We will now assume you used `en_US.UTF-8 UTF-8` above.*
-
-Generate locale:<br>
-`locale-gen`
-
-`ln -s /usr/share/zoneinfo/Australia/Sydney /etc/localtime`
-
-`hwclock --systohc --utc`
-
-Enable the OpenSSH service (if you installed it and want to use it):<br>
-`systemctl enable sshd.service`
-
-Change the password:<br>
-`passwd`
-
-Install grub. NOTE: Use `i386-pc`, even if you're on a 64-bit installation.<br>
-`grub-install --target=i386-pc --recheck /dev/sda`
-
-`cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo`<br>
-(`en` is for English. Change this for other languages.)
-
-Now, we will configure the system to skip the boot menu. (Skip it if this is not desired.)
-
-`vi /etc/defaults/grub`
-
-Change these values:
+We can now optionally configure the system to skip the boot menu. Open:<br>
+`vi /etc/defaults/grub`<br>
+Set the following values:
 ```
 GRUB_TIMEOUT=0
 GRUB_HIDDEN_TIMEOUT=0
-```
-
-And add this value:
-```
 GRUB_FORCE_HIDDEN_MENU=true
 ```
 
 *TODO: How do we make it show the boot menu by holding shift?*
 
-`grub-mkconfig -o /boot/grub/grub.cfg`
+Run my script to finish installing GRUB:<br>
+`./stage3b-finishgrub.sh`
 
-Start automatic DHCP (which would otherwise require us to manually run `dhcpcd` frequently):<br>
-`systemctl enable dhcpcd.service`
+Change the password:<br>
+`passwd`
 
-`exit`
-
-## Stage 4: Now, back on the installation media...
-
+Now, we must reboot:<br>
+`exit`<br>
 `umount /mnt/home`<br>
 `umount /mnt`<br>
 `reboot`
@@ -152,16 +122,20 @@ Wait for reboot. If the installation media boots again, select "Boot existing OS
 
 Should be able to log in now. If not, we failed something and should start all over again.
 
+## Stage 4: Now, back on the installation media...
+
+`pacman -Sy openssh linux-headers linux-lts linux-lts-headers wpa_supplicant wireless_tools`<br>
+Packages:
+* linux-headers: Recommended.
+* linux-lts: Recommended. This is a secondary kernel, useful as a backup. Accessible via the boot menu.
+* linux-lts-headers: Recommended to go with the LTS kernel.
+* wpa\_supplicant: Required in order to use a wireless card. Recommended otherwise.
+* wireless\_tools: Optional.
+
 Ensure `/dev/sda1` and `/dev/sda3` are shown:<br>
 `df -h`
 
 ## Stage 5: Post-installation steps...
-
-You may SSH into the box now to complete the installation.
-
-Somehow, this is required, otherwise some applications won't work:<br>
-`localectl set-locale LANG="en_US.UTF-8"`<br>
-Change LANG to your own language.
 
 We're not using a swap partition right now. Verify this with:<br>
 `free -m`<br>

@@ -4,5 +4,5 @@
 set -e
 
 # We install some basic packages.
-pacman -Sy --noconfirm grub-bios linux-headers wpa_supplicant wireless_tools
+pacman -Sy --noconfirm linux-headers wpa_supplicant wireless_tools
 
