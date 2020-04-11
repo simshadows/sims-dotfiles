@@ -1,10 +1,10 @@
 # Arch Linux Installation
 
-This guide currently is designed mostly for personal reference, and not a newbie guide.
+This guide currently is designed mostly for personal reference, and not a newbie guide. But if you like what you see, use it by all means! :)
+
+To save on the tedium, I have written some sections into scripts.
 
 *(I'll link to a proper newbie guide when I find one that I can vet!)*
-
-For Arch ARM, see *Installing Arch ARM*.
 
 ## Stage 1: From the installation media...
 
@@ -47,13 +47,8 @@ Format sda1 and sda3 to the ext4 filesystem:<br>
 Check if we have an IP address:<br>
 `ip a`
 
-Ping Google's DNS server:<br>
+Ping Google's DNS server to check the internet connection:<br>
 `ping -c 5 8.8.8.8`
-
-*Might also have to set up wireless stuff. For that, see the source video.*
-
-DHCP renew:<br>
-`dhcpcd`
 
 Mount our partitions:<br>
 `mount /dev/sda1 /mnt`<br>
@@ -77,7 +72,17 @@ Create filesystems table file:<br>
 Chroot into installation:<br>
 `arch-chroot /mnt`
 
-## Stage 2: Continuing from within the Arch installation...
+## Stage 2: Downloading my scripts
+
+First, we'll need to install git:
+
+`pacman -Sy git`
+
+And now, we clone my repository!<br>
+`git clone https://github.com/simshadows/sims-dotfiles.git /root/dotfiles`<br>
+`cd /root/dotfiles/system-setup-scripts-and-guides/arch-linux`
+
+## Stage 3: Continuing from within the Arch installation...
 
 `pacman -Sy openssh grub-bios linux-headers linux-lts linux-lts-headers wpa_supplicant wireless_tools`<br>
 Packages:
@@ -137,7 +142,7 @@ Start automatic DHCP (which would otherwise require us to manually run `dhcpcd` 
 
 `exit`
 
-## Stage 3: Now, back on the installation media...
+## Stage 4: Now, back on the installation media...
 
 `umount /mnt/home`<br>
 `umount /mnt`<br>
@@ -150,7 +155,7 @@ Should be able to log in now. If not, we failed something and should start all o
 Ensure `/dev/sda1` and `/dev/sda3` are shown:<br>
 `df -h`
 
-## Stage 4: Post-installation steps...
+## Stage 5: Post-installation steps...
 
 You may SSH into the box now to complete the installation.
 
@@ -199,7 +204,7 @@ xf86-input-libinput is for if you use a trackpad. Otherwise, it's optional.
 
 Now, we install the video driver.
 
-## Stage 5: Installing the video driver...
+## Stage 6: Installing the video driver...
 
 Use to check what card you're using:<br>
 `lspci`
@@ -237,7 +242,7 @@ xf86-video-vmware assumes you're using the VMSVGA virtual graphics controller.
 ### Vesa driver (allows you to use any card, but very minimal)
 `pacman -Sy xf86-video-vesa`
 
-## Stage 6: Continuing on...
+## Stage 7: Continuing on...
 
 Now, install sudo:<br>
 `pacman -Sy sudo`
@@ -267,7 +272,7 @@ Check if you have a home directory:<br>
 Change machine name:<br>
 `hostnamectl set-hostname <putnamehere>`
 
-## Stage 7: Installing display managers and desktop environments
+## Stage 8: Installing display managers and desktop environments
 
 Pick one of the options below.
 
@@ -335,7 +340,7 @@ Enable GDM to start automatically upon boot:<br>
 
 `reboot`
 
-## Stage 8: Recommended Programs
+## Stage 9: Recommended Programs
 
 Now that the important stuff is done, let's install more programs!
 
