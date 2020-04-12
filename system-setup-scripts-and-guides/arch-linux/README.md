@@ -86,15 +86,15 @@ Chroot into installation, and change directory for convenience:<br>
 `cd /root/dotfiles/system-setup-scripts-and-guides/arch-linux`
 
 Run my script:<br>
-`./stage3-loctimegrub.sh`
+`./stage3.sh`
 This will:
 - Generate locale to `en_AU.UTF-8`.
 - Set our timezone to `Australia/Sydney`.
 - Set the hardware clock.
 - Install the standard Linux kernel and its headers. *(Headers are optional.)*
-- Install GRUB to `/dev/sda`.
+- Install GRUB bootloader to `/dev/sda`.
 - Sets GRUB language to `en`.
-- Install basic networking packages.
+- Installs and sets up a DHCP client to allow us to connect to the internet.
 
 Change `root`'s password:<br>
 `passwd`
@@ -116,25 +116,19 @@ Ensure `/dev/sda1` and `/dev/sda3` are shown:<br>
 
 We're not using a swap partition right now. Verify this with:<br>
 `free -m`<br>
-Swap should show 0 total.
+Swap total should show 0 total.
 
-Check what the swap partition is:<br>
+Double-check what the swap partition is:<br>
 `fdisk -l`
+
+Set up the swap partition and tee the output into `tmp.txt`:<br>
+`mkswap /dev/sda2 | tee tmp.txt`<br>
+This should print out a UUID. Please make sure that when we run `./stage4.sh`, the UUID matches.
 
 Run my script:<br>
 `./stage4.sh`
 This will:
-- *(it doesn't really do anything yet...)*
-
-Set up the swap partition:<br>
-`mkswap /dev/sda2`<br>
-We should now get a UUID. Copy this down. (This is where SSH is useful.)
-
-`vi /etc/fstab`<br>
-Add a new line somewhere (substituting `<YOUR UUID>` with the UUID you just wrote):<br>
-```
-UUID=<YOUR UUID>              none                   swap                defaults                0 0
-```
+- Add an entry in `/etc/fstab` for the swap partition.
 
 Note on the above: If you're using an SSD, you should also add `discard` to  the root and data partitions (or whatever is on an SSD).<br>
 This sets up trim support.<br>

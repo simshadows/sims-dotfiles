@@ -3,6 +3,15 @@
 # Terminate script on error
 set -e
 
+# Let the user know if something went wrong.
+on_exit () {
+    echo ""
+    echo "A critical error has occurred on line $1."
+    echo "Stopping."
+    echo ""
+}
+trap 'on_exit $LINENO' ERR
+
 # We will first generate locale.
 # First, we uncomment the line 'en_AU.UTF-8 UTF-8' from the locales file.
 sed -i 's/^#en_AU\.UTF-8 UTF-8/en_AU\.UTF-8 UTF-8/' /etc/locale.gen
@@ -36,7 +45,8 @@ cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 # We generate grub.cfg.
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# Install networking packages.
+# Install and enable our DHCP client into our Arch installation.
 # This is important, otherwise our Arch installation cannot connect to the internet!
-pacman -Sy --noconfirm networkmanager
+pacman -Sy --noconfirm dhcpcd
+systemctl enable dhcpcd.service
 
