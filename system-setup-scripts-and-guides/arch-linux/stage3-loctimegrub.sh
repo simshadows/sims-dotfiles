@@ -18,8 +18,9 @@ ln -s /usr/share/zoneinfo/Australia/Sydney /etc/localtime
 # Setting hardware clock to the current system time.
 hwclock --systohc --utc
 
-# Install the Linux kernel.
-pacman -Sy --noconfirm linux
+# Install the Linux kernel and the associated Linux headers.
+# Do note that if we install a different kernel, we may need a different headers package.
+pacman -Sy --noconfirm linux linux-headers
 
 # Install the GRUB package.
 pacman -Sy --noconfirm grub-bios
@@ -31,4 +32,11 @@ grub-install --target=i386-pc --recheck /dev/sda
 # (Not 100% sure what this does. I think it sets the GRUB language to en?)
 mkdir /boot/grub/locale
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+
+# We generate grub.cfg.
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# Install networking packages.
+# This is important, otherwise our Arch installation cannot connect to the internet!
+pacman -Sy --noconfirm networkmanager
 

@@ -86,21 +86,17 @@ Chroot into installation, and change directory for convenience:<br>
 `cd /root/dotfiles/system-setup-scripts-and-guides/arch-linux`
 
 Run my script:<br>
-`./stage3a-loctimegrub.sh`
+`./stage3-loctimegrub.sh`
 This will:
 - Generate locale to `en_AU.UTF-8`.
 - Set our timezone to `Australia/Sydney`.
 - Set the hardware clock.
-- Install the Linux kernel.
+- Install the standard Linux kernel and its headers. *(Headers are optional.)*
 - Install GRUB to `/dev/sda`.
 - Sets GRUB language to `en`.
+- Install basic networking packages.
 
-*If you have any GRUB configuration changes to make, do them now!*
-
-Run my script to finish installing GRUB:<br>
-`./stage3b-finishgrub.sh`
-
-Change the password:<br>
+Change `root`'s password:<br>
 `passwd`
 
 Now, we must reboot:<br>
@@ -111,22 +107,12 @@ Now, we must reboot:<br>
 
 Wait for reboot. If the installation media boots again, select "Boot existing OS" or similar options to boot into the installation.
 
-Should be able to log in now. If not, we failed something and should start all over again.
+Should be able to log in as `root` now. If not, we failed something and should start all over again.
 
-## Stage 4: Now, back on the installation media...
-
-`pacman -Sy openssh linux-headers linux-lts linux-lts-headers wpa_supplicant wireless_tools`<br>
-Packages:
-* linux-headers: Recommended.
-* linux-lts: Recommended. This is a secondary kernel, useful as a backup. Accessible via the boot menu.
-* linux-lts-headers: Recommended to go with the LTS kernel.
-* wpa\_supplicant: Required in order to use a wireless card. Recommended otherwise.
-* wireless\_tools: Optional.
+## Stage 4: Now that we have directly booted into our installation...
 
 Ensure `/dev/sda1` and `/dev/sda3` are shown:<br>
 `df -h`
-
-## Stage 5: Post-installation steps...
 
 We're not using a swap partition right now. Verify this with:<br>
 `free -m`<br>
@@ -134,6 +120,11 @@ Swap should show 0 total.
 
 Check what the swap partition is:<br>
 `fdisk -l`
+
+Run my script:<br>
+`./stage4.sh`
+This will:
+- *(it doesn't really do anything yet...)*
 
 Set up the swap partition:<br>
 `mkswap /dev/sda2`<br>
@@ -160,9 +151,6 @@ If wired connection:<br>
 `ip a`<br>
 `dhcpcd`<br>
 If a wireless connection, see the source video <https://www.youtube.com/watch?v=GCUmGtCYPWM>, at about 8:10.
-
-`pacman -Sy networkmanager network-manager-applet wpa_actiond dialog`<br>
-If you see "There are x providers available for libgl", just use the default.
 
 `pacman -Sy xf86-input-libinput xorg-server xorg-xinit xorg-apps mesa`<br>
 xf86-input-libinput is for if you use a trackpad. Otherwise, it's optional.
