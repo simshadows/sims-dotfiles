@@ -18,6 +18,9 @@ ln -s /usr/share/zoneinfo/Australia/Sydney /etc/localtime
 # Setting hardware clock to the current system time.
 hwclock --systohc --utc
 
+# Install the Linux kernel.
+pacman -Sy --noconfirm linux
+
 # Install the GRUB package.
 pacman -Sy --noconfirm grub-bios
 

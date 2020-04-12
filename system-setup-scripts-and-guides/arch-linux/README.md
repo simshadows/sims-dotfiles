@@ -69,42 +69,33 @@ root@archiso ~ #
 Create filesystems table file:<br>
 `genfstab -U -p /mnt >> /mnt/etc/fstab`
 
-Chroot into installation:<br>
-`arch-chroot /mnt`
+## Stage 2: Downloading my helper scripts
 
-## Stage 2: Downloading my scripts
-
-First, we'll need to install git:
-
+First, we'll need to install git into the RAM-disk:<br>
 `pacman -Sy git`
 
 And now, we clone my repository!<br>
-`git clone https://github.com/simshadows/sims-dotfiles.git /root/dotfiles`<br>
-`cd /root/dotfiles/system-setup-scripts-and-guides/arch-linux`
+`git clone https://github.com/simshadows/sims-dotfiles.git /mnt/root/dotfiles`
 
 **IMPORTANT: Each script may need adjustments before running. Please read the "This will:" dotpoints and adjust the script if any of it is wrong!**
 
 ## Stage 3: Continuing from within the Arch installation...
 
+Chroot into installation, and change directory for convenience:<br>
+`arch-chroot /mnt`<br>
+`cd /root/dotfiles/system-setup-scripts-and-guides/arch-linux`
+
 Run my script:<br>
-`./stage3a-loctimegrub.sh`<br>
+`./stage3a-loctimegrub.sh`
 This will:
 - Generate locale to `en_AU.UTF-8`.
 - Set our timezone to `Australia/Sydney`.
 - Set the hardware clock.
+- Install the Linux kernel.
 - Install GRUB to `/dev/sda`.
 - Sets GRUB language to `en`.
 
-We can now optionally configure the system to skip the boot menu. Open:<br>
-`vi /etc/defaults/grub`<br>
-Set the following values:
-```
-GRUB_TIMEOUT=0
-GRUB_HIDDEN_TIMEOUT=0
-GRUB_FORCE_HIDDEN_MENU=true
-```
-
-*TODO: How do we make it show the boot menu by holding shift?*
+*If you have any GRUB configuration changes to make, do them now!*
 
 Run my script to finish installing GRUB:<br>
 `./stage3b-finishgrub.sh`
