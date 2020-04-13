@@ -23,24 +23,21 @@ trap 'on_exit $LINENO' ERR
 # We install some more optional packages.
 #pacman -Sy --noconfirm dialog
 
-
 echo ""
 
 # We first grab the UUID that the user found.
 swpuuid=$(egrep -o 'UUID=[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}' tmp.txt)
 # Now, we update /etc/fstab.
-# We will append the following three lines to the file:
-swpcomment1="# Swap Partition"
-swpcomment2="#                                           <dir>   <type>   <options>   <dump> <pass>"
-swpline="$swpuuid   none    swap     defaults    0      0"
+# We will append the following lines to the file:
+swpcomment="# Swap Partition                          <dir> <type> <options> <dump> <pass>"
+swpline="$swpuuid none  swap   defaults  0      0"
 # Print some information for the user.
 echo "Appending swap partition entry to fstab:"
-echo "$swpcomment2"
+echo "$swpcomment"
 echo "$swpline"
 echo ""
 # Now, we actually do the appending.
-echo "$swpcomment1" >> /etc/fstab
-echo "$swpcomment2" >> /etc/fstab
+echo "$swpcomment" >> /etc/fstab
 echo "$swpline" >> /etc/fstab
 echo "" >> /etc/fstab
 
