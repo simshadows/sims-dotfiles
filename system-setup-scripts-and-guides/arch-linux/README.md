@@ -126,8 +126,9 @@ Set up the swap partition and tee the output into `tmp.txt`:<br>
 This should print out a UUID.
 
 Run my script:<br>
-`./stage4.sh`
-This will add an entry in `/etc/fstab` for the swap partition.
+`./stage4.sh`<br>
+This will add an entry in `/etc/fstab` for the swap partition.<br>
+Please double-check that the UUID it shows is consistent with the UUID from mkswap.
 
 Note on the above: If you're using an SSD, you should also add `discard` to  the root and data partitions (or whatever is on an SSD).<br>
 This sets up trim support.<br>
@@ -143,7 +144,7 @@ Swap should show values now.
 ## Stage 5: User account, hostname, and X.org.
 
 Install sudo and X.org:
-`pacman -Sy --noconfirm sudo xorg-server xorg-xinit`
+`pacman -Sy sudo xorg-server xorg-xinit`
 
 Add user account:<br>
 `useradd -m -s /bin/bash simshadows`
