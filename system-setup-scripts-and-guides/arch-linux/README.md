@@ -86,7 +86,7 @@ Chroot into installation, and change directory for convenience:<br>
 `cd /root/dotfiles/system-setup-scripts-and-guides/arch-linux`
 
 Run my script:<br>
-`./stage3.sh`
+`./stage3.sh`<br>
 This will:
 - Generate locale to `en_AU.UTF-8`.
 - Set our timezone to `Australia/Sydney`.
@@ -274,4 +274,4 @@ You can install a tonne of stuff I use by running my script:<br>
 
 You can also read the script and edit it yourself as needed.
 
-Do note that this script will require you to 
+Do note that this script will require you to interact with any prompts. I left it this way to make sure we understand the options we're choosing here.
