@@ -122,6 +122,6 @@ a+=( yara     ) # (TODO: idk how to describe this one lol)
 
 ###########################################################
 
-# We install sudo and the core X.org packages.
+# Start installation of all specified packages!
 pacman -Sy "${a[@]}"
 

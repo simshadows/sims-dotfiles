@@ -143,7 +143,7 @@ Swap should show values now.
 
 ## Stage 5: User account, hostname, and X.org.
 
-Install sudo and X.org:
+Install sudo and X.org:<br>
 `pacman -Sy sudo xorg-server xorg-xinit`
 
 Add user account:<br>
@@ -188,16 +188,23 @@ Include = /etc/pacman.d/mirrorlist
 Then, attempt to install again.
 
 ### Intel driver
+
 `pacman -Sy xf86-video-intel lib32-intel-dri lib32-mesa lib32-libgl`
 
 ### Closed-source Nvidia driver (better for gaming)
+
 `pacman -Sy nvidia lib32-nvidia-libgl`
 
 ### Virtualbox
+
 `pacman -Sy virtualbox-guest-utils xf86-video-vmware`<br>
 xf86-video-vmware assumes you're using the VMSVGA virtual graphics controller.
 
+Additionally, we should enable the VirtualBox guest service:<br>
+`systemctl enable vboxservice.service`
+
 ### Vesa driver (allows you to use any card, but very minimal)
+
 `pacman -Sy xf86-video-vesa`
 
 ## Stage 7: Installing display managers and desktop environments
@@ -208,40 +215,13 @@ Note that both minimalist recommendations include terminals. That's because with
 
 ### Minimalist i3 (This is what I personally use)
 
-`pacman -Sy nodm i3 rxvt-unicode`
+`pacman -Sy gdm i3 rxvt-unicode`
 
-`vi /etc/nodm.conf`<br>
-Sample settings (without comments):<br>
-```
-NODM_USER='simshadows'
-NODM_X_OPTIONS='vt7 -nolisten tcp'
-NODM_MIN_SESSION_TIME=60
-NODM_XSESSION='/home/simshadows/.xinitrc'
-NODM_X_TIMEOUT=20      
-```
-
-`vi /home/simshadows/.xinitrc`<br>
-File contents:
-```
-#!/bin/bash
-
-# Enable VBoxClient features (such as auto-resize), or fail silently
-VBoxClient-all || true
-# Load .Xresources file
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
-# Launch i3 window manager
-exec i3
-```
-
-Change file permissions (since it's a user file):
-```
-chown simshadows /home/simshadows/.xinitrc
-chgrp simshadows /home/simshadows/.xinitrc
-```
-
-`systemctl enable nodm`
+`systemctl enable gdm`
 
 `reboot`
+
+*Note: GDM is the display manager, but it's heavily bloated. Consider installing LightDM or some other lighter-weight display manager instead. The only reason I personally use GDM is because LightDM doesn't work in a VirtualBox guest for some reason.*
 
 ### Minimalist GNOME
 
