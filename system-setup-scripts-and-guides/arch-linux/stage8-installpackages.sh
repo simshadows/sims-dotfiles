@@ -52,7 +52,8 @@ a+=( strace   ) # for debugging interactions between a process and the kernel
 #
 # Additional Development Tools
 #
-a+=( ruby ) # Ruby language
+a+=( ruby       ) # Ruby language
+a+=( python-pip ) # Python pip package.
 
 
 #

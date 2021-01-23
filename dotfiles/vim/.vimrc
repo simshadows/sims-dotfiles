@@ -266,7 +266,7 @@ autocmd FileType * set formatoptions-=cro
 "       It works when entering it in manually...
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" COLOURS AND FONTS """""""""""""""""""""""""""""""""""""""""""""""""
+" SYNTAX HIGHLIGHTING, COLOURS, AND FONTS """""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Enable syntax highlighting
@@ -309,6 +309,9 @@ set encoding=utf8
 
 " Set unix as the standard file type when creating a new buffer.
 set ffs=unix,dos,mac
+
+" Changes default highlighting of *.ejs files (Node.js EJS template files) to HTML.
+au BufNewFile,BufRead *.ejs set filetype=html
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE """""""""""""""""""""""""""""""""""""""""""""""""""""""
