@@ -1,6 +1,7 @@
 [user]
 	email = contact@simshadows.com
 	name = simshadows
+	signingkey = 9734AEE67765FB4A
 [push]
 	default = upstream
 [merge]

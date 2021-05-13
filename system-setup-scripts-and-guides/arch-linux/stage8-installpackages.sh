@@ -88,6 +88,7 @@ a+=( htop       ) # a much more useful process monitor
 a+=( dos2unix   ) # converts between unix-style and dos-style line breaks
 a+=( dosfstools ) # dos filesystems
 a+=( ntfs-3g    ) # ntfs filesystem
+a+=( dnsutils   ) # DNS utilities (such as dig)
 
 
 #
