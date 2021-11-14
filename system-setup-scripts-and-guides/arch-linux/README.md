@@ -60,6 +60,11 @@ Connect to network (this may prompt you for a passphrase if needed):
 station <YOUR_DEVICE_HERE> connect <SSID>
 ```
 
+Verify you're connected:
+```
+station <YOUR_DEVICE_HERE> show
+```
+
 ### Creating physical partitions
 
 Verify available storage devices:
@@ -72,13 +77,12 @@ Launch fdisk:
 fdisk /dev/sda
 ```
 
-You'll generally want to make:
+We want to make:
 
 - **EFI system partition**
     - I make this 512MiB, and of GPT partition type `uefi`/`EFI System`/`C12A7328-F81F-11D2-BA4B-00A0C93EC93B`.
 - **A root partition**
     - Takes up the remaining space.
-- *(Optionally, you can make a swap partition, but it's up to you to figure it out. For this guide, I'll be using a swapfile.)*
 
 Useful commands within `fdisk`:
 
@@ -171,17 +175,11 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 
 ## Stage 2: Downloading my helper scripts
 
-First, we'll need to install git into the RAM-disk:
+Tnstall git into the RAM-disk and clone the repository:
 ```
 pacman -Sy git
-```
-
-And now, we clone my repository!
-```
 git clone https://github.com/simshadows/sims-dotfiles.git /mnt/root/dotfiles
 ```
-
-**IMPORTANT: Each script may need adjustments before running. Please read the "This will:" dotpoints and adjust the script if any of it is wrong!**
 
 ## Stage 3: Continuing from within the Arch installation...
 
@@ -191,28 +189,40 @@ arch-chroot /mnt
 cd /root/dotfiles/system-setup-scripts-and-guides/arch-linux
 ```
 
-Run my script:
+We're not using the swapfile (or any swap partition) right now. Verify this by checking zero swap space:
 ```
-./stage3.sh
+free -m
 ```
 
-`stage3.sh` will:
+Now, we will run `stage3.sh`. First, check through the script to see if you need to make any edits:
+- Create and enable a 16GB swapfile at `/swapfile` **(Edit the script if you want a different size.)**
 - Generate locale to `en_AU.UTF-8`.
 - Set our timezone to `Australia/Sydney`.
 - Set the hardware clock.
-- Install the standard Linux kernel and its headers. *(Headers are optional.)*
+- Install the standard Linux kernel and its headers. **(Headers are optional.)**
 - Edits mkinitcpio hooks then regenerates preset. **(This is probably not necessary if not using LUKS)**
 - Install GRUB bootloader.
 - Sets GRUB language to `en`.
 - Sets `GRUB_CMDLINE_LINUX`. **(This is probably not necessary if not using LUKS)**
 - Installs and sets up a DHCP client to allow us to connect to the internet.
+- Installs some optional packages
+
+Run the script:
+```
+./stage3.sh
+```
 
 Change `root`'s password:
 ```
 passwd
 ```
 
-Now, we must reboot:
+Check now that we have swap space:
+```
+free -m
+```
+
+Now, we can reboot to check if our installation was done correctly:
 ```
 exit
 umount /mnt/boot
@@ -225,42 +235,20 @@ Wait for reboot. If the installation media boots again, select "Boot existing OS
 
 Should be able to log in as `root` now. If not, we failed something and should start all over again.
 
-## Stage 4: Now that we have directly booted into our installation...
+Ensure `/dev/sda1` and `/dev/mapper/cryptroot` are shown (or `/dev/sda2`):
+```
+df -h
+```
 
-Ensure `/dev/sda1` and `/dev/sda2` are shown (or `/dev/mapper/cryptroot`):<br>
-`df -h`
+## Stage 4: TRIM Support
 
-We're not using a swap partition right now. Verify this with:<br>
-`free -m`<br>
-Swap total should show 0 total.
+If you want to use TRIM, you'll need to do some manual tweaks yourself.
 
-~~Double-check what the swap partition is:~~<br>
-~~`fdisk -l`~~
+(I haven't quite figured this out yet though since I'm using root filesystem encryption, but if you aren't using encryption, you can just add `discard` to `/etc/fstab` where needed.)
 
-~~Set up the swap partition and tee the output into `tmp.txt`:~~<br>
-~~`mkswap /dev/sda2 | tee tmp.txt`~~<br>
-~~This should print out a UUID.~~
-
-~~Run my script:~~<br>
-~~`./stage4.sh`~~<br>
-~~This will add an entry in `/etc/fstab` for the swap partition.~~<br>
-~~Please double-check that the UUID it shows is consistent with the UUID from mkswap.~~
-
-Note on the above: If you're using an SSD, you should also add `discard` to  the root and data partitions (or whatever is on an SSD).<br>
-This sets up trim support.<br>
-Don't do this with a hard drive.<br>
-
-`reboot` if needed.
-
-Wait for reboot...
-
-~~`free -m`~~<br>
-~~Swap should show values now.~~
+(I'll updated this section once I figured it out.)
 
 ## Stage 5: User account, hostname, and X.org.
-
-Install sudo and X.org:<br>
-`pacman -Sy sudo xorg-server xorg-xinit`
 
 Add user account:<br>
 `useradd -m -s /bin/bash simshadows`
@@ -278,14 +266,32 @@ Set user password:<br>
 Change machine name:<br>
 `hostnamectl set-hostname <putnamehere>`
 
-## Stage 6: Installing the video driver...
+## Stage 6: Installing the video driver
 
 Use to check what card you're using:<br>
 `lspci`
 
-Now pick a driver below:
+You may need to do your own research into what driver to use, but here are some suggestions:
+
+### Virtualbox
+
+`pacman -Sy virtualbox-guest-utils xf86-video-vmware`<br>
+xf86-video-vmware assumes you're using the VMSVGA virtual graphics controller.
+
+Additionally, we should enable the VirtualBox guest service:<br>
+`systemctl enable vboxservice.service`
+
+### Intel driver
+
+`pacman -Sy xf86-video-intel`
+
+### AMD driver
+
+`pacman -Sy xf86-video-amdgpu`
 
 ### Open-source Nvidia driver
+
+*(If you want performance, you probably don't want the open-source driver. Use the proprietary driver for this.)*
 
 `pacman -Sy xf86-video-nouveau lib32-nouveau-dri`
 
@@ -303,21 +309,9 @@ Include = /etc/pacman.d/mirrorlist
 
 Then, attempt to install again.
 
-### Intel driver
+### Proprietary Nvidia driver
 
-`pacman -Sy xf86-video-intel lib32-intel-dri lib32-mesa lib32-libgl`
-
-### Closed-source Nvidia driver (better for gaming)
-
-`pacman -Sy nvidia lib32-nvidia-libgl`
-
-### Virtualbox
-
-`pacman -Sy virtualbox-guest-utils xf86-video-vmware`<br>
-xf86-video-vmware assumes you're using the VMSVGA virtual graphics controller.
-
-Additionally, we should enable the VirtualBox guest service:<br>
-`systemctl enable vboxservice.service`
+`pacman -Sy nvidia lib32-nvidia-libgl nvidia-utils nvidia-settings`
 
 ### Vesa driver (allows you to use any card, but very minimal)
 
@@ -325,49 +319,42 @@ Additionally, we should enable the VirtualBox guest service:<br>
 
 ## Stage 7: Installing display managers and desktop environments
 
-Pick one of the options below.
+Pick one of the options below (or do some research into others you might be interested in).
 
 Note that both minimalist recommendations include terminals. That's because without one, you literally can't do anything.
 
 ### Minimalist i3
 
-`pacman -Sy gdm i3 rxvt-unicode`
-
-`systemctl enable gdm`
-
-`reboot`
+```
+pacman -Sy gdm i3 rxvt-unicode
+systemctl enable gdm
+reboot
+```
 
 *Note: GDM is the display manager, but it's heavily bloated. Consider installing LightDM or some other lighter-weight display manager instead. The only reason I personally use GDM is because LightDM doesn't work in a VirtualBox guest for some reason.*
 
 ### Minimalist GNOME
 
-`pacman -Sy gdm gnome-shell gnome-terminal`
-
-Highly recommended:<br>
-`pacman -Sy gnome-control-center` to provide the "control panel".
-
-`systemctl enable gdm`
-
-`reboot`
+```
+pacman -Sy gdm gnome-shell gnome-terminal gnome-control-center
+systemctl enable gdm
+reboot
+```
 
 ### Full GNOME
 
-`pacman -Sy gdm gnome gnome-extra`
-
-Notes:
-* gdm: The display manager. It is generally recommended to use one associated with your desktop environment, but they can be interchangable anyway. In this case, gdm is GNOME's recommended display manager.
-* gnome: The desktop environment itself.
-* gnome-extra: A bundle of extras to provide a more complete system.
-
-Enable GDM to start automatically upon boot:<br>
-`systemctl enable gdm`
-
-`reboot`
+```
+pacman -Sy gdm gnome gnome-extra
+systemctl enable gdm
+reboot
+```
 
 ## Stage 8: Recommended Programs
 
-You can install a tonne of stuff I use by running my script:<br>
-`./stage8-installpackages.sh`
+You can install a tonne of stuff I use by running my script:
+```
+./stage8-installpackages.sh
+```
 
 You can also read the script and edit it yourself as needed.
 

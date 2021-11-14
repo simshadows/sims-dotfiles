@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # Terminate script on error
-set -e
+set -ex
 
 # Let the user know if something went wrong.
 on_exit () {
@@ -12,7 +12,17 @@ on_exit () {
 }
 trap 'on_exit $LINENO' ERR
 
-# We will first generate locale.
+# Create the swapfile
+fallocate -l 16GB /swapfile
+# Set permissions (huge vulnerability if this isn't done)
+chmod 600 /swapfile
+# Set up the swapfile
+mkswap /swapfile
+swapon /swapfile
+echo "/swapfile none swap defaults 0 0" >> /etc/fstab
+echo "" >> /etc/fstab
+
+# Generate locale.
 # First, we uncomment the line 'en_AU.UTF-8 UTF-8' from the locales file.
 sed -i 's/^#en_AU\.UTF-8 UTF-8/en_AU\.UTF-8 UTF-8/' /etc/locale.gen
 # Now, we run locale-gen
@@ -29,7 +39,7 @@ hwclock --systohc --utc
 
 # Install the Linux kernel and the associated Linux headers, and the GRUB package.
 # Do note that if we install a different kernel, we may need a different headers package.
-pacman -Sy --noconfirm grub linux linux-headers efibootmgr
+pacman -Sy --noconfirm grub linux efibootmgr
 # We need efibootmgr otherwise grub-install doesn't work.
 
 # regenerate the mkinitcpio preset. (mkinitcpio is what makes the initial ramdisk environment.)
@@ -61,7 +71,40 @@ sed -i "s/^GRUB_CMDLINE_LINUX=\"\"$/${NEW_LINE}/" /etc/default/grub
 # We generate grub.cfg.
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# Install and enable our DHCP client into our Arch installation.
+##################################################################
+# OPTIONAL PART BELOW.                                           #
+#                                                                #
+# Please go through and edit as needed.                          #
+# For an ultra-minimal system, you probably only want dhcpcd,    #
+# sudo, and maybe the X server stuff.                            #
+#                                                                #
+# Also, if you need wireless networking, you need wpa_supplicant #
+# (or iwd maybe).                                                #
+##################################################################
+
+a=()
+
+# DHCP client
+a+=( dhcpcd )
+
+# sudo
+a+=( sudo )
+
+# X server
+# (Should already come with GNOME, but we'll add it explicitly here anyway.)
+a+=( xorg-server )
+a+=( xorg-xinit  )
+
+# Linux headers and firmware
+a+=( linux-headers  )
+a+=( linux-firmware )
+
+# Wireless networking
+a+=( wpa_supplicant )
+
+# Run the actual package installation
+pacman -Syu --noconfirm "${a[@]}"
+
+# Enable the DHCP client.
 # This is important, otherwise our Arch installation cannot connect to the internet!
-pacman -Sy --noconfirm dhcpcd
 systemctl enable dhcpcd.service
