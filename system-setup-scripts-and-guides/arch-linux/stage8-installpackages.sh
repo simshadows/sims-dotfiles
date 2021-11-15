@@ -37,6 +37,7 @@ a+=( zathura-pdf-mupdf ) # zathura mupdf plugin in order to view PDFs!
 #a+=( sublime-text ) # text editor # TODO: Find a better text editor?
 a+=( thunar       ) # file manager
 a+=( firefox      ) # web browser
+a+=( keepassxc    ) # password manager
 
 
 #

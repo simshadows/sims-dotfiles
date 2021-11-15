@@ -195,17 +195,24 @@ free -m
 ```
 
 Now, we will run `stage3.sh`. First, check through the script to see if you need to make any edits:
-- Create and enable a 16GB swapfile at `/swapfile` **(Edit the script if you want a different size.)**
+- Create and enable a 16GB swapfile at `/swapfile`
+    - **Edit the script if you want a different size.**
 - Generate locale to `en_AU.UTF-8`.
 - Set our timezone to `Australia/Sydney`.
 - Set the hardware clock.
-- Install the standard Linux kernel and its headers. **(Headers are optional.)**
-- Edits mkinitcpio hooks then regenerates preset. **(This is probably not necessary if not using LUKS)**
+- Install the bootloader, standard Linux kernel, and efibootmgr.
+- Edits mkinitcpio hooks then regenerates preset.
+    - **Edit the script to remove this if you're not using LUKS.**
 - Install GRUB bootloader.
 - Sets GRUB language to `en`.
-- Sets `GRUB_CMDLINE_LINUX`. **(This is probably not necessary if not using LUKS)**
-- Installs and sets up a DHCP client to allow us to connect to the internet.
-- Installs some optional packages
+- Sets `GRUB_CMDLINE_LINUX`.
+    - **Edit the script to remove this if you're not using LUKS.**
+- Installs some very common packages.
+    - **Edit the script if you want a more minimal system.**
+- Sets up a DHCP client.
+    - *Allows us to automatically connect to the internet when we have a connection.*
+- Sets up NetworkManager.
+    - *It's required by a lot of Desktop Environments for their wireless networking tools (but for some reason doesn't come with them).*
 
 Run the script:
 ```
@@ -248,58 +255,86 @@ If you want to use TRIM, you'll need to do some manual tweaks yourself.
 
 (I'll updated this section once I figured it out.)
 
-## Stage 5: User account, hostname, and X.org.
+## Stage 5: User account, hostname, and installing an AUR helper
 
-Add user account:<br>
-`useradd -m -s /bin/bash simshadows`
-
-Now, we want to add `simshadows` to the sudoers file. Run:<br>
-`visudo`<br>
-Add this line:<br>
+Add user account:
 ```
-simshadows ALL=(ALL) ALL
+useradd -m -s /bin/bash simshadows
 ```
 
-Set user password:<br>
-`passwd simshadows`
+Now, we want to add `simshadows ALL=(ALL) ALL` to the sudoers file. Run:
+```
+visudo
+```
 
-Change machine name:<br>
-`hostnamectl set-hostname <putnamehere>`
+Set user password:
+```
+passwd simshadows
+```
+
+Change machine name:
+```
+hostnamectl set-hostname <putnamehere>
+```
+
+Now that we have our user account, we can install yay (my preferred AUR helper).
+```
+# sudo -u simshadows bash
+$ cd
+$ git clone https://aur.archlinux.org/yay.git tmp-yay
+$ cd tmp-yay
+$ makepkg -si
+```
 
 ## Stage 6: Installing the video driver
 
-Use to check what card you're using:<br>
-`lspci`
+Use to check what card you're using:
+```
+lspci
+```
 
 You may need to do your own research into what driver to use, but here are some suggestions:
 
 ### Virtualbox
 
-`pacman -Sy virtualbox-guest-utils xf86-video-vmware`<br>
+```
+pacman -Sy virtualbox-guest-utils xf86-video-vmware
+```
+
 xf86-video-vmware assumes you're using the VMSVGA virtual graphics controller.
 
-Additionally, we should enable the VirtualBox guest service:<br>
-`systemctl enable vboxservice.service`
+Additionally, we should enable the VirtualBox guest service:
+```
+systemctl enable vboxservice.service
+```
 
 ### Intel driver
 
-`pacman -Sy xf86-video-intel`
+```
+pacman -Sy xf86-video-intel
+```
 
 ### AMD driver
 
-`pacman -Sy xf86-video-amdgpu`
+```
+pacman -Sy xf86-video-amdgpu
+```
 
 ### Open-source Nvidia driver
 
 *(If you want performance, you probably don't want the open-source driver. Use the proprietary driver for this.)*
 
-`pacman -Sy xf86-video-nouveau lib32-nouveau-dri`
+```
+pacman -Sy xf86-video-nouveau lib32-nouveau-dri
+```
 
 If that succeeds, go to the next section.
 
 Otherwise, if that fails, you might need to allow 32-bit packages to be installed. Do the following:
 
-`vi /etc/pacman.conf`
+```
+vi /etc/pacman.conf
+```
 
 Uncomment:
 ```
@@ -311,17 +346,50 @@ Then, attempt to install again.
 
 ### Proprietary Nvidia driver
 
-`pacman -Sy nvidia lib32-nvidia-libgl nvidia-utils nvidia-settings`
+```
+pacman -Sy nvidia lib32-nvidia-libgl nvidia-utils nvidia-settings
+```
 
 ### Vesa driver (allows you to use any card, but very minimal)
 
-`pacman -Sy xf86-video-vesa`
+```
+pacman -Sy xf86-video-vesa
+```
 
 ## Stage 7: Installing display managers and desktop environments
 
 Pick one of the options below (or do some research into others you might be interested in).
 
 Note that both minimalist recommendations include terminals. That's because without one, you literally can't do anything.
+
+### KDE
+
+Full KDE:
+```
+pacman -Sy sddm plasma-meta konsole dolphin
+systemctl enable sddm
+reboot
+```
+
+### GNOME
+
+Full GNOME:
+```
+pacman -Sy gdm gnome gnome-extra
+systemctl enable gdm
+reboot
+```
+
+Alternative minimal GNOME:
+```
+pacman -Sy gdm gnome-shell gnome-terminal gnome-control-center
+systemctl enable gdm
+reboot
+```
+
+`networkmanager` is required if you want GNOME to manage your wireless networking connection.
+
+If weird things are happening and you can't even open up a terminal, you should go into settings, find *Region & Language*, and fix up any weird values you see there. That should fix it.
 
 ### Minimalist i3
 
@@ -333,22 +401,6 @@ reboot
 
 *Note: GDM is the display manager, but it's heavily bloated. Consider installing LightDM or some other lighter-weight display manager instead. The only reason I personally use GDM is because LightDM doesn't work in a VirtualBox guest for some reason.*
 
-### Minimalist GNOME
-
-```
-pacman -Sy gdm gnome-shell gnome-terminal gnome-control-center
-systemctl enable gdm
-reboot
-```
-
-### Full GNOME
-
-```
-pacman -Sy gdm gnome gnome-extra
-systemctl enable gdm
-reboot
-```
-
 ## Stage 8: Recommended Programs
 
 You can install a tonne of stuff I use by running my script:
@@ -359,3 +411,5 @@ You can install a tonne of stuff I use by running my script:
 You can also read the script and edit it yourself as needed.
 
 Do note that this script will require you to interact with any prompts. I left it this way to make sure we understand the options we're choosing here.
+
+## Stage 9: Additional Customizations

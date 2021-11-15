@@ -71,6 +71,12 @@ sed -i "s/^GRUB_CMDLINE_LINUX=\"\"$/${NEW_LINE}/" /etc/default/grub
 # We generate grub.cfg.
 grub-mkconfig -o /boot/grub/grub.cfg
 
+# Start systemd's SNTP client.
+# This is important to automatically keep the system clock synchronized over NTP.
+systemctl enable systemd-timesyncd
+# And start it immediately since it'll be needed for SSL connections.
+systemctl start systemd-timesyncd
+
 ##################################################################
 # OPTIONAL PART BELOW.                                           #
 #                                                                #
@@ -90,11 +96,6 @@ a+=( dhcpcd )
 # sudo
 a+=( sudo )
 
-# X server
-# (Should already come with GNOME, but we'll add it explicitly here anyway.)
-a+=( xorg-server )
-a+=( xorg-xinit  )
-
 # Linux headers and firmware
 a+=( linux-headers  )
 a+=( linux-firmware )
@@ -102,9 +103,38 @@ a+=( linux-firmware )
 # Wireless networking
 a+=( wpa_supplicant )
 
+# NetworkManager
+# (Might not need it if you want a super-minimal install, but it's a good higher-level networking
+# tool that figures more stuff out for you. Also, desktop environments like GNOME and KDE require it.)
+a+=( networkmanager )
+
+# X server
+# (Should already come with your desktop environment, but we'll add it explicitly here anyway.)
+a+=( xorg-server )
+a+=( xorg-xinit  )
+
+# man and Linux man pages
+# (Very inconvenient not to have these.)
+a+=( man-db    )
+a+=( man-pages )
+
+# Vim
+# (Specifically gVim because it comes with additional features like clipboard support.)
+a+=( gvim )
+
+# Git and development tools for building packages.
+# (These are necessary to install yay, otherwise you can leave it out.)
+a+=( git        )
+a+=( base-devel )
+
 # Run the actual package installation
 pacman -Syu --noconfirm "${a[@]}"
 
+####################
+
 # Enable the DHCP client.
 # This is important, otherwise our Arch installation cannot connect to the internet!
-systemctl enable dhcpcd.service
+systemctl enable dhcpcd
+
+# Enable networkmanager.
+systemctl enable NetworkManager
