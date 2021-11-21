@@ -34,27 +34,27 @@ a+=( zathura-pdf-mupdf ) # zathura mupdf plugin in order to view PDFs!
 #
 # Core Full Graphical Applications
 #
-#a+=( sublime-text ) # text editor # TODO: Find a better text editor?
-a+=( thunar       ) # file manager
-a+=( firefox      ) # web browser
-a+=( keepassxc    ) # password manager
+a+=( code      ) # text editor
+a+=( chromium  ) # web browser
+a+=( keepassxc ) # password manager
 
 
 #
 # Core Development Tools
 #
-a+=( ctags    ) # code indexing
-a+=( gdb      ) # GNU debugger
-a+=( lldb     ) # LLVM debugger
-a+=( valgrind ) # memory debugger (e.g. for mysterious segfaults)
-a+=( strace   ) # for debugging interactions between a process and the kernel
+a+=( ctags      ) # code indexing
+a+=( gdb        ) # GNU debugger
+a+=( lldb       ) # LLVM debugger
+a+=( valgrind   ) # memory debugger (e.g. for mysterious segfaults)
+a+=( strace     ) # for debugging interactions between a process and the kernel
+a+=( python     ) # Python language tooling
+a+=( python-pip ) # Python pip package manager
 
 
 #
 # Additional Development Tools
 #
-a+=( ruby       ) # Ruby language
-a+=( python-pip ) # Python pip package.
+a+=( ruby ) # Ruby language tooling
 
 
 #
@@ -127,4 +127,3 @@ a+=( yara     ) # (TODO: idk how to describe this one lol)
 
 # Start installation of all specified packages!
 pacman -Sy "${a[@]}"
-

@@ -44,19 +44,11 @@ Launch interactive prompt:
 iwctl
 ```
 
-List Wi-Fi devices:
+List Wi-Fi devices, scan for networks, list all available networks, then connect to one (this may prompt you for a passphrase if needed):
 ```
 device list
-```
-
-Scan for networks, then list all available networks:
-```
 station <YOUR_DEVICE_HERE> scan
 station <YOUR_DEVICE_HERE> get-networks
-```
-
-Connect to network (this may prompt you for a passphrase if needed):
-```
 station <YOUR_DEVICE_HERE> connect <SSID>
 ```
 
@@ -219,14 +211,41 @@ Run the script:
 ./stage3.sh
 ```
 
-Change `root`'s password:
+Check now that we have swap space:
+```
+free -m
+```
+
+Optional: If you're using a laptop, install TLP to improve power efficiency and the `gnome-power-statistics` tool for tracking charge:
+```
+pacman -Sy tlp gnome-power-manager
+systemctl enable tlp.service
+```
+
+Optional: Change `root`'s password if you want the account enabled:
 ```
 passwd
 ```
 
-Check now that we have swap space:
+Add user account, set user password, and change machine name:
 ```
-free -m
+useradd -m -s /bin/bash simshadows
+passwd simshadows
+hostnamectl set-hostname YOUR_MACHINE_NAME_HERE
+```
+
+Now, we want to add `simshadows ALL=(ALL) ALL` to the sudoers file using:
+```
+visudo
+```
+
+Now that we have our user account, we can install yay (my preferred AUR helper).
+```
+# sudo -u simshadows bash
+$ cd
+$ git clone https://aur.archlinux.org/yay.git tmp-yay
+$ cd tmp-yay
+$ makepkg -si
 ```
 
 Now, we can reboot to check if our installation was done correctly:
@@ -237,10 +256,6 @@ umount /mnt
 cryptsetup close cryptroot
 reboot
 ```
-
-Wait for reboot. If the installation media boots again, select "Boot existing OS" or similar options to boot into the installation.
-
-Should be able to log in as `root` now. If not, we failed something and should start all over again.
 
 Ensure `/dev/sda1` and `/dev/mapper/cryptroot` are shown (or `/dev/sda2`):
 ```
@@ -255,38 +270,7 @@ If you want to use TRIM, you'll need to do some manual tweaks yourself.
 
 (I'll updated this section once I figured it out.)
 
-## Stage 5: User account, hostname, and installing an AUR helper
-
-Add user account:
-```
-useradd -m -s /bin/bash simshadows
-```
-
-Now, we want to add `simshadows ALL=(ALL) ALL` to the sudoers file. Run:
-```
-visudo
-```
-
-Set user password:
-```
-passwd simshadows
-```
-
-Change machine name:
-```
-hostnamectl set-hostname <putnamehere>
-```
-
-Now that we have our user account, we can install yay (my preferred AUR helper).
-```
-# sudo -u simshadows bash
-$ cd
-$ git clone https://aur.archlinux.org/yay.git tmp-yay
-$ cd tmp-yay
-$ makepkg -si
-```
-
-## Stage 6: Installing the video driver
+## Stage 5: Installing the video driver
 
 Use to check what card you're using:
 ```
@@ -299,14 +283,10 @@ You may need to do your own research into what driver to use, but here are some 
 
 ```
 pacman -Sy virtualbox-guest-utils xf86-video-vmware
+systemctl enable vboxservice.service
 ```
 
 xf86-video-vmware assumes you're using the VMSVGA virtual graphics controller.
-
-Additionally, we should enable the VirtualBox guest service:
-```
-systemctl enable vboxservice.service
-```
 
 ### Intel driver
 
@@ -356,7 +336,7 @@ pacman -Sy nvidia lib32-nvidia-libgl nvidia-utils nvidia-settings
 pacman -Sy xf86-video-vesa
 ```
 
-## Stage 7: Installing display managers and desktop environments
+## Stage 6: Installing display managers and desktop environments
 
 Pick one of the options below (or do some research into others you might be interested in).
 
@@ -366,10 +346,44 @@ Note that both minimalist recommendations include terminals. That's because with
 
 Full KDE:
 ```
-pacman -Sy sddm plasma-meta konsole dolphin
+pacman -Sy sddm \
+    plasma-meta \
+    rxvt-unicode \
+    dolphin \
+    ark \
+    filelight \
+    spectacle \
+    kolourpaint
 systemctl enable sddm
 reboot
 ```
+
+Extras:
+```
+yay ttf-twemoji
+```
+
+You'll also need to fix locale issues by going *System Settings* > *Regional Settings* > *Formats* and setting *Region* to *Australia - Australian English (en_AU)*, then reboot. Without doing this, you end up with really weird behaviour.
+
+Additional things I like to configure:
+
+- **Appearance-related configuration**:
+    - *System Settings* > *Appearance* > *Global Theme*
+        - Set to *Breeze Dark*.
+        - > *Window Decorations*, set to *Plastik* to get the familiar minimize/maximize/close buttons.
+    - Right-click on your desktop > *Configure Desktop and Wallpaper...*, set to *Plain Color* and set the colour to `#191c1e`/`rgb(252,28,30)`.
+    - *System Settings* > *Workspace Behavior*
+        - > *Screen Locking* > *Apperance: Configure...*, set to the same colour as the desktop.
+        - > *General Behavior*, set animation speed to instant.
+- **Functionality-related configuration**:
+    - *System Settings* > *Input Devices* > *Touchpad*, enable *Tap-to-click* and consider enabling *Tap-and-drag*.
+    - *System Settings* > *Workspace Behavior*
+        - > *Virtual Desktops*, set up 10 desktops named `Desktop 1` through to `Desktop 10`, set up as two rows.
+    - *System Settings* > *Shortcuts*
+        - > *KWin*
+            - Bind *Switch to Desktop 1:* to `Alt+1`, and so on for all 10 desktops.
+            - Bind *Window to Desktop 1:* to `Alt+Shift+1`, and so on for all 10 desktops.
+            - Bind *Toggle Present Windows (Current desktop):* to `Alt+\``.
 
 ### GNOME
 
@@ -394,14 +408,14 @@ If weird things are happening and you can't even open up a terminal, you should 
 ### Minimalist i3
 
 ```
-pacman -Sy gdm i3 rxvt-unicode
+pacman -Sy gdm i3 rxvt-unicode thunar
 systemctl enable gdm
 reboot
 ```
 
 *Note: GDM is the display manager, but it's heavily bloated. Consider installing LightDM or some other lighter-weight display manager instead. The only reason I personally use GDM is because LightDM doesn't work in a VirtualBox guest for some reason.*
 
-## Stage 8: Recommended Programs
+## Stage 7: Recommended Programs
 
 You can install a tonne of stuff I use by running my script:
 ```
@@ -411,5 +425,3 @@ You can install a tonne of stuff I use by running my script:
 You can also read the script and edit it yourself as needed.
 
 Do note that this script will require you to interact with any prompts. I left it this way to make sure we understand the options we're choosing here.
-
-## Stage 9: Additional Customizations
