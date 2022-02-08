@@ -1,0 +1,83 @@
+priority 50
+
+snippet ifndef "#include guards for .h files." b
+#ifndef ${1:FILE}_H
+#define $1_H
+
+${0:// TODO}
+
+#endif // $1_H
+endsnippet
+
+snippet cout "Print to std::cout." b
+std::cout << $1 << "\n";$0
+endsnippet
+
+snippet clog "Print to std::clog." b
+std::clog << $1 << "\n";$0
+endsnippet
+
+snippet cerr "Print to std::cerr." b
+std::cerr << $1 << "\n";$0
+endsnippet
+
+snippet if "If-statement." b
+if (${1:true}) {
+	$2
+}$0
+endsnippet
+
+snippet elif "Else-if-section of an if-statement." w
+else if (${1:true}) {
+	$2
+}$0
+endsnippet
+
+snippet else "Else-section of an if-statement." w
+else {
+	$1
+}$0
+endsnippet
+
+snippet while "While-loop." b
+while (${1:true}) {
+	$2
+}$0
+endsnippet
+
+snippet for "For-loop." b
+for (${1:true}) {
+	$2
+}$0
+endsnippet
+
+snippet namespace "namespace .. (namespace)"
+namespace $1
+{
+
+
+${0:// TODO}
+
+
+} // namespace
+endsnippet
+# Alias
+snippet ns "namespace .. (namespace)"
+namespace $1
+{
+
+
+${0:// TODO}
+
+
+} // namespace
+endsnippet
+
+snippet runtime_error "throw std::runtime_error();" w
+throw std::runtime_error($1);$0
+endsnippet
+
+snippet logic_error "throw std::logic_error();" w
+throw std::logic_error($1);$0
+endsnippet
+

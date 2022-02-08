@@ -20,6 +20,7 @@ else
     utils_flavour="gnu"
 fi
 
+
 # Prompt
 
 PS1='\[\e[31m\]\u@\h\[\e[m\] \W\$ '
@@ -121,6 +122,16 @@ function clip.bmptofile() {
     xclip -selection clipboard -t "$CLIP_TARGET" -o | mogrify -format png - > $FILENAME
     echo 'BMP from clipboard saved as '$FILENAME
 }
+
+
+# Node.js Stuff
+
+export PATH="$HOME/.npm-global/bin:$PATH"
+
+export N_PREFIX=$HOME/.n
+if [ -d "$HOME/.n" ]; then
+    export PATH=$N_PREFIX/bin:$PATH
+fi
 
 
 # Other script invocations
