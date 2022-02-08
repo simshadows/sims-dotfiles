@@ -41,12 +41,11 @@
 	s              = status
 
 	# Show the commit log with various useful formatting styles
-	lL             = log
-	l              = log --oneline --graph --decorate
-	lF             = log --pretty=fuller --stat --graph --decorate
+	l              = log --all --oneline --graph --decorate
+	lF             = log --all --pretty=fuller --stat --graph --decorate
 
 	# (TODO: What exactly does 'git show' do?)
-	s              = show
+	#s             = show
 
 	# Show difference between working directory and staging area.
 	d              = diff
