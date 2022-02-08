@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Convenience script to run the xrdb merge command against my .Xresources file.
+# I find I use it a lot if I'm tinkering with my config.
+
+# Terminate script on error
+set -e
+
+xrdb -merge ~/.Xresources
+
