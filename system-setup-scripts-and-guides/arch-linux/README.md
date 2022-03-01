@@ -370,17 +370,18 @@ Additional things I like to configure:
 - **Appearance-related configuration**:
     - *System Settings* > *Appearance* > *Global Theme*
         - Set to *Breeze Dark*.
-        - > *Window Decorations*, set to *Plastik* to get the familiar minimize/maximize/close buttons.
+        - **>** *Window Decorations*, set to *Plastik* to get the familiar minimize/maximize/close buttons.
     - Right-click on your desktop > *Configure Desktop and Wallpaper...*, set to *Plain Color* and set the colour to `#191c1e`/`rgb(252,28,30)`.
     - *System Settings* > *Workspace Behavior*
-        - > *Screen Locking* > *Apperance: Configure...*, set to the same colour as the desktop.
-        - > *General Behavior*, set animation speed to instant.
+        - **>** *Screen Locking* > *Apperance: Configure...*, set to the same colour as the desktop.
+        - **>** *General Behavior*, set animation speed to instant.
 - **Functionality-related configuration**:
     - *System Settings* > *Input Devices* > *Touchpad*, enable *Tap-to-click* and consider enabling *Tap-and-drag*.
     - *System Settings* > *Workspace Behavior*
-        - > *Virtual Desktops*, set up 10 desktops named `Desktop 1` through to `Desktop 10`, set up as two rows.
+        - **>** *Virtual Desktops*, set up 10 desktops named `Desktop 1` through to `Desktop 10`, set up as two rows.
+        - **>** *Screen Edges*, set all corners/edges to `No Action`.
     - *System Settings* > *Shortcuts*
-        - > *KWin*
+        - **>** *KWin*
             - Bind *Switch to Desktop 1:* to `Alt+1`, and so on for all 10 desktops.
             - Bind *Window to Desktop 1:* to `Alt+Shift+1`, and so on for all 10 desktops.
             - Bind *Toggle Present Windows (Current desktop):* to `Alt+\``.

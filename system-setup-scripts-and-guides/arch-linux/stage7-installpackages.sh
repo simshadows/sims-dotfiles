@@ -26,6 +26,7 @@ a+=( lynx              ) # CLI web browser
 a+=( feh               ) # minimalist image viewer
 a+=( zathura           ) # minimalist document viewer
 a+=( zathura-pdf-mupdf ) # zathura mupdf plugin in order to view PDFs!
+a+=( lazygit           ) # CLI git helper
 #
 # (NOTE: 'gvim' is installed since 'vim' annoyingly lacks clipboard support.)
 #
@@ -54,7 +55,9 @@ a+=( python-pip ) # Python pip package manager
 #
 # Additional Development Tools
 #
-a+=( ruby ) # Ruby language tooling
+a+=( ruby   ) # Ruby language tooling
+a+=( nodejs ) # Node Javascript language runtime
+a+=( npm    ) # Node package manager
 
 
 #

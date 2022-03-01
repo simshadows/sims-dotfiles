@@ -45,6 +45,7 @@ fi
 
 alias r='ranger'
 alias rss='newsboat' # My preferred RSS reader client
+alias g='lazygit'
 
 
 # Prevents nesting ranger instances when you repeatedly open shells with Shift+s

@@ -22,7 +22,7 @@ ln_corresponding .config/ranger commands_full.py
 ln_corresponding .config/ranger rc.conf
 ln_corresponding .config/ranger rifle.conf
 ln_corresponding .config/ranger scope.sh
-ln_corresponding .config/zathura zathurarc
+ln_corresponding .config/lazygit config.yml
 
 echo "DONE!"
 printf "\n"

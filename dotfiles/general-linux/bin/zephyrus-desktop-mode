@@ -12,7 +12,7 @@ echo "Setting power profile to 'Performance'."
 sudo asusctl profile -P Performance
 
 echo "Setting power profile to 'nvidia'. (NOTE: You may need to log out and log back in.)"
-sudo supergfxctl --mode nvidia
+sudo supergfxctl --mode Dedicated
 
 echo "=== DONE! ==="
 printf "\n"

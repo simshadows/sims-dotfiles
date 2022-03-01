@@ -12,7 +12,7 @@ echo "Setting power profile to 'Quiet'."
 sudo asusctl profile -P Quiet
 
 echo "Setting power profile to 'integrated'. (NOTE: You may need to log out and log back in.)"
-sudo supergfxctl --mode integrated
+sudo supergfxctl --mode Integrated
 
 echo "=== DONE! ==="
 printf "\n"
