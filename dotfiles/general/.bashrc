@@ -43,9 +43,11 @@ else
     alias la='ls --color=auto -lah'
 fi
 
-alias r='ranger'
+alias g='git'
+alias gg='lazygit' # Interactive CLI git client
+alias r='ranger' # CLI file manager
 alias rss='newsboat' # My preferred RSS reader client
-alias g='lazygit'
+alias t='tmux new-session -s ' # Create new named tmux session
 
 
 # Prevents nesting ranger instances when you repeatedly open shells with Shift+s

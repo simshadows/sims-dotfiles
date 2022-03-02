@@ -56,11 +56,13 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-sleuth'
 Plugin 'SirVer/ultisnips'
 "Plugin 'mattn/emmet-vim'
-Plugin 'lervag/vimtex'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'wincent/command-t'
+
+Plugin 'leafgarland/typescript-vim'
+Plugin 'lervag/vimtex'
 
 " Conflicts...
 "Plugin 'tpope/vim-surround'
