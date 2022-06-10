@@ -29,6 +29,10 @@ snippet tit "Text Emphasis: Italics" w
 \textit{$1}$0
 endsnippet
 
+snippet em "Text Emphasis: Emphasis" w
+\emph{$1}$0
+endsnippet
+
 snippet tbf "Text Emphasis: Bold" w
 \textbf{$1}$0
 endsnippet
@@ -74,6 +78,12 @@ snippet ga* "gather* env." b
 \end{gather*}$0
 endsnippet
 
+snippet gathered "gathered env." b
+\begin{gathered}
+	$1
+\end{gathered}$0
+endsnippet
+
 snippet align "align env." b
 \begin{align}
 	$1
@@ -96,6 +106,12 @@ snippet alignat* "alignat* env." b
 \begin{alignat*}{2}
 	$1
 \end{alignat*}$0
+endsnippet
+
+snippet aligned "aligned env." b
+\begin{aligned}
+	$1
+\end{aligned}$0
 endsnippet
 
 snippet subeq "subequations env." b
@@ -132,7 +148,7 @@ endsnippet
 # Simple Surrounds
 
 snippet parens "Math: ($1)" w
-\parens*{$1}$0
+\parens{$1}$0
 endsnippet
 
 snippet brackets "Math: [$1]" w
@@ -182,7 +198,11 @@ endsnippet
 # siunitx Unit Building
 
 snippet si "Math: \si{} SI Units" w
-\si{$1}$0
+\,\si{$1}$0
+endsnippet
+
+snippet qty "Math: \qty{}{} numbers + SI Units" w
+\qty{$1}{$2}$0
 endsnippet
 
 # siunitx Others
@@ -195,55 +215,59 @@ snippet angg "Math: \angle \ang{$1}" w
 \angle \ang{$1}$0
 endsnippet
 
+snippet phase "Math: Steinmetz notation for complex numbers" w
+\phase{\qty{$1}{\degree}}$0
+endsnippet
+
 snippet rad "Math: \si{\radian}" w
-\si{\radian}$0
+\,\si{\radian}$0
 endsnippet
 
 snippet volt "Math: \si{\volt}" w
-\si{\volt}$0
+\,\si{\volt}$0
 endsnippet
 snippet kvolt "Math: \si{\kilo\volt}" w
-\si{\kilo\volt}$0
+\,\si{\kilo\volt}$0
 endsnippet
 snippet mvolt "Math: \si{\milli\volt}" w
-\si{\milli\volt}$0
+\,\si{\milli\volt}$0
 endsnippet
 snippet uvolt "Math: \si{\micro\volt}" w
-\si{\micro\volt}$0
+\,\si{\micro\volt}$0
 endsnippet
 
 snippet amp "Math: \si{\ampere}" w
-\si{\ampere}$0
+\,\si{\ampere}$0
 endsnippet
 snippet mamp "Math: \si{\milli\ampere}" w
-\si{\milli\ampere}$0
+\,\si{\milli\ampere}$0
 endsnippet
 snippet uamp "Math: \si{\micro\ampere}" w
-\si{\micro\ampere}$0
+\,\si{\micro\ampere}$0
 endsnippet
 
 snippet ohm "Math: \si{\ohm}" w
-\si{\ohm}$0
+\,\si{\ohm}$0
 endsnippet
 snippet kohm "Math: \si{\kilo\ohm}" w
-\si{\kilo\ohm}$0
+\,\si{\kilo\ohm}$0
 endsnippet
 snippet Mohm "Math: \si{\mega\ohm}" w
-\si{\mega\ohm}$0
+\,\si{\mega\ohm}$0
 endsnippet
 
 snippet farad "Math: \si{\farad}" w
-\si{\farad}$0
+\,\si{\farad}$0
 endsnippet
 snippet ufarad "Math: \si{\micro\farad}" w
-\si{\micro\farad}$0
+\,\si{\micro\farad}$0
 endsnippet
 snippet nfarad "Math: \si{\nano\farad}" w
-\si{\nano\farad}$0
+\,\si{\nano\farad}$0
 endsnippet
 
 snippet db "Math: \si{\decibel}" w
-\si{\decibel}$0
+\,\si{\decibel}$0
 endsnippet
 
 # Miscellaneous
@@ -496,6 +520,18 @@ endsnippet
 snippet multicols "multicols env." b
 \begin{multicols}{2}
 	$1
+\end{multicols}$0
+endsnippet
+
+snippet mc "my custom weird multicols env." b
+\begin{multicols}{2}
+	$1
+
+	\MulticolsBreak
+
+	$2
+
+	\MulticolsCleanEnd
 \end{multicols}$0
 endsnippet
 

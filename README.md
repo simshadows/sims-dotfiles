@@ -16,6 +16,28 @@ My personal dotfiles for Linux and Mac.
         - Feel free to subscribe to them!
     - For more information, see `dotfiles/newsboat/README.md`.
 
+## My Workflow
+
+This repo ultimately serves to support my specific workflow out of the box.
+
+General characteristics of my workflow:
+
+- Aims for 100% CLI rather than GUI.
+- Aims for vi-style keybinds.
+- Keeps as close to default out-of-the-box settings as possible, and favouring aliasing rather than overwriting default settings.
+
+Specific details of my workflow:
+
+- Operating System
+    - Linux (Preferring Arch, Manjaro, Debian, or Ubuntu.)
+        - Preferred desktop environments are KDE Plasma and i3.
+        - Preferred terminal is rxvt-unicode.
+    - Windows
+        - Using WSL1 and Xming to give a Linux-like environment and an X-server.
+        - Preferred terminal is rxvt-unicode.
+    - MacOS
+        - *(I don't really use a Mac for development these days, so don't remember what I used.)*
+
 ## Compatibility and Personalization
 
 This repo is built primarily *for my convenience*, which means two things:

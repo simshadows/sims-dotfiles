@@ -22,19 +22,16 @@ fi
 
 
 # Prompt
-
 PS1='\[\e[31m\]\u@\h\[\e[m\] \W\$ '
 
 
 # Put ~/bin into PATH
-
 if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"
 fi
 
 
 # The usual aliases
-
 if [[ "$utils_flavour" == "bsd" ]]; then
     alias ls='ls -G'
     alias la='ls -lahG'
@@ -42,7 +39,7 @@ else
     alias ls='ls --color=auto'
     alias la='ls --color=auto -lah'
 fi
-
+alias cheatsheet='vim -R ~/cheatsheet.md' # Cheatsheet for how to use Linux
 alias g='git'
 alias gg='lazygit' # Interactive CLI git client
 alias r='ranger' # CLI file manager
@@ -50,8 +47,11 @@ alias rss='newsboat' # My preferred RSS reader client
 alias t='tmux new-session -s ' # Create new named tmux session
 
 
-# Prevents nesting ranger instances when you repeatedly open shells with Shift+s
+# Automatically reread ~/.Xresources
+xrdb -merge ~/.Xresources || true
 
+
+# Prevents nesting ranger instances when you repeatedly open shells with Shift+s
 if [[ "$os_type" == "mac" ]]; then
     function ranger() {
         if [ -z "$RANGER_LEVEL" ]; then
@@ -72,7 +72,6 @@ fi
 
 
 # Different ways to search for things
-
 function search.str() {
     grep -rnw $1 -e $2
 }
@@ -80,25 +79,21 @@ function search.str() {
 
 # Very handy pastebins. Pipe in your data, and you get back a URL.
 # Multiple are provided for options since some can break.
-
 function pastebin() {
     curl -F '"'"'sprunge=<-'"'"' http://sprunge.us
 }
-
 function pastebin2() {
     nc termbin.com 9999
 }
 
 
 # Clipboard operations
-
 function clip.targets() {
     echo '=== PRIMARY ==='
     xclip -selection primary -t TARGETS -o
     echo '=== CLIPBOARD ==='
     xclip -selection clipboard -t TARGETS -o
 }
-
 function clip.get() {
     xclip -selection clipboard -t $1 -o
 }
@@ -128,9 +123,7 @@ function clip.bmptofile() {
 
 
 # Node.js Stuff
-
 export PATH="$HOME/.npm-global/bin:$PATH"
-
 export N_PREFIX=$HOME/.n
 if [ -d "$HOME/.n" ]; then
     export PATH=$N_PREFIX/bin:$PATH

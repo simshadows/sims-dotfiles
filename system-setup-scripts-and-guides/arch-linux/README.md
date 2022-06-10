@@ -385,6 +385,8 @@ Additional things I like to configure:
             - Bind *Switch to Desktop 1:* to `Alt+1`, and so on for all 10 desktops.
             - Bind *Window to Desktop 1:* to `Alt+Shift+1`, and so on for all 10 desktops.
             - Bind *Toggle Present Windows (Current desktop):* to `Alt+\``.
+    - Right-click the taskbar > *Configure Icons-only Task Manager...* > *Behavior*
+        - Set *Clicking grouped task* to *Shows tooltip window thumbanails*.
 
 ### GNOME
 

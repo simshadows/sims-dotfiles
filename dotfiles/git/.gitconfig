@@ -15,123 +15,53 @@
 	required = true
 	clean = git-lfs clean -- %f
 [alias]
+	i   = init
+	#c  = clone
 
-	###############################################################################
-	##  GIT ALIASES                                                              ##
-	###############################################################################
-	##                                                                           ##
-	##  This part of the file serves two purposes:                               ##
-	##                                                                           ##
-	##      1) Command Shortening                                                ##
-	##                                                                           ##
-	##          Aliases with less keystrokes save you time and effort.           ##
-	##                                                                           ##
-	##      2) Command Cheatsheet                                                ##
-	##                                                                           ##
-	##          This file could be used as a cheatsheet for more complex git     ##
-	##          commands. To help with that, I've added plenty of comments       ##
-	##          below.                                                           ##
-	##                                                                           ##
-	##  Due to the specific way I formatted this file, it is recommended to      ##
-	##  view it with syntax highlighting (such as within Vim, or on Github).     ##
-	##                                                                           ##
-	###############################################################################
+	s   = status
+	#sh = show
+	l   = log --all --oneline --graph --decorate
+	lF  = log --all --pretty=fuller --stat --graph --decorate
+	d   = diff
+	dS  = diff --staged
+	#re = remote -v
+	
+	a   = add -A
 
-	# See repository status.
-	s              = status
+	c   = commit
+	cM  = commit -m
+	cA  = commit --amend
 
-	# Show the commit log with various useful formatting styles
-	l              = log --all --oneline --graph --decorate
-	lF             = log --all --pretty=fuller --stat --graph --decorate
+	b   = checkout -b
+	bL  = branch -a
+	m   = merge
 
-	# (TODO: What exactly does 'git show' do?)
-	#s             = show
+	f   = fetch --prune
+	p   = push
+	pu  = pull
 
-	# Show difference between working directory and staging area.
-	d              = diff
-	# Show difference between two commits:
-	#              = diff <commitID-old> <commitID-new>
-	# Show difference between staging area and most recent commit.
-	dS             = diff --staged
+	# Removes untracked files and folders.
+	cl  = clean -fdx
 
-	# Initialize a new empty repository, or reinitialize an existing one
-	i              = init
+	# Removes untracked ignored files and folders.
+	clI = clean -fdX
 
-	# Clone a remote repository
-	cl             = clone  # <url>
+	# Undoes the latest commit and leaves those commited changes unstaged.
+	# To commit with the old message: 'git commit -c ORIG_HEAD'.
+	rU = reset HEAD~
+
+	# (TODO: What exactly does this do?)
+	rH = reset --hard
+
+	# Reset the working copy at the current directory and its subdirectories
+	rW = checkout .
+
+	# Garbage Collection
+	#g  = gc
+
 	# Clone from Github
 	github          = !sh -c 'git clone git@github.com:$1.git' -
 	githubwiki      = !sh -c 'git clone git@github.com:$1.wiki.git' -
 	githubHTTPS     = !sh -c 'git clone https://github.com/$1.git' -
 	githubwikiHTTPS = !sh -c 'git clone https://github.com/$1.wiki.git' -
-
-	# View all remotes.
-	rR             = remote
-	r              = remote -v
-	# Create a new remote
-	rA             = remote add  # <remote> <url>
-
-	# List local branches
-	b              = branch
-	# List local and remote branches
-	bA             = branch -a
-	# Create a branch at the current commit.
-	#              = branch <branchname>
-	# Create a branch at the current commit, and checks it out.
-	chB            = checkout -b  # <new-branch>
-	# Delete the branch.
-	bD             = branch -d  # <branchname>
-
-	# Stage specific files.
-	a              = add  # <paths...>
-	# Stage all files
-	aA             = add -A
-
-	# Create a commit with a text editor.
-	c              = commit
-	# Create a commit with <message> as the commit message.
-	cM             = commit -m  # <message>
-
-	# Merge <branch1> with <branch2>.
-	m              = merge  # <branch1> <branch2>
-
-	# Update remote branch
-	f              = fetch
-	# (TODO: How does the use of arguments such as 'fetch <remote>' work...)
-
-	# Pushes the current branch to the remote 'origin' (if push.default=upstream)
-	ps             = push
-	# Pushes the branch to the remote. (TODO: More info...)
-	#              = push <remote> <branch>
-
-	# Pulls changes from the remote. (TODO: More info...)
-	pl             = pull
-	#                pull <remote> <branch>
-	# (TODO: Note the equivalence of 'git pull <remote> <branch>' to 'git fetch
-	#        remote; git merge <branch> <remote>/<branch>'.
-
-	# Checkout a particular branch or commit ID.
-	ch              = checkout  # <branch|commitID>
-	# Reset the working copy at the current directory and its subdirectories
-	chR             = checkout .
-	# Reset a specific file in the working copy.
-	chF             = checkout --  # <filepath>
-
-	# Interactively unstage hunks
-	reP             = reset -p
-	# Undoes the latest commit and leaves those commited changes unstaged.
-	# To commit with the old message: 'git commit -c ORIG_HEAD'.
-	reU             = reset HEAD~
-	# (TODO: What exactly does this do?)
-	reH             = reset --hard
-
-	# Removes untracked unignored files (not folders).
-	#              = clean
-	# Removes untracked ignored files and folders.
-	clean-ignored  = clean -dX
-	# Removes untracked ignored and unignored files and folders.
-	clean-all      = clean -dx
-
-	# Garbage Collection
-	#              = gc
 

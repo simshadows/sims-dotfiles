@@ -5,13 +5,13 @@ echo "=== Setting up your ASUS Zephyrus laptop for portable use. ==="
 # Terminate script on error
 set -e
 
-echo "Setting battery charge limit to 100%."
-sudo asusctl -c 100
+echo "Setting battery charge limit to (almost) 100%."
+sudo asusctl -c 98
 
 echo "Setting power profile to 'Quiet'."
 sudo asusctl profile -P Quiet
 
-echo "Setting power profile to 'integrated'. (NOTE: You may need to log out and log back in.)"
+echo "Setting power profile to 'Integrated'. (NOTE: You may need to log out and log back in.)"
 sudo supergfxctl --mode Integrated
 
 echo "=== DONE! ==="

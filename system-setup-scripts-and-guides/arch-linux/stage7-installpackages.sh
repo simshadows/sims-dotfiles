@@ -38,6 +38,7 @@ a+=( lazygit           ) # CLI git helper
 a+=( code      ) # text editor
 a+=( chromium  ) # web browser
 a+=( keepassxc ) # password manager
+a+=( vlc       ) # media player
 
 
 #
@@ -106,7 +107,9 @@ a+=( rtorrent          ) # bittorrent client
 a+=( p7zip             ) # 7zip POSIX port
 a+=( texlive-most      ) # latex distribution   (WARNING: Large install.)
 a+=( biber             ) # latex reference management
+a+=( texstudio         ) # latex IDE
 a+=( libreoffice-still ) # libreoffice, stable branch   (WARNING: Large install.)
+a+=( obs-studio        ) # screen recording
 
 
 #
