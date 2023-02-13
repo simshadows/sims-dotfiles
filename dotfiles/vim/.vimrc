@@ -56,8 +56,10 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-sleuth'
 Plugin 'SirVer/ultisnips'
 "Plugin 'mattn/emmet-vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-utils/vim-troll-stopper'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'wincent/command-t'
 
@@ -100,6 +102,17 @@ let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 "inoremap <expr> <C-J> UltiSnips#JumpForwards()
 "inoremap <expr> <C-K> UltiSnips#JumpBackwards()
 " TODO: These are bugged. Find a better alternative...
+
+" Show indentation
+let g:indent_guides_enable_on_vim_startup = 1
+" TODO: Make this look better?
+let g:indent_guides_auto_colors = 0
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=darkgrey
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
+
+" Set unicode characters to be highlighted
+" TODO: How do I use this?
+"highlight TrollStopper ctermbg = red guibg = #FF0000
 
 nnoremap ;; :CommandT<enter>
 
@@ -314,6 +327,14 @@ set ffs=unix,dos,mac
 
 " Changes default highlighting of *.ejs files (Node.js EJS template files) to HTML.
 au BufNewFile,BufRead *.ejs set filetype=html
+
+" Project-specific highlighting
+au BufNewFile,BufRead *.txt.ejs set filetype=text
+au BufNewFile,BufRead *.ts.ejs set filetype=typescript
+au BufNewFile,BufRead *.js.ejs set filetype=javascript
+au BufNewFile,BufRead *.tsx.ejs set filetype=typescriptreact
+au BufNewFile,BufRead *.jsx.ejs set filetype=javascriptreact
+au BufNewFile,BufRead *.json.ejs set filetype=json
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE """""""""""""""""""""""""""""""""""""""""""""""""""""""

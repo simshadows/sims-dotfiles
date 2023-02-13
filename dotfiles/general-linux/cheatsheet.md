@@ -10,6 +10,8 @@
     - **Shows manpages for the query.**
 - `$ which <<<COMMAND>>>`
     - **Shows full path of a command.**
+- `du -sh <<PATH>>`
+    - **Calculates a specific file/directory's disk usage.**
 
 For rescuing an Arch/Manjaro Linux installation from a live installer:
 
@@ -42,4 +44,11 @@ $ echo "If you're using Manjaro, use 'manjaro-chroot' instead."
     - Add `-f` to force complete processing despite errors.
     - Add `-quiet` to force complete processing without interruption.
     - Add `-pvc` to watch for changes and automatically recompile.
+
+## Linux Disk Management
+
+- `sudo smartctl /dev/sdX -a`
+    - SMART information
+- `sudo dd if=/dev/zero of=/dev/sdX`
+    - zero drive *sdX*
 
