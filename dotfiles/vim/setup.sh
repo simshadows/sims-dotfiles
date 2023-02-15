@@ -30,6 +30,9 @@ make
 echo "Setting up remaining symlinks..."
 ln -sfn "$src_dir/runtime" ~/.vim/custom-runtime
 
+echo "Installing coc dependencies..."
+yarn install --cwd ~/.vim/bundle/coc.nvim
+
 echo "DONE!"
 printf "\n"
 

@@ -54,6 +54,7 @@ Plugin 'tomtom/tlib_vim'
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-sleuth'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'SirVer/ultisnips'
 "Plugin 'mattn/emmet-vim'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -91,6 +92,8 @@ colorscheme solarized
 
 let g:vimtex_view_general_viewer="zathura"
 "let g:vimtex_view_method="zathura"
+
+let g:coc_global_extensions = ["coc-tsserver"]
 
 " These keys trigger UltiSnips commands in insert mode.
 " NOTE: <C-L> should still usable if you use 'set insertmode'.

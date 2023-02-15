@@ -32,6 +32,8 @@ $ echo "If you're using Manjaro, use 'manjaro-chroot' instead."
 
 - `git submodule update --init --recursive --remote`
     - Run this if you forgot to clone with `--recurse-submodules` and need it.
+- `git stash` and `git stash pop`
+    - Save/load the current changes to a stash.
 
 ## Kubernetes + Helm
 
