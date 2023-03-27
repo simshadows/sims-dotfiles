@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#
+# You run this file to copy in any required files.
+#
+
 # Terminate script on error
 set -e
 
@@ -13,33 +17,14 @@ src_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #   We symlink "$HOME/$1/$2" to "$src_dir/$1/$2".
 #   Intermediate parent directories are also created.
 # NOTE: "rm" is used instead of the "ln -T" option for compatibility.
-function ln_corresponding() {
+function update_corresponding() {
     if [[ "$#" == 1 ]]; then
-        ln -sfn "$src_dir/$1" "$HOME/$1"
+        cp "$HOME/$1" "$src_dir/$1"
     elif [[ "$#" == 2 ]]; then
         mkdir -p "$HOME/$1"
-        ln -sfn "$src_dir/$1/$2" "$HOME/$1/$2"
+        cp "$HOME/$1/$2" "$src_dir/$1/$2"
     else
-        echo "Wrong number of arguments for ln_corresponding()."
-        exit 1
-    fi
-}
-export -f ln_corresponding
-
-# If one argument:
-#   We symlink "$HOME/$1" to "$src_dir/$1".
-# If two arguments:
-#   We symlink "$HOME/$1/$2" to "$src_dir/$1/$2".
-#   Intermediate parent directories are also created.
-# NOTE: "rm" is used instead of the "ln -T" option for compatibility.
-function cp_corresponding() {
-    if [[ "$#" == 1 ]]; then
-        cp "$src_dir/$1" "$HOME/$1"
-    elif [[ "$#" == 2 ]]; then
-        mkdir -p "$HOME/$1"
-        cp "$src_dir/$1/$2" "$HOME/$1/$2"
-    else
-        echo "Wrong number of arguments for cp_corresponding()."
+        echo "Wrong number of arguments for update_corresponding()."
         exit 1
     fi
 }
@@ -65,18 +50,9 @@ printf "\n"
 echo "Running the setup scripts..."
 printf "\n"
 
-bash "$src_dir/dotfiles/general/setup.sh"
-
 if [[ "$os_type" == "gnu" ]]; then
-    bash "$src_dir/dotfiles/general-linux/setup.sh"
-    bash "$src_dir/dotfiles/kde/setup.sh"
+    bash "$src_dir/dotfiles/kde/update.sh"
 fi
-
-bash "$src_dir/dotfiles/git/setup.sh"
-
-bash "$src_dir/dotfiles/vim/setup.sh"
-
-bash "$src_dir/dotfiles/newsboat/setup.sh"
 
 echo "ALL DONE!"
 

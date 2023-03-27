@@ -55,7 +55,6 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-sleuth'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'SirVer/ultisnips'
 "Plugin 'mattn/emmet-vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'tpope/vim-fugitive'
@@ -66,6 +65,10 @@ Plugin 'wincent/command-t'
 
 Plugin 'leafgarland/typescript-vim'
 Plugin 'lervag/vimtex'
+
+" TODO: We should get rid of directly using ultisnips now since we have coc.
+"       The problem is, I'm still not sure how to configure coc for tab autocompletion.
+Plugin 'SirVer/ultisnips'
 
 " Conflicts...
 "Plugin 'tpope/vim-surround'
@@ -93,7 +96,22 @@ colorscheme solarized
 let g:vimtex_view_general_viewer="zathura"
 "let g:vimtex_view_method="zathura"
 
-let g:coc_global_extensions = ["coc-tsserver"]
+let g:coc_global_extensions = [
+    \ "coc-tsserver",
+    \ "coc-snippets"]
+
+nmap ;; :call CocActionAsync('doHover')<CR>
+
+" We're not using this right now since we're still using ultisnips directly.
+" " Trigger snippet expand.
+" "imap <C-l> <Plug>(coc-snippets-expand)
+" " TODO: What's the difference between expand and expand-jump?
+" " TODO: What does coc-snippets-select do?
+" vmap <C-l> <Plug>(coc-snippets-select)
+" imap <C-l> <Plug>(coc-snippets-expand-jump)
+" " Next/previous placeholder
+" let g:coc_snippet_next = '<c-l>'
+" let g:coc_snippet_prev = '<c-h>'
 
 " These keys trigger UltiSnips commands in insert mode.
 " NOTE: <C-L> should still usable if you use 'set insertmode'.
@@ -117,7 +135,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
 " TODO: How do I use this?
 "highlight TrollStopper ctermbg = red guibg = #FF0000
 
-nnoremap ;; :CommandT<enter>
+nnoremap ;g :CommandT<enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL AND UI """"""""""""""""""""""""""""""""""""""""""""""""""""
