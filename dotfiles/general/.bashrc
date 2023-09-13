@@ -40,6 +40,7 @@ else
     alias la='ls --color=auto -lah'
 fi
 alias cheatsheet='vim -R ~/cheatsheet.md' # Cheatsheet for how to use Linux
+alias duu='du --max-depth=1 --all --human-readable --total ' # Summarize file/directory sizes
 alias g='git'
 alias gg='lazygit' # Interactive CLI git client
 alias r='ranger' # CLI file manager

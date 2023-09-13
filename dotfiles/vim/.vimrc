@@ -46,11 +46,12 @@ Plugin 'VundleVim/Vundle.vim'
 """ INDIVIDUAL PLUGIN INSTALLATION """
 
 " Dependencies
+" (These are here since the other plugins won't work without them.)
 
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
-" Functionality Plugins
+" General Functionality Plugins
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-sleuth'
@@ -63,8 +64,13 @@ Plugin 'vim-utils/vim-troll-stopper'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'wincent/command-t'
 
+" Functionality Plugins (for specific workflows)
+
 Plugin 'leafgarland/typescript-vim'
+Plugin 'wuelnerdotexe/vim-astro'
 Plugin 'lervag/vimtex'
+" vim-mdx-js is old. Need to find an actively maintained plugin.
+Plugin 'jxnblk/vim-mdx-js'
 
 " TODO: We should get rid of directly using ultisnips now since we have coc.
 "       The problem is, I'm still not sure how to configure coc for tab autocompletion.
@@ -346,16 +352,18 @@ set encoding=utf8
 " Set unix as the standard file type when creating a new buffer.
 set ffs=unix,dos,mac
 
-" Changes default highlighting of *.ejs files (Node.js EJS template files) to HTML.
+" Changes default highlighting of *.ejs files
+" EJS templating can be anything, but HTML has been a good default for me.
 au BufNewFile,BufRead *.ejs set filetype=html
 
-" Project-specific highlighting
 au BufNewFile,BufRead *.txt.ejs set filetype=text
 au BufNewFile,BufRead *.ts.ejs set filetype=typescript
 au BufNewFile,BufRead *.js.ejs set filetype=javascript
 au BufNewFile,BufRead *.tsx.ejs set filetype=typescriptreact
 au BufNewFile,BufRead *.jsx.ejs set filetype=javascriptreact
 au BufNewFile,BufRead *.json.ejs set filetype=json
+"" using astro for mdx is a reasonable fallback
+" au BufNewFile,BufRead *.mdx set filetype=astro
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE """""""""""""""""""""""""""""""""""""""""""""""""""""""
