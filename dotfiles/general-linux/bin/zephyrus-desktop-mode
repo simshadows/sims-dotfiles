@@ -9,10 +9,10 @@ echo "Setting battery charge limit to 60%."
 sudo asusctl -c 60
 
 # Performance is very loud.
-#echo "Setting power profile to 'Performance'."
-#sudo asusctl profile -P Performance
-echo "Setting power profile to 'Balanced'."
-sudo asusctl profile -P Balanced
+echo "Setting power profile to 'Performance'."
+sudo asusctl profile -P Performance
+#echo "Setting power profile to 'Balanced'."
+#sudo asusctl profile -P Balanced
 
 # Dedicated is very hot, so I try to use Integrated now unless I need it.
 #echo "Setting power profile to 'Dedicated'. (NOTE: You may need to log out and log back in.)"

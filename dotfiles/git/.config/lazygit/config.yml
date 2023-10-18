@@ -84,7 +84,8 @@ keybinding:
     return: 'h'
     goInto: 'l'
     select: '<space>'
-    nextTab: '<c-h>'
+    # nextTab: '<c-h>' # original keybind. <backspace> somehow also makes it so <c-h> works...? so weird.
+    nextTab: '<backspace>'
     prevTab: '<c-l>'
 
     prevItem: '<up>'

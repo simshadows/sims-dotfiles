@@ -43,6 +43,7 @@ alias cheatsheet='vim -R ~/cheatsheet.md' # Cheatsheet for how to use Linux
 alias duu='du --max-depth=1 --all --human-readable --total ' # Summarize file/directory sizes
 alias g='git'
 alias gg='lazygit' # Interactive CLI git client
+alias java17='/usr/lib/jvm/java-17-openjdk/bin/java'
 alias r='ranger' # CLI file manager
 alias rss='newsboat' # My preferred RSS reader client
 alias t='tmux new-session -s ' # Create new named tmux session
