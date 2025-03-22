@@ -43,10 +43,26 @@ alias cheatsheet='vim -R ~/cheatsheet.md' # Cheatsheet for how to use Linux
 alias duu='du --max-depth=1 --all --human-readable --total ' # Summarize file/directory sizes
 alias g='git'
 alias gg='lazygit' # Interactive CLI git client
-alias java17='/usr/lib/jvm/java-17-openjdk/bin/java'
 alias r='ranger' # CLI file manager
 alias rss='newsboat' # My preferred RSS reader client
 alias t='tmux new-session -s ' # Create new named tmux session
+
+# Simple one-file Java compilation
+# Currently a very system-dependent alias. I should improve this.
+alias java17='/usr/lib/jvm/java-17-openjdk/bin/java'
+
+# Simple one-file C++ compilation
+# cppbasecompile shouldn't be used directly
+alias cppbasecompile='g++ -Werror -Wall -Wextra -Wshadow -std=c++20 -o a.out '
+alias cppcompile='cppbasecompile -O2 '
+alias cppfast='cppbasecompile -O3 -DNDEBUG -flto -fomit-frame-pointer -march=native '
+# For when you're segfaulting
+alias cppdebug='cppbasecompile -g -O2 -fsanitize=address '
+# Keeps as much information as possible for profiling
+alias cppprofile='cppbasecompile -g -O3 -fno-omit-frame-pointer '
+# Competitive programming
+# (Except I'm not really a properly competitive programmer. Don't use this if you want to avoid debugging "unnecessary" errors.)
+alias cppcp='cppbasecompile -O2 -fsanitize=address '
 
 
 # Automatically reread ~/.Xresources
@@ -139,3 +155,7 @@ fi
 # on a machine.
 [[ -f ~/.bash_custom ]] && source ~/.bash_custom
 
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

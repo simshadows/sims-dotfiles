@@ -544,6 +544,10 @@ vnoremap p "_dP
 " be useful someday?
 nnoremap ;m K
 
+" Remove carriage returns from the entire file
+" I found this very useful in WSL with the Windows 11 X server, which doesn't filter out carriage returns.
+nnoremap ;M :%s/\r//g<enter>
+
 " -------------
 " --- netrw ---
 " -------------

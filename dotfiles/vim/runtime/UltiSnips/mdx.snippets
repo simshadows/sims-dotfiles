@@ -1,0 +1,38 @@
+priority 51
+
+extends markdown
+
+############################
+# Personal Website Helpers #
+############################
+
+# I use these to help me write posts for my personal blog.
+
+snippet $ "Personal Site: Latex Component" w
+<Eq code="$1" />$0
+endsnippet
+
+snippet eq "Personal Site: DisplayLatex Component" b
+<DisplayLatex code="
+	$1
+" />$0
+endsnippet
+
+snippet ga "Personal Site: GatherLatex Component" b
+<GatherLatex code="
+	$1
+" />$0
+endsnippet
+
+snippet align "Personal Site: AlignLatex Component" b
+<AlignLatex code="
+	$1
+" />$0
+endsnippet
+
+snippet alignat "Personal Site: AlignatLatex Component" b
+<AlignatLatex eqcols={${2:2}} code="
+	$1
+" />$0
+endsnippet
+
