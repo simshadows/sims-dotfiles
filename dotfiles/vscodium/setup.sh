@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "=== Git ==="
+echo "=== VSCodium ==="
 
 # Terminate script on error
 set -e

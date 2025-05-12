@@ -1,4 +1,5 @@
 {
     "editor.unicodeHighlight.nonBasicASCII": true,
-    "editor.unicodeHighlight.includeComments": true
+    "editor.unicodeHighlight.includeComments": true,
+    "editor.renderWhitespace": "all"
 }

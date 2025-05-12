@@ -29,7 +29,7 @@ cat /etc/nftables.conf
 systemctl status nftables.service
 ```
 
-If nftables isn't running, you may need to explicitly enable:
+If nftables isn't running and you need it, you may need to explicitly enable:
 
 ```bash
 systemctl enable --now nftables.service

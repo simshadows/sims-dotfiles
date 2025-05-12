@@ -22,6 +22,7 @@ choco install firefox `
     rufus
 
 # Additional packages for manual installation as needed:
+#   adobereader
 #   wireshark
 #   hwinfo
 #   geekbench
@@ -29,5 +30,6 @@ choco install firefox `
 #   aida64-extreme
 #   iperf3
 #   ventoy
+#   tortoisesvn
 #   fah        # Folding@home, useful to put a long sustained all-system load.
 #   alacritty  # A useful terminal, but it has no tabs.
