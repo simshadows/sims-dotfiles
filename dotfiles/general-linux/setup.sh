@@ -12,7 +12,9 @@ src_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Setting up symlinks and directories..."
 ln_corresponding .i3
 ln_corresponding cheatsheet.md
+ln_corresponding bin pacman-update
 ln_corresponding bin xrdb-merge
+ln_corresponding bin zephyrus-battery-limit
 ln_corresponding bin zephyrus-desktop-mode
 ln_corresponding bin zephyrus-portable-mode
 ln_corresponding .Xresources

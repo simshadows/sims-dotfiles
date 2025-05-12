@@ -74,9 +74,11 @@ fi
 
 bash "$src_dir/dotfiles/git/setup.sh"
 
+bash "$src_dir/dotfiles/newsboat/setup.sh"
+
 bash "$src_dir/dotfiles/vim/setup.sh"
 
-bash "$src_dir/dotfiles/newsboat/setup.sh"
+bash "$src_dir/dotfiles/vscodium/setup.sh"
 
 echo "ALL DONE!"
 
