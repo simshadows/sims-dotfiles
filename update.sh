@@ -28,7 +28,7 @@ function update_corresponding() {
         exit 1
     fi
 }
-export -f cp_corresponding
+export -f update_corresponding
 
 ################################################################################
 
@@ -49,6 +49,8 @@ printf "\n"
 
 echo "Running the setup scripts..."
 printf "\n"
+
+bash "$src_dir/dotfiles/general/update.sh"
 
 if [[ "$os_type" == "gnu" ]]; then
     bash "$src_dir/dotfiles/kde/update.sh"

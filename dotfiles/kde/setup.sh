@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "=== General ==="
+echo "=== KDE ==="
 
 # Terminate script on error
 set -e

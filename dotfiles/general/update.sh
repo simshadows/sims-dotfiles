@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "=== KDE ==="
+echo "=== General ==="
 
 # Terminate script on error
 set -e
@@ -11,8 +11,7 @@ src_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Copying files into the repository..."
 
-## Unstable. Maybe revisit these some other time.
-#update_corresponding .config kdeglobals
+update_corresponding .config/vlc vlcrc
 
 echo "DONE!"
 printf "\n"
