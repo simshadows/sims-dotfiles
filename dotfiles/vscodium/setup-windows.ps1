@@ -1,4 +1,4 @@
-# filename: setup-windows.ps
+# filename: setup-windows.ps1
 # author:   simshadows <contact@simshadows.com>
 
 echo "=== VSCodium ==="
