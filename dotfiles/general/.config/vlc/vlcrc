@@ -4698,55 +4698,55 @@ qt-privacy-ask=0
 #global-key-jump-extrashort=
 
 # Very short backwards jump (string)
-#key-jump-extrashort=Shift+Left
+key-jump-extrashort=a
 
 # Very short forward jump (string)
 #global-key-jump+extrashort=
 
 # Very short forward jump (string)
-#key-jump+extrashort=Shift+Right
+key-jump+extrashort=d
 
 # Short backwards jump (string)
 #global-key-jump-short=
 
 # Short backwards jump (string)
-#key-jump-short=Alt+Left
+key-jump-short=Shift+a
 
 # Short forward jump (string)
 #global-key-jump+short=
 
 # Short forward jump (string)
-#key-jump+short=Alt+Right
+key-jump+short=Shift+d
 
 # Medium backwards jump (string)
 #global-key-jump-medium=
 
 # Medium backwards jump (string)
-#key-jump-medium=Ctrl+Left
+key-jump-medium=q
 
 # Medium forward jump (string)
 #global-key-jump+medium=
 
 # Medium forward jump (string)
-#key-jump+medium=Ctrl+Right
+key-jump+medium=e
 
 # Long backwards jump (string)
 #global-key-jump-long=
 
 # Long backwards jump (string)
-#key-jump-long=Ctrl+Alt+Left
+key-jump-long=Shift+q
 
 # Long forward jump (string)
 #global-key-jump+long=
 
 # Long forward jump (string)
-#key-jump+long=Ctrl+Alt+Right
+key-jump+long=Shift+e
 
 # Next frame (string)
 #global-key-frame-next=
 
 # Next frame (string)
-#key-frame-next=e
+key-frame-next=w
 
 # Activate (string)
 #global-key-nav-activate=
@@ -4902,7 +4902,7 @@ qt-privacy-ask=0
 #global-key-audiodevice-cycle=
 
 # Cycle through audio devices (string)
-#key-audiodevice-cycle=Shift+a
+key-audiodevice-cycle=
 
 # Cycle subtitle track in reverse order (string)
 #global-key-subtitle-revtrack=
@@ -4938,7 +4938,7 @@ qt-privacy-ask=0
 #global-key-aspect-ratio=
 
 # Cycle source aspect ratio (string)
-#key-aspect-ratio=a
+key-aspect-ratio=
 
 # Cycle video crop (string)
 #global-key-crop=
@@ -4968,13 +4968,13 @@ qt-privacy-ask=0
 #global-key-deinterlace=
 
 # Toggle deinterlacing (string)
-#key-deinterlace=d
+key-deinterlace=
 
 # Cycle deinterlace modes (string)
 #global-key-deinterlace-mode=
 
 # Cycle deinterlace modes (string)
-#key-deinterlace-mode=Shift+d
+key-deinterlace-mode=
 
 # Show controller in fullscreen (string)
 #global-key-intf-show=
@@ -5022,7 +5022,7 @@ qt-privacy-ask=0
 #global-key-wallpaper=
 
 # Toggle wallpaper mode in video output (string)
-#key-wallpaper=w
+key-wallpaper=
 
 # Crop one pixel from the top of the video (string)
 #global-key-crop-top=
