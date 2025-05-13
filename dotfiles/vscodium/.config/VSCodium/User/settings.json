@@ -1,5 +1,7 @@
 {
     "editor.unicodeHighlight.nonBasicASCII": true,
     "editor.unicodeHighlight.includeComments": true,
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "editor.stickyScroll.maxLineCount": 20,
+    "update.showReleaseNotes": false
 }
