@@ -3,5 +3,6 @@
     "editor.unicodeHighlight.includeComments": true,
     "editor.renderWhitespace": "all",
     "editor.stickyScroll.maxLineCount": 20,
-    "update.showReleaseNotes": false
+    "update.showReleaseNotes": false,
+    "editor.wordWrap": "on"
 }

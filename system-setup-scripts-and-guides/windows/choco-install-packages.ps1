@@ -19,7 +19,8 @@ choco install firefox `
     python `
     obs-studio `
     ffmpeg-full `
-    rufus
+    rufus `
+    windirstat
 
 # Additional packages for manual installation as needed:
 #   adobereader
