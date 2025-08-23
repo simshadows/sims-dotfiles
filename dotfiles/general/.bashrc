@@ -31,6 +31,10 @@ if [ -d "$HOME/bin" ]; then
 fi
 
 
+export VISUAL=nvim
+export EDITOR=nvim
+
+
 # The usual aliases
 if [[ "$utils_flavour" == "bsd" ]]; then
     alias ls='ls -G'

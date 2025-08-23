@@ -12,15 +12,17 @@ a=()
 #
 # Essentials
 #
-a+=( base-devel     )
-a+=( git            )
-a+=( tmux           )
+a+=( base-devel )
+a+=( git        )
+a+=( tmux       )
+a+=( xclip      ) # clipboard cli interface that I've set up for tmux and nvim
 
 
 #
 # Core CLI and minimalist GUI applications
 #
-a+=( gvim              ) # CLI text editor
+a+=( neovim            ) # CLI text editor
+#a+=( gvim             ) # CLI text editor
 a+=( ranger            ) # CLI file manager
 a+=( lynx              ) # CLI web browser
 a+=( feh               ) # minimalist image viewer
@@ -62,9 +64,10 @@ a+=( npm    ) # Node package manager
 
 
 #
-# Offline Documentation
+# More
 #
 a+=( arch-wiki-docs ) # the entire Arch wiki
+a+=( iwd            ) # backup wireless daemon to recover a bricked system
 
 
 ###########################################################
@@ -88,7 +91,6 @@ a+=( lsof       ) # lists all open files
 a+=( tree       ) # recursive directory lister
 a+=( zip        ) # zip archive utility for compressing
 a+=( unzip      ) # zip archive utility for uncompressing
-a+=( xclip      ) # clipboard cli interface, useful for tmux
 a+=( htop       ) # a much more useful process monitor
 a+=( dos2unix   ) # converts between unix-style and dos-style line breaks
 a+=( dosfstools ) # dos filesystems

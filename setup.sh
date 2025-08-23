@@ -73,10 +73,12 @@ if [[ "$os_type" == "gnu" ]]; then
 fi
 
 bash "$src_dir/dotfiles/git/setup.sh"
-
+bash "$src_dir/dotfiles/neovim/setup.sh"
 bash "$src_dir/dotfiles/newsboat/setup.sh"
 
-bash "$src_dir/dotfiles/vim/setup.sh"
+## We no longer install vim by default since I'm using neovim.
+## Uncomment this and then rerun setup.sh to install vim.
+#bash "$src_dir/dotfiles/vim/setup.sh"
 
 bash "$src_dir/dotfiles/vscodium/setup.sh"
 
