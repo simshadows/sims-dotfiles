@@ -7,12 +7,15 @@
 
 local plugin_specs = {
     {
+        "https://github.com/neovim/nvim-lspconfig"
+    },
+    {
         "nvim-treesitter/nvim-treesitter",
-        branch = 'master',
+        branch = "master",
         lazy = false,
         build = ":TSUpdate",
         config = function()
-            require('nvim-treesitter.configs').setup {
+            require("nvim-treesitter.configs").setup {
                 ensure_installed = {
                     "astro",
                     "c",
@@ -29,7 +32,9 @@ local plugin_specs = {
                 sync_install = false,
                 highlight = {
                     enable = true,
-                    additional_vim_regex_highlighting = false,
+                    additional_vim_regex_highlighting = {
+                        "markdown",
+                    },
 
                     -- Disable treesitter highlight for large files
                     disable = function(lang, buf)
@@ -202,7 +207,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- SYNTAX HIGHLIGHTING, COLOURS, AND FONTS ---------------------------
 ----------------------------------------------------------------------
 
-vim.cmd "colorscheme unokai"
+vim.cmd("colorscheme unokai")
 -- Some alternatives that I also like:
 --vim.cmd "colorscheme slate"
 --vim.cmd "colorscheme retrobox"
@@ -211,6 +216,17 @@ vim.cmd "colorscheme unokai"
 --vim.opt.list = true
 --vim.opt.listchars = "tab:>-,trail:.,extends:>,precedes:<"
 -- TODO: Figure out how to get the colours for this.
+
+vim.cmd("au BufNewFile,BufRead *.ejs set filetype=html")
+
+vim.cmd("au BufNewFile,BufRead *.txt.ejs set filetype=text")
+vim.cmd("au BufNewFile,BufRead *.ts.ejs set filetype=typescript")
+vim.cmd("au BufNewFile,BufRead *.js.ejs set filetype=javascript")
+vim.cmd("au BufNewFile,BufRead *.tsx.ejs set filetype=typescriptreact")
+vim.cmd("au BufNewFile,BufRead *.jsx.ejs set filetype=javascriptreact")
+vim.cmd("au BufNewFile,BufRead *.json.ejs set filetype=json")
+
+vim.cmd("au BufNewFile,BufRead *.mdx set filetype=markdown")
 
 ----------------------------------------------------------------------
 -- STATUS LINE -------------------------------------------------------
@@ -221,6 +237,14 @@ vim.opt.statusline = " %-h%w  cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %
 
 -- TODO: My original .vimrc has more stuff to it. I should adapt it.
 --       It handled netrw and "paste mode".
+
+----------------------------------------------------------------------
+-- LSP ---------------------------------------------------------------
+----------------------------------------------------------------------
+
+-- npm install -g @astrojs/language-server
+--vim.lsp.enable("astro")
+-- TODO: This doesn't work for me for some reason.
 
 ----------------------------------------------------------------------
 -- KEY MAPPINGS ------------------------------------------------------
