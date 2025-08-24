@@ -1,5 +1,19 @@
 --   file: init.lua
 -- author: simshadows <contact@simshadows.com>
+--
+-- TODO:
+-- - How do I get visual selections to stay selected when changing indentation?
+-- - Add keybinds for automating the substitute command
+-- - Snippets?
+-- - <https://github.com/folke/persistence.nvim> Maybe use this?
+-- - How do I get non-ASCII characters to be highlighted?
+-- - How do I get tabs and trailing whitespace highlighted?
+-- - How do I get Typescript LSP working? I want:
+--     - Types analysis.
+--     - Highlight problems.
+--     - Autocomplete.
+--     - (Maybe I need mason for this.)
+-- - Maybe find another colour theme.
 
 ----------------------------------------------------------------------
 -- PLUGIN SPECS ------------------------------------------------------
@@ -88,6 +102,20 @@ local plugin_specs = {
                     hide_dotfiles = false,
                     hide_gitignored = false,
                 },
+            },
+        },
+    },
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        opts = {},
+        keys = {
+            {
+                "<leader>?",
+                function()
+                    require("which-key").show({ global = false })
+                end,
+                desc = "Buffer Local Keymaps (which-key)",
             },
         },
     },
@@ -249,6 +277,19 @@ vim.opt.statusline = " %-h%w  cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %
 ----------------------------------------------------------------------
 -- KEY MAPPINGS ------------------------------------------------------
 ----------------------------------------------------------------------
+
+vim.keymap.set(
+    "v",
+    ">",
+    ">gv",
+    {desc = "Increase indent without losing the selection"}
+)
+vim.keymap.set(
+    "v",
+    "<",
+    "<gv",
+    {desc = "Decrease indent without losing the selection"}
+)
 
 vim.keymap.set(
     "n",
