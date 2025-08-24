@@ -38,7 +38,8 @@ a+=( lazygit           ) # CLI git helper
 # Core Full Graphical Applications
 #
 a+=( code      ) # text editor
-a+=( chromium  ) # web browser
+a+=( firefox   ) # web browser
+a+=( chromium  ) # web browser (backup in case something doesn't render correctly in Firefox)
 a+=( keepassxc ) # password manager
 a+=( vlc       ) # media player
 
@@ -76,6 +77,7 @@ a+=( iwd            ) # backup wireless daemon to recover a bricked system
 #
 # Fonts
 #
+a+=( nerd-fonts                  )
 a+=( adobe-source-code-pro-fonts )
 
 

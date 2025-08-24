@@ -16,24 +16,39 @@ local plugin_specs = {
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
-        opts = {},
-        config = function ()
-            local highlight = {"Whitespace", "CursorColumn"}
-            require("ibl").setup({
-                indent = {
-                    highlight = highlight,
-                    char = "",
+        opts = {
+            indent = {
+                highlight = {"Whitespace", "CursorColumn"},
+                char = "",
+            },
+            whitespace = {
+                highlight = {"Whitespace", "CursorColumn"},
+                remove_blankline_trail = false,
+            },
+            scope = {
+                enabled = false,
+            },
+        },
+    },
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+            "nvim-tree/nvim-web-devicons",
+        },
+        lazy = false,
+        opts = {
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                    hide_dotfiles = false,
+                    hide_gitignored = false,
                 },
-                whitespace = {
-                    highlight = highlight,
-                    remove_blankline_trail = false,
-                },
-                scope = {
-                    enabled = false,
-                },
-            })
-        end
-    }
+            },
+        },
+    },
 }
 
 ----------------------------------------------------------------------
@@ -176,6 +191,18 @@ vim.opt.statusline = " %-h%w  cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %
 
 vim.keymap.set(
     "n",
+    "<C-p>",
+    "gT",
+    {desc = "Navigate Tab Left"}
+)
+vim.keymap.set(
+    "n",
+    "<C-n>",
+    "gt",
+    {desc = "Navigate Tab Right"}
+)
+vim.keymap.set(
+    "n",
     "<C-k>",
     "<C-w>k",
     {desc = "Navigate Split Up"}
@@ -201,6 +228,18 @@ vim.keymap.set(
 
 vim.keymap.set(
     "n",
+    "<leader>p",
+    "gT",
+    {desc = "Navigate Tab Previous"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>n",
+    "gt",
+    {desc = "Navigate Tab Next"}
+)
+vim.keymap.set(
+    "n",
     "<leader>k",
     "<C-w>k",
     {desc = "Navigate Split Up"}
@@ -222,6 +261,31 @@ vim.keymap.set(
     "<leader>l",
     "<C-w>l",
     {desc = "Navigate Split Right"}
+)
+
+vim.keymap.set(
+    "n",
+    "<leader>K",
+    "<C-w>+",
+    {desc = "Split Height Increase"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>J",
+    "<C-w>-",
+    {desc = "Split Height Decrease"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>H",
+    "<C-w><",
+    {desc = "Split Width Decrease"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>L",
+    "<C-w>>",
+    {desc = "Split Width Increase"}
 )
 
 
@@ -250,5 +314,13 @@ vim.keymap.set(
     "<leader>fh",
     telescopeBuiltin.help_tags,
     {desc = "Telescope help tags"}
+)
+
+
+vim.keymap.set(
+    "n",
+    "<leader>q",
+    ":Neotree<enter>",
+    {desc = "Open Neotree"}
 )
 
