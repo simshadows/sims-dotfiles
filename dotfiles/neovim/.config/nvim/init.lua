@@ -2,11 +2,55 @@
 -- author: simshadows <contact@simshadows.com>
 
 ----------------------------------------------------------------------
--- PLUGINS -----------------------------------------------------------
+-- PLUGIN SPECS ------------------------------------------------------
 ----------------------------------------------------------------------
 
--- TODO
+local plugin_specs = {
+    {
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.8",
+        dependencies = {
+            "nvim-lua/plenary.nvim"
+        },
+    },
+}
 
+----------------------------------------------------------------------
+-- BOOTSTRAP PLUGIN MANAGER ------------------------------------------
+----------------------------------------------------------------------
+
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- Make sure to setup `mapleader` and `maplocalleader` before
+-- loading lazy.nvim so that mappings are correct.
+-- This is also a good place to setup other settings (vim.opt)
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+-- Setup lazy.nvim
+require("lazy").setup({
+    spec = plugin_specs,
+    -- Configure any other settings here. See the documentation for more details.
+    -- colorscheme that will be used when installing plugins.
+    install = { colorscheme = { "habamax" } },
+    -- automatically check for plugin updates
+    checker = { enabled = true },
+})
 
 ----------------------------------------------------------------------
 -- GENERAL AND UI ----------------------------------------------------
@@ -55,15 +99,14 @@ vim.opt.wrap = true
 -- Long lines will continue from visually the same indent level
 vim.opt.breakindent = true
 
--- TODO: adapt these to neovim if needed
 ---- Indentation
 -- 1 tab == 4 spaces
---vim.opt.shiftwidth = 4
---vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 -- Disable softtabstop. Such a confusing feature.
---vim.opt.softtabstop = 0
+vim.opt.softtabstop = 0
 -- Insert spaces instead of tabs.
---vim.opt.expandtab = true
+vim.opt.expandtab = true
 -- TODO: What does this do, and do I need it?
 --vim.opt.smarttab = true
 
@@ -100,11 +143,40 @@ vim.cmd "colorscheme unokai"
 -- STATUS LINE -------------------------------------------------------
 ----------------------------------------------------------------------
 
--- TODO
+--vim.opt.statusline = " %-h%w  %{HasPaste()}cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %y%m%r  "
+vim.opt.statusline = " %-h%w  cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %y%m%r  "
+
+-- TODO: My original .vimrc has more stuff to it. I should adapt it.
+--       It handled netrw and "paste mode".
 
 ----------------------------------------------------------------------
 -- KEY MAPPINGS ------------------------------------------------------
 ----------------------------------------------------------------------
 
--- TODO
+local telescopeBuiltin = require("telescope.builtin")
+
+vim.keymap.set(
+    "n",
+    "<leader>ff",
+    telescopeBuiltin.find_files,
+    {desc = "Telescope find files"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>fg",
+    telescopeBuiltin.live_grep,
+    {desc = "Telescope live grep"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>fb",
+    telescopeBuiltin.buffers,
+    {desc = "Telescope buffers"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>fh",
+    telescopeBuiltin.help_tags,
+    {desc = "Telescope help tags"}
+)
 
