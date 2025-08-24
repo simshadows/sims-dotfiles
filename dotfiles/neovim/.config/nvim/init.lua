@@ -7,6 +7,43 @@
 
 local plugin_specs = {
     {
+        "nvim-treesitter/nvim-treesitter",
+        branch = 'master',
+        lazy = false,
+        build = ":TSUpdate",
+        config = function()
+            require('nvim-treesitter.configs').setup {
+                ensure_installed = {
+                    "astro",
+                    "c",
+                    "lua",
+                    "markdown",
+                    "markdown_inline",
+                    "query",
+                    "typescript",
+                    "vim",
+                    "vimdoc",
+                },
+
+                auto_install = true,
+                sync_install = false,
+                highlight = {
+                    enable = true,
+                    additional_vim_regex_highlighting = false,
+
+                    -- Disable treesitter highlight for large files
+                    disable = function(lang, buf)
+                        local max_filesize = 100 * 1024 -- 100 KB
+                        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+                        if ok and stats and stats.size > max_filesize then
+                            return true
+                        end
+                    end,
+                },
+            }
+        end,
+    },
+    {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.8",
         dependencies = {
@@ -26,7 +63,7 @@ local plugin_specs = {
                 remove_blankline_trail = false,
             },
             scope = {
-                enabled = false,
+                enabled = true,
             },
         },
     },
