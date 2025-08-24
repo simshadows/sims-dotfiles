@@ -13,6 +13,27 @@ local plugin_specs = {
             "nvim-lua/plenary.nvim"
         },
     },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {},
+        config = function ()
+            local highlight = {"Whitespace", "CursorColumn"}
+            require("ibl").setup({
+                indent = {
+                    highlight = highlight,
+                    char = "",
+                },
+                whitespace = {
+                    highlight = highlight,
+                    remove_blankline_trail = false,
+                },
+                scope = {
+                    enabled = false,
+                },
+            })
+        end
+    }
 }
 
 ----------------------------------------------------------------------
@@ -152,6 +173,57 @@ vim.opt.statusline = " %-h%w  cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %
 ----------------------------------------------------------------------
 -- KEY MAPPINGS ------------------------------------------------------
 ----------------------------------------------------------------------
+
+vim.keymap.set(
+    "n",
+    "<C-k>",
+    "<C-w>k",
+    {desc = "Navigate Split Up"}
+)
+vim.keymap.set(
+    "n",
+    "<C-j>",
+    "<C-w>j",
+    {desc = "Navigate Split Down"}
+)
+vim.keymap.set(
+    "n",
+    "<C-h>",
+    "<C-w>h",
+    {desc = "Navigate Split Left"}
+)
+vim.keymap.set(
+    "n",
+    "<C-l>",
+    "<C-w>l",
+    {desc = "Navigate Split Right"}
+)
+
+vim.keymap.set(
+    "n",
+    "<leader>k",
+    "<C-w>k",
+    {desc = "Navigate Split Up"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>j",
+    "<C-w>j",
+    {desc = "Navigate Split Down"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>h",
+    "<C-w>h",
+    {desc = "Navigate Split Left"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>l",
+    "<C-w>l",
+    {desc = "Navigate Split Right"}
+)
+
 
 local telescopeBuiltin = require("telescope.builtin")
 
