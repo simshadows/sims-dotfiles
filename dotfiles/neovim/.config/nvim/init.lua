@@ -2,10 +2,8 @@
 -- author: simshadows <contact@simshadows.com>
 --
 -- TODO:
--- - How do I get visual selections to stay selected when changing indentation?
 -- - Add keybinds for automating the substitute command
 -- - Snippets?
--- - <https://github.com/folke/persistence.nvim> Maybe use this?
 -- - How do I get non-ASCII characters to be highlighted?
 -- - How do I get tabs and trailing whitespace highlighted?
 -- - How do I get Typescript LSP working? I want:
@@ -15,11 +13,37 @@
 --     - (Maybe I need mason for this.)
 -- - Maybe find another colour theme.
 
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- enable 24-bit colour
+vim.opt.termguicolors = true
+
 ----------------------------------------------------------------------
 -- PLUGIN SPECS ------------------------------------------------------
 ----------------------------------------------------------------------
 
 local plugin_specs = {
+    {
+        "folke/persistence.nvim",
+        event = "BufReadPre",
+        opts = {},
+    },
+    --{
+    --    "LintaoAmons/bookmarks.nvim",
+    --    tag = "3.2.0",
+    --    dependencies = {
+    --        {"kkharji/sqlite.lua"},
+    --        {"nvim-telescope/telescope.nvim"},
+    --        {"stevearc/dressing.nvim"},
+    --        {"GeorgesAlkhouri/nvim-aider"}
+    --    },
+    --    config = function()
+    --        local opts = {}
+    --        require("bookmarks").setup(opts)
+    --    end,
+    --},
     {
         "https://github.com/neovim/nvim-lspconfig"
     },
@@ -86,6 +110,9 @@ local plugin_specs = {
             },
         },
     },
+    -- I'm not sure which file browser to use.
+    -- For now, I prefer Neotree due to saner keybinds, but Neotree is buggier.
+    -- nvim-tree is more stable but I don't know how to change keybinds.
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -105,6 +132,53 @@ local plugin_specs = {
             },
         },
     },
+    --{
+    --    "nvim-tree/nvim-tree.lua",
+    --    config = function()
+    --        require("nvim-tree").setup({
+    --            --on_attach = function()
+    --            --    local api = require "nvim-tree.api"
+  
+    --            --    local function opts(desc)
+    --            --      return {
+    --            --          desc = "nvim-tree: " .. desc,
+    --            --          buffer = bufnr,
+    --            --          noremap = true,
+    --            --          silent = true,
+    --            --          nowait = true
+    --            --      }
+    --            --    end
+  
+    --            --    api.config.mappings.default_on_attach(bufnr)
+    --            --    vim.keymap.set(
+    --            --        'n',
+    --            --        '<C-t>',
+    --            --        api.tree.change_root_to_parent,
+    --            --        opts('Up')
+    --            --    )
+    --            --    vim.keymap.set(
+    --            --        'n',
+    --            --        '?',
+    --            --        api.tree.toggle_help,
+    --            --        opts('Help')
+    --            --    )
+  
+    --            --end,
+    --            sort = {
+    --                sorter = "case_sensitive",
+    --            },
+    --            view = {
+    --                width = 30,
+    --            },
+    --            renderer = {
+    --                group_empty = true,
+    --            },
+    --            filters = {
+    --                dotfiles = true,
+    --            },
+    --        })
+    --    end,
+    --},
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -119,6 +193,12 @@ local plugin_specs = {
             },
         },
     },
+    -- TODO: Get this working
+    --{
+    --    "L3MON4D3/LuaSnip",
+    --    version = "v2.*",
+    --    build = "make install_jsregexp"
+    --},
 }
 
 ----------------------------------------------------------------------
@@ -391,30 +471,36 @@ vim.keymap.set(
 )
 
 
-local telescopeBuiltin = require("telescope.builtin")
-
 vim.keymap.set(
     "n",
     "<leader>ff",
-    telescopeBuiltin.find_files,
+    function()
+        require("telescope.builtin").find_files()
+    end,
     {desc = "Telescope find files"}
 )
 vim.keymap.set(
     "n",
     "<leader>fg",
-    telescopeBuiltin.live_grep,
+    function()
+        require("telescope.builtin").live_grep()
+    end,
     {desc = "Telescope live grep"}
 )
 vim.keymap.set(
     "n",
     "<leader>fb",
-    telescopeBuiltin.buffers,
+    function()
+        require("telescope.builtin").buffers()
+    end,
     {desc = "Telescope buffers"}
 )
 vim.keymap.set(
     "n",
     "<leader>fh",
-    telescopeBuiltin.help_tags,
+    function()
+        require("telescope.builtin").help_tags()
+    end,
     {desc = "Telescope help tags"}
 )
 
@@ -423,6 +509,48 @@ vim.keymap.set(
     "n",
     "<leader>q",
     ":Neotree<enter>",
-    {desc = "Open Neotree"}
+    --":NvimTreeOpen<enter>",
+    {desc = "Open File Browser"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>Q",
+    ":Neotree close<enter>",
+    --":NvimTreeToggle<enter>",
+    {desc = "Close File Browser"}
+)
+
+
+vim.keymap.set(
+    "n",
+    "<leader>ss",
+    function()
+        require("persistence").load()
+    end,
+    {desc = "[persistence.nvim] Load the session for the current directory"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>sS",
+    function()
+        require("persistence").select()
+    end,
+    {desc = "[persistence.nvim] Select a session to load"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>sl",
+    function()
+        require("persistence").load({ last = true })
+    end,
+    {desc = "[persistence.nvim] Load the last session"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>sd",
+    function()
+        require("persistence").stop()
+    end,
+    {desc = "[persistence.nvim] Stop. (Session won't be saved on exit.)"}
 )
 
