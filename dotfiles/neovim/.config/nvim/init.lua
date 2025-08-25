@@ -193,13 +193,20 @@ local plugin_specs = {
             },
         },
     },
-    -- TODO: Get this working
-    --{
-    --    "L3MON4D3/LuaSnip",
-    --    version = "v2.*",
-    --    build = "make install_jsregexp"
-    --},
+    {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        build = "make install_jsregexp",
+        config = function()
+            require("luasnip").setup({})
+            require("luasnip.loaders.from_snipmate").lazy_load({
+                paths = {"~/.common-resources/snippets-snipmate"}
+            })
+        end
+    },
 }
+
+
 
 ----------------------------------------------------------------------
 -- BOOTSTRAP PLUGIN MANAGER ------------------------------------------
@@ -553,4 +560,22 @@ vim.keymap.set(
     end,
     {desc = "[persistence.nvim] Stop. (Session won't be saved on exit.)"}
 )
+
+vim.keymap.set(
+    {"i"},
+    "<tab>",
+    function()
+        local luasnip = require("luasnip")
+        if luasnip.expandable() then
+            luasnip.expand()
+        elseif luasnip.locally_jumpable(1) then
+            luasnip.jump(1)
+        else
+            local key = vim.api.nvim_replace_termcodes("<tab>", true, false, true)
+            vim.api.nvim_feedkeys(key, 'n', false)
+        end
+    end
+    --{silent = true}
+)
+-- TODO: What about backwards and other functions?
 

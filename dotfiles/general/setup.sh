@@ -23,6 +23,7 @@ ln_corresponding .config/ranger rc.conf
 ln_corresponding .config/ranger rifle.conf
 ln_corresponding .config/ranger scope.sh
 cp_corresponding .config/vlc vlcrc
+ln -sfn "$src_dir/.common-resources" ~/.common-resources
 
 echo "DONE!"
 printf "\n"
