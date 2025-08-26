@@ -1,0 +1,10 @@
+{
+    "for": {
+        "prefix": ["for"],
+        "body": [
+            "for (${2:condition}) {",
+            "\t$0",
+            "}"
+        ]
+    }
+}

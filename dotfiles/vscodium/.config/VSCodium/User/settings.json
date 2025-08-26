@@ -4,5 +4,6 @@
     "editor.renderWhitespace": "all",
     "editor.stickyScroll.maxLineCount": 20,
     "update.showReleaseNotes": false,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "editor.tabCompletion": "onlySnippets"
 }

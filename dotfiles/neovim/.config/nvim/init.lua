@@ -3,7 +3,6 @@
 --
 -- TODO:
 -- - Add keybinds for automating the substitute command
--- - Snippets?
 -- - How do I get non-ASCII characters to be highlighted?
 -- - How do I get tabs and trailing whitespace highlighted?
 -- - How do I get Typescript LSP working? I want:
@@ -199,8 +198,12 @@ local plugin_specs = {
         build = "make install_jsregexp",
         config = function()
             require("luasnip").setup({})
-            require("luasnip.loaders.from_snipmate").lazy_load({
-                paths = {"~/.common-resources/snippets-snipmate"}
+            -- I'm preferring to use VSCode-format snippets for compatibility
+            --require("luasnip.loaders.from_snipmate").lazy_load({
+            --    paths = {"~/.common-resources/snippets-snipmate"}
+            --})
+            require("luasnip.loaders.from_vscode").lazy_load({
+                paths = {"~/.common-resources/snippets-vscode"}
             })
         end
     },

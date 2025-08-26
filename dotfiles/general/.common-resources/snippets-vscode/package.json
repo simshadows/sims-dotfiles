@@ -1,0 +1,16 @@
+{
+    "name": "simshadows-snippets",
+    "publisher": "simshadows",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescript",
+                "path": "./typescript.json"
+            }
+        ]
+    }
+}
