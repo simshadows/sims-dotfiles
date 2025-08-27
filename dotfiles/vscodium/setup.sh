@@ -21,11 +21,16 @@ ln_corresponding .config/VSCodium/User settings.json
 mkdir -p "$HOME_OSS/User"
 ln -sfn "$DOTFILES_CODIUM/User/settings.json" "$HOME_OSS/User/settings.json"
 
+echo "Installing snippets extension..."
+
 mkdir -p "$HOME/.vscode-oss/extensions"
 ln -sfn "$src_dir/../general/.common-resources/snippets-vscode" "$HOME/.vscode-oss/extensions/simshadows.simshadows-snippets-0.0.1"
-# We need to delete extensions.json, otherwise the extension fails to install.
-# The file is just a cache anyway.
+
+echo "Removing 'extensions.json' and '.obsolete' (otherwise the extension fails to install)..."
+# extensions.json is just a cache anyway.
+
 rm -f "$HOME/.vscode-oss/extensions/extensions.json"
+rm -f "$HOME/.vscode-oss/extensions/.obsolete"
 
 echo "DONE!"
 printf "\n"
