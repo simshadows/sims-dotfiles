@@ -1,0 +1,88 @@
+{
+    "div (simshadows snippets)":  {"prefix": "div",  "body": "<div>$1</div>$0"},
+    "span (simshadows snippets)": {"prefix": "span", "body": "<span>$1</span>$0"},
+    "p (simshadows snippets)":    {"prefix": "p",    "body": "<p>$1</p>$0"},
+    "h1 (simshadows snippets)":   {"prefix": "h1",   "body": "<h1>$1</h1>$0"},
+    "h2 (simshadows snippets)":   {"prefix": "h2",   "body": "<h2>$1</h2>$0"},
+    "h3 (simshadows snippets)":   {"prefix": "h3",   "body": "<h3>$1</h3>$0"},
+    "h4 (simshadows snippets)":   {"prefix": "h4",   "body": "<h4>$1</h4>$0"},
+    "h5 (simshadows snippets)":   {"prefix": "h5",   "body": "<h5>$1</h5>$0"},
+    "h6 (simshadows snippets)":   {"prefix": "h6",   "body": "<h6>$1</h6>$0"},
+    "em (simshadows snippets)":   {"prefix": "em",   "body": "<em>$1</em>$0"},
+    "code (simshadows snippets)": {"prefix": "code", "body": "<code>$1</code>$0"},
+    "pre (simshadows snippets)":  {"prefix": "pre",  "body": "<pre>$1</pre>$0"},
+    "ul (simshadows snippets)":   {"prefix": "ul",   "body": "<ul>$1</ul>$0"},
+    "ol (simshadows snippets)":   {"prefix": "ol",   "body": "<ol>$1</ol>$0"},
+    "li (simshadows snippets)":   {"prefix": "li",   "body": "<li>$1</li>$0"},
+    "tr (simshadows snippets)":   {"prefix": "tr",   "body": "<tr>$1</tr>$0"},
+    "th (simshadows snippets)":   {"prefix": "th",   "body": "<th>$1</th>$0"},
+    "thead (simshadows snippets)": {"prefix": "thead", "body": "<thead>$1</thead>$0"},
+    "tbody (simshadows snippets)": {"prefix": "tbody", "body": "<tbody>$1</tbody>$0"},
+    "tfoot (simshadows snippets)": {"prefix": "tfoot", "body": "<tfoot>$1</tfoot>$0"},
+    "strong (simshadows snippets)": {"prefix": "strong", "body": "<strong>$1</strong>$0"},
+    "strong (simshadows snippets)": {"prefix": "strong", "body": "<strong>$1</strong>$0"},
+    "article (simshadows snippets)": {"prefix": "article", "body": "<article>$1</article>$0"},
+    "script (simshadows snippets)": {"prefix": "script", "body": "<script>$1</script>$0"},
+    "noscript (simshadows snippets)": {"prefix": "noscript", "body": "<noscript>$1</noscript>$0"},
+    "a (simshadows snippets)": {
+        "prefix": ["a"],
+        "body": [
+            "<a href=\"${2:url}\" target=\"_blank\">$1</a>$0"
+        ]
+    },
+    "blockquote (simshadows snippets)": {
+        "prefix": ["blockquote"],
+        "body": [
+            "<blockquote cite=\"${2:url}\">",
+            "\t$1",
+            "</blockquote>$0"
+        ]
+    },
+    "button (simshadows snippets)": {
+        "prefix": ["button"],
+        "body": [
+            "<button type=\"button\">${1:text}</button>$0"
+        ]
+    },
+    "canvas (simshadows snippets)": {
+        "prefix": ["canvas"],
+        "body": [
+            "<canvas id=\"${1:id}\">",
+            "\tYour browser does not support the canvas tag.",
+            "</canvas>$0"
+        ]
+    },
+    "table (simshadows snippets)": {
+        "prefix": ["table", "tab"],
+        "body": [
+            "<table>$1",
+            "\t<thead>",
+            "\t\t<tr>",
+            "\t\t\t<th>head1</th>",
+            "\t\t\t<th>head2</th>",
+            "\t\t</tr>",
+            "\t</thead>",
+            "\t<tbody>",
+            "\t\t<tr>",
+            "\t\t\t<td rowspan=\"2\">cell1</td>",
+            "\t\t\t<td>cell2</td>",
+            "\t\t</tr>",
+            "\t\t<tr>",
+            "\t\t\t<td>cell3</td>",
+            "\t\t</tr>",
+            "\t</tbody>",
+            "\t<tfoot>",
+            "\t\t<tr>",
+            "\t\t\t<td colspan=\"2\">foot</td>",
+            "\t\t</tr>",
+            "\t</tfoot>",
+            "</table>$0"
+        ]
+    },
+    "textarea (simshadows snippets)": {
+        "prefix": ["textarea"],
+        "body": [
+            "<textarea id=\"${1:todo}\" name=\"${2:todo}\">$3</textarea>$0"
+        ]
+    }
+}

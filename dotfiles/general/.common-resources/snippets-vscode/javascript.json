@@ -1,0 +1,66 @@
+{
+    "import (simshadows snippets)": {
+        "prefix": ["import"],
+        "body": [
+            "import ${1:foobar} from \"${2:mymodule}\";$0"
+        ]
+    },
+    "if (simshadows snippets)": {
+        "prefix": ["if"],
+        "body": [
+            "if (${1:condition}) {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "for (simshadows snippets)": {
+        "prefix": ["for"],
+        "body": [
+            "for (${1:condition}) {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "throw (simshadows snippets)": {
+        "prefix": ["throw"],
+        "body": [
+            "throw new Error($1);$0"
+        ]
+    },
+    "class (simshadows snippets)": {
+        "prefix": ["class"],
+        "body": [
+            "class MyClass {",
+            "\t#myPrivateField = 123;",
+            "",
+            "\tstatic #myPrivateStaticField = 456;",
+            "",
+            "\tconstructor(x, y) {",
+            "\t\tthis.x = x;",
+            "\t\tthis.y = y;",
+            "\t}",
+            "",
+            "\tget myProp() {",
+            "\t\treturn this.x;",
+            "\t}",
+            "\tset myProp(v) {",
+            "\t\tthis.x = v;",
+            "\t}",
+            "",
+            "\tmyMethod() {",
+            "\t\treturn this.#myPrivateField + this.#myPrivateMethod();",
+            "\t}",
+            "\t#myPrivateMethod() {",
+            "\t\treturn this.x + this.y;",
+            "\t}",
+            "",
+            "\tstatic myStaticMethod() {",
+            "\t\treturn \"foobar\";",
+            "\t}",
+            "\tstatic #myPrivateStaticMethod() {",
+            "\t\treturn \"barbaz\";",
+            "\t}",
+            "}"
+        ]
+    }
+}

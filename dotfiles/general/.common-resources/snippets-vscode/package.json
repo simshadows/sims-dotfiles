@@ -7,10 +7,16 @@
     },
     "contributes": {
         "snippets": [
-            {
-                "language": "typescript",
-                "path": "./typescript.json"
-            }
+            {"path": "./html.json", "language": "html"},
+            {"path": "./html.json", "language": "javascriptreact"},
+            {"path": "./html.json", "language": "typescriptreact"},
+            {"path": "./javascript.json", "language": "javascript"},
+            {"path": "./javascript.json", "language": "typescript"},
+            {"path": "./javascript.json", "language": "javascriptreact"},
+            {"path": "./javascript.json", "language": "typescriptreact"},
+            {"path": "./typescript.json", "language": "typescript"},
+            {"path": "./typescript.json", "language": "typescriptreact"},
+            {"path": "./xslt.json", "language": "xslt"}
         ]
     }
 }

@@ -1,5 +1,5 @@
 {
-    "for": {
+    "for (simshadows snippets)": {
         "prefix": ["for"],
         "body": [
             "for (${1:condition}) {",

@@ -1,0 +1,111 @@
+{
+    "xsl:variable (simshadows snippets)": {
+        "prefix": ["var", "variable"],
+        "body": [
+            "<xsl:variable name=\"${1:todo}\" select=\"${2:todo}\"/>$0"
+        ]
+    },
+    "xsl:text (simshadows snippets)": {
+        "prefix": ["txt", "text"],
+        "body": [
+            "<xsl:text>${1:todo}</xsl:text>$0"
+        ]
+    },
+    "xsl:value-of (simshadows snippets)": {
+        "prefix": ["val", "value", "valueof"],
+        "body": [
+            "<xsl:value-of select=\"${1:todo}\"/>$0"
+        ]
+    },
+    "xsl:if (simshadows snippets)": {
+        "prefix": ["if"],
+        "body": [
+            "<xsl:if test=\"${1:todo}\">",
+            "\t${2:todo}",
+            "</xsl:if>$0"
+        ]
+    },
+    "xsl:choose (simshadows snippets)": {
+        "prefix": ["choose", "switch"],
+        "body": [
+            "<xsl:choose>",
+            "\t<xsl:when test=\"${1:todo}\">",
+            "\t\t${2:todo}",
+            "\t</xsl:when>",
+            "\t<xsl:otherwise>",
+            "\t\t${3:todo}",
+            "\t</xsl:otherwise>",
+            "</xsl:choose>$0"
+        ]
+    },
+    "xsl:for-each (simshadows snippets)": {
+        "prefix": ["for", "foreach"],
+        "body": [
+            "<xsl:for-each select=\"${1:todo}\">",
+            "\t${2:todo}",
+            "</xsl:for-each>$0"
+        ]
+    },
+    "xsl:copy-of (simshadows snippets)": {
+        "prefix": ["copyof"],
+        "body": [
+            "<xsl:copy-of select=\"${1:todo}\"/>$0"
+        ]
+    },
+    "xsl:copy (simshadows snippets)": {
+        "prefix": ["copy"],
+        "body": [
+            "<xsl:copy>${1:todo}</xsl:copy>$0"
+        ]
+    },
+    "xsl:element (simshadows snippets)": {
+        "prefix": ["element"],
+        "body": [
+            "<xsl:element name=\"${1:todo}\" namespace=\"${2:todo}\">",
+            "\t${3:todo}",
+            "</xsl:element>$0"
+        ]
+    },
+    "xsl:attribute (simshadows snippets)": {
+        "prefix": ["attribute"],
+        "body": [
+            "<xsl:attribute name=\"${1:todo}\" namespace=\"${2:todo}\">",
+            "\t${3:todo}",
+            "</xsl:attribute>$0"
+        ]
+    },
+    "xsl:apply-templates (simshadows snippets)": {
+        "prefix": ["apply", "applytemplates"],
+        "body": [
+            "<xsl:apply-templates select=\"${1:todo}\" mode=\"${2:todo}\"/>$0"
+        ]
+    },
+    "xsl:call-template (simshadows snippets)": {
+        "prefix": ["call", "calltemplate"],
+        "body": [
+            "<xsl:call-template name=\"${1:todo}\">",
+            "\t<xsl:with-param name=\"${2:todo}\" select=\"${3:todo}\"/>",
+            "\t<xsl:with-param name=\"${4:todo}\">",
+            "\t\t${5:todo}",
+            "\t</xsl:with-param>",
+            "</xsl:call-template>$0"
+        ]
+    },
+    "xsl:template [matching template] (simshadows snippets)": {
+        "prefix": ["template", "mtemplate"],
+        "body": [
+            "<xsl:template match=\"${1:todo}\" mode=\"${2:todo}\">",
+            "\t${3:todo}",
+            "</xsl:template>$0"
+        ]
+    },
+    "xsl:template [named template] (simshadows snippets)": {
+        "prefix": ["ntemplate"],
+        "body": [
+            "<xsl:template name=\"${1:todo}\">",
+            "\t<xsl:param name=\"${2:todo}\" select=\"${3:todo}\"/>",
+            "\t${4:todo}",
+            "</xsl:template>$0"
+        ]
+    }
+}
