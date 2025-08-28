@@ -2,7 +2,6 @@
 -- author: simshadows <contact@simshadows.com>
 --
 -- TODO:
--- - Add keybinds for automating the substitute command
 -- - How do I get Typescript LSP working? I want:
 --     - Types analysis.
 --     - Highlight problems.
@@ -26,20 +25,6 @@ local plugin_specs = {
         event = "BufReadPre",
         opts = {},
     },
-    --{
-    --    "LintaoAmons/bookmarks.nvim",
-    --    tag = "3.2.0",
-    --    dependencies = {
-    --        {"kkharji/sqlite.lua"},
-    --        {"nvim-telescope/telescope.nvim"},
-    --        {"stevearc/dressing.nvim"},
-    --        {"GeorgesAlkhouri/nvim-aider"}
-    --    },
-    --    config = function()
-    --        local opts = {}
-    --        require("bookmarks").setup(opts)
-    --    end,
-    --},
     {
         "https://github.com/neovim/nvim-lspconfig"
     },
@@ -175,6 +160,9 @@ local plugin_specs = {
     --        })
     --    end,
     --},
+    {
+        "https://github.com/ThePrimeagen/harpoon"
+    },
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -324,7 +312,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- SYNTAX HIGHLIGHTING, COLOURS, AND FONTS ---------------------------
 ----------------------------------------------------------------------
 
-vim.cmd("colorscheme unokai")
+vim.cmd([[ colorscheme unokai ]])
 -- Some alternatives that I also like:
 --vim.cmd "colorscheme slate"
 --vim.cmd "colorscheme retrobox"
@@ -403,17 +391,29 @@ vim.keymap.set(
     {desc = "Decrease indent without losing the selection"}
 )
 
-vim.keymap.set(
-    "n",
-    "<C-p>",
-    "gT",
-    {desc = "Navigate Tab Left"}
-)
+--vim.keymap.set(
+--    "n",
+--    "<C-n>",
+--    "gt",
+--    {desc = "Navigate Next Tab"}
+--)
+--vim.keymap.set(
+--    "n",
+--    "<C-p>",
+--    "gT",
+--    {desc = "Navigate Prev Tab"}
+--)
 vim.keymap.set(
     "n",
     "<C-n>",
-    "gt",
-    {desc = "Navigate Tab Right"}
+    ":bnext<enter>",
+    {desc = "Navigate Next Buffer"}
+)
+vim.keymap.set(
+    "n",
+    "<C-p>",
+    ":bprevious<enter>",
+    {desc = "Navigate Prev Buffer"}
 )
 vim.keymap.set(
     "n",
@@ -440,42 +440,42 @@ vim.keymap.set(
     {desc = "Navigate Split Right"}
 )
 
-vim.keymap.set(
-    "n",
-    "<leader>p",
-    "gT",
-    {desc = "Navigate Tab Previous"}
-)
-vim.keymap.set(
-    "n",
-    "<leader>n",
-    "gt",
-    {desc = "Navigate Tab Next"}
-)
-vim.keymap.set(
-    "n",
-    "<leader>k",
-    "<C-w>k",
-    {desc = "Navigate Split Up"}
-)
-vim.keymap.set(
-    "n",
-    "<leader>j",
-    "<C-w>j",
-    {desc = "Navigate Split Down"}
-)
-vim.keymap.set(
-    "n",
-    "<leader>h",
-    "<C-w>h",
-    {desc = "Navigate Split Left"}
-)
-vim.keymap.set(
-    "n",
-    "<leader>l",
-    "<C-w>l",
-    {desc = "Navigate Split Right"}
-)
+--vim.keymap.set(
+--    "n",
+--    "<leader>p",
+--    "gT",
+--    {desc = "Navigate Tab Previous"}
+--)
+--vim.keymap.set(
+--    "n",
+--    "<leader>n",
+--    "gt",
+--    {desc = "Navigate Tab Next"}
+--)
+--vim.keymap.set(
+--    "n",
+--    "<leader>k",
+--    "<C-w>k",
+--    {desc = "Navigate Split Up"}
+--)
+--vim.keymap.set(
+--    "n",
+--    "<leader>j",
+--    "<C-w>j",
+--    {desc = "Navigate Split Down"}
+--)
+--vim.keymap.set(
+--    "n",
+--    "<leader>h",
+--    "<C-w>h",
+--    {desc = "Navigate Split Left"}
+--)
+--vim.keymap.set(
+--    "n",
+--    "<leader>l",
+--    "<C-w>l",
+--    {desc = "Navigate Split Right"}
+--)
 
 vim.keymap.set(
     "n",
@@ -505,7 +505,7 @@ vim.keymap.set(
 
 vim.keymap.set(
     "n",
-    "<leader>ff",
+    "<leader>f",
     function()
         require("telescope.builtin").find_files()
     end,
@@ -513,7 +513,7 @@ vim.keymap.set(
 )
 vim.keymap.set(
     "n",
-    "<leader>fg",
+    "<leader>g",
     function()
         require("telescope.builtin").live_grep()
     end,
@@ -521,7 +521,7 @@ vim.keymap.set(
 )
 vim.keymap.set(
     "n",
-    "<leader>fb",
+    "<leader>b",
     function()
         require("telescope.builtin").buffers()
     end,
@@ -529,7 +529,7 @@ vim.keymap.set(
 )
 vim.keymap.set(
     "n",
-    "<leader>fh",
+    "<leader>h",
     function()
         require("telescope.builtin").help_tags()
     end,
@@ -544,12 +544,46 @@ vim.keymap.set(
     --":NvimTreeOpen<enter>",
     {desc = "Open File Browser"}
 )
+--vim.keymap.set(
+--    "n",
+--    "<leader><leader>",
+--    ":Neotree close<enter>",
+--    --":NvimTreeToggle<enter>",
+--    {desc = "Close File Browser"}
+--)
+
+
 vim.keymap.set(
     "n",
-    "<leader>Q",
-    ":Neotree close<enter>",
-    --":NvimTreeToggle<enter>",
-    {desc = "Close File Browser"}
+    "<leader>1",
+    function()
+        require("harpoon.ui").nav_prev()
+    end,
+    {desc = "[harpoon] Navigate to prev mark"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>2",
+    function()
+        require("harpoon.ui").toggle_quick_menu()
+    end,
+    {desc = "[harpoon] Toggle quick menu"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>3",
+    function()
+        require("harpoon.ui").nav_next()
+    end,
+    {desc = "[harpoon] Navigate to next mark"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>4",
+    function()
+        require("harpoon.mark").add_file()
+    end,
+    {desc = "[harpoon] Mark"}
 )
 
 
@@ -603,4 +637,32 @@ vim.keymap.set(
     --{silent = true}
 )
 -- TODO: What about backwards and other functions?
+
+vim.keymap.set(
+    "n",
+    ";s",
+    ":%s///g<left><left><left>",
+    {desc = "Substitute text (global)"}
+)
+-- A version that will only replace within a visual selection:
+-- (Note that the '<,'> part is automatically added in.)
+--vim.keymap.set(
+--    "v",
+--    ";s",
+--    ":s///g<left><left><left>",
+--    {desc = "Substitute text within visual selection"}
+--)
+-- TODO: This doesn't seem to work. 
+-- TODO: Maybe it's better to just use something like:
+--           :%s//g<left><left>
+--       since it results in fewer keystrokes.
+
+vim.keymap.set(
+    "n",
+    ";c",
+    function()
+        vim.cmd([[ :noh ]])
+    end,
+    {desc = "Clear highlighting"}
+)
 
