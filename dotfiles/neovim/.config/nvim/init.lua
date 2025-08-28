@@ -3,14 +3,11 @@
 --
 -- TODO:
 -- - Add keybinds for automating the substitute command
--- - How do I get non-ASCII characters to be highlighted?
--- - How do I get tabs and trailing whitespace highlighted?
 -- - How do I get Typescript LSP working? I want:
 --     - Types analysis.
 --     - Highlight problems.
 --     - Autocomplete.
 --     - (Maybe I need mason for this.)
--- - Maybe find another colour theme.
 
 -- disable netrw
 vim.g.loaded_netrw = 1
@@ -332,10 +329,33 @@ vim.cmd("colorscheme unokai")
 --vim.cmd "colorscheme slate"
 --vim.cmd "colorscheme retrobox"
 
--- Show tabs and trailing spaces
---vim.opt.list = true
---vim.opt.listchars = "tab:>-,trail:.,extends:>,precedes:<"
--- TODO: Figure out how to get the colours for this.
+-- Show whitespace
+vim.opt.list = true
+vim.opt.listchars = {
+    tab = "\u{2192} ",
+    trail = "\u{B7}",
+    extends = ">",
+    precedes = "<",
+}
+-- And set the colour of this
+vim.api.nvim_set_hl(0, "NonText", {fg = "#525043"})
+
+-- Also highlight "sus characters" (mostly non-ASCII and control characters)
+vim.api.nvim_set_hl(0, "SusCharacter", {bg = "yellow", fg = "red", ctermbg = "yellow", ctermfg = "red"})
+vim.api.nvim_create_autocmd(
+    {"BufEnter", "BufReadPost"},
+    {
+        pattern = "*",
+        callback = function()
+            -- If it's a normal buffer
+            if vim.bo.buftype == "" then
+                -- Do highlighting
+                vim.cmd([[ syn match SusCharacter /[^\x09-\x7E]/ ]])
+                vim.cmd([[ syn match SusCharacter /[\x0A-\x1F]/  ]])
+            end
+        end
+    }
+)
 
 vim.cmd("au BufNewFile,BufRead *.ejs set filetype=html")
 
