@@ -1,12 +1,5 @@
 --   file: init.lua
 -- author: simshadows <contact@simshadows.com>
---
--- TODO:
--- - How do I get Typescript LSP working? I want:
---     - Types analysis.
---     - Highlight problems.
---     - Autocomplete.
---     - (Maybe I need mason for this.)
 
 -- disable netrw
 vim.g.loaded_netrw = 1
@@ -378,127 +371,40 @@ vim.opt.statusline = " %-h%w  cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %
 -- KEY MAPPINGS ------------------------------------------------------
 ----------------------------------------------------------------------
 
-vim.keymap.set(
-    "v",
-    ">",
-    ">gv",
+vim.keymap.set("v", ">", ">gv",
     {desc = "Increase indent without losing the selection"}
 )
-vim.keymap.set(
-    "v",
-    "<",
-    "<gv",
+vim.keymap.set("v", "<", "<gv",
     {desc = "Decrease indent without losing the selection"}
 )
 
---vim.keymap.set(
---    "n",
---    "<C-n>",
---    "gt",
---    {desc = "Navigate Next Tab"}
---)
---vim.keymap.set(
---    "n",
---    "<C-p>",
---    "gT",
---    {desc = "Navigate Prev Tab"}
---)
-vim.keymap.set(
-    "n",
-    "<C-n>",
-    ":bnext<enter>",
-    {desc = "Navigate Next Buffer"}
-)
-vim.keymap.set(
-    "n",
-    "<C-p>",
-    ":bprevious<enter>",
-    {desc = "Navigate Prev Buffer"}
-)
-vim.keymap.set(
-    "n",
-    "<C-k>",
-    "<C-w>k",
-    {desc = "Navigate Split Up"}
-)
-vim.keymap.set(
-    "n",
-    "<C-j>",
-    "<C-w>j",
-    {desc = "Navigate Split Down"}
-)
-vim.keymap.set(
-    "n",
-    "<C-h>",
-    "<C-w>h",
-    {desc = "Navigate Split Left"}
-)
-vim.keymap.set(
-    "n",
-    "<C-l>",
-    "<C-w>l",
-    {desc = "Navigate Split Right"}
-)
 
---vim.keymap.set(
---    "n",
---    "<leader>p",
---    "gT",
---    {desc = "Navigate Tab Previous"}
---)
---vim.keymap.set(
---    "n",
---    "<leader>n",
---    "gt",
---    {desc = "Navigate Tab Next"}
---)
---vim.keymap.set(
---    "n",
---    "<leader>k",
---    "<C-w>k",
---    {desc = "Navigate Split Up"}
---)
---vim.keymap.set(
---    "n",
---    "<leader>j",
---    "<C-w>j",
---    {desc = "Navigate Split Down"}
---)
---vim.keymap.set(
---    "n",
---    "<leader>h",
---    "<C-w>h",
---    {desc = "Navigate Split Left"}
---)
---vim.keymap.set(
---    "n",
---    "<leader>l",
---    "<C-w>l",
---    {desc = "Navigate Split Right"}
---)
+-- We make basic navigation keybinds available in normal and insert mode
+function setNavigationKeybind(key, cmd, desc)
+    local fullDesc = "Navigate " .. desc
+    local iCmd = "<Esc>" .. cmd;
+    vim.keymap.set("n", key, cmd, {desc = fullDesc})
+    vim.keymap.set("i", key, iCmd, {desc = fullDesc})
+end
+setNavigationKeybind("<C-n>", ":bnext<enter>",     "buffers: next")
+setNavigationKeybind("<C-p>", ":bprevious<enter>", "buffers: previous")
+setNavigationKeybind("<C-k>", "<C-w>k", "splits: up")
+setNavigationKeybind("<C-h>", "<C-w>h", "splits: down")
+setNavigationKeybind("<C-h>", "<C-w>h", "splits: left")
+setNavigationKeybind("<C-l>", "<C-w>l", "splits: right")
+--setNavigationKeybind("<C-n>", "gt", "tabs: next")
+--setNavigationKeybind("<C-p>", "gT", "tabs: previous")
 
-vim.keymap.set(
-    "n",
-    "<leader>K",
-    "<C-w>+",
+vim.keymap.set("n", "<leader>K", "<C-w>+",
     {desc = "Split Height Increase"}
 )
-vim.keymap.set(
-    "n",
-    "<leader>J",
-    "<C-w>-",
+vim.keymap.set("n", "<leader>J", "<C-w>-",
     {desc = "Split Height Decrease"}
 )
-vim.keymap.set(
-    "n",
-    "<leader>H",
-    "<C-w><",
+vim.keymap.set("n", "<leader>H", "<C-w><",
     {desc = "Split Width Decrease"}
 )
-vim.keymap.set(
-    "n",
-    "<leader>L",
-    "<C-w>>",
+vim.keymap.set("n", "<leader>L", "<C-w>>",
     {desc = "Split Width Increase"}
 )
 
@@ -537,10 +443,7 @@ vim.keymap.set(
 )
 
 
-vim.keymap.set(
-    "n",
-    "<leader>q",
-    ":Neotree<enter>",
+vim.keymap.set("n", "<leader>q", ":Neotree<enter>",
     --":NvimTreeOpen<enter>",
     {desc = "Open File Browser"}
 )
@@ -664,5 +567,15 @@ vim.keymap.set(
         vim.cmd([[ :noh ]])
     end,
     {desc = "Clear highlighting"}
+)
+
+
+vim.keymap.set(
+    "n",
+    "<leader>x",
+    function()
+        vim.cmd([[ :bp | sp | bn | bd ]])
+    end,
+    {desc = "Close buffer, then switch to another buffer"}
 )
 

@@ -25,6 +25,7 @@ choco install firefox `
     audacity `
     yt-dlp `
     qbittorrent `
+    virtualbox `
     winaero-tweaker
 
 # I don't install DisplayCAL using Chocolatey due to bad experiences with it when I tried.
