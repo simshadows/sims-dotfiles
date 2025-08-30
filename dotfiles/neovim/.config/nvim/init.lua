@@ -61,11 +61,9 @@ local plugin_specs = {
         end,
     },
     {
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.8",
-        dependencies = {
-            "nvim-lua/plenary.nvim"
-        },
+        "ibhagwan/fzf-lua",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {}
     },
     {
         "lukas-reineke/indent-blankline.nvim",
@@ -371,14 +369,6 @@ vim.opt.statusline = " %-h%w  cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %
 -- KEY MAPPINGS ------------------------------------------------------
 ----------------------------------------------------------------------
 
-vim.keymap.set("v", ">", ">gv",
-    {desc = "Increase indent without losing the selection"}
-)
-vim.keymap.set("v", "<", "<gv",
-    {desc = "Decrease indent without losing the selection"}
-)
-
-
 -- We make basic navigation keybinds available in normal and insert mode
 function setNavigationKeybind(key, cmd, desc)
     local fullDesc = "Navigate " .. desc
@@ -386,8 +376,9 @@ function setNavigationKeybind(key, cmd, desc)
     vim.keymap.set("n", key, cmd, {desc = fullDesc})
     vim.keymap.set("i", key, iCmd, {desc = fullDesc})
 end
-setNavigationKeybind("<C-n>", ":bnext<enter>",     "buffers: next")
-setNavigationKeybind("<C-p>", ":bprevious<enter>", "buffers: previous")
+setNavigationKeybind("<C-n>", ":bnext<enter>",             "buffers: next")
+setNavigationKeybind("<C-p>", ":bprevious<enter>",         "buffers: previous")
+setNavigationKeybind("<C-x>", ":bp | sp | bn | bd<enter>", "buffers: close buffer without closing window")
 setNavigationKeybind("<C-k>", "<C-w>k", "splits: up")
 setNavigationKeybind("<C-h>", "<C-w>h", "splits: down")
 setNavigationKeybind("<C-h>", "<C-w>h", "splits: left")
@@ -408,39 +399,55 @@ vim.keymap.set("n", "<leader>L", "<C-w>>",
     {desc = "Split Width Increase"}
 )
 
+vim.keymap.set("v", ">", ">gv",
+    {desc = "Increase indent without losing the selection"}
+)
+vim.keymap.set("v", "<", "<gv",
+    {desc = "Decrease indent without losing the selection"}
+)
 
 vim.keymap.set(
     "n",
     "<leader>f",
     function()
-        require("telescope.builtin").find_files()
+        require("fzf-lua").files()
     end,
-    {desc = "Telescope find files"}
+    {desc = "Find files [fzf-lua]"}
 )
 vim.keymap.set(
     "n",
     "<leader>g",
     function()
-        require("telescope.builtin").live_grep()
+        require("fzf-lua").live_grep_native()
+        -- Alternatively, there's live_grep(), but do you ever need it?
+        --require("fzf-lua").live_grep()
     end,
-    {desc = "Telescope live grep"}
+    {desc = "Find in contents (live grep) [fzf-lua]"}
 )
 vim.keymap.set(
     "n",
     "<leader>b",
     function()
-        require("telescope.builtin").buffers()
+        require("fzf-lua").buffers()
     end,
-    {desc = "Telescope buffers"}
+    {desc = "Find buffers [fzf-lua]"}
 )
 vim.keymap.set(
     "n",
     "<leader>h",
     function()
-        require("telescope.builtin").help_tags()
+        require("fzf-lua").helptags()
     end,
-    {desc = "Telescope help tags"}
+    {desc = "Find in help tags [fzf-lua]"}
 )
+--vim.keymap.set(
+--    "n",
+--    "<leader>r",
+--    function()
+--        require("fzf-lua").resume()
+--    end,
+--    {desc = "(Experimental)"}
+--)
 
 
 vim.keymap.set("n", "<leader>q", ":Neotree<enter>",
@@ -524,7 +531,7 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
-    {"i"},
+    "i",
     "<tab>",
     function()
         local luasnip = require("luasnip")
@@ -560,22 +567,7 @@ vim.keymap.set(
 --           :%s//g<left><left>
 --       since it results in fewer keystrokes.
 
-vim.keymap.set(
-    "n",
-    ";c",
-    function()
-        vim.cmd([[ :noh ]])
-    end,
+vim.keymap.set("n", ";c", ":noh<enter>",
     {desc = "Clear highlighting"}
-)
-
-
-vim.keymap.set(
-    "n",
-    "<leader>x",
-    function()
-        vim.cmd([[ :bp | sp | bn | bd ]])
-    end,
-    {desc = "Close buffer, then switch to another buffer"}
 )
 
