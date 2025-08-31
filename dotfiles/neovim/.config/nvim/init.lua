@@ -95,6 +95,7 @@ local plugin_specs = {
         },
         lazy = false,
         opts = {
+            auto_clean_after_session_restore = true,
             filesystem = {
                 filtered_items = {
                     visible = true,
@@ -157,7 +158,12 @@ local plugin_specs = {
     {
         "akinsho/bufferline.nvim",
         dependencies = "nvim-tree/nvim-web-devicons",
-        opts = {},
+        opts = {
+            options = {
+                --show_close_icon = false,
+                show_buffer_close_icons = false,
+            },
+        },
     },
     {
         "folke/which-key.nvim",
@@ -356,11 +362,26 @@ vim.cmd("au BufNewFile,BufRead *.mdx set filetype=markdown")
 -- STATUS LINE -------------------------------------------------------
 ----------------------------------------------------------------------
 
---vim.opt.statusline = " %-h%w  %{HasPaste()}cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %y%m%r  "
-vim.opt.statusline = " %-h%w  cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %y%m%r  "
+vim.opt_local.laststatus = 2
+vim.api.nvim_create_autocmd(
+    {"BufEnter", "WinEnter"},
+    {
+        pattern = "*",
+        callback = function()
+            vim.opt_local.statusline = "%-h%w%q   %F%=%a   %b(0x%B)  line %l/%L  %v  %y%m%r  "
+            -- My original status line that showed CWD and checked for paste mode
+            --vim.opt.statusline = " %-h%w  %{HasPaste()}cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %y%m%r  "
 
--- TODO: My original .vimrc has more stuff to it. I should adapt it.
---       It handled netrw and "paste mode".
+            -- I originally made this autocmd so I can change the statusline depending on the buffer.
+            -- Since then, I decided to just have the same status line for now.
+            --if vim.bo.buftype == "" then
+            --    -- If it's a normal buffer
+            --else
+            --    -- If it's not a special buffer
+            --end
+        end
+    }
+)
 
 ----------------------------------------------------------------------
 -- LSP ---------------------------------------------------------------
@@ -373,6 +394,11 @@ vim.opt.statusline = " %-h%w  cwd: %{getcwd()}   %F%=%a   %b(0x%B)  %l/%L  %c  %
 ----------------------------------------------------------------------
 -- KEY MAPPINGS ------------------------------------------------------
 ----------------------------------------------------------------------
+
+function ensureFileBrowserIsOpen()
+    vim.cmd([[ :Neotree ]])
+end
+
 
 -- We make basic navigation keybinds available in normal and insert mode
 function setNavigationKeybind(key, cmd, desc)
@@ -445,27 +471,26 @@ vim.keymap.set(
     end,
     {desc = "Find in help tags [fzf-lua]"}
 )
---vim.keymap.set(
---    "n",
---    "<leader>r",
---    function()
---        require("fzf-lua").resume()
---    end,
---    {desc = "(Experimental)"}
---)
+
+function setResumeSearchKeybind(key)
+    vim.keymap.set(
+        "n",
+        key,
+        function()
+            require("fzf-lua").resume()
+        end,
+        {desc = "Resume search [fzf-lua]"}
+    )
+end
+setResumeSearchKeybind("<leader>F")
+setResumeSearchKeybind("<leader>G")
+setResumeSearchKeybind("<leader>B")
+setResumeSearchKeybind("<leader>H")
 
 
-vim.keymap.set("n", "<leader>q", ":Neotree<enter>",
-    --":NvimTreeOpen<enter>",
+vim.keymap.set("n", "<leader>q", ensureFileBrowserIsOpen,
     {desc = "Open File Browser"}
 )
---vim.keymap.set(
---    "n",
---    "<leader><leader>",
---    ":Neotree close<enter>",
---    --":NvimTreeToggle<enter>",
---    {desc = "Close File Browser"}
---)
 
 
 vim.keymap.set(
@@ -507,6 +532,7 @@ vim.keymap.set(
     "<leader>ss",
     function()
         require("persistence").load()
+        ensureFileBrowserIsOpen()
     end,
     {desc = "[persistence.nvim] Load the session for the current directory"}
 )
@@ -553,18 +579,12 @@ vim.keymap.set(
 )
 -- TODO: What about backwards and other functions?
 
-vim.keymap.set(
-    "n",
-    ";s",
-    ":%s///g<left><left><left>",
+vim.keymap.set("n", "<leader>as", ":%s///g<left><left><left>",
     {desc = "Substitute text (global)"}
 )
 -- A version that will only replace within a visual selection:
 -- (Note that the '<,'> part is automatically added in.)
---vim.keymap.set(
---    "v",
---    ";s",
---    ":s///g<left><left><left>",
+--vim.keymap.set("v", ";s", ":s///g<left><left><left>",
 --    {desc = "Substitute text within visual selection"}
 --)
 -- TODO: This doesn't seem to work. 
@@ -572,7 +592,26 @@ vim.keymap.set(
 --           :%s//g<left><left>
 --       since it results in fewer keystrokes.
 
-vim.keymap.set("n", ";c", ":noh<enter>",
+vim.keymap.set("n", "<leader>ac", ":noh<enter>",
     {desc = "Clear highlighting"}
+)
+
+vim.keymap.set(
+    "n",
+    "<leader>ap",
+    function()
+        local filepath = vim.fn.expand("%:p")
+        vim.fn.setreg("+", filepath)
+    end,
+    {desc = "Write full filepath to clipboard"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>af",
+    function()
+        local filepath = vim.fn.expand("%:t")
+        vim.fn.setreg("+", filepath)
+    end,
+    {desc = "Write filename to clipboard"}
 )
 
