@@ -155,6 +155,11 @@ local plugin_specs = {
         "https://github.com/ThePrimeagen/harpoon"
     },
     {
+        "akinsho/bufferline.nvim",
+        dependencies = "nvim-tree/nvim-web-devicons",
+        opts = {},
+    },
+    {
         "folke/which-key.nvim",
         event = "VeryLazy",
         opts = {},
