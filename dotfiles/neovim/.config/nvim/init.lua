@@ -1,15 +1,48 @@
 --   file: init.lua
 -- author: simshadows <contact@simshadows.com>
 
--- disable netrw
+-- Disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- enable 24-bit colour
+-- Enable 24-bit colour
 vim.opt.termguicolors = true
 
+-- Set leader keys
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+function bootstrapPluginManager(_plugin_specs)
+    local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+    if not (vim.uv or vim.loop).fs_stat(lazypath) then
+        local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+        local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+        if vim.v.shell_error ~= 0 then
+            vim.api.nvim_echo({
+                { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+                { out, "WarningMsg" },
+                { "\nPress any key to exit..." },
+            }, true, {})
+            vim.fn.getchar()
+            os.exit(1)
+        end
+    end
+    vim.opt.rtp:prepend(lazypath)
+
+    require("lazy").setup({
+        spec = _plugin_specs,
+        -- Configure any other settings here. See the documentation for more details.
+        -- colorscheme that will be used when installing plugins.
+        install = { colorscheme = { "habamax" } },
+        -- automatically check for plugin updates
+        checker = {
+            enabled = false
+        },
+    })
+end
+
 ----------------------------------------------------------------------
--- PLUGIN SPECS ------------------------------------------------------
+-- PLUGINS -----------------------------------------------------------
 ----------------------------------------------------------------------
 
 local plugin_specs = {
@@ -65,6 +98,16 @@ local plugin_specs = {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {}
     },
+    ---- I'm trying to find a "heavyweight" search tool that can handle complex search
+    ---- situations that fzf/telescope are suboptimal for.
+    --{
+    --    "nvim-pack/nvim-spectre",
+    --    dependencies = {
+    --        "nvim-lua/plenary.nvim",
+    --        "nvim-tree/nvim-web-devicons",
+    --    },
+    --    opts = {},
+    --},
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
@@ -105,53 +148,6 @@ local plugin_specs = {
             },
         },
     },
-    --{
-    --    "nvim-tree/nvim-tree.lua",
-    --    config = function()
-    --        require("nvim-tree").setup({
-    --            --on_attach = function()
-    --            --    local api = require "nvim-tree.api"
-  
-    --            --    local function opts(desc)
-    --            --      return {
-    --            --          desc = "nvim-tree: " .. desc,
-    --            --          buffer = bufnr,
-    --            --          noremap = true,
-    --            --          silent = true,
-    --            --          nowait = true
-    --            --      }
-    --            --    end
-  
-    --            --    api.config.mappings.default_on_attach(bufnr)
-    --            --    vim.keymap.set(
-    --            --        'n',
-    --            --        '<C-t>',
-    --            --        api.tree.change_root_to_parent,
-    --            --        opts('Up')
-    --            --    )
-    --            --    vim.keymap.set(
-    --            --        'n',
-    --            --        '?',
-    --            --        api.tree.toggle_help,
-    --            --        opts('Help')
-    --            --    )
-  
-    --            --end,
-    --            sort = {
-    --                sorter = "case_sensitive",
-    --            },
-    --            view = {
-    --                width = 30,
-    --            },
-    --            renderer = {
-    --                group_empty = true,
-    --            },
-    --            filters = {
-    --                dotfiles = true,
-    --            },
-    --        })
-    --    end,
-    --},
     {
         "https://github.com/ThePrimeagen/harpoon"
     },
@@ -196,46 +192,7 @@ local plugin_specs = {
     },
 }
 
-
-
-----------------------------------------------------------------------
--- BOOTSTRAP PLUGIN MANAGER ------------------------------------------
-----------------------------------------------------------------------
-
--- Bootstrap lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-    if vim.v.shell_error ~= 0 then
-        vim.api.nvim_echo({
-            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out, "WarningMsg" },
-            { "\nPress any key to exit..." },
-        }, true, {})
-        vim.fn.getchar()
-        os.exit(1)
-    end
-end
-vim.opt.rtp:prepend(lazypath)
-
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
--- Setup lazy.nvim
-require("lazy").setup({
-    spec = plugin_specs,
-    -- Configure any other settings here. See the documentation for more details.
-    -- colorscheme that will be used when installing plugins.
-    install = { colorscheme = { "habamax" } },
-    -- automatically check for plugin updates
-    checker = {
-        enabled = false
-    },
-})
+bootstrapPluginManager(plugin_specs)
 
 ----------------------------------------------------------------------
 -- GENERAL AND UI ----------------------------------------------------

@@ -33,10 +33,12 @@ This `README.md` will serve as the user manual for my Neovim config and workflow
 
 ## TODO
 
+- Fold keybinds
 - Refine my search tools
     - I need two broad categories of search functionality: 1) fast low-overhead search, and 2) a heavyweight solution suitable for long and complex engagements of raw string searches.
     - I'm currently using *fzf-lua* for my fast search needs.
     - **I'll still need to find a heavyweight solution.**
+        - try out spectre
 - How do I get Typescript LSP working? I want:
     - Types analysis.
     - Highlight problems.
