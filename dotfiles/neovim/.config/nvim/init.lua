@@ -41,18 +41,19 @@ function bootstrapPluginManager(_plugin_specs)
     })
 end
 
+-- Don't need this yet
+--local isWindowsOS = (vim.fn.has("win32") ~= 0) or (vim.fn.has("win64") ~= 0);
+
 ----------------------------------------------------------------------
 -- PLUGINS -----------------------------------------------------------
 ----------------------------------------------------------------------
 
-local plugin_specs = {
+local pluginSpecs = {
+    {"https://github.com/neovim/nvim-lspconfig"},
     {
         "folke/persistence.nvim",
         event = "BufReadPre",
         opts = {},
-    },
-    {
-        "https://github.com/neovim/nvim-lspconfig"
     },
     {
         "nvim-treesitter/nvim-treesitter",
@@ -192,7 +193,7 @@ local plugin_specs = {
     },
 }
 
-bootstrapPluginManager(plugin_specs)
+bootstrapPluginManager(pluginSpecs)
 
 ----------------------------------------------------------------------
 -- GENERAL AND UI ----------------------------------------------------
@@ -344,9 +345,19 @@ vim.api.nvim_create_autocmd(
 -- LSP ---------------------------------------------------------------
 ----------------------------------------------------------------------
 
--- npm install -g @astrojs/language-server
+-- I have no idea what I'm doing wrong here
+--vim.lsp.config("astro", {
+--    init_options = {
+--        typescript = {
+--            serverPath = vim.fs.normalize("/home/simshadows/.npm-global/lib/node_modules/typescript/lib/tsserverlibrary.js"),
+--            ["typescript.tsdk"] = vim.fs.normalize("/home/simshadows/.npm-global/lib/node_modules/typescript/lib/tsserverlibrary.js")
+--        },
+--    },
+--})
 --vim.lsp.enable("astro")
--- TODO: This doesn't work for me for some reason.
+
+vim.lsp.enable("vtsls")
+
 
 ----------------------------------------------------------------------
 -- KEY MAPPINGS ------------------------------------------------------
@@ -368,7 +379,7 @@ setNavigationKeybind("<C-n>", ":bnext<enter>",             "buffers: next")
 setNavigationKeybind("<C-p>", ":bprevious<enter>",         "buffers: previous")
 setNavigationKeybind("<C-x>", ":bp | sp | bn | bd<enter>", "buffers: close buffer without closing window")
 setNavigationKeybind("<C-k>", "<C-w>k", "splits: up")
-setNavigationKeybind("<C-h>", "<C-w>h", "splits: down")
+setNavigationKeybind("<C-j>", "<C-w>j", "splits: down")
 setNavigationKeybind("<C-h>", "<C-w>h", "splits: left")
 setNavigationKeybind("<C-l>", "<C-w>l", "splits: right")
 --setNavigationKeybind("<C-n>", "gt", "tabs: next")
@@ -535,6 +546,75 @@ vim.keymap.set(
     --{silent = true}
 )
 -- TODO: What about backwards and other functions?
+
+-- I don't use Omni completion yet, but it's good to know that this works at least
+vim.keymap.set("i", "<C-f>", "<C-x><C-o>",
+    {desc = "LSP: Omni completion"}
+)
+vim.keymap.set(
+    "n",
+    ";;",
+    function()
+        vim.lsp.buf.hover()
+    end,
+    {desc = "LSP: Hover"}
+)
+vim.keymap.set(
+    "n",
+    ";c",
+    function()
+        vim.lsp.buf.code_action()
+    end,
+    {desc = "LSP: Code actions"}
+)
+vim.keymap.set(
+    "n",
+    ";r",
+    function()
+        vim.lsp.buf.references()
+    end,
+    {desc = "LSP: List all references"}
+)
+vim.keymap.set(
+    "n",
+    ";d",
+    function()
+        vim.lsp.buf.type_definition()
+    end,
+    {desc = "LSP: Jump to type definition"}
+)
+vim.keymap.set(
+    "n",
+    ";i",
+    function()
+        vim.lsp.buf.implementation()
+    end,
+    {desc = "LSP: List all implementations"}
+)
+vim.keymap.set(
+    "n",
+    ";s",
+    function()
+        vim.lsp.buf.document_symbol()
+    end,
+    {desc = "LSP: List all symbols in current buffer"}
+)
+vim.keymap.set(
+    "n",
+    ";n",
+    function()
+        vim.lsp.buf.rename()
+    end,
+    {desc = "LSP: Rename all references"}
+)
+vim.keymap.set(
+    "n",
+    ";h",
+    function()
+        vim.lsp.buf.signature_help()
+    end,
+    {desc = "LSP: Display signature information"}
+)
 
 vim.keymap.set("n", "<leader>as", ":%s///g<left><left><left>",
     {desc = "Substitute text (global)"}

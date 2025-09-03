@@ -1,6 +1,8 @@
-# Neovim
+# Neovim dotfiles
 
 This `README.md` will serve as the user manual for my Neovim config and workflow to help me familiarize and refine.
+
+To avoid the need to memorize motions, I lean a lot on [folke/which-key.nvim](https://github.com/folke/which-key.nvim) to list keybinds out for me.
 
 ## Things you should do on startup
 
@@ -9,7 +11,7 @@ This `README.md` will serve as the user manual for my Neovim config and workflow
 ## Navigation: Basics
 
 **`<C-u>` / `<C-d>` - Go half a page up/down**
-- This is what I'm used to for fast scrolling in vi-style UI's. I don't tend to need anything else.
+- This is what I'm used to for fast scrolling in vi-style UI's.
 
 **`<C-h>` / `<C-j>` / `<C-k>` / `<C-l>` - Navigate splits**
 
@@ -27,11 +29,30 @@ This `README.md` will serve as the user manual for my Neovim config and workflow
 
 **`<space>F` / `<space>G` / `<space>B` / `<space>H` - Resume previous search**
 
+## Code Helpers (Auto-Completion, LSP, Snippets, etc.)
+
+**`<C-f>` (in insert mode) - Omni completion**
+
+**`<tab>` (in insert mode) - Expand snippet (if the text is snippet-expandable)**
+
+`;` is the lead key for all sorts of code help functions. My favourite one is: **`;;` - Hover**
+
 ## Misc
 
 **`<space>a` will show keys for miscellaneous uncategorized things.**
 
-## TODO
+## Appendix: Setting up dependencies
+
+### fzf
+
+<https://wiki.archlinux.org/title/Fzf>
+
+### LSP Servers
+
+- Typescript:
+    - <https://github.com/yioneko/vtsls>
+
+## Appendix: TODO
 
 - Fold keybinds
 - Refine my search tools
@@ -39,13 +60,9 @@ This `README.md` will serve as the user manual for my Neovim config and workflow
     - I'm currently using *fzf-lua* for my fast search needs.
     - **I'll still need to find a heavyweight solution.**
         - try out spectre
-- How do I get Typescript LSP working? I want:
-    - Types analysis.
-    - Highlight problems.
-    - Autocomplete.
-    - (Maybe I need mason for this.)
+- Configure which-key with group descriptions.
 
-## References
+## Appendix: References
 
 - <https://neovim.io/doc/user/index.html>
     - Neovim official documentation
