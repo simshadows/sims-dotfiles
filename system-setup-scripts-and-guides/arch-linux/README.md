@@ -23,7 +23,7 @@ If you're using VirtualBox, you'll need to turn EFI on.
 ### Does the system use EFI?
 
 Run the command:
-```
+```bash
 efibootmgr
 ```
 
@@ -32,7 +32,7 @@ If you get `EFI variables are not supported on this system.`, then you are not b
 ### Internet Connection
 
 Check our IP address and ping Google's DNS server to check the internet connection:
-```
+```bash
 ip a
 ping -c 5 8.8.8.8
 ```
@@ -40,12 +40,12 @@ ping -c 5 8.8.8.8
 If you're on ethernet, it should immediately work. If you need to connect to a wireless network, you'll need to do to follow the steps below.
 
 Launch interactive prompt:
-```
+```bash
 iwctl
 ```
 
 List Wi-Fi devices, scan for networks, list all available networks, then connect to one (this may prompt you for a passphrase if needed):
-```
+```bash
 device list
 station <YOUR_DEVICE_HERE> scan
 station <YOUR_DEVICE_HERE> get-networks
@@ -53,19 +53,19 @@ station <YOUR_DEVICE_HERE> connect <SSID>
 ```
 
 Verify you're connected:
-```
+```bash
 station <YOUR_DEVICE_HERE> show
 ```
 
 ### Creating physical partitions
 
 Verify available storage devices:
-```
+```bash
 fdisk -l
 ```
 
 Launch fdisk:
-```
+```bash
 fdisk /dev/sda
 ```
 
@@ -87,7 +87,7 @@ Useful commands within `fdisk`:
 - `w` writes changes to disk. Use this command last.
 
 Afterwards, verify available storage devices again:
-```
+```bash
 fdisk -l
 ```
 
@@ -100,28 +100,28 @@ fdisk -l
 *(We follow the steps from [LUKS on a partition](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#LUKS_on_a_partition) here.)*
 
 Format the root physical partition as LUKS:
-```
+```bash
 cryptsetup -vy luksFormat /dev/sda2
 ```
 
 Open the LUKS physical partition as `/dev/mapper/cryptroot`:
-```
+```bash
 cryptsetup open /dev/sda2 cryptroot
 ```
 
 Check and see that `cryptroot` can be seen from `fdisk`:
-```
+```bash
 fdisk -l
 ```
 
 Format filesystems (the UEFI partition must be FAT12/FAT16/FAT32):
-```
+```bash
 mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/mapper/cryptroot
 ```
 
 Mount the filesystems:
-```
+```bash
 mount /dev/mapper/cryptroot /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
@@ -130,13 +130,13 @@ mount /dev/sda1 /mnt/boot
 #### Option 2: Unencrypted
 
 Format filesystems:
-```
+```bash
 mkfs.fat -F 32 /dev/sda1
 mkfs.ext4 /dev/sda2
 ```
 
 Mount our partitions:
-```
+```bash
 mount /dev/sda2 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
@@ -145,30 +145,30 @@ mount /dev/sda1 /mnt/boot
 ### Continuing on...
 
 Check what's mounted:
-```
+```bash
 mount
 ```
 
 If we successfully mounted everything, we should be able to see something like this:
-```
+```bash
 /dev/mapper/cryptroot on /mnt type ext4 (rw,relatime)
 /dev/sda1 on /mnt/boot type ext4 (rw,relatime)
 ```
 
 Install base package to disk:
-```
+```bash
 pacstrap -i /mnt base
 ```
 
 Create filesystems table file:
-```
+```bash
 genfstab -U -p /mnt >> /mnt/etc/fstab
 ```
 
 ## Stage 2: Downloading my helper scripts
 
-Tnstall git into the RAM-disk and clone the repository:
-```
+Install git into the RAM-disk and clone the repository:
+```bash
 pacman -Sy git
 git clone https://github.com/simshadows/sims-dotfiles.git /mnt/root/dotfiles
 ```
@@ -176,13 +176,13 @@ git clone https://github.com/simshadows/sims-dotfiles.git /mnt/root/dotfiles
 ## Stage 3: Continuing from within the Arch installation...
 
 Chroot into installation, and change directory for convenience:
-```
+```bash
 arch-chroot /mnt
 cd /root/dotfiles/system-setup-scripts-and-guides/arch-linux
 ```
 
 We're not using the swapfile (or any swap partition) right now. Verify this by checking zero swap space:
-```
+```bash
 free -m
 ```
 
@@ -207,35 +207,35 @@ Now, we will run `stage3.sh`. First, check through the script to see if you need
     - *It's required by a lot of Desktop Environments for their wireless networking tools (but for some reason doesn't come with them).*
 
 Run the script:
-```
+```bash
 ./stage3.sh
 ```
 
 Check now that we have swap space:
-```
+```bash
 free -m
 ```
 
 Optional: If you're using a laptop, install TLP to improve power efficiency and the `gnome-power-statistics` tool for tracking charge:
-```
+```bash
 pacman -Sy tlp gnome-power-manager
 systemctl enable tlp.service
 ```
 
 Optional: Change `root`'s password if you want the account enabled:
-```
+```bash
 passwd
 ```
 
 Add user account, set user password, and change machine name:
-```
+```bash
 useradd -m -s /bin/bash simshadows
 passwd simshadows
 hostnamectl set-hostname YOUR_MACHINE_NAME_HERE
 ```
 
 Now, we want to add `simshadows ALL=(ALL) ALL` to the sudoers file using:
-```
+```bash
 visudo
 ```
 
@@ -249,7 +249,7 @@ $ makepkg -si
 ```
 
 Now, we can reboot to check if our installation was done correctly:
-```
+```bash
 exit
 umount /mnt/boot
 umount /mnt
@@ -258,7 +258,7 @@ reboot
 ```
 
 Ensure `/dev/sda1` and `/dev/mapper/cryptroot` are shown (or `/dev/sda2`):
-```
+```bash
 df -h
 ```
 
@@ -270,71 +270,33 @@ If you want to use TRIM, you'll need to do some manual tweaks yourself.
 
 (I'll updated this section once I figured it out.)
 
-## Stage 5: Installing the video driver
+## Stage 5: Installing hardware-specific stuff
 
-Use to check what card you're using:
-```
+Use to check what GPU you're using:
+```bash
 lspci
 ```
 
-You may need to do your own research into what driver to use, but here are some suggestions:
+### Arch Linux as a Virtualbox guest
 
-### Virtualbox
-
-```
+```bash
 pacman -Sy virtualbox-guest-utils xf86-video-vmware
 systemctl enable vboxservice.service
 ```
 
 xf86-video-vmware assumes you're using the VMSVGA virtual graphics controller.
 
-### Intel driver
+### Framework 13 (2025), AMD Ryzen AI 7 300 Series Mainboard
 
-```
-pacman -Sy xf86-video-intel
-```
-
-### AMD driver
-
-```
-pacman -Sy xf86-video-amdgpu
+```bash
+pacman -Sy mesa lib32-mesa power-profiles-daemon
 ```
 
-### Open-source Nvidia driver
+(I didn't write down whether you need to `systemctl enable` for `power-profiles-daemon`. You'll need to double-check this.)
 
-*(If you want performance, you probably don't want the open-source driver. Use the proprietary driver for this.)*
+### Anything else
 
-```
-pacman -Sy xf86-video-nouveau lib32-nouveau-dri
-```
-
-If that succeeds, go to the next section.
-
-Otherwise, if that fails, you might need to allow 32-bit packages to be installed. Do the following:
-
-```
-vi /etc/pacman.conf
-```
-
-Uncomment:
-```
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-```
-
-Then, attempt to install again.
-
-### Proprietary Nvidia driver
-
-```
-pacman -Sy nvidia lib32-nvidia-libgl nvidia-utils nvidia-settings
-```
-
-### Vesa driver (allows you to use any card, but very minimal)
-
-```
-pacman -Sy xf86-video-vesa
-```
+You'll need to look into this yourself.
 
 ## Stage 6: Installing display managers and desktop environments
 
@@ -345,7 +307,7 @@ Note that both minimalist recommendations include terminals. That's because with
 ### KDE
 
 Full KDE:
-```
+```bash
 pacman -Sy sddm \
     plasma-meta \
     rxvt-unicode \
@@ -355,11 +317,12 @@ pacman -Sy sddm \
     spectacle \
     kolourpaint
 systemctl enable sddm
+systemctl enable bluetooth
 reboot
 ```
 
 Extras:
-```
+```bash
 yay ttf-twemoji
 ```
 
@@ -391,14 +354,14 @@ Additional things I like to configure:
 ### GNOME
 
 Full GNOME:
-```
+```bash
 pacman -Sy gdm gnome gnome-extra
 systemctl enable gdm
 reboot
 ```
 
 Alternative minimal GNOME:
-```
+```bash
 pacman -Sy gdm gnome-shell gnome-terminal gnome-control-center
 systemctl enable gdm
 reboot
@@ -408,22 +371,15 @@ reboot
 
 If weird things are happening and you can't even open up a terminal, you should go into settings, find *Region & Language*, and fix up any weird values you see there. That should fix it.
 
-### Minimalist i3
-
-```
-pacman -Sy gdm i3 rxvt-unicode thunar
-systemctl enable gdm
-reboot
-```
-
-*Note: GDM is the display manager, but it's heavily bloated. Consider installing LightDM or some other lighter-weight display manager instead. The only reason I personally use GDM is because LightDM doesn't work in a VirtualBox guest for some reason.*
-
 ## Stage 7: Recommended Programs
 
-You can install a tonne of stuff I use by running my script:
+You can install a tonne of stuff I use by running my scripts:
+```bash
+./stage7a-installpackages.sh
+./stage7b-installmorepackages.sh
 ```
-./stage8-installpackages.sh
-```
+
+(I separated them out into two scripts so that `stage7a` is focused on what I install on all systems while the other script is for programs that create a more complete desktop user experience.)
 
 You can also read the script and edit it yourself as needed.
 

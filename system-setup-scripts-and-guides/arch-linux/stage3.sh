@@ -118,11 +118,6 @@ a+=( xorg-xinit  )
 a+=( man-db    )
 a+=( man-pages )
 
-# Vim, and a necessary dependency for my plugins to work
-# (Specifically gVim because it comes with additional features like clipboard support.)
-a+=( gvim )
-a+=( ruby )
-
 # Git and development tools for building packages.
 # (These are necessary to install yay, otherwise you can leave it out.)
 a+=( git        )
@@ -130,6 +125,10 @@ a+=( base-devel )
 
 # OpenSSH, necessary to use SSH keys and open SSH connections
 a+=( openssh )
+
+# I got into an awkward situation once where I didn't have a
+# text editor. Install vi to make sure this never happens.
+a+=( vi )
 
 # Run the actual package installation
 pacman -Syu --noconfirm "${a[@]}"

@@ -105,15 +105,13 @@ a+=( dnsutils   ) # DNS utilities (such as dig)
 #
 a+=( scrot             ) # makes screenshots
 a+=( nmap              ) # maps the network, e.g. ping/port scans
-a+=( sshfs             ) # for mounting remote directories over SSH
-a+=( weechat           ) # irc client
-a+=( rtorrent          ) # bittorrent client
 a+=( p7zip             ) # 7zip POSIX port
-a+=( texlive-most      ) # latex distribution   (WARNING: Large install.)
+a+=( texlive           ) # latex distribution   (WARNING: Large install.)
 a+=( biber             ) # latex reference management
 a+=( texstudio         ) # latex IDE
 a+=( libreoffice-still ) # libreoffice, stable branch   (WARNING: Large install.)
 a+=( obs-studio        ) # screen recording
+a+=( audacity          ) # audio recording
 
 
 #
@@ -124,16 +122,10 @@ a+=( screenfetch ) # prints basic system info in a pretty form
 
 ###########################################################
 
-
-#
-# Domain Specific: Security
-#
-#a+=( bless    ) # GUI hex editor (TODO: Seems to be in the AUR now.)
-a+=( steghide ) # steganography program to hide or extract info in image/audio files
-a+=( yara     ) # (TODO: idk how to describe this one lol)
-
+# Start installation of all specified packages!
+pacman -Sy "${a[@]}"
 
 ###########################################################
 
-# Start installation of all specified packages!
-pacman -Sy "${a[@]}"
+npm install --global yarn
+
