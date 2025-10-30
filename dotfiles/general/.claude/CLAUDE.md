@@ -1,0 +1,4 @@
+- Always provide reasoning, even if it's brief.
+- If you notice or suspect a security problem, please investigate and inform me.
+- Prefer clear and explicit error handling. Avoid possibilities of silent failure.
+- Strongly prefer clear and maintainable code. Never optimize prematurely.

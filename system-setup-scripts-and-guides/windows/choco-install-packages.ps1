@@ -4,6 +4,7 @@
 # I install all of these packages whenever I reinstall Windows.
 
 choco install firefox `
+    brave `
     chromium `
     vlc `
     vscodium `

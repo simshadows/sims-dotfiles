@@ -3,6 +3,13 @@
 # Terminate script on error
 set -e
 
+
+if [[ $EUID == 0 ]]; then
+   echo "Error: This script should not be run as root."
+   echo "(We run a 'yay' command, which shouldn't be run as root.)"
+   exit 1
+fi
+
 # Empty array.
 a=()
 
@@ -128,4 +135,15 @@ pacman -Sy "${a[@]}"
 ###########################################################
 
 npm install --global yarn
+
+# (NOTE: Everything below is untested, but they should work.)
+
+if command -v yay > /dev/null; then
+    echo "'yay' is installed."
+    echo "Installing AUR packages..."
+
+    yay brave
+else
+    echo "'yay' is not installed, so no AUR packages were installed."
+fi
 

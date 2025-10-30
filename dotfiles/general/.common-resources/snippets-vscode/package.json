@@ -10,6 +10,7 @@
             {"path": "./html.json", "language": "html"},
             {"path": "./html.json", "language": "javascriptreact"},
             {"path": "./html.json", "language": "typescriptreact"},
+            {"path": "./html.json", "language": "astro"},
             {"path": "./javascript.json", "language": "javascript"},
             {"path": "./javascript.json", "language": "typescript"},
             {"path": "./javascript.json", "language": "javascriptreact"},

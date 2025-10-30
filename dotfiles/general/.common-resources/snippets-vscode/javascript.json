@@ -21,6 +21,15 @@
             "}"
         ]
     },
+    "switch (simshadows snippets)": {
+        "prefix": ["switch"],
+        "body": [
+            "switch (${1:condition}) {",
+            "\tcase $0:",
+            "\tdefault:",
+            "}"
+        ]
+    },
     "throw (simshadows snippets)": {
         "prefix": ["throw"],
         "body": [
