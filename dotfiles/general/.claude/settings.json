@@ -1,3 +1,13 @@
 {
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": false
+  },
+  "permissions": {
+    "deny": [
+      "Read(.envrc)",
+      "Read(~/.aws/**)"
+    ]
+  }
 }
