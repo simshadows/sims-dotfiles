@@ -124,6 +124,9 @@
         "Bash(git write-tree:*)"
     ],
     "allow": [
+        "Bash(dir:*)",
+        "Bash(find:*)",
+        "Bash(findstr:*)",
         "Bash(git bisect:*)",
         "Bash(git blame:*)",
         "Bash(git cat-file:*)",
@@ -166,7 +169,9 @@
         "Bash(git verify-pack:*)",
         "Bash(git verify-tag:*)",
         "Bash(git version:*)",
-        "Bash(git whatchanged:*)"
+        "Bash(git whatchanged:*)",
+        "Bash(grep:*)",
+        "Bash(ls:*)"
     ]
   }
 }
