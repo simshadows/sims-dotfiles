@@ -157,6 +157,7 @@ fi
 # This is where code not intended to be part of the dotfiles repository goes.
 # Here, we find machine-specific config, such as aliases to specific files
 # on a machine.
+[[ -f ~/.bash_private ]] && source ~/.bash_private
 [[ -f ~/.bash_custom ]] && source ~/.bash_custom
 
 

@@ -33,6 +33,9 @@
         "Bash(git sparse-checkout:*)",
         "Bash(git stash:*)",
         "Bash(git switch:*)",
+        "Bash(svn commit:*)",
+        "Bash(svn up:*)",
+        "Bash(svn update:*)",
         "Read(.envrc)",
         "Read(~/.aws/**)"
     ],
@@ -110,7 +113,6 @@
         "Bash(git shell:*)",
         "Bash(git stripspace:*)",
         "Bash(git submodule:*)",
-        "Bash(git svn:*)",
         "Bash(git symbolic-ref:*)",
         "Bash(git tag:*)",
         "Bash(git unpack-objects:*)",
@@ -171,7 +173,11 @@
         "Bash(git version:*)",
         "Bash(git whatchanged:*)",
         "Bash(grep:*)",
-        "Bash(ls:*)"
+        "Bash(ls:*)",
+        "Bash(git svn di:*)",
+        "Bash(git svn diff:*)",
+        "Bash(git svn info:*)",
+        "Bash(git svn log:*)"
     ]
   }
 }

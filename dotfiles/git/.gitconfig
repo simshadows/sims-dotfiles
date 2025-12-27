@@ -1,63 +1,49 @@
 [user]
 	email = contact@simshadows.com
 	name = simshadows
-	signingkey = 9734AEE67765FB4A
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[init]
+	defaultBranch = master
 [push]
 	default = upstream
 [merge]
 	conflictstyle = diff3
-[core]
-	excludesfile = ~/.gitignore_global
-	editor = vim
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 [alias]
-	i   = init
-	#c  = clone
-
 	s   = status
-	#sh = show
 	l   = log --all --oneline --graph --decorate
-	lF  = log --all --pretty=fuller --stat --graph --decorate
+	lf  = log --all --pretty=fuller --stat --graph --decorate
 	d   = diff
-	dS  = diff --staged
-	#re = remote -v
+	ds  = diff --staged
 	
-	a   = add -A
-
 	c   = commit
-	cM  = commit -m
-	cA  = commit --amend
+	ca  = commit --amend
 
 	b   = checkout -b
-	bL  = branch -a
-	m   = merge
+	bl  = branch -avv
 
 	f   = fetch --prune
-	p   = push
-	pu  = pull
+
+    # Stage everything
+	a   = add -A
+    # Unstage
+    u   = restore --staged
 
 	# Removes untracked files and folders.
 	cl  = clean -fdx
 
-	# Removes untracked ignored files and folders.
-	clI = clean -fdX
-
 	# Undoes the latest commit and leaves those commited changes unstaged.
 	# To commit with the old message: 'git commit -c ORIG_HEAD'.
-	rU = reset HEAD~
+	ru = reset HEAD~
 
 	# (TODO: What exactly does this do?)
-	rH = reset --hard
-
-	# Reset the working copy at the current directory and its subdirectories
-	rW = checkout .
-
-	# Garbage Collection
-	#g  = gc
+	rh = reset --hard
 
 	# Clone from Github
 	github          = !sh -c 'git clone git@github.com:$1.git' -
