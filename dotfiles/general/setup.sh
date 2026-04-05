@@ -27,6 +27,9 @@ ln_corresponding .config/ranger scope.sh
 cp_corresponding .config/vlc vlcrc
 ln -sfn "$src_dir/.common-resources" ~/.common-resources
 
+mkdir -p ~/bin
+ln -sfn "$src_dir/bin" ~/bin/from-dotfiles-1
+
 echo "DONE!"
 printf "\n"
 

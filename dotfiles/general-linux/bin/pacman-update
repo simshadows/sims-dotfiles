@@ -2,8 +2,6 @@
 
 # Fully updates an Arch Linux system.
 
-# TODO: update mirror list?
-#       something like this:
-#           sudo reflector --save /etc/pacman.d/mirrorlist
-
-sudo pacman -Sy --needed archlinux-keyring && sudo pacman -Su
+sudo reflector --save /etc/pacman.d/mirrorlist
+sudo pacman -Sy --needed archlinux-keyring
+sudo pacman -Su

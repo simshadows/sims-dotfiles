@@ -23,6 +23,7 @@ a+=( base-devel )
 a+=( git        )
 a+=( tmux       )
 a+=( xclip      ) # clipboard cli interface that I've set up for tmux and nvim
+a+=( reflector  ) # updates mirrorlist
 
 
 #
@@ -49,11 +50,13 @@ a+=( firefox   ) # web browser
 a+=( chromium  ) # web browser (backup in case something doesn't render correctly in Firefox)
 a+=( keepassxc ) # password manager
 a+=( vlc       ) # media player
+a+=( vlc-plugin-ffmpeg ) # needed to decode common video formats
 
 
 #
 # Core Development Tools
 #
+a+=( podman     ) # containerization
 a+=( ctags      ) # code indexing
 a+=( gdb        ) # GNU debugger
 a+=( lldb       ) # LLVM debugger
@@ -69,6 +72,7 @@ a+=( python-pip ) # Python pip package manager
 a+=( ruby   ) # Ruby language tooling
 a+=( nodejs ) # Node Javascript language runtime
 a+=( npm    ) # Node package manager
+a+=( nvm    ) # Node version manager
 
 
 #
@@ -110,6 +114,7 @@ a+=( dnsutils   ) # DNS utilities (such as dig)
 #
 # Other Useful Utilities
 #
+a+=( displaycal        ) # display colour calibration
 a+=( scrot             ) # makes screenshots
 a+=( nmap              ) # maps the network, e.g. ping/port scans
 a+=( p7zip             ) # 7zip POSIX port
@@ -133,6 +138,8 @@ a+=( screenfetch ) # prints basic system info in a pretty form
 pacman -Sy "${a[@]}"
 
 ###########################################################
+
+systemctl enable --now reflector.timer
 
 npm install --global yarn
 

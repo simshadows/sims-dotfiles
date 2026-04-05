@@ -25,9 +25,15 @@ fi
 PS1='\[\e[31m\]\u@\h\[\e[m\] \W\$ '
 
 
-# Put ~/bin into PATH
+# Add to PATH:
+#     The main directory:
+#         ~/bin
+#     Symlink to the platform-independent script collection:
+#         ~bin/from-dotfiles-1
+#     Symlink to the platform-dependent script collection:
+#         ~bin/from-dotfiles-2
 if [ -d "$HOME/bin" ]; then
-    export PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin:$HOME/bin/from-dotfiles-1:$HOME/bin/from-dotfiles-2:$PATH"
 fi
 
 
@@ -149,6 +155,9 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 export N_PREFIX=$HOME/.n
 if [ -d "$HOME/.n" ]; then
     export PATH=$N_PREFIX/bin:$PATH
+fi
+if [ -f "/usr/share/nvm/init-nvm.sh" ]; then
+    . /usr/share/nvm/init-nvm.sh
 fi
 
 

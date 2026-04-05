@@ -21,6 +21,8 @@ choco install firefox `
     python `
     obs-studio `
     ffmpeg-full `
+    imagemagick `
+    handbrake `
     rufus `
     windirstat `
     audacity `

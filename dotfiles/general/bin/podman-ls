@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+echo "=============================="
+echo "  All Containers"
+echo "  podman ps -a --no-trunc --pod"
+echo "=============================="
+
+podman ps -a --no-trunc --pod
+
+echo
+echo "=============================="
+echo "  All Pods"
+echo "  podman pod ls"
+echo "=============================="
+
+podman pod ls
+
+echo
+echo "=============================="
+echo "  All Images"
+echo "  podman images"
+echo "=============================="
+
+podman images
