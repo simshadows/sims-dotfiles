@@ -1,24 +1,32 @@
 #!/usr/bin/env bash
 
-echo "=============================="
-echo "  All Containers"
-echo "  podman ps -a --no-trunc --pod"
-echo "=============================="
+#echo "=============================="
+#echo "  All Containers"
+#echo "  podman ps -a --no-trunc --pod"
+#echo "=============================="
+#
+#podman ps -a --no-trunc --pod
+## This was commented out because of the verbosity of the
+## container IDs. But I don't know if --no-trunc also
+## affects anything else.
 
-podman ps -a --no-trunc --pod
+echo "=== All Volumes (podman volume ls)"
+podman volume ls
+echo "=== Hint: Delete volumes with 'podman volume rm <name>'"
 
 echo
-echo "=============================="
-echo "  All Pods"
-echo "  podman pod ls"
-echo "=============================="
-
-podman pod ls
-
-echo
-echo "=============================="
-echo "  All Images"
-echo "  podman images"
-echo "=============================="
-
+echo "=== All Images (podman images)"
 podman images
+echo "=== Hint: Force delete images with 'podman image rm --force <name>'"
+
+echo
+echo "=== All Pods (podman pod ls)"
+podman pod ls
+echo "=== Hint: Start/stop pods with 'podman pod start <name>' or 'podman pod stop <name>'"
+echo "=== Hint: Delete pods with 'podman pod rm <name>'"
+
+echo
+echo "=== All Containers (podman ps -a --pod)"
+podman ps -a --pod
+echo "=== Hint: Start/stop containers with 'podman start <name>' or 'podman stop <name>'"
+echo "=== Hint: Delete containers with 'podman rm <name>'"

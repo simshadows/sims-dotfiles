@@ -76,7 +76,9 @@ alias cppcp='cppbasecompile -O2 -fsanitize=address '
 
 
 # Automatically reread ~/.Xresources
-xrdb -merge ~/.Xresources || true
+if command -v xrdb >/dev/null 2>&1; then
+    xrdb -merge ~/.Xresources
+fi
 
 
 # Prevents nesting ranger instances when you repeatedly open shells with Shift+s

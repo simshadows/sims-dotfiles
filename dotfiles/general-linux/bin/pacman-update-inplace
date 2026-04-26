@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Updates only in-place updatable Arch Linux system.
+
+sudo reflector --save /etc/pacman.d/mirrorlist
+sudo pacman -Sy --needed archlinux-keyring
+sudo pacman -Sy discord

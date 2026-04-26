@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# setup.sh
+#
+# Installs the dotfiles for the user.
+
 # Terminate script on error
 set -e
 
@@ -45,6 +49,23 @@ function cp_corresponding() {
 }
 export -f cp_corresponding
 
+################################################################################
+# We first process the shortcut.
+################################################################################
+
+if [[ "$1" == "minimal" ]]; then
+    echo "Running minimal dotfile installation."
+    echo
+    bash "$src_dir/dotfiles/general/setup.sh"
+    exit 0
+elif [[ -n "$1" ]]; then
+    echo "[ERROR] Unknown mode: $1"
+    echo "There is currently only one supported mode: minimal"
+    exit 1
+fi
+
+################################################################################
+# If we didn't take any shortcuts, we run the full installer.
 ################################################################################
 
 echo "Detecting system information..."

@@ -18,6 +18,7 @@ choco install firefox `
     7zip `
     podman-desktop `
     podman-cli `
+    make `
     python `
     obs-studio `
     ffmpeg-full `
